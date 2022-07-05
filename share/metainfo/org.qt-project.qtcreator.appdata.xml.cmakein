@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2016 The Qt Company Ltd. Contact: https://www.qt.io/licensing/ -->
+<component type="desktop">
+ <id>org.orca-project.orca.desktop</id>
+ <name>Orca</name>
+ <summary>Free and open-source software reverse engineering (SRE) framework for Windows, Mac and Linux platforms.</summary>
+ <metadata_license>CC0-1.0</metadata_license>
+ <project_license>GPL-3.0</project_license>
+ <description>
+  TODO
+ </description>
+
+ <url type="homepage">https://www.qt.io/ide/</url>
+ <project_group>Qt</project_group>
+ <content_rating type="oars-1.1" />
+ <screenshots>
+  <screenshot>
+   <image>https://doc.qt.io/qtcreator/images/qtcreator-breakdown.png</image>
+  </screenshot>
+  <screenshot>
+   <image>https://doc.qt.io/qtcreator/images/qtcreator-gs-build-example-open.png</image>
+  </screenshot>
+ </screenshots>
+ <releases>
+  <release version="${IDE_VERSION_DISPLAY}"${DATE_ATTRIBUTE}>
+   <description>
+    <p>Qt Creator v${IDE_VERSION_DISPLAY}</p>
+   </description>
+  </release>
+ </releases>
+</component>

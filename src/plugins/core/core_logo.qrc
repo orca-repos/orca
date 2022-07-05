@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/core">
+        <file alias="images/orcalogo-big.png">images/logo/128/Orca-orca.png</file>
+        <file alias="images/orcalogo-big@2x.png">images/logo/256/Orca-orca.png</file>
+    </qresource>
+</RCC>

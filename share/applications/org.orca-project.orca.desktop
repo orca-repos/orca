@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Exec=orca %F
+Name=Orca
+GenericName=SRE framework for Windows, Mac and Linux platforms.
+X-KDE-StartupNotify=true
+Icon=Orca-orca
+StartupWMClass=orca
+Terminal=false
+Categories=Development;IDE;Qt;
+MimeType= text/x-c++src;text/x-c++hdr;text/x-xsrc;application/x-designer;application/vnd.qt.qmakeprofile;application/vnd.qt.xml.resource;
+
