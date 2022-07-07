@@ -1,16 +1,16 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "externaltoolmanager.h"
-#include "externaltool.h"
-#include "coreconstants.h"
-#include "icontext.h"
-#include "icore.h"
-#include "messagemanager.h"
-#include "actionmanager/actionmanager.h"
-#include "actionmanager/actioncontainer.h"
-#include "actionmanager/command.h"
+#include "externaltoolmanager.hpp"
+#include "externaltool.hpp"
+#include "coreconstants.hpp"
+#include "icontext.hpp"
+#include "icore.hpp"
+#include "messagemanager.hpp"
+#include "actionmanager/actionmanager.hpp"
+#include "actionmanager/actioncontainer.hpp"
+#include "actionmanager/command.hpp"
 
-#include <utils/qtcassert.h>
+#include <utils/qtcassert.hpp>
 
 #include <QAction>
 #include <QDebug>

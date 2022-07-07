@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "macroexpander.h"
+#include "macroexpander.hpp"
 
-#include "algorithm.h"
-#include "fileutils.h"
-#include "commandline.h"
-#include "qtcassert.h"
-#include "stringutils.h"
+#include "algorithm.hpp"
+#include "fileutils.hpp"
+#include "commandline.hpp"
+#include "qtcassert.hpp"
+#include "stringutils.hpp"
 
 #include <QCoreApplication>
 #include <QDebug>

@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "imode.h"
-#include "modemanager.h"
-#include "outputpane.h"
-#include "outputpanemanager.h"
+#include "imode.hpp"
+#include "modemanager.hpp"
+#include "outputpane.hpp"
+#include "outputpanemanager.hpp"
 
 #include <QResizeEvent>
 #include <QSplitter>

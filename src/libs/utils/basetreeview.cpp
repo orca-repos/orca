@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "basetreeview.h"
+#include "basetreeview.hpp"
 
-#include "progressindicator.h"
-#include "qtcsettings.h"
-#include "treemodel.h"
+#include "progressindicator.hpp"
+#include "qtcsettings.hpp"
+#include "treemodel.hpp"
 
-#include <utils/algorithm.h>
-#include <utils/qtcassert.h>
+#include <utils/algorithm.hpp>
+#include <utils/qtcassert.hpp>
 
 #include <QDebug>
 #include <QFontMetrics>

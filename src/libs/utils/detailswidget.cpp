@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "detailswidget.h"
-#include "detailsbutton.h"
-#include "hostosinfo.h"
-#include "theme/theme.h"
+#include "detailswidget.hpp"
+#include "detailsbutton.hpp"
+#include "hostosinfo.hpp"
+#include "theme/theme.hpp"
 
 #include <QGridLayout>
 #include <QLabel>

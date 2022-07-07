@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "processreaper.h"
-#include "qtcassert.h"
+#include "processreaper.hpp"
+#include "qtcassert.hpp"
 
 #include <QCoreApplication>
 #include <QProcess>

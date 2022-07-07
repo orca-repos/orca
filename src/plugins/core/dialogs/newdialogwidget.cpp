@@ -1,14 +1,14 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "newdialogwidget.h"
+#include "newdialogwidget.hpp"
 #include "ui_newdialog.h"
 
-#include <core/icontext.h>
-#include <core/icore.h>
+#include <core/icontext.hpp>
+#include <core/icore.hpp>
 
-#include <utils/algorithm.h>
-#include <utils/qtcassert.h>
-#include <utils/utilsicons.h>
+#include <utils/algorithm.hpp>
+#include <utils/qtcassert.hpp>
+#include <utils/utilsicons.hpp>
 
 #include <QDebug>
 #include <QItemDelegate>

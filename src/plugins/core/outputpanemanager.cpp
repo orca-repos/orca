@@ -1,29 +1,29 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "outputpanemanager.h"
-#include "outputpane.h"
-#include "findplaceholder.h"
-#include "icore.h"
-#include "ioutputpane.h"
-#include "modemanager.h"
-#include "statusbarmanager.h"
+#include "outputpanemanager.hpp"
+#include "outputpane.hpp"
+#include "findplaceholder.hpp"
+#include "icore.hpp"
+#include "ioutputpane.hpp"
+#include "modemanager.hpp"
+#include "statusbarmanager.hpp"
 
-#include <core/actionmanager/actionmanager.h>
-#include <core/actionmanager/actioncontainer.h>
-#include <core/actionmanager/command.h>
-#include <core/actionmanager/commandbutton.h>
-#include <core/editormanager/editormanager.h>
-#include <core/editormanager/ieditor.h>
-#include <core/find/optionspopup.h>
+#include <core/actionmanager/actionmanager.hpp>
+#include <core/actionmanager/actioncontainer.hpp>
+#include <core/actionmanager/command.hpp>
+#include <core/actionmanager/commandbutton.hpp>
+#include <core/editormanager/editormanager.hpp>
+#include <core/editormanager/ieditor.hpp>
+#include <core/find/optionspopup.hpp>
 
-#include <utils/algorithm.h>
-#include <utils/hostosinfo.h>
-#include <utils/styledbar.h>
-#include <utils/stylehelper.h>
-#include <utils/proxyaction.h>
-#include <utils/qtcassert.h>
-#include <utils/theme/theme.h>
-#include <utils/utilsicons.h>
+#include <utils/algorithm.hpp>
+#include <utils/hostosinfo.hpp>
+#include <utils/styledbar.hpp>
+#include <utils/stylehelper.hpp>
+#include <utils/proxyaction.hpp>
+#include <utils/qtcassert.hpp>
+#include <utils/theme/theme.hpp>
+#include <utils/utilsicons.hpp>
 
 #include <QDebug>
 #include <QAction>

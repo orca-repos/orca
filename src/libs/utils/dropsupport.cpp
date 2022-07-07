@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "dropsupport.h"
+#include "dropsupport.hpp"
 
-#include "qtcassert.h"
+#include "qtcassert.hpp"
 
 #include <QUrl>
 #include <QWidget>
@@ -11,7 +11,7 @@
 
 #ifdef Q_OS_OSX
 // for file drops from Finder, working around QTBUG-40449
-#include "fileutils_mac.h"
+#include "fileutils_mac.hpp"
 #endif
 
 namespace Utils {

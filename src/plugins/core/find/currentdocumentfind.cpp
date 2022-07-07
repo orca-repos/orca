@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "currentdocumentfind.h"
+#include "currentdocumentfind.hpp"
 
-#include <core/coreconstants.h>
+#include <core/coreconstants.hpp>
 
-#include <utils/fadingindicator.h>
-#include <utils/qtcassert.h>
+#include <utils/fadingindicator.hpp>
+#include <utils/qtcassert.hpp>
 
-#include <aggregation/aggregate.h>
+#include <aggregation/aggregate.hpp>
 
 #include <QDebug>
 #include <QApplication>

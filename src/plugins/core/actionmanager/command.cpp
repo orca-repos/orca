@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "command.h"
-#include "command_p.h"
+#include "command.hpp"
+#include "command_p.hpp"
 
-#include <core/coreconstants.h>
-#include <core/icontext.h>
+#include <core/coreconstants.hpp>
+#include <core/icontext.hpp>
 
-#include <utils/stringutils.h>
+#include <utils/stringutils.hpp>
 
 #include <QAction>
 #include <QToolButton>

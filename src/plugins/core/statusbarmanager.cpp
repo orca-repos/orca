@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "statusbarmanager.h"
-#include "imode.h"
-#include "mainwindow.h"
-#include "minisplitter.h"
+#include "statusbarmanager.hpp"
+#include "imode.hpp"
+#include "mainwindow.hpp"
+#include "minisplitter.hpp"
 
-#include <utils/qtcassert.h>
+#include <utils/qtcassert.hpp>
 
 #include <QHBoxLayout>
 #include <QLabel>

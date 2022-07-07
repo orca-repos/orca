@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "algorithm.h"
-#include "launchersocket.h"
-#include "launcherinterface.h"
+#include "algorithm.hpp"
+#include "launchersocket.hpp"
+#include "launcherinterface.hpp"
 
-#include "qtcassert.h"
+#include "qtcassert.hpp"
 
 #include <QCoreApplication>
 #include <QLocalSocket>

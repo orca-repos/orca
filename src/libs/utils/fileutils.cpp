@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "fileutils.h"
-#include "savefile.h"
+#include "fileutils.hpp"
+#include "savefile.hpp"
 
-#include "algorithm.h"
-#include "commandline.h"
-#include "environment.h"
-#include "hostosinfo.h"
-#include "qtcassert.h"
+#include "algorithm.hpp"
+#include "commandline.hpp"
+#include "environment.hpp"
+#include "hostosinfo.hpp"
+#include "qtcassert.hpp"
 
 #include <QDataStream>
 #include <QDateTime>
@@ -30,7 +30,7 @@
 #endif
 
 #ifdef Q_OS_OSX
-#include "fileutils_mac.h"
+#include "fileutils_mac.hpp"
 #endif
 
 namespace Utils {

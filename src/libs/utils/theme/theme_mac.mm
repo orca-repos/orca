@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "theme_mac.h"
+#include "theme_mac.hpp"
 
 #include <qglobal.h>
 #include <QOperatingSystemVersion>

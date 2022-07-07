@@ -7,186 +7,186 @@ add_qtc_library(Utils
     ../3rdparty/variant/variant.hpp
     ../3rdparty/span/span.hpp
     QtConcurrentTools
-    algorithm.h
-    ansiescapecodehandler.cpp ansiescapecodehandler.h
-    appmainwindow.cpp appmainwindow.h
-    archive.cpp archive.h
-    aspects.cpp aspects.h
-    basetreeview.cpp basetreeview.h
-    benchmarker.cpp benchmarker.h
-    buildablehelperlibrary.cpp buildablehelperlibrary.h
-    camelcasecursor.cpp camelcasecursor.h
-    categorysortfiltermodel.cpp categorysortfiltermodel.h
-    changeset.cpp changeset.h
-    checkablemessagebox.cpp checkablemessagebox.h
-    classnamevalidatinglineedit.cpp classnamevalidatinglineedit.h
-    codegeneration.cpp codegeneration.h
-    commandline.cpp commandline.h
-    completinglineedit.cpp completinglineedit.h
-    completingtextedit.cpp completingtextedit.h
-    cpplanguage_details.h
-    crumblepath.cpp crumblepath.h
-    declarationmacros.h
-    delegates.cpp delegates.h
-    detailsbutton.cpp detailsbutton.h
-    detailswidget.cpp detailswidget.h
-    differ.cpp differ.h
-    displayname.cpp displayname.h
-    dropsupport.cpp dropsupport.h
-    elfreader.cpp elfreader.h
-    elidinglabel.cpp elidinglabel.h
-    environment.cpp environment.h
-    environmentdialog.cpp environmentdialog.h
-    environmentfwd.h
-    environmentmodel.cpp environmentmodel.h
-    execmenu.cpp execmenu.h
-    executeondestruction.h
-    fadingindicator.cpp fadingindicator.h
-    faketooltip.cpp faketooltip.h
-    fancylineedit.cpp fancylineedit.h
-    fancymainwindow.cpp fancymainwindow.h
-    filecrumblabel.cpp filecrumblabel.h
-    fileinprojectfinder.cpp fileinprojectfinder.h
-    filenamevalidatinglineedit.cpp filenamevalidatinglineedit.h
-    filepath.cpp filepath.h
-    filesearch.cpp filesearch.h
-    filesystemmodel.cpp filesystemmodel.h
-    filesystemwatcher.cpp filesystemwatcher.h
-    fileutils.cpp fileutils.h
-    filewizardpage.cpp filewizardpage.h
-    fixedsizeclicklabel.cpp fixedsizeclicklabel.h
-    flowlayout.cpp flowlayout.h
-    functiontraits.h
-    futuresynchronizer.cpp futuresynchronizer.h
-    fuzzymatcher.cpp fuzzymatcher.h
-    genericconstants.h
-    globalfilechangeblocker.cpp globalfilechangeblocker.h
-    guard.cpp guard.h
-    headerviewstretcher.cpp headerviewstretcher.h
-    highlightingitemdelegate.cpp highlightingitemdelegate.h
-    historycompleter.cpp historycompleter.h
-    hostosinfo.cpp hostosinfo.h
-    htmldocextractor.cpp htmldocextractor.h
-    icon.cpp icon.h
-    id.cpp id.h
-    indexedcontainerproxyconstiterator.h
-    infobar.cpp infobar.h
-    infolabel.cpp infolabel.h
-    itemviews.cpp itemviews.h
-    json.cpp json.h
-    jsontreeitem.cpp jsontreeitem.h
-    launcherinterface.cpp launcherinterface.h
-    launcherpackets.cpp launcherpackets.h
-    launchersocket.cpp launchersocket.h
-    layoutbuilder.cpp layoutbuilder.h
-    linecolumn.cpp linecolumn.h
-    link.cpp link.h
-    listmodel.h
-    listutils.h
-    macroexpander.cpp macroexpander.h
-    mapreduce.h
-    mimetypes/mimedatabase.cpp mimetypes/mimedatabase.h mimetypes/mimedatabase_p.h
-    mimetypes/mimeglobpattern.cpp mimetypes/mimeglobpattern_p.h
-    mimetypes/mimemagicrule.cpp mimetypes/mimemagicrule_p.h
-    mimetypes/mimemagicrulematcher.cpp mimetypes/mimemagicrulematcher_p.h
-    mimetypes/mimeprovider.cpp mimetypes/mimeprovider_p.h
-    mimetypes/mimetype.cpp mimetypes/mimetype.h mimetypes/mimetype_p.h
-    mimetypes/mimetypeparser.cpp mimetypes/mimetypeparser_p.h
-    multitextcursor.cpp multitextcursor.h
-    namevaluedictionary.cpp namevaluedictionary.h
-    namevaluedictionary.cpp namevaluedictionary.h
-    namevalueitem.cpp namevalueitem.h
-    namevalueitem.cpp namevalueitem.h
-    namevaluemodel.cpp namevaluemodel.h
-    namevaluemodel.cpp namevaluemodel.h
-    namevaluesdialog.cpp namevaluesdialog.h
-    namevaluesdialog.cpp namevaluesdialog.h
-    namevaluevalidator.cpp namevaluevalidator.h
-    namevaluevalidator.cpp namevaluevalidator.h
-    navigationtreeview.cpp navigationtreeview.h
-    networkaccessmanager.cpp networkaccessmanager.h
-    optional.h
-    osspecificaspects.h
-    outputformat.h
-    outputformatter.cpp outputformatter.h
-    overlaywidget.cpp overlaywidget.h
-    overridecursor.cpp overridecursor.h
-    parameteraction.cpp parameteraction.h
-    pathchooser.cpp pathchooser.h
-    pathlisteditor.cpp pathlisteditor.h
-    persistentsettings.cpp persistentsettings.h
-    pointeralgorithm.h
-    port.cpp port.h
-    porting.h
-    portlist.cpp portlist.h
-    predicates.h
-    processhandle.cpp processhandle.h
-    processreaper.cpp processreaper.h
-    processutils.cpp processutils.h
-    progressindicator.cpp progressindicator.h
-    projectintropage.cpp projectintropage.h projectintropage.ui
-    proxyaction.cpp proxyaction.h
-    proxycredentialsdialog.cpp proxycredentialsdialog.h proxycredentialsdialog.ui
-    qrcparser.cpp qrcparser.h
-    qtcassert.cpp qtcassert.h
-    qtcolorbutton.cpp qtcolorbutton.h
-    qtcprocess.cpp qtcprocess.h
-    qtcsettings.cpp qtcsettings.h
-    reloadpromptutils.cpp reloadpromptutils.h
-    removefiledialog.cpp removefiledialog.h removefiledialog.ui
-    runextensions.cpp runextensions.h
-    savefile.cpp savefile.h
-    scopedswap.h
-    set_algorithm.h
-    settingsaccessor.cpp settingsaccessor.h
-    settingsselector.cpp settingsselector.h
-    settingsutils.h
-    shellcommand.cpp shellcommand.h
-    shellcommandpage.cpp shellcommandpage.h
-    singleton.cpp singleton.h
-    sizedarray.h
-    smallstring.h
-    smallstringfwd.h
-    smallstringio.h
-    smallstringiterator.h
-    smallstringlayout.h
-    smallstringliteral.h
-    smallstringmemory.h
-    smallstringvector.h
-    smallstringview.h
-    span.h
-    statuslabel.cpp statuslabel.h
-    stringutils.cpp stringutils.h
-    styledbar.cpp styledbar.h
-    stylehelper.cpp stylehelper.h
-    templateengine.cpp templateengine.h
-    temporarydirectory.cpp temporarydirectory.h
-    temporaryfile.cpp temporaryfile.h
-    terminalcommand.cpp terminalcommand.h
-    terminalprocess.cpp terminalprocess_p.h
-    textfieldcheckbox.cpp textfieldcheckbox.h
-    textfieldcombobox.cpp textfieldcombobox.h
-    textfileformat.cpp textfileformat.h
-    textutils.cpp textutils.h
-    theme/theme.cpp theme/theme.h theme/theme_p.h
-    threadutils.cpp threadutils.h
-    tooltip/effects.h
-    tooltip/tips.cpp tooltip/tips.h
-    tooltip/tooltip.cpp tooltip/tooltip.h
-    touchbar/touchbar.h
-    treemodel.cpp treemodel.h
-    treeviewcombobox.cpp treeviewcombobox.h
-    uncommentselection.cpp uncommentselection.h
-    unixutils.cpp unixutils.h
-    url.cpp url.h
+    algorithm.hpp
+    ansiescapecodehandler.cpp ansiescapecodehandler.hpp
+    appmainwindow.cpp appmainwindow.hpp
+    archive.cpp archive.hpp
+    aspects.cpp aspects.hpp
+    basetreeview.cpp basetreeview.hpp
+    benchmarker.cpp benchmarker.hpp
+    buildablehelperlibrary.cpp buildablehelperlibrary.hpp
+    camelcasecursor.cpp camelcasecursor.hpp
+    categorysortfiltermodel.cpp categorysortfiltermodel.hpp
+    changeset.cpp changeset.hpp
+    checkablemessagebox.cpp checkablemessagebox.hpp
+    classnamevalidatinglineedit.cpp classnamevalidatinglineedit.hpp
+    codegeneration.cpp codegeneration.hpp
+    commandline.cpp commandline.hpp
+    completinglineedit.cpp completinglineedit.hpp
+    completingtextedit.cpp completingtextedit.hpp
+    cpplanguage_details.hpp
+    crumblepath.cpp crumblepath.hpp
+    declarationmacros.hpp
+    delegates.cpp delegates.hpp
+    detailsbutton.cpp detailsbutton.hpp
+    detailswidget.cpp detailswidget.hpp
+    differ.cpp differ.hpp
+    displayname.cpp displayname.hpp
+    dropsupport.cpp dropsupport.hpp
+    elfreader.cpp elfreader.hpp
+    elidinglabel.cpp elidinglabel.hpp
+    environment.cpp environment.hpp
+    environmentdialog.cpp environmentdialog.hpp
+    environmentfwd.hpp
+    environmentmodel.cpp environmentmodel.hpp
+    execmenu.cpp execmenu.hpp
+    executeondestruction.hpp
+    fadingindicator.cpp fadingindicator.hpp
+    faketooltip.cpp faketooltip.hpp
+    fancylineedit.cpp fancylineedit.hpp
+    fancymainwindow.cpp fancymainwindow.hpp
+    filecrumblabel.cpp filecrumblabel.hpp
+    fileinprojectfinder.cpp fileinprojectfinder.hpp
+    filenamevalidatinglineedit.cpp filenamevalidatinglineedit.hpp
+    filepath.cpp filepath.hpp
+    filesearch.cpp filesearch.hpp
+    filesystemmodel.cpp filesystemmodel.hpp
+    filesystemwatcher.cpp filesystemwatcher.hpp
+    fileutils.cpp fileutils.hpp
+    filewizardpage.cpp filewizardpage.hpp
+    fixedsizeclicklabel.cpp fixedsizeclicklabel.hpp
+    flowlayout.cpp flowlayout.hpp
+    functiontraits.hpp
+    futuresynchronizer.cpp futuresynchronizer.hpp
+    fuzzymatcher.cpp fuzzymatcher.hpp
+    genericconstants.hpp
+    globalfilechangeblocker.cpp globalfilechangeblocker.hpp
+    guard.cpp guard.hpp
+    headerviewstretcher.cpp headerviewstretcher.hpp
+    highlightingitemdelegate.cpp highlightingitemdelegate.hpp
+    historycompleter.cpp historycompleter.hpp
+    hostosinfo.cpp hostosinfo.hpp
+    htmldocextractor.cpp htmldocextractor.hpp
+    icon.cpp icon.hpp
+    id.cpp id.hpp
+    indexedcontainerproxyconstiterator.hpp
+    infobar.cpp infobar.hpp
+    infolabel.cpp infolabel.hpp
+    itemviews.cpp itemviews.hpp
+    json.cpp json.hpp
+    jsontreeitem.cpp jsontreeitem.hpp
+    launcherinterface.cpp launcherinterface.hpp
+    launcherpackets.cpp launcherpackets.hpp
+    launchersocket.cpp launchersocket.hpp
+    layoutbuilder.cpp layoutbuilder.hpp
+    linecolumn.cpp linecolumn.hpp
+    link.cpp link.hpp
+    listmodel.hpp
+    listutils.hpp
+    macroexpander.cpp macroexpander.hpp
+    mapreduce.hpp
+    mimetypes/mimedatabase.cpp mimetypes/mimedatabase.hpp mimetypes/mimedatabase_p.hpp
+    mimetypes/mimeglobpattern.cpp mimetypes/mimeglobpattern_p.hpp
+    mimetypes/mimemagicrule.cpp mimetypes/mimemagicrule_p.hpp
+    mimetypes/mimemagicrulematcher.cpp mimetypes/mimemagicrulematcher_p.hpp
+    mimetypes/mimeprovider.cpp mimetypes/mimeprovider_p.hpp
+    mimetypes/mimetype.cpp mimetypes/mimetype.hpp mimetypes/mimetype_p.hpp
+    mimetypes/mimetypeparser.cpp mimetypes/mimetypeparser_p.hpp
+    multitextcursor.cpp multitextcursor.hpp
+    namevaluedictionary.cpp namevaluedictionary.hpp
+    namevaluedictionary.cpp namevaluedictionary.hpp
+    namevalueitem.cpp namevalueitem.hpp
+    namevalueitem.cpp namevalueitem.hpp
+    namevaluemodel.cpp namevaluemodel.hpp
+    namevaluemodel.cpp namevaluemodel.hpp
+    namevaluesdialog.cpp namevaluesdialog.hpp
+    namevaluesdialog.cpp namevaluesdialog.hpp
+    namevaluevalidator.cpp namevaluevalidator.hpp
+    namevaluevalidator.cpp namevaluevalidator.hpp
+    navigationtreeview.cpp navigationtreeview.hpp
+    networkaccessmanager.cpp networkaccessmanager.hpp
+    optional.hpp
+    osspecificaspects.hpp
+    outputformat.hpp
+    outputformatter.cpp outputformatter.hpp
+    overlaywidget.cpp overlaywidget.hpp
+    overridecursor.cpp overridecursor.hpp
+    parameteraction.cpp parameteraction.hpp
+    pathchooser.cpp pathchooser.hpp
+    pathlisteditor.cpp pathlisteditor.hpp
+    persistentsettings.cpp persistentsettings.hpp
+    pointeralgorithm.hpp
+    port.cpp port.hpp
+    porting.hpp
+    portlist.cpp portlist.hpp
+    predicates.hpp
+    processhandle.cpp processhandle.hpp
+    processreaper.cpp processreaper.hpp
+    processutils.cpp processutils.hpp
+    progressindicator.cpp progressindicator.hpp
+    projectintropage.cpp projectintropage.hpp projectintropage.ui
+    proxyaction.cpp proxyaction.hpp
+    proxycredentialsdialog.cpp proxycredentialsdialog.hpp proxycredentialsdialog.ui
+    qrcparser.cpp qrcparser.hpp
+    qtcassert.cpp qtcassert.hpp
+    qtcolorbutton.cpp qtcolorbutton.hpp
+    qtcprocess.cpp qtcprocess.hpp
+    qtcsettings.cpp qtcsettings.hpp
+    reloadpromptutils.cpp reloadpromptutils.hpp
+    removefiledialog.cpp removefiledialog.hpp removefiledialog.ui
+    runextensions.cpp runextensions.hpp
+    savefile.cpp savefile.hpp
+    scopedswap.hpp
+    set_algorithm.hpp
+    settingsaccessor.cpp settingsaccessor.hpp
+    settingsselector.cpp settingsselector.hpp
+    settingsutils.hpp
+    shellcommand.cpp shellcommand.hpp
+    shellcommandpage.cpp shellcommandpage.hpp
+    singleton.cpp singleton.hpp
+    sizedarray.hpp
+    smallstring.hpp
+    smallstringfwd.hpp
+    smallstringio.hpp
+    smallstringiterator.hpp
+    smallstringlayout.hpp
+    smallstringliteral.hpp
+    smallstringmemory.hpp
+    smallstringvector.hpp
+    smallstringview.hpp
+    span.hpp
+    statuslabel.cpp statuslabel.hpp
+    stringutils.cpp stringutils.hpp
+    styledbar.cpp styledbar.hpp
+    stylehelper.cpp stylehelper.hpp
+    templateengine.cpp templateengine.hpp
+    temporarydirectory.cpp temporarydirectory.hpp
+    temporaryfile.cpp temporaryfile.hpp
+    terminalcommand.cpp terminalcommand.hpp
+    terminalprocess.cpp terminalprocess_p.hpp
+    textfieldcheckbox.cpp textfieldcheckbox.hpp
+    textfieldcombobox.cpp textfieldcombobox.hpp
+    textfileformat.cpp textfileformat.hpp
+    textutils.cpp textutils.hpp
+    theme/theme.cpp theme/theme.hpp theme/theme_p.hpp
+    threadutils.cpp threadutils.hpp
+    tooltip/effects.hpp
+    tooltip/tips.cpp tooltip/tips.hpp
+    tooltip/tooltip.cpp tooltip/tooltip.hpp
+    touchbar/touchbar.hpp
+    treemodel.cpp treemodel.hpp
+    treeviewcombobox.cpp treeviewcombobox.hpp
+    uncommentselection.cpp uncommentselection.hpp
+    unixutils.cpp unixutils.hpp
+    url.cpp url.hpp
     utils.qrc
-    utils_global.h
-    utilsicons.cpp utilsicons.h
-    variablechooser.cpp variablechooser.h
-    variant.h
-    winutils.cpp winutils.h
-    wizard.cpp wizard.h
-    wizardpage.cpp wizardpage.h
+    utils_global.hpp
+    utilsicons.cpp utilsicons.hpp
+    variablechooser.cpp variablechooser.hpp
+    variant.hpp
+    winutils.cpp winutils.hpp
+    wizard.cpp wizard.hpp
+    wizardpage.cpp wizardpage.hpp
 )
 
 extend_qtc_library(Utils CONDITION WIN32
@@ -202,11 +202,11 @@ extend_qtc_library(Utils CONDITION WIN32
 
 extend_qtc_library(Utils CONDITION APPLE
   SOURCES
-    fileutils_mac.mm fileutils_mac.h
+    fileutils_mac.mm fileutils_mac.hpp
     processhandle_mac.mm
-    theme/theme_mac.mm theme/theme_mac.h
-    touchbar/touchbar_appdelegate_mac.mm touchbar/touchbar_appdelegate_mac_p.h
-    touchbar/touchbar_mac.mm touchbar/touchbar_mac_p.h
+    theme/theme_mac.mm theme/theme_mac.hpp
+    touchbar/touchbar_appdelegate_mac.mm touchbar/touchbar_appdelegate_mac_p.hpp
+    touchbar/touchbar_mac.mm touchbar/touchbar_mac_p.hpp
   DEPENDS
     ${FWFoundation} ${FWAppKit}
 )

@@ -2,15 +2,15 @@
 
 #include <qplatformdefs.h> // always first
 
-#include "mimedatabase.h"
+#include "mimedatabase.hpp"
 
-#include "mimedatabase_p.h"
+#include "mimedatabase_p.hpp"
 
-#include "mimemagicrule_p.h"
-#include "mimeprovider_p.h"
-#include "mimetype_p.h"
+#include "mimemagicrule_p.hpp"
+#include "mimeprovider_p.hpp"
+#include "mimetype_p.hpp"
 
-#include <utils/fileutils.h>
+#include <utils/fileutils.hpp>
 
 #include <QtCore/QCoreApplication>
 #include <QtCore/QFile>

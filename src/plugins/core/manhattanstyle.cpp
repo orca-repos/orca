@@ -1,15 +1,15 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "manhattanstyle.h"
-#include "styleanimator.h"
+#include "manhattanstyle.hpp"
+#include "styleanimator.hpp"
 
-#include <utils/algorithm.h>
-#include <utils/hostosinfo.h>
-#include <utils/stylehelper.h>
-#include <utils/fancymainwindow.h>
-#include <utils/theme/theme.h>
-#include <utils/utilsicons.h>
-#include <utils/qtcassert.h>
+#include <utils/algorithm.hpp>
+#include <utils/hostosinfo.hpp>
+#include <utils/stylehelper.hpp>
+#include <utils/fancymainwindow.hpp>
+#include <utils/theme/theme.hpp>
+#include <utils/utilsicons.hpp>
+#include <utils/qtcassert.hpp>
 
 #include <QApplication>
 #include <QCheckBox>

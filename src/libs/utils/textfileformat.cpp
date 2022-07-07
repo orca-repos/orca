@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "textfileformat.h"
-#include "fileutils.h"
-#include "qtcassert.h"
+#include "textfileformat.hpp"
+#include "fileutils.hpp"
+#include "qtcassert.hpp"
 
 #include <QTextCodec>
 #include <QStringList>

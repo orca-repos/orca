@@ -1,14 +1,14 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "qtcassert.h"
+#include "qtcassert.hpp"
 
 #include <QByteArray>
 #include <QDebug>
 
 #if defined(Q_OS_UNIX)
-#include <stdio.h>
-#include <signal.h>
-#include <execinfo.h>
+#include <stdio.hpp>
+#include <signal.hpp>
+#include <execinfo.hpp>
 #endif
 
 namespace Utils {

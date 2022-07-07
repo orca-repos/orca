@@ -11,7 +11,7 @@ set(snippets_h "")
 if (NOT Python3_Interpreter_FOUND)
   message(WARNING "No python3 interpreter found, skipping extraction of data from XML and JSON files.\n *** Please pass -DPython3_EXECUTABLE=/path/to/python3 to cmake.")
 else()
-  set(json_wizards_h "${CMAKE_CURRENT_BINARY_DIR}/jsonwizards_tr.h")
+  set(json_wizards_h "${CMAKE_CURRENT_BINARY_DIR}/jsonwizards_tr.hpp")
   add_custom_command(OUTPUT "${json_wizards_h}"
     COMMAND "${Python3_EXECUTABLE}"
       "${CMAKE_CURRENT_SOURCE_DIR}/extract-jsonwizards.py"
@@ -19,7 +19,7 @@ else()
     COMMENT Generate translation data from JSON wizards
     VERBATIM)
 
-  set(custom_wizards_h "${CMAKE_CURRENT_BINARY_DIR}/customwizards_tr.h")
+  set(custom_wizards_h "${CMAKE_CURRENT_BINARY_DIR}/customwizards_tr.hpp")
   add_custom_command(OUTPUT "${custom_wizards_h}"
     COMMAND "${Python3_EXECUTABLE}"
       "${CMAKE_CURRENT_SOURCE_DIR}/extract-customwizards.py"
@@ -27,7 +27,7 @@ else()
     COMMENT Generate translation data from XML wizards
     VERBATIM)
 
-  set(externaltools_h "${CMAKE_CURRENT_BINARY_DIR}/externaltools_tr.h")
+  set(externaltools_h "${CMAKE_CURRENT_BINARY_DIR}/externaltools_tr.hpp")
   add_custom_command(OUTPUT "${externaltools_h}"
     COMMAND "${Python3_EXECUTABLE}"
       "${CMAKE_CURRENT_SOURCE_DIR}/extract-externaltools.py"
@@ -35,7 +35,7 @@ else()
     COMMENT Generate translation data from external tools definitions
     VERBATIM)
 
-  set(snippets_h "${CMAKE_CURRENT_BINARY_DIR}/snippets_tr.h")
+  set(snippets_h "${CMAKE_CURRENT_BINARY_DIR}/snippets_tr.hpp")
   add_custom_command(OUTPUT "${snippets_h}"
     COMMAND "${Python3_EXECUTABLE}"
       "${CMAKE_CURRENT_SOURCE_DIR}/extract-snippets.py"

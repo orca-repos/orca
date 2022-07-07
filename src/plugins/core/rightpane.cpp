@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "rightpane.h"
+#include "rightpane.hpp"
 
-#include <core/imode.h>
-#include <core/modemanager.h>
+#include <core/imode.hpp>
+#include <core/modemanager.hpp>
 
-#include <utils/qtcsettings.h>
+#include <utils/qtcsettings.hpp>
 
 #include <QVBoxLayout>
 #include <QSplitter>

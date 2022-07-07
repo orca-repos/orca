@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "networkaccessmanager.h"
+#include "networkaccessmanager.hpp"
 
 #include <QCoreApplication>
 #include <QLocale>
 #include <QNetworkReply>
 
 #ifdef Q_OS_UNIX
-#include <sys/utsname.h>
+#include <sys/utsname.hpp>
 #endif
 
 /*!

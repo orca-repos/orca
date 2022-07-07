@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "ioptionspage.h"
+#include "ioptionspage.hpp"
 
-#include <core/icore.h>
+#include <core/icore.hpp>
 
-#include <utils/aspects.h>
-#include <utils/qtcassert.h>
-#include <utils/stringutils.h>
+#include <utils/aspects.hpp>
+#include <utils/qtcassert.hpp>
+#include <utils/stringutils.hpp>
 
 #include <QCheckBox>
 #include <QGroupBox>

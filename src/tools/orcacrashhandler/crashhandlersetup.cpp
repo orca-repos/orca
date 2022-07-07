@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "crashhandlersetup.h"
+#include "crashhandlersetup.hpp"
 
 #include <QtGlobal>
 
@@ -24,7 +24,7 @@
 #include <unistd.h>
 #include <sys/prctl.h>
 
-#include <utils/porting.h>
+#include <utils/porting.hpp>
 
 // Enable compilation with older header that doesn't contain this constant
 // for running on newer libraries that do support it

@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "winutils.h"
+#include "winutils.hpp"
 
-#include "filepath.h"
-#include "qtcassert.h"
+#include "filepath.hpp"
+#include "qtcassert.hpp"
 
 #ifdef Q_OS_WIN
-#include <windows.h>
+#include <Windows.h>
 #endif
 
 #include <QString>

@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "qtlockedfile.h"
+#include "qtlockedfile.hpp"
 
-#include <string.h>
-#include <errno.h>
-#include <unistd.h>
-#include <fcntl.h>
+#include <string.hpp>
+#include <errno.hpp>
+#include <unistd.hpp>
+#include <fcntl.hpp>
 
 namespace SharedTools {
 

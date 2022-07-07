@@ -1,15 +1,15 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "navigationsubwidget.h"
-#include "navigationwidget.h"
-#include "inavigationwidgetfactory.h"
+#include "navigationsubwidget.hpp"
+#include "navigationwidget.hpp"
+#include "inavigationwidgetfactory.hpp"
 
-#include <core/actionmanager/actionmanager.h>
-#include <core/actionmanager/command.h>
-#include <core/icore.h>
+#include <core/actionmanager/actionmanager.hpp>
+#include <core/actionmanager/command.hpp>
+#include <core/icore.hpp>
 
-#include <utils/styledbar.h>
-#include <utils/utilsicons.h>
+#include <utils/styledbar.hpp>
+#include <utils/utilsicons.hpp>
 
 #include <QHBoxLayout>
 #include <QMenu>

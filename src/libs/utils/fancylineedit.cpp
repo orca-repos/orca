@@ -1,14 +1,14 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "camelcasecursor.h"
-#include "execmenu.h"
-#include "fancylineedit.h"
-#include "historycompleter.h"
-#include "hostosinfo.h"
-#include "optional.h"
-#include "qtcassert.h"
-#include "stylehelper.h"
-#include "utilsicons.h"
+#include "camelcasecursor.hpp"
+#include "execmenu.hpp"
+#include "fancylineedit.hpp"
+#include "historycompleter.hpp"
+#include "hostosinfo.hpp"
+#include "optional.hpp"
+#include "qtcassert.hpp"
+#include "stylehelper.hpp"
+#include "utilsicons.hpp"
 
 #include <QAbstractItemView>
 #include <QDebug>

@@ -536,7 +536,7 @@
   <customwidget>
    <class>Utils::PathChooser</class>
    <extends>QWidget</extends>
-   <header location="global">utils/pathchooser.h</header>
+   <header location="global">utils/pathchooser.hpp</header>
    <container>1</container>
    <slots>
     <signal>editingFinished()</signal>
@@ -546,7 +546,7 @@
   <customwidget>
    <class>Utils::ElidingLabel</class>
    <extends>QLabel</extends>
-   <header location="global">utils/elidinglabel.h</header>
+   <header location="global">utils/elidinglabel.hpp</header>
   </customwidget>
  </customwidgets>
  <tabstops>

@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "terminalcommand.h"
+#include "terminalcommand.hpp"
 
-#include <utils/algorithm.h>
-#include <utils/commandline.h>
-#include <utils/environment.h>
-#include <utils/hostosinfo.h>
-#include <utils/qtcassert.h>
+#include <utils/algorithm.hpp>
+#include <utils/commandline.hpp>
+#include <utils/environment.hpp>
+#include <utils/hostosinfo.hpp>
+#include <utils/qtcassert.hpp>
 
 #include <QCoreApplication>
 #include <QFileInfo>

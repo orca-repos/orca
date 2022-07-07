@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "sidebarwidget.h"
-#include "sidebar.h"
-#include "navigationsubwidget.h"
+#include "sidebarwidget.hpp"
+#include "sidebar.hpp"
+#include "navigationsubwidget.hpp"
 
-#include <utils/algorithm.h>
-#include <utils/utilsicons.h>
+#include <utils/algorithm.hpp>
+#include <utils/utilsicons.hpp>
 
 #include <QToolBar>
 #include <QToolButton>

@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "crashhandler.h"
-#include "crashhandlerdialog.h"
-#include "backtracecollector.h"
-#include "utils.h"
+#include "crashhandler.hpp"
+#include "crashhandlerdialog.hpp"
+#include "backtracecollector.hpp"
+#include "utils.hpp"
 
-#include <utils/environment.h>
-#include <utils/fileutils.h>
+#include <utils/environment.hpp>
+#include <utils/fileutils.hpp>
 
 #include <QApplication>
 #include <QDebug>
@@ -18,14 +18,14 @@
 #include <QUrl>
 #include <QVector>
 
-#include <stdio.h>
-#include <stdlib.h>
+#include <stdio.hpp>
+#include <stdlib.hpp>
 
-#include <errno.h>
-#include <unistd.h>
+#include <errno.hpp>
+#include <unistd.hpp>
 
-#include <sys/types.h>
-#include <sys/wait.h>
+#include <sys/types.hpp>
+#include <sys/wait.hpp>
 
 static const char FileDistroInformation[] = "/etc/lsb-release";
 static const char FileKernelVersion[] = "/proc/version";

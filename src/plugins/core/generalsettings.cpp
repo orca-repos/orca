@@ -1,17 +1,17 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "generalsettings.h"
-#include "coreconstants.h"
-#include "icore.h"
+#include "generalsettings.hpp"
+#include "coreconstants.hpp"
+#include "icore.hpp"
 #include "ui_generalsettings.h"
 
-#include <core/dialogs/restartdialog.h>
+#include <core/dialogs/restartdialog.hpp>
 
-#include <utils/algorithm.h>
-#include <utils/checkablemessagebox.h>
-#include <utils/hostosinfo.h>
-#include <utils/infobar.h>
-#include <utils/stylehelper.h>
+#include <utils/algorithm.hpp>
+#include <utils/checkablemessagebox.hpp>
+#include <utils/hostosinfo.hpp>
+#include <utils/infobar.hpp>
+#include <utils/stylehelper.hpp>
 
 #include <QCoreApplication>
 #include <QDir>

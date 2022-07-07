@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "progressmanager_p.h"
+#include "progressmanager_p.hpp"
 
-#include <core/icore.h>
+#include <core/icore.hpp>
 
-#include <utils/utilsicons.h>
+#include <utils/utilsicons.hpp>
 
 #include <QGuiApplication>
 #include <QMainWindow>

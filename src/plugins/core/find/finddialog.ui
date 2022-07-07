@@ -210,7 +210,7 @@
   <customwidget>
    <class>Utils::FancyLineEdit</class>
    <extends>QLineEdit</extends>
-   <header location="global">utils/fancylineedit.h</header>
+   <header location="global">utils/fancylineedit.hpp</header>
   </customwidget>
  </customwidgets>
  <tabstops>

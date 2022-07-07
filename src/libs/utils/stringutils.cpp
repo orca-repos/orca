@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "stringutils.h"
+#include "stringutils.hpp"
 
-#include "hostosinfo.h"
+#include "hostosinfo.hpp"
 
-#include <utils/algorithm.h>
-#include <utils/qtcassert.h>
+#include <utils/algorithm.hpp>
+#include <utils/qtcassert.hpp>
 
 #include <QCoreApplication>
 #include <QDir>

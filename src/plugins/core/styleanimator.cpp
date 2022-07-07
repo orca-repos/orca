@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "styleanimator.h"
+#include "styleanimator.hpp"
 
-#include <utils/algorithm.h>
+#include <utils/algorithm.hpp>
 
 #include <QStyleOption>
 

@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "mimemagicrulematcher_p.h"
+#include "mimemagicrulematcher_p.hpp"
 
-#include "mimetype_p.h"
+#include "mimetype_p.hpp"
 
 using namespace Utils;
 using namespace Utils::Internal;

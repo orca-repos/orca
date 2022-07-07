@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "filecrumblabel.h"
+#include "filecrumblabel.hpp"
 
-#include <utils/hostosinfo.h>
+#include <utils/hostosinfo.hpp>
 
 #include <QDir>
 #include <QUrl>

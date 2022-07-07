@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "fadingindicator.h"
+#include "fadingindicator.hpp"
 
-#include "stylehelper.h"
+#include "stylehelper.hpp"
 
 #include <QGraphicsOpacityEffect>
 #include <QHBoxLayout>

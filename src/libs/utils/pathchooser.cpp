@@ -1,14 +1,14 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "pathchooser.h"
+#include "pathchooser.hpp"
 
-#include "commandline.h"
-#include "environment.h"
-#include "hostosinfo.h"
-#include "macroexpander.h"
-#include "qtcassert.h"
-#include "qtcprocess.h"
-#include "theme/theme.h"
+#include "commandline.hpp"
+#include "environment.hpp"
+#include "hostosinfo.hpp"
+#include "macroexpander.hpp"
+#include "qtcassert.hpp"
+#include "qtcprocess.hpp"
+#include "theme/theme.hpp"
 
 #include <QDebug>
 #include <QFileDialog>

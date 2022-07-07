@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "findtoolwindow.h"
-#include "ifindfilter.h"
-#include "findplugin.h"
+#include "findtoolwindow.hpp"
+#include "ifindfilter.hpp"
+#include "findplugin.hpp"
 
-#include <core/icore.h>
+#include <core/icore.hpp>
 
-#include <utils/qtcassert.h>
-#include <utils/algorithm.h>
+#include <utils/qtcassert.hpp>
+#include <utils/algorithm.hpp>
 
 #include <QSettings>
 #include <QStringListModel>

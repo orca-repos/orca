@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "layoutbuilder.h"
+#include "layoutbuilder.hpp"
 
-#include <utils/algorithm.h>
-#include <utils/aspects.h>
-#include <utils/qtcassert.h>
+#include <utils/algorithm.hpp>
+#include <utils/aspects.hpp>
+#include <utils/qtcassert.hpp>
 
 #include <QFormLayout>
 #include <QGridLayout>

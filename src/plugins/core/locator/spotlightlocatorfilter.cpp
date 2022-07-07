@@ -1,21 +1,21 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "spotlightlocatorfilter.h"
+#include "spotlightlocatorfilter.hpp"
 
-#include <core/messagemanager.h>
-#include <core/editormanager/editormanager.h>
+#include <core/messagemanager.hpp>
+#include <core/editormanager/editormanager.hpp>
 
-#include <utils/algorithm.h>
-#include <utils/commandline.h>
-#include <utils/environment.h>
-#include <utils/fancylineedit.h>
-#include <utils/link.h>
-#include <utils/macroexpander.h>
-#include <utils/pathchooser.h>
-#include <utils/qtcassert.h>
-#include <utils/qtcprocess.h>
-#include <utils/stringutils.h>
-#include <utils/variablechooser.h>
+#include <utils/algorithm.hpp>
+#include <utils/commandline.hpp>
+#include <utils/environment.hpp>
+#include <utils/fancylineedit.hpp>
+#include <utils/link.hpp>
+#include <utils/macroexpander.hpp>
+#include <utils/pathchooser.hpp>
+#include <utils/qtcassert.hpp>
+#include <utils/qtcprocess.hpp>
+#include <utils/stringutils.hpp>
+#include <utils/variablechooser.hpp>
 
 #include <QFormLayout>
 #include <QJsonObject>

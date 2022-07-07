@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "uncommentselection.h"
+#include "uncommentselection.hpp"
 
-#include "qtcassert.h"
-#include "utils/multitextcursor.h"
+#include "qtcassert.hpp"
+#include "utils/multitextcursor.hpp"
 
 #include <QPlainTextEdit>
 #include <QTextBlock>

@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "stylehelper.h"
+#include "stylehelper.hpp"
 
-#include "theme/theme.h"
-#include "hostosinfo.h"
+#include "theme/theme.hpp"
+#include "hostosinfo.hpp"
 
-#include <utils/qtcassert.h>
+#include <utils/qtcassert.hpp>
 
 #include <QPixmapCache>
 #include <QPainter>

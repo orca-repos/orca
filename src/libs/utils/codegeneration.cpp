@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "codegeneration.h"
+#include "codegeneration.hpp"
 
-#include "algorithm.h"
+#include "algorithm.hpp"
 
 #include <QTextStream>
 #include <QSet>
@@ -84,9 +84,9 @@ ORCA_UTILS_EXPORT auto writeQtIncludeSection(const QStringList &qt4, const QStri
 
     // qglobal.h is needed for QT_VERSION
     if (includeQtModule)
-      common.insert(QLatin1String("QtCore/qglobal.h"));
+      common.insert(QLatin1String("QtCore/qglobal.hpp"));
     else
-      common.insert(QLatin1String("qglobal.h"));
+      common.insert(QLatin1String("qglobal.hpp"));
 
     qt4Only.subtract(common);
     qt5Only.subtract(common);

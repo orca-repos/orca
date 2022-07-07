@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "fileutils.h"
-#include "reloadpromptutils.h"
+#include "fileutils.hpp"
+#include "reloadpromptutils.hpp"
 
 #include <QCoreApplication>
 #include <QDir>

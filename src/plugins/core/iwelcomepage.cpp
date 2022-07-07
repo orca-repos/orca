@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "iwelcomepage.h"
-#include "icore.h"
-#include "welcomepagehelper.h"
+#include "iwelcomepage.hpp"
+#include "icore.hpp"
+#include "welcomepagehelper.hpp"
 
-#include <utils/theme/theme.h>
+#include <utils/theme/theme.hpp>
 
 #include <QHBoxLayout>
 #include <QLabel>

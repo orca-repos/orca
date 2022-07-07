@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "mimetypemagicdialog.h"
-#include "icore.h"
+#include "mimetypemagicdialog.hpp"
+#include "icore.hpp"
 
-#include <utils/headerviewstretcher.h>
-#include <utils/qtcassert.h>
+#include <utils/headerviewstretcher.hpp>
+#include <utils/qtcassert.hpp>
 
 #include <QDesktopServices>
 #include <QMessageBox>

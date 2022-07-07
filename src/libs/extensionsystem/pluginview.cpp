@@ -1,15 +1,15 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "pluginview.h"
-#include "pluginmanager.h"
-#include "pluginspec.h"
-#include "pluginspec_p.h"
+#include "pluginview.hpp"
+#include "pluginmanager.hpp"
+#include "pluginspec.hpp"
+#include "pluginspec_p.hpp"
 
-#include <utils/algorithm.h>
-#include <utils/categorysortfiltermodel.h>
-#include <utils/utilsicons.h>
-#include <utils/itemviews.h>
-#include <utils/qtcassert.h>
+#include <utils/algorithm.hpp>
+#include <utils/categorysortfiltermodel.hpp>
+#include <utils/utilsicons.hpp>
+#include <utils/itemviews.hpp>
+#include <utils/qtcassert.hpp>
 
 #include <QDebug>
 #include <QDir>

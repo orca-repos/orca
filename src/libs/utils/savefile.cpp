@@ -1,14 +1,14 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "savefile.h"
-#include "qtcassert.h"
-#include "fileutils.h"
+#include "savefile.hpp"
+#include "qtcassert.hpp"
+#include "fileutils.hpp"
 #ifdef Q_OS_WIN
-#  include <windows.h>
+#  include <Windows.h>
 #  include <io.h>
 #else
-#  include <unistd.h>
-#  include <sys/stat.h>
+#  include <unistd.hpp>
+#  include <sys/stat.hpp>
 #endif
 
 namespace Utils {

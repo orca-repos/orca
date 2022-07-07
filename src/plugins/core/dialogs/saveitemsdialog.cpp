@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "saveitemsdialog.h"
+#include "saveitemsdialog.hpp"
 
-#include <core/diffservice.h>
-#include <core/fileiconprovider.h>
-#include <core/idocument.h>
+#include <core/diffservice.hpp>
+#include <core/fileiconprovider.hpp>
+#include <core/idocument.hpp>
 
-#include <utils/fileutils.h>
-#include <utils/hostosinfo.h>
+#include <utils/fileutils.hpp>
+#include <utils/hostosinfo.hpp>
 
 #include <QDir>
 #include <QFileInfo>

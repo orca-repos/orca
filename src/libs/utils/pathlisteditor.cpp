@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "pathlisteditor.h"
+#include "pathlisteditor.hpp"
 
-#include "hostosinfo.h"
-#include "stringutils.h"
-#include "fileutils.h"
+#include "hostosinfo.hpp"
+#include "stringutils.hpp"
+#include "fileutils.hpp"
 
 #include <QDebug>
 #include <QFileDialog>

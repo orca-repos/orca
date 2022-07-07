@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "archive.h"
+#include "archive.hpp"
 
-#include "algorithm.h"
-#include "checkablemessagebox.h"
-#include "environment.h"
-#include "mimetypes/mimedatabase.h"
-#include "qtcassert.h"
-#include "qtcprocess.h"
+#include "algorithm.hpp"
+#include "checkablemessagebox.hpp"
+#include "environment.hpp"
+#include "mimetypes/mimedatabase.hpp"
+#include "qtcassert.hpp"
+#include "qtcprocess.hpp"
 
 #include <QDir>
 #include <QPushButton>

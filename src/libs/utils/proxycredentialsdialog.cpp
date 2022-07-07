@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "proxycredentialsdialog.h"
+#include "proxycredentialsdialog.hpp"
 #include "ui_proxycredentialsdialog.h"
 
-#include <utils/networkaccessmanager.h>
+#include <utils/networkaccessmanager.hpp>
 #include <QNetworkProxy>
 
 using namespace Utils;

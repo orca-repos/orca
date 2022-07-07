@@ -1,22 +1,22 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "fileutils.h"
+#include "fileutils.hpp"
 
-#include <core/coreconstants.h>
-#include <core/documentmanager.h>
-#include <core/foldernavigationwidget.h>
-#include <core/icore.h>
-#include <core/iversioncontrol.h>
-#include <core/messagemanager.h>
-#include <core/navigationwidget.h>
-#include <core/vcsmanager.h>
+#include <core/coreconstants.hpp>
+#include <core/documentmanager.hpp>
+#include <core/foldernavigationwidget.hpp>
+#include <core/icore.hpp>
+#include <core/iversioncontrol.hpp>
+#include <core/messagemanager.hpp>
+#include <core/navigationwidget.hpp>
+#include <core/vcsmanager.hpp>
 
-#include <utils/commandline.h>
-#include <utils/environment.h>
-#include <utils/hostosinfo.h>
-#include <utils/qtcprocess.h>
-#include <utils/textfileformat.h>
-#include <utils/unixutils.h>
+#include <utils/commandline.hpp>
+#include <utils/environment.hpp>
+#include <utils/hostosinfo.hpp>
+#include <utils/qtcprocess.hpp>
+#include <utils/textfileformat.hpp>
+#include <utils/unixutils.hpp>
 
 #include <QApplication>
 #include <QDir>

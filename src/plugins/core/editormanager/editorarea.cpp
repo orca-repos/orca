@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "editorarea.h"
-#include "editormanager.h"
-#include "ieditor.h"
+#include "editorarea.hpp"
+#include "editormanager.hpp"
+#include "ieditor.hpp"
 
-#include <core/coreconstants.h>
-#include <core/icontext.h>
-#include <core/idocument.h>
-#include <core/icore.h>
+#include <core/coreconstants.hpp>
+#include <core/icontext.hpp>
+#include <core/idocument.hpp>
+#include <core/icore.hpp>
 
 #include <QApplication>
 

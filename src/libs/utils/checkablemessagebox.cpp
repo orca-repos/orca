@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "checkablemessagebox.h"
+#include "checkablemessagebox.hpp"
 
-#include "qtcassert.h"
-#include "qtcsettings.h"
+#include "qtcassert.hpp"
+#include "qtcsettings.hpp"
 
 #include <QApplication>
 #include <QCheckBox>

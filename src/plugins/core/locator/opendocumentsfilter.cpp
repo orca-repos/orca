@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "opendocumentsfilter.h"
+#include "opendocumentsfilter.hpp"
 
-#include <core/editormanager/editormanager.h>
-#include <core/locator/basefilefilter.h>
+#include <core/editormanager/editormanager.hpp>
+#include <core/locator/basefilefilter.hpp>
 
-#include <utils/fileutils.h>
-#include <utils/link.h>
+#include <utils/fileutils.hpp>
+#include <utils/link.hpp>
 
 #include <QAbstractItemModel>
 #include <QMutexLocker>

@@ -1,33 +1,33 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "foldernavigationwidget.h"
+#include "foldernavigationwidget.hpp"
 
-#include <core/actionmanager/actionmanager.h>
-#include <core/actionmanager/command.h>
-#include <core/coreicons.h>
-#include <core/diffservice.h>
-#include <core/documentmanager.h>
-#include <core/editormanager/editormanager.h>
-#include <core/editormanager/ieditor.h>
-#include <core/fileiconprovider.h>
-#include <core/fileutils.h>
-#include <core/icontext.h>
-#include <core/icore.h>
-#include <core/idocument.h>
-#include <core/iwizardfactory.h>
+#include <core/actionmanager/actionmanager.hpp>
+#include <core/actionmanager/command.hpp>
+#include <core/coreicons.hpp>
+#include <core/diffservice.hpp>
+#include <core/documentmanager.hpp>
+#include <core/editormanager/editormanager.hpp>
+#include <core/editormanager/ieditor.hpp>
+#include <core/fileiconprovider.hpp>
+#include <core/fileutils.hpp>
+#include <core/icontext.hpp>
+#include <core/icore.hpp>
+#include <core/idocument.hpp>
+#include <core/iwizardfactory.hpp>
 
-#include <utils/algorithm.h>
-#include <utils/filecrumblabel.h>
-#include <utils/fileutils.h>
-#include <utils/hostosinfo.h>
-#include <utils/navigationtreeview.h>
-#include <utils/qtcassert.h>
-#include <utils/removefiledialog.h>
-#include <utils/stringutils.h>
-#include <utils/styledbar.h>
-#include <utils/utilsicons.h>
+#include <utils/algorithm.hpp>
+#include <utils/filecrumblabel.hpp>
+#include <utils/fileutils.hpp>
+#include <utils/hostosinfo.hpp>
+#include <utils/navigationtreeview.hpp>
+#include <utils/qtcassert.hpp>
+#include <utils/removefiledialog.hpp>
+#include <utils/stringutils.hpp>
+#include <utils/styledbar.hpp>
+#include <utils/utilsicons.hpp>
 
-#include <extensionsystem/pluginmanager.h>
+#include <extensionsystem/pluginmanager.hpp>
 
 #include <QAction>
 #include <QApplication>

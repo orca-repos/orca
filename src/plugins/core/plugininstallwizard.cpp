@@ -1,24 +1,24 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "plugininstallwizard.h"
-#include "coreplugin.h"
-#include "icore.h"
+#include "plugininstallwizard.hpp"
+#include "coreplugin.hpp"
+#include "icore.hpp"
 
-#include <utils/archive.h>
-#include <utils/fileutils.h>
-#include <utils/hostosinfo.h>
-#include <utils/infolabel.h>
-#include <utils/pathchooser.h>
-#include <utils/qtcassert.h>
-#include <utils/qtcprocess.h>
-#include <utils/runextensions.h>
-#include <utils/temporarydirectory.h>
-#include <utils/wizard.h>
-#include <utils/wizardpage.h>
+#include <utils/archive.hpp>
+#include <utils/fileutils.hpp>
+#include <utils/hostosinfo.hpp>
+#include <utils/infolabel.hpp>
+#include <utils/pathchooser.hpp>
+#include <utils/qtcassert.hpp>
+#include <utils/qtcprocess.hpp>
+#include <utils/runextensions.hpp>
+#include <utils/temporarydirectory.hpp>
+#include <utils/wizard.hpp>
+#include <utils/wizardpage.hpp>
 
-#include <app/app_version.h>
+#include <app/app_version.hpp>
 
-#include <extensionsystem/pluginspec.h>
+#include <extensionsystem/pluginspec.hpp>
 
 #include <QButtonGroup>
 #include <QDir>

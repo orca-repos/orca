@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "ifindfilter.h"
+#include "ifindfilter.hpp"
 
-#include <core/coreicons.h>
+#include <core/coreicons.hpp>
 
 #include <QApplication>
 #include <QKeySequence>

@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "opendocumentstreeview.h"
+#include "opendocumentstreeview.hpp"
 
-#include <utils/utilsicons.h>
+#include <utils/utilsicons.hpp>
 
 #include <QApplication>
 #include <QHeaderView>

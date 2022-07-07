@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "patchtool.h"
-#include "messagemanager.h"
-#include "icore.h"
+#include "patchtool.hpp"
+#include "messagemanager.hpp"
+#include "icore.hpp"
 
-#include <utils/environment.h>
-#include <utils/qtcprocess.h>
+#include <utils/environment.hpp>
+#include <utils/qtcprocess.hpp>
 
 #include <QApplication>
 

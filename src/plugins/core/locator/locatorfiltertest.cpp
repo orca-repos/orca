@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "locatorfiltertest.h"
-#include "locatorsearchutils.h"
+#include "locatorfiltertest.hpp"
+#include "locatorsearchutils.hpp"
 
-#include <utils/runextensions.h>
+#include <utils/runextensions.hpp>
 
 #include <QFuture>
 #include <QList>

@@ -1,17 +1,17 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "editortoolbar.h"
+#include "editortoolbar.hpp"
 
-#include <core/actionmanager/actionmanager.h>
-#include <core/actionmanager/command.h>
-#include <core/editormanager/documentmodel.h>
-#include <core/editormanager/editormanager.h>
-#include <core/editormanager/editormanager_p.h>
-#include <core/editormanager/ieditor.h>
-#include <core/fileiconprovider.h>
+#include <core/actionmanager/actionmanager.hpp>
+#include <core/actionmanager/command.hpp>
+#include <core/editormanager/documentmodel.hpp>
+#include <core/editormanager/editormanager.hpp>
+#include <core/editormanager/editormanager_p.hpp>
+#include <core/editormanager/ieditor.hpp>
+#include <core/fileiconprovider.hpp>
 
-#include <utils/qtcassert.h>
-#include <utils/utilsicons.h>
+#include <utils/qtcassert.hpp>
+#include <utils/utilsicons.hpp>
 
 #include <QApplication>
 #include <QComboBox>

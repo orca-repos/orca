@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "elidinglabel.h"
+#include "elidinglabel.hpp"
 #include <QFontMetrics>
 #include <QPainter>
 #include <QStyle>

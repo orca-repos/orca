@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "qtlocalpeer.h"
+#include "qtlocalpeer.hpp"
 
 #include <QCoreApplication>
 #include <QDataStream>
@@ -14,8 +14,8 @@ static PProcessIdToSessionId pProcessIdToSessionId = 0;
 #endif
 
 #if defined(Q_OS_UNIX)
-#include <time.h>
-#include <unistd.h>
+#include <time.hpp>
+#include <unistd.hpp>
 #endif
 
 namespace SharedTools {

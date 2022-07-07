@@ -1,34 +1,34 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "locator.h"
-#include "directoryfilter.h"
-#include "executefilter.h"
-#include "externaltoolsfilter.h"
-#include "filesystemfilter.h"
-#include "javascriptfilter.h"
-#include "locatorconstants.h"
-#include "locatorfiltersfilter.h"
-#include "locatormanager.h"
-#include "locatorsettingspage.h"
-#include "locatorwidget.h"
-#include "opendocumentsfilter.h"
-#include "spotlightlocatorfilter.h"
-#include "urllocatorfilter.h"
+#include "locator.hpp"
+#include "directoryfilter.hpp"
+#include "executefilter.hpp"
+#include "externaltoolsfilter.hpp"
+#include "filesystemfilter.hpp"
+#include "javascriptfilter.hpp"
+#include "locatorconstants.hpp"
+#include "locatorfiltersfilter.hpp"
+#include "locatormanager.hpp"
+#include "locatorsettingspage.hpp"
+#include "locatorwidget.hpp"
+#include "opendocumentsfilter.hpp"
+#include "spotlightlocatorfilter.hpp"
+#include "urllocatorfilter.hpp"
 
-#include <core/coreplugin.h>
-#include <core/coreconstants.h>
-#include <core/icore.h>
-#include <core/settingsdatabase.h>
-#include <core/statusbarmanager.h>
-#include <core/actionmanager/actionmanager.h>
-#include <core/actionmanager/actioncontainer.h>
-#include <core/editormanager/editormanager_p.h>
-#include <core/menubarfilter.h>
-#include <core/progressmanager/progressmanager.h>
+#include <core/coreplugin.hpp>
+#include <core/coreconstants.hpp>
+#include <core/icore.hpp>
+#include <core/settingsdatabase.hpp>
+#include <core/statusbarmanager.hpp>
+#include <core/actionmanager/actionmanager.hpp>
+#include <core/actionmanager/actioncontainer.hpp>
+#include <core/editormanager/editormanager_p.hpp>
+#include <core/menubarfilter.hpp>
+#include <core/progressmanager/progressmanager.hpp>
 
-#include <utils/algorithm.h>
-#include <utils/mapreduce.h>
-#include <utils/utilsicons.h>
+#include <utils/algorithm.hpp>
+#include <utils/mapreduce.hpp>
+#include <utils/utilsicons.hpp>
 
 #include <QAction>
 #include <utility>

@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "filewizardpage.h"
+#include "filewizardpage.hpp"
 #include "ui_filewizardpage.h"
 
-#include "wizard.h"
+#include "wizard.hpp"
 
 /*!
   \class Utils::FileWizardPage

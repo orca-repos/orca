@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "itemviewfind.h"
+#include "itemviewfind.hpp"
 
-#include <core/findplaceholder.h>
+#include <core/findplaceholder.hpp>
 
-#include <aggregation/aggregate.h>
+#include <aggregation/aggregate.hpp>
 
 #include <QTextCursor>
 #include <QTreeView>

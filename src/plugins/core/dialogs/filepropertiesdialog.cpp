@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "filepropertiesdialog.h"
+#include "filepropertiesdialog.hpp"
 #include "ui_filepropertiesdialog.h"
 
-#include <core/editormanager/editormanager.h>
-#include <core/editormanager/ieditorfactory.h>
+#include <core/editormanager/editormanager.hpp>
+#include <core/editormanager/ieditorfactory.hpp>
 
-#include <utils/fileutils.h>
-#include <utils/mimetypes/mimedatabase.h>
+#include <utils/fileutils.hpp>
+#include <utils/mimetypes/mimedatabase.hpp>
 
 #include <QDateTime>
 #include <QDebug>

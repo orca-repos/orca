@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "plugindetailsview.h"
+#include "plugindetailsview.hpp"
 #include "ui_plugindetailsview.h"
 
-#include "pluginmanager.h"
-#include "pluginspec.h"
+#include "pluginmanager.hpp"
+#include "pluginspec.hpp"
 
-#include <utils/algorithm.h>
+#include <utils/algorithm.hpp>
 
 #include <QDir>
 #include <QJsonObject>

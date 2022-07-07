@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "directoryfilter.h"
+#include "directoryfilter.hpp"
 #include "ui_directoryfilter.h"
-#include "locator.h"
+#include "locator.hpp"
 
-#include <core/coreconstants.h>
+#include <core/coreconstants.hpp>
 
-#include <utils/algorithm.h>
-#include <utils/filesearch.h>
+#include <utils/algorithm.hpp>
+#include <utils/filesearch.hpp>
 
 #include <QJsonArray>
 #include <QJsonObject>
@@ -28,7 +28,7 @@ constexpr char k_filters_key[] = "filters";
 constexpr char k_files_key[] = "files";
 constexpr char k_exclusion_filters_key[] = "exclusionFilters";
 
-const QStringList k_filters_default = {"*.h", "*.cpp", "*.ui", "*.qrc"};
+const QStringList k_filters_default = {"*.hpp", "*.cpp", "*.ui", "*.qrc"};
 const QStringList k_exclusion_filters_default = {"*/.git/*", "*/.cvs/*", "*/.svn/*"};
 
 static auto defaultDisplayName() -> QString

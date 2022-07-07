@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "unixutils.h"
+#include "unixutils.hpp"
 
-#include "fileutils.h"
-#include "qtcsettings.h"
+#include "fileutils.hpp"
+#include "qtcsettings.hpp"
 
 #include <QSettings>
 #include <QFileInfo>

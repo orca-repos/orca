@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "variablechooser.h"
+#include "variablechooser.hpp"
 
-#include "fancylineedit.h"
-#include "headerviewstretcher.h" // IconButton
-#include "macroexpander.h"
-#include "treemodel.h"
-#include "qtcassert.h"
-#include "utilsicons.h"
+#include "fancylineedit.hpp"
+#include "headerviewstretcher.hpp" // IconButton
+#include "macroexpander.hpp"
+#include "treemodel.hpp"
+#include "qtcassert.hpp"
+#include "utilsicons.hpp"
 
 #include <QApplication>
 #include <QAbstractItemModel>

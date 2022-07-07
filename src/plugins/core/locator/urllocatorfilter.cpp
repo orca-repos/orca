@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "urllocatorfilter.h"
+#include "urllocatorfilter.hpp"
 
-#include <utils/algorithm.h>
-#include <utils/stringutils.h>
+#include <utils/algorithm.hpp>
+#include <utils/stringutils.hpp>
 
 #include <QDesktopServices>
 #include <QJsonArray>

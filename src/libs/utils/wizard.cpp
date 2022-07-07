@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "wizard.h"
+#include "wizard.hpp"
 
-#include "algorithm.h"
-#include "hostosinfo.h"
-#include "qtcassert.h"
-#include "wizardpage.h"
+#include "algorithm.hpp"
+#include "hostosinfo.hpp"
+#include "qtcassert.hpp"
+#include "wizardpage.hpp"
 
-#include <utils/theme/theme.h>
+#include <utils/theme/theme.hpp>
 
 #include <QDebug>
 #include <QDialog>

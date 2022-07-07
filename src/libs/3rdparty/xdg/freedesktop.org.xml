@@ -33232,7 +33232,7 @@
     <comment xml:lang="zh_CN">C 程序头文件</comment>
     <comment xml:lang="zh_TW">C 標頭檔</comment>
     <sub-class-of type="text/x-csrc"/>
-    <glob pattern="*.h"/>
+    <glob pattern="*.hpp"/>
   </mime-type>
   <mime-type type="text/x-cmake">
     <comment>CMake source code</comment>

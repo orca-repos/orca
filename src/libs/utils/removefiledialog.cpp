@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "removefiledialog.h"
+#include "removefiledialog.hpp"
 #include "ui_removefiledialog.h"
 
-#include <utils/filepath.h>
+#include <utils/filepath.hpp>
 
 namespace Utils {
 

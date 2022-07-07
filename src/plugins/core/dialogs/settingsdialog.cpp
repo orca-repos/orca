@@ -1,15 +1,15 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "settingsdialog.h"
+#include "settingsdialog.hpp"
 
-#include <core/icore.h>
-#include <core/dialogs/ioptionspage.h>
-#include <core/iwizardfactory.h>
+#include <core/icore.hpp>
+#include <core/dialogs/ioptionspage.hpp>
+#include <core/iwizardfactory.hpp>
 
-#include <utils/algorithm.h>
-#include <utils/hostosinfo.h>
-#include <utils/fancylineedit.h>
-#include <utils/qtcassert.h>
+#include <utils/algorithm.hpp>
+#include <utils/hostosinfo.hpp>
+#include <utils/fancylineedit.hpp>
+#include <utils/qtcassert.hpp>
 
 #include <QApplication>
 #include <QDialog>

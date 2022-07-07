@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "futureprogress.h"
-#include "progressbar.h"
+#include "futureprogress.hpp"
+#include "progressbar.hpp"
 
-#include <utils/stylehelper.h>
-#include <utils/theme/theme.h>
+#include <utils/stylehelper.hpp>
+#include <utils/theme/theme.hpp>
 
 #include <QCoreApplication>
 #include <QFutureWatcher>

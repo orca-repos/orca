@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "temporarydirectory.h"
+#include "temporarydirectory.hpp"
 
-#include "fileutils.h"
+#include "fileutils.hpp"
 
 #include <QtCore/QCoreApplication>
 
-#include "qtcassert.h"
+#include "qtcassert.hpp"
 
 namespace Utils {
 

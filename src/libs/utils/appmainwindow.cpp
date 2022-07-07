@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "appmainwindow.h"
-#include "theme/theme_p.h"
+#include "appmainwindow.hpp"
+#include "theme/theme_p.hpp"
 
 #ifdef Q_OS_WIN
-#include <windows.h>
+#include <Windows.h>
 #endif
 
 #include <QEvent>

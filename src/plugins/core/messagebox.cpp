@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "messagebox.h"
+#include "messagebox.hpp"
 
 #include <QMessageBox>
 
-#include "icore.h"
+#include "icore.hpp"
 
 namespace Core {
 namespace AsynchronousMessageBox {

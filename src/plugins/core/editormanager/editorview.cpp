@@ -1,25 +1,25 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "editorview.h"
+#include "editorview.hpp"
 
-#include "editormanager.h"
-#include "editormanager_p.h"
-#include "documentmodel.h"
-#include "documentmodel_p.h"
+#include "editormanager.hpp"
+#include "editormanager_p.hpp"
+#include "documentmodel.hpp"
+#include "documentmodel_p.hpp"
 
-#include <core/actionmanager/actionmanager.h>
-#include <core/editormanager/ieditor.h>
-#include <core/editortoolbar.h>
-#include <core/findplaceholder.h>
-#include <core/icore.h>
-#include <core/locator/locatorconstants.h>
-#include <core/minisplitter.h>
-#include <utils/algorithm.h>
-#include <utils/infobar.h>
-#include <utils/qtcassert.h>
-#include <utils/theme/theme.h>
-#include <utils/link.h>
-#include <utils/utilsicons.h>
+#include <core/actionmanager/actionmanager.hpp>
+#include <core/editormanager/ieditor.hpp>
+#include <core/editortoolbar.hpp>
+#include <core/findplaceholder.hpp>
+#include <core/icore.hpp>
+#include <core/locator/locatorconstants.hpp>
+#include <core/minisplitter.hpp>
+#include <utils/algorithm.hpp>
+#include <utils/infobar.hpp>
+#include <utils/qtcassert.hpp>
+#include <utils/theme/theme.hpp>
+#include <utils/link.hpp>
+#include <utils/utilsicons.hpp>
 
 #include <QFileInfo>
 #include <QHBoxLayout>

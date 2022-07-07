@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "commandbutton.h"
-#include "actionmanager.h"
-#include "command.h"
+#include "commandbutton.hpp"
+#include "actionmanager.hpp"
+#include "command.hpp"
 
-#include <utils/proxyaction.h>
+#include <utils/proxyaction.hpp>
 
 using namespace Utils;
 

@@ -1,14 +1,14 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "terminalprocess_p.h"
+#include "terminalprocess_p.hpp"
 
-#include <utils/environment.h>
-#include <utils/hostosinfo.h>
-#include <utils/commandline.h>
-#include <utils/qtcassert.h>
-#include <utils/qtcprocess.h>
-#include <utils/terminalcommand.h>
-#include <utils/winutils.h>
+#include <utils/environment.hpp>
+#include <utils/hostosinfo.hpp>
+#include <utils/commandline.hpp>
+#include <utils/qtcassert.hpp>
+#include <utils/qtcprocess.hpp>
+#include <utils/terminalcommand.hpp>
+#include <utils/winutils.hpp>
 
 #include <QAbstractEventDispatcher>
 #include <QCoreApplication>
@@ -23,17 +23,17 @@
 
 #ifdef Q_OS_WIN
 
-#  include <windows.h>
+#  include <Windows.h>
 #  include <stdlib.h>
 #  include <cstring>
 
 #else
 
-#  include <sys/stat.h>
-#  include <sys/types.h>
-#  include <errno.h>
-#  include <string.h>
-#  include <unistd.h>
+#  include <sys/stat.hpp>
+#  include <sys/types.hpp>
+#  include <errno.hpp>
+#  include <string.hpp>
+#  include <unistd.hpp>
 
 #endif
 

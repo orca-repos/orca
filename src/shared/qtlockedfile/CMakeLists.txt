@@ -4,7 +4,7 @@ else()
   set(OS_SOURCES qtlockedfile_unix.cpp)
 endif()
 
-add_library(shared_qtlockedfile STATIC ${OS_SOURCES} qtlockedfile.cpp qtlockedfile.h)
+add_library(shared_qtlockedfile STATIC ${OS_SOURCES} qtlockedfile.cpp qtlockedfile.hpp)
 target_link_libraries(shared_qtlockedfile Qt6::Core)
 target_include_directories(shared_qtlockedfile PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}")
 if (WIN32)

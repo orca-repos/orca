@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "shellcommandpage.h"
-#include "shellcommand.h"
-#include "outputformatter.h"
-#include "qtcassert.h"
-#include "theme/theme.h"
+#include "shellcommandpage.hpp"
+#include "shellcommand.hpp"
+#include "outputformatter.hpp"
+#include "qtcassert.hpp"
+#include "theme/theme.hpp"
 
 #include <QAbstractButton>
 #include <QApplication>

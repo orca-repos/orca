@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "searchresulttreeview.h"
-#include "searchresulttreeitemroles.h"
-#include "searchresulttreemodel.h"
-#include "searchresulttreeitemdelegate.h"
+#include "searchresulttreeview.hpp"
+#include "searchresulttreeitemroles.hpp"
+#include "searchresulttreemodel.hpp"
+#include "searchresulttreeitemdelegate.hpp"
 
-#include <utils/qtcassert.h>
+#include <utils/qtcassert.hpp>
 
 #include <QHeaderView>
 #include <QKeyEvent>

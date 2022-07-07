@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "filenamevalidatinglineedit.h"
-#include "qtcassert.h"
+#include "filenamevalidatinglineedit.hpp"
+#include "qtcassert.hpp"
 
 #include <QRegularExpression>
 #include <QDebug>

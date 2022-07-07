@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "persistentsettings.h"
+#include "persistentsettings.hpp"
 
 #include <QDebug>
 #include <QDir>
@@ -17,8 +17,8 @@
 #include <QMessageBox>
 #endif
 
-#include <utils/porting.h>
-#include <utils/qtcassert.h>
+#include <utils/porting.hpp>
+#include <utils/qtcassert.hpp>
 
 // Read and write rectangle in X11 resource syntax "12x12+4+3"
 static auto rectangleToString(const QRect &r) -> QString

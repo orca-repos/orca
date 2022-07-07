@@ -1,17 +1,17 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "modemanager.h"
-#include "fancytabwidget.h"
-#include "fancyactionbar.h"
-#include "icore.h"
-#include "mainwindow.h"
+#include "modemanager.hpp"
+#include "fancytabwidget.hpp"
+#include "fancyactionbar.hpp"
+#include "icore.hpp"
+#include "mainwindow.hpp"
 
-#include <core/actionmanager/actionmanager.h>
-#include <core/actionmanager/command.h>
-#include <core/imode.h>
+#include <core/actionmanager/actionmanager.hpp>
+#include <core/actionmanager/command.hpp>
+#include <core/imode.hpp>
 
-#include <utils/algorithm.h>
-#include <utils/qtcassert.h>
+#include <utils/algorithm.hpp>
+#include <utils/qtcassert.hpp>
 
 #include <QAction>
 #include <QDebug>

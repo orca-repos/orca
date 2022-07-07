@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "tooltip.h"
-#include "tips.h"
-#include "effects.h"
+#include "tooltip.hpp"
+#include "tips.hpp"
+#include "effects.hpp"
 
-#include <utils/faketooltip.h>
-#include <utils/hostosinfo.h>
-#include <utils/qtcassert.h>
+#include <utils/faketooltip.hpp>
+#include <utils/hostosinfo.hpp>
+#include <utils/qtcassert.hpp>
 
 #include <QApplication>
 #include <QColor>

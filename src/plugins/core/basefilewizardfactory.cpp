@@ -1,16 +1,16 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "basefilewizardfactory.h"
-#include "basefilewizard.h"
-#include "icontext.h"
-#include "editormanager/editormanager.h"
-#include "dialogs/promptoverwritedialog.h"
+#include "basefilewizardfactory.hpp"
+#include "basefilewizard.hpp"
+#include "icontext.hpp"
+#include "editormanager/editormanager.hpp"
+#include "dialogs/promptoverwritedialog.hpp"
 
-#include <utils/filewizardpage.h>
-#include <utils/mimetypes/mimedatabase.h>
-#include <utils/qtcassert.h>
-#include <utils/stringutils.h>
-#include <utils/wizard.h>
+#include <utils/filewizardpage.hpp>
+#include <utils/mimetypes/mimedatabase.hpp>
+#include <utils/qtcassert.hpp>
+#include <utils/stringutils.hpp>
+#include <utils/wizard.hpp>
 
 #include <QDir>
 #include <QFileInfo>

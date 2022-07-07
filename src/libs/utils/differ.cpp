@@ -8,7 +8,7 @@ Preprocessing and postprocessing functions inspired by "Diff Strategies"
 publication by Neil Fraser: http://neil.fraser.name/writing/diff/
 */
 
-#include "differ.h"
+#include "differ.hpp"
 
 #include <QList>
 #include <QRegularExpression>

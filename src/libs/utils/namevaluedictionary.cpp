@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "algorithm.h"
-#include "namevaluedictionary.h"
-#include "qtcassert.h"
+#include "algorithm.hpp"
+#include "namevaluedictionary.hpp"
+#include "qtcassert.hpp"
 
 #include <QDir>
 

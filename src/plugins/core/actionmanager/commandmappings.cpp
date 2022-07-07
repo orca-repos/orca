@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "commandmappings.h"
-#include "commandsfile.h"
+#include "commandmappings.hpp"
+#include "commandsfile.hpp"
 
-#include <core/dialogs/shortcutsettings.h>
+#include <core/dialogs/shortcutsettings.hpp>
 
-#include <utils/headerviewstretcher.h>
-#include <utils/fancylineedit.h>
+#include <utils/headerviewstretcher.hpp>
+#include <utils/fancylineedit.hpp>
 
 #include <QGroupBox>
 #include <QHBoxLayout>

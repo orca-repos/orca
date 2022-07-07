@@ -1,14 +1,14 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "outputformatter.h"
+#include "outputformatter.hpp"
 
-#include "algorithm.h"
-#include "ansiescapecodehandler.h"
-#include "fileinprojectfinder.h"
-#include "link.h"
-#include "qtcassert.h"
-#include "qtcprocess.h"
-#include "theme/theme.h"
+#include "algorithm.hpp"
+#include "ansiescapecodehandler.hpp"
+#include "fileinprojectfinder.hpp"
+#include "link.hpp"
+#include "qtcassert.hpp"
+#include "qtcprocess.hpp"
+#include "theme/theme.hpp"
 
 #include <QDir>
 #include <QFileInfo>

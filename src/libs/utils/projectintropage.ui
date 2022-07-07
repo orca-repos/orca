@@ -121,18 +121,18 @@
   <customwidget>
    <class>Utils::FancyLineEdit</class>
    <extends>QLineEdit</extends>
-   <header location="global">utils/fancylineedit.h</header>
+   <header location="global">utils/fancylineedit.hpp</header>
   </customwidget>
   <customwidget>
    <class>Utils::PathChooser</class>
    <extends>QWidget</extends>
-   <header location="global">utils/pathchooser.h</header>
+   <header location="global">utils/pathchooser.hpp</header>
    <container>1</container>
   </customwidget>
   <customwidget>
    <class>Utils::InfoLabel</class>
    <extends>QLabel</extends>
-   <header location="global">utils/infolabel.h</header>
+   <header location="global">utils/infolabel.hpp</header>
   </customwidget>
  </customwidgets>
  <resources/>

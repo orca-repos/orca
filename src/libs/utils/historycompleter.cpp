@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "historycompleter.h"
+#include "historycompleter.hpp"
 
-#include "fancylineedit.h"
-#include "qtcassert.h"
-#include "qtcsettings.h"
-#include "theme/theme.h"
-#include "utilsicons.h"
+#include "fancylineedit.hpp"
+#include "qtcassert.hpp"
+#include "qtcsettings.hpp"
+#include "theme/theme.hpp"
+#include "utilsicons.hpp"
 
 #include <QItemDelegate>
 #include <QKeyEvent>

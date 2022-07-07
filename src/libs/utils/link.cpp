@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "link.h"
+#include "link.hpp"
 
-#include "linecolumn.h"
+#include "linecolumn.hpp"
 
 namespace Utils {
 

@@ -1,21 +1,21 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "findtoolbar.h"
-#include "ifindfilter.h"
-#include "findplugin.h"
-#include "optionspopup.h"
+#include "findtoolbar.hpp"
+#include "ifindfilter.hpp"
+#include "findplugin.hpp"
+#include "optionspopup.hpp"
 
-#include <core/coreicons.h>
-#include <core/coreplugin.h>
-#include <core/icontext.h>
-#include <core/icore.h>
-#include <core/actionmanager/actionmanager.h>
-#include <core/actionmanager/actioncontainer.h>
-#include <core/actionmanager/command.h>
-#include <core/findplaceholder.h>
+#include <core/coreicons.hpp>
+#include <core/coreplugin.hpp>
+#include <core/icontext.hpp>
+#include <core/icore.hpp>
+#include <core/actionmanager/actionmanager.hpp>
+#include <core/actionmanager/actioncontainer.hpp>
+#include <core/actionmanager/command.hpp>
+#include <core/findplaceholder.hpp>
 
-#include <utils/hostosinfo.h>
-#include <utils/utilsicons.h>
+#include <utils/hostosinfo.hpp>
+#include <utils/utilsicons.hpp>
 
 #include <QSettings>
 #include <QAbstractItemView>

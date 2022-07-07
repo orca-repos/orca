@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "messageoutputwindow.h"
-#include "outputwindow.h"
-#include "icontext.h"
-#include "coreconstants.h"
+#include "messageoutputwindow.hpp"
+#include "outputwindow.hpp"
+#include "icontext.hpp"
+#include "coreconstants.hpp"
 
-#include <core/icore.h>
+#include <core/icore.hpp>
 
 namespace Core {
 namespace Internal {

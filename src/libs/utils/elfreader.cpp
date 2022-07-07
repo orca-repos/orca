@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "elfreader.h"
-#include "qtcassert.h"
+#include "elfreader.hpp"
+#include "qtcassert.hpp"
 
 #include <QDir>
 #include <QDebug>

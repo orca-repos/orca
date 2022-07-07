@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "fancymainwindow.h"
+#include "fancymainwindow.hpp"
 
-#include "algorithm.h"
-#include "porting.h"
-#include "qtcassert.h"
-#include "stringutils.h"
+#include "algorithm.hpp"
+#include "porting.hpp"
+#include "qtcassert.hpp"
+#include "stringutils.hpp"
 
 #include <QAbstractButton>
 #include <QApplication>

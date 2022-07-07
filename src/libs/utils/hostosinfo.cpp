@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "hostosinfo.h"
+#include "hostosinfo.hpp"
 
 #include <QCoreApplication>
 
@@ -13,7 +13,7 @@
 #endif
 
 #ifdef Q_OS_MACOS
-#include <sys/sysctl.h>
+#include <sys/sysctl.hpp>
 #endif
 
 using namespace Utils;

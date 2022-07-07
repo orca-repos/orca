@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "helpitem.h"
-#include "helpmanager.h"
+#include "helpitem.hpp"
+#include "helpmanager.hpp"
 
-#include <utils/algorithm.h>
-#include <utils/htmldocextractor.h>
+#include <utils/algorithm.hpp>
+#include <utils/htmldocextractor.hpp>
 
 #include <QVersionNumber>
 #include <ranges>

@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "executefilter.h"
+#include "executefilter.hpp"
 
-#include <core/icore.h>
-#include <core/messagemanager.h>
+#include <core/icore.hpp>
+#include <core/messagemanager.hpp>
 
-#include <utils/algorithm.h>
-#include <utils/macroexpander.h>
-#include <utils/qtcassert.h>
+#include <utils/algorithm.hpp>
+#include <utils/macroexpander.hpp>
+#include <utils/qtcassert.hpp>
 
 #include <QJsonArray>
 #include <QJsonObject>

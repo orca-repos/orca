@@ -1,17 +1,17 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "loggingviewer.h"
-#include "actionmanager/actionmanager.h"
-#include "coreicons.h"
-#include "icore.h"
-#include "loggingmanager.h"
+#include "loggingviewer.hpp"
+#include "actionmanager/actionmanager.hpp"
+#include "coreicons.hpp"
+#include "icore.hpp"
+#include "loggingmanager.hpp"
 
-#include <utils/algorithm.h>
-#include <utils/basetreeview.h>
-#include <utils/executeondestruction.h>
-#include <utils/listmodel.h>
-#include <utils/theme/theme.h>
-#include <utils/utilsicons.h>
+#include <utils/algorithm.hpp>
+#include <utils/basetreeview.hpp>
+#include <utils/executeondestruction.hpp>
+#include <utils/listmodel.hpp>
+#include <utils/theme/theme.hpp>
+#include <utils/utilsicons.hpp>
 
 #include <QAction>
 #include <QClipboard>

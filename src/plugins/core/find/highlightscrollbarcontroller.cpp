@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "highlightscrollbarcontroller.h"
+#include "highlightscrollbarcontroller.hpp"
 
 #include <QAbstractScrollArea>
 #include <QPainter>

@@ -1,15 +1,15 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "searchresultwindow.h"
-#include "searchresultwidget.h"
-#include "textfindconstants.h"
+#include "searchresultwindow.hpp"
+#include "searchresultwidget.hpp"
+#include "textfindconstants.hpp"
 
-#include <core/icore.h>
-#include <core/actionmanager/actionmanager.h>
-#include <core/actionmanager/command.h>
+#include <core/icore.hpp>
+#include <core/actionmanager/actionmanager.hpp>
+#include <core/actionmanager/command.hpp>
 
-#include <utils/qtcassert.h>
-#include <utils/utilsicons.h>
+#include <utils/qtcassert.hpp>
+#include <utils/utilsicons.hpp>
 
 #include <QAction>
 #include <QComboBox>

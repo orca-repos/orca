@@ -1,14 +1,14 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "openeditorsview.h"
-#include "editormanager.h"
-#include "ieditor.h"
-#include "documentmodel.h"
+#include "openeditorsview.hpp"
+#include "editormanager.hpp"
+#include "ieditor.hpp"
+#include "documentmodel.hpp"
 
-#include <core/actionmanager/actionmanager.h>
-#include <core/actionmanager/command.h>
+#include <core/actionmanager/actionmanager.hpp>
+#include <core/actionmanager/command.hpp>
 
-#include <utils/qtcassert.h>
+#include <utils/qtcassert.hpp>
 
 #include <QApplication>
 #include <QMenu>

@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "basefilefilter.h"
-#include "locatorfiltertest.h"
+#include "basefilefilter.hpp"
+#include "locatorfiltertest.hpp"
 
-#include <core/coreplugin.h>
-#include <core/testdatadir.h>
+#include <core/coreplugin.hpp>
+#include <core/testdatadir.hpp>
 
-#include <utils/algorithm.h>
-#include <utils/fileutils.h>
+#include <utils/algorithm.hpp>
+#include <utils/fileutils.hpp>
 
 #include <QDir>
 #include <QTextStream>
@@ -139,23 +139,23 @@ void Core::Internal::CorePlugin::test_basefilefilter_data()
             );
 
     const QStringList priorityTestFiles({testDir.file("qmap.cpp"),
-                                         testDir.file("mid_qcore_mac_p.h"),
-                                         testDir.file("qcore_mac_p.h"),
-                                         testDir.file("foo_qmap.h"),
-                                         testDir.file("qmap.h"),
-                                         testDir.file("bar.h")});
+                                         testDir.file("mid_qcore_mac_p.hpp"),
+                                         testDir.file("qcore_mac_p.hpp"),
+                                         testDir.file("foo_qmap.hpp"),
+                                         testDir.file("qmap.hpp"),
+                                         testDir.file("bar.hpp")});
     const QStringList priorityTestFilesShort = Utils::transform(priorityTestFiles, shortNativePath);
 
     QTest::newRow("BaseFileFilter-InputPriorizeFullOverFuzzy")
         << priorityTestFiles
         << (QList<ReferenceData>()
             << ReferenceData(
-                "qmap.h",
+                "qmap.hpp",
                 (QList<ResultData>()
-                     << ResultData("qmap.h", priorityTestFilesShort.at(4))
-                     << ResultData("foo_qmap.h", priorityTestFilesShort.at(3))
-                     << ResultData("qcore_mac_p.h", priorityTestFilesShort.at(2))
-                     << ResultData("mid_qcore_mac_p.h", priorityTestFilesShort.at(1))))
+                     << ResultData("qmap.hpp", priorityTestFilesShort.at(4))
+                     << ResultData("foo_qmap.hpp", priorityTestFilesShort.at(3))
+                     << ResultData("qcore_mac_p.hpp", priorityTestFilesShort.at(2))
+                     << ResultData("mid_qcore_mac_p.hpp", priorityTestFilesShort.at(1))))
            );
 
     const QStringList sortingTestFiles({QDir::fromNativeSeparators(testDir.file("aaa/zfile.cpp")),

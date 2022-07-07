@@ -1,24 +1,24 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "findplugin.h"
-#include "currentdocumentfind.h"
-#include "findtoolbar.h"
-#include "findtoolwindow.h"
-#include "searchresultwindow.h"
-#include "ifindfilter.h"
+#include "findplugin.hpp"
+#include "currentdocumentfind.hpp"
+#include "findtoolbar.hpp"
+#include "findtoolwindow.hpp"
+#include "searchresultwindow.hpp"
+#include "ifindfilter.hpp"
 
-#include <core/actionmanager/actionmanager.h>
-#include <core/actionmanager/actioncontainer.h>
-#include <core/actionmanager/command.h>
-#include <core/coreconstants.h>
-#include <core/icontext.h>
-#include <core/icore.h>
-#include <core/coreplugin.h>
+#include <core/actionmanager/actionmanager.hpp>
+#include <core/actionmanager/actioncontainer.hpp>
+#include <core/actionmanager/command.hpp>
+#include <core/coreconstants.hpp>
+#include <core/icontext.hpp>
+#include <core/icore.hpp>
+#include <core/coreplugin.hpp>
 
-#include <utils/algorithm.h>
-#include <utils/qtcassert.h>
+#include <utils/algorithm.hpp>
+#include <utils/qtcassert.hpp>
 
-#include <extensionsystem/pluginmanager.h>
+#include <extensionsystem/pluginmanager.hpp>
 
 #include <QMenu>
 #include <QStringListModel>

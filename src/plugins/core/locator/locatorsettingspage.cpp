@@ -1,20 +1,20 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "locatorsettingspage.h"
+#include "locatorsettingspage.hpp"
 #include "ui_locatorsettingspage.h"
-#include "directoryfilter.h"
-#include "ilocatorfilter.h"
-#include "locator.h"
-#include "locatorconstants.h"
-#include "urllocatorfilter.h"
+#include "directoryfilter.hpp"
+#include "ilocatorfilter.hpp"
+#include "locator.hpp"
+#include "locatorconstants.hpp"
+#include "urllocatorfilter.hpp"
 
-#include <core/coreconstants.h>
+#include <core/coreconstants.hpp>
 
-#include <utils/treemodel.h>
-#include <utils/algorithm.h>
-#include <utils/categorysortfiltermodel.h>
-#include <utils/headerviewstretcher.h>
-#include <utils/qtcassert.h>
+#include <utils/treemodel.hpp>
+#include <utils/algorithm.hpp>
+#include <utils/categorysortfiltermodel.hpp>
+#include <utils/headerviewstretcher.hpp>
+#include <utils/qtcassert.hpp>
 
 #include <QCoreApplication>
 #include <QHash>

@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "algorithm.h"
-#include "icon.h"
-#include "qtcassert.h"
-#include "theme/theme.h"
-#include "stylehelper.h"
+#include "algorithm.hpp"
+#include "icon.hpp"
+#include "qtcassert.hpp"
+#include "theme/theme.hpp"
+#include "stylehelper.hpp"
 
 #include <QApplication>
 #include <QIcon>

@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "iplugin.h"
-#include "iplugin_p.h"
-#include "pluginmanager.h"
-#include "pluginspec.h"
+#include "iplugin.hpp"
+#include "iplugin_p.hpp"
+#include "pluginmanager.hpp"
+#include "pluginspec.hpp"
 
 /*!
     \class ExtensionSystem::IPlugin

@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "basetextfind.h"
+#include "basetextfind.hpp"
 
-#include <utils/algorithm.h>
-#include <utils/qtcassert.h>
-#include <utils/filesearch.h>
+#include <utils/algorithm.hpp>
+#include <utils/qtcassert.hpp>
+#include <utils/filesearch.hpp>
 
 #include <QPointer>
 #include <QPlainTextEdit>

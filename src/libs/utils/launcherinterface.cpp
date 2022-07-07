@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "launcherinterface.h"
+#include "launcherinterface.hpp"
 
-#include "filepath.h"
-#include "launcherpackets.h"
-#include "launchersocket.h"
-#include "qtcassert.h"
-#include "temporarydirectory.h"
+#include "filepath.hpp"
+#include "launcherpackets.hpp"
+#include "launchersocket.hpp"
+#include "qtcassert.hpp"
+#include "temporarydirectory.hpp"
 
 #include <QCoreApplication>
 #include <QDebug>
@@ -15,7 +15,7 @@
 #include <QProcess>
 
 #ifdef Q_OS_UNIX
-#include <unistd.h>
+#include <unistd.hpp>
 #endif
 
 namespace Utils {

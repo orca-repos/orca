@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "processutils.h"
+#include "processutils.hpp"
 
 #ifdef Q_OS_WIN
 #include <qt_windows.h>
 #else
-#include <errno.h>
-#include <stdio.h>
-#include <unistd.h>
+#include <errno.hpp>
+#include <stdio.hpp>
+#include <unistd.hpp>
 #endif
 
 namespace Utils {

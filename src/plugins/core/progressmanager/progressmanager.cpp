@@ -1,20 +1,20 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "futureprogress.h"
-#include "progressmanager_p.h"
-#include "progressbar.h"
-#include "progressview.h"
+#include "futureprogress.hpp"
+#include "progressmanager_p.hpp"
+#include "progressbar.hpp"
+#include "progressview.hpp"
 
-#include <core/actionmanager/actionmanager.h>
-#include <core/actionmanager/command.h>
-#include <core/icore.h>
-#include <core/statusbarmanager.h>
+#include <core/actionmanager/actionmanager.hpp>
+#include <core/actionmanager/command.hpp>
+#include <core/icore.hpp>
+#include <core/statusbarmanager.hpp>
 
-#include <utils/qtcassert.h>
-#include <utils/stylehelper.h>
-#include <utils/utilsicons.h>
+#include <utils/qtcassert.hpp>
+#include <utils/stylehelper.hpp>
+#include <utils/utilsicons.hpp>
 
-#include <extensionsystem/pluginmanager.h>
+#include <extensionsystem/pluginmanager.hpp>
 
 #include <QAction>
 #include <QEvent>

@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "newdialog.h"
+#include "newdialog.hpp"
 
-#include <utils/qtcassert.h>
+#include <utils/qtcassert.hpp>
 
 using namespace Core;
 

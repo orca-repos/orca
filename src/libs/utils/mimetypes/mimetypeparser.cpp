@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "mimetypeparser_p.h"
+#include "mimetypeparser_p.hpp"
 
-#include "mimetype_p.h"
-#include "mimemagicrulematcher_p.h"
+#include "mimetype_p.hpp"
+#include "mimemagicrulematcher_p.hpp"
 
 #include <QtCore/QCoreApplication>
 #include <QtCore/QDebug>

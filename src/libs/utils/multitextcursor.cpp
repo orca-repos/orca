@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "multitextcursor.h"
+#include "multitextcursor.hpp"
 
-#include "algorithm.h"
-#include "camelcasecursor.h"
-#include "hostosinfo.h"
-#include "qtcassert.h"
+#include "algorithm.hpp"
+#include "camelcasecursor.hpp"
+#include "hostosinfo.hpp"
+#include "qtcassert.hpp"
 
 #include <QKeyEvent>
 #include <QTextBlock>

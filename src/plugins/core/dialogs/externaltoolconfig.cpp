@@ -1,23 +1,23 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "externaltoolconfig.h"
+#include "externaltoolconfig.hpp"
 #include "ui_externaltoolconfig.h"
-#include "ioptionspage.h"
+#include "ioptionspage.hpp"
 
-#include <core/coreconstants.h>
-#include <core/externaltool.h>
-#include <core/externaltoolmanager.h>
-#include <core/icore.h>
+#include <core/coreconstants.hpp>
+#include <core/externaltool.hpp>
+#include <core/externaltoolmanager.hpp>
+#include <core/icore.hpp>
 
-#include <utils/algorithm.h>
-#include <utils/environment.h>
-#include <utils/environmentdialog.h>
-#include <utils/fancylineedit.h>
-#include <utils/hostosinfo.h>
-#include <utils/macroexpander.h>
-#include <utils/qtcassert.h>
-#include <utils/qtcprocess.h>
-#include <utils/variablechooser.h>
+#include <utils/algorithm.hpp>
+#include <utils/environment.hpp>
+#include <utils/environmentdialog.hpp>
+#include <utils/fancylineedit.hpp>
+#include <utils/hostosinfo.hpp>
+#include <utils/macroexpander.hpp>
+#include <utils/qtcassert.hpp>
+#include <utils/qtcprocess.hpp>
+#include <utils/variablechooser.hpp>
 
 #include <QDir>
 #include <QFileInfo>

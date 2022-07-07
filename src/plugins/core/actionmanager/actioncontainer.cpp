@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "actioncontainer_p.h"
-#include "actionmanager.h"
+#include "actioncontainer_p.hpp"
+#include "actionmanager.hpp"
 
-#include <core/coreconstants.h>
-#include <core/icontext.h>
+#include <core/coreconstants.hpp>
+#include <core/icontext.hpp>
 
-#include <utils/qtcassert.h>
+#include <utils/qtcassert.hpp>
 
 #include <QDebug>
 #include <QAction>

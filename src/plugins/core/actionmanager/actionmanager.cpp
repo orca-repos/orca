@@ -1,15 +1,15 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "actionmanager.h"
-#include "actionmanager_p.h"
-#include "actioncontainer_p.h"
-#include "command_p.h"
+#include "actionmanager.hpp"
+#include "actionmanager_p.hpp"
+#include "actioncontainer_p.hpp"
+#include "command_p.hpp"
 
-#include <core/icore.h>
+#include <core/icore.hpp>
 
-#include <utils/algorithm.h>
-#include <utils/fadingindicator.h>
-#include <utils/qtcassert.h>
+#include <utils/algorithm.hpp>
+#include <utils/fadingindicator.hpp>
+#include <utils/qtcassert.hpp>
 
 #include <QAction>
 #include <QApplication>

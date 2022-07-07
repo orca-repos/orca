@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "welcomepagehelper.h"
+#include "welcomepagehelper.hpp"
 
-#include <utils/algorithm.h>
-#include <utils/fancylineedit.h>
-#include <utils/stylehelper.h>
-#include <utils/theme/theme.h>
+#include <utils/algorithm.hpp>
+#include <utils/fancylineedit.hpp>
+#include <utils/stylehelper.hpp>
+#include <utils/theme/theme.hpp>
 
 #include <QEasingCurve>
 #include <QFontDatabase>

@@ -1,55 +1,55 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "editormanager.h"
-#include "editormanager_p.h"
-#include "editorwindow.h"
-#include "editorview.h"
-#include "openeditorswindow.h"
-#include "openeditorsview.h"
-#include "documentmodel.h"
-#include "documentmodel_p.h"
-#include "ieditor.h"
+#include "editormanager.hpp"
+#include "editormanager_p.hpp"
+#include "editorwindow.hpp"
+#include "editorview.hpp"
+#include "openeditorswindow.hpp"
+#include "openeditorsview.hpp"
+#include "documentmodel.hpp"
+#include "documentmodel_p.hpp"
+#include "ieditor.hpp"
 
-#include <app/app_version.h>
+#include <app/app_version.hpp>
 
-#include <core/coreconstants.h>
-#include <core/actionmanager/actioncontainer.h>
-#include <core/actionmanager/actionmanager.h>
-#include <core/actionmanager/command.h>
-#include <core/dialogs/openwithdialog.h>
-#include <core/dialogs/readonlyfilesdialog.h>
-#include <core/diffservice.h>
-#include <core/documentmanager.h>
-#include <core/editormanager/ieditorfactory.h>
-#include <core/editormanager/ieditorfactory_p.h>
-#include <core/editormanager/iexternaleditor.h>
-#include <core/fileutils.h>
-#include <core/findplaceholder.h>
-#include <core/find/searchresultitem.h>
-#include <core/icore.h>
-#include <core/iversioncontrol.h>
-#include <core/outputpane.h>
-#include <core/outputpanemanager.h>
-#include <core/rightpane.h>
-#include <core/settingsdatabase.h>
-#include <core/vcsmanager.h>
+#include <core/coreconstants.hpp>
+#include <core/actionmanager/actioncontainer.hpp>
+#include <core/actionmanager/actionmanager.hpp>
+#include <core/actionmanager/command.hpp>
+#include <core/dialogs/openwithdialog.hpp>
+#include <core/dialogs/readonlyfilesdialog.hpp>
+#include <core/diffservice.hpp>
+#include <core/documentmanager.hpp>
+#include <core/editormanager/ieditorfactory.hpp>
+#include <core/editormanager/ieditorfactory_p.hpp>
+#include <core/editormanager/iexternaleditor.hpp>
+#include <core/fileutils.hpp>
+#include <core/findplaceholder.hpp>
+#include <core/find/searchresultitem.hpp>
+#include <core/icore.hpp>
+#include <core/iversioncontrol.hpp>
+#include <core/outputpane.hpp>
+#include <core/outputpanemanager.hpp>
+#include <core/rightpane.hpp>
+#include <core/settingsdatabase.hpp>
+#include <core/vcsmanager.hpp>
 
-#include <extensionsystem/pluginmanager.h>
+#include <extensionsystem/pluginmanager.hpp>
 
-#include <utils/algorithm.h>
-#include <utils/checkablemessagebox.h>
-#include <utils/executeondestruction.h>
-#include <utils/fileutils.h>
-#include <utils/hostosinfo.h>
-#include <utils/infobar.h>
-#include <utils/link.h>
-#include <utils/macroexpander.h>
-#include <utils/mimetypes/mimedatabase.h>
-#include <utils/mimetypes/mimetype.h>
-#include <utils/overridecursor.h>
-#include <utils/qtcassert.h>
-#include <utils/stringutils.h>
-#include <utils/utilsicons.h>
+#include <utils/algorithm.hpp>
+#include <utils/checkablemessagebox.hpp>
+#include <utils/executeondestruction.hpp>
+#include <utils/fileutils.hpp>
+#include <utils/hostosinfo.hpp>
+#include <utils/infobar.hpp>
+#include <utils/link.hpp>
+#include <utils/macroexpander.hpp>
+#include <utils/mimetypes/mimedatabase.hpp>
+#include <utils/mimetypes/mimetype.hpp>
+#include <utils/overridecursor.hpp>
+#include <utils/qtcassert.hpp>
+#include <utils/stringutils.hpp>
+#include <utils/utilsicons.hpp>
 
 #include <QClipboard>
 #include <QDateTime>
@@ -69,7 +69,7 @@
 #include <utility>
 
 #if defined(ORCA_BUILD_WITH_PLUGINS_TESTS)
-#include <core/coreplugin.h>
+#include <core/coreplugin.hpp>
 #include <QTest>
 #endif
 

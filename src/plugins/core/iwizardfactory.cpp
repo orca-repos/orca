@@ -1,18 +1,18 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "iwizardfactory.h"
-#include "actionmanager/actionmanager.h"
-#include "documentmanager.h"
-#include "icore.h"
-#include "featureprovider.h"
+#include "iwizardfactory.hpp"
+#include "actionmanager/actionmanager.hpp"
+#include "documentmanager.hpp"
+#include "icore.hpp"
+#include "featureprovider.hpp"
 
-#include <utils/fileutils.h>
-#include <utils/icon.h>
-#include <utils/qtcassert.h>
-#include <utils/wizard.h>
+#include <utils/fileutils.hpp>
+#include <utils/icon.hpp>
+#include <utils/qtcassert.hpp>
+#include <utils/wizard.hpp>
 
-#include <extensionsystem/pluginspec.h>
-#include <extensionsystem/pluginmanager.h>
+#include <extensionsystem/pluginspec.hpp>
+#include <extensionsystem/pluginmanager.hpp>
 
 #include <QAction>
 #include <QPainter>

@@ -1,18 +1,18 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "outputwindow.h"
-#include "coreconstants.h"
-#include "coreplugin.h"
-#include "icore.h"
+#include "outputwindow.hpp"
+#include "coreconstants.hpp"
+#include "coreplugin.hpp"
+#include "icore.hpp"
 
-#include <core/actionmanager/actionmanager.h>
-#include <core/editormanager/editormanager.h>
-#include <core/find/basetextfind.h>
+#include <core/actionmanager/actionmanager.hpp>
+#include <core/editormanager/editormanager.hpp>
+#include <core/find/basetextfind.hpp>
 
-#include <utils/outputformatter.h>
-#include <utils/qtcassert.h>
+#include <utils/outputformatter.hpp>
+#include <utils/qtcassert.hpp>
 
-#include <aggregation/aggregate.h>
+#include <aggregation/aggregate.hpp>
 
 #include <QAction>
 #include <QElapsedTimer>

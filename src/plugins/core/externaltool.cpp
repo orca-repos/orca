@@ -1,17 +1,17 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "externaltool.h"
-#include "externaltoolmanager.h"
-#include "icore.h"
-#include "idocument.h"
-#include "messagemanager.h"
-#include "documentmanager.h"
-#include "editormanager/editormanager.h"
+#include "externaltool.hpp"
+#include "externaltoolmanager.hpp"
+#include "icore.hpp"
+#include "idocument.hpp"
+#include "messagemanager.hpp"
+#include "documentmanager.hpp"
+#include "editormanager/editormanager.hpp"
 
-#include <utils/algorithm.h>
-#include <utils/fileutils.h>
-#include <utils/macroexpander.h>
-#include <utils/qtcprocess.h>
+#include <utils/algorithm.hpp>
+#include <utils/fileutils.hpp>
+#include <utils/macroexpander.hpp>
+#include <utils/qtcprocess.hpp>
 
 #include <QCoreApplication>
 #include <QDateTime>

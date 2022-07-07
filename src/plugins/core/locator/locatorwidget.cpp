@@ -1,27 +1,27 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "locatorwidget.h"
-#include "ilocatorfilter.h"
-#include "locator.h"
-#include "locatorconstants.h"
-#include "locatorsearchutils.h"
+#include "locatorwidget.hpp"
+#include "ilocatorfilter.hpp"
+#include "locator.hpp"
+#include "locatorconstants.hpp"
+#include "locatorsearchutils.hpp"
 
-#include <core/icore.h>
-#include <core/modemanager.h>
-#include <core/actionmanager/actionmanager.h>
-#include <core/fileiconprovider.h>
-#include <core/icontext.h>
-#include <core/mainwindow.h>
+#include <core/icore.hpp>
+#include <core/modemanager.hpp>
+#include <core/actionmanager/actionmanager.hpp>
+#include <core/fileiconprovider.hpp>
+#include <core/icontext.hpp>
+#include <core/mainwindow.hpp>
 
-#include <utils/algorithm.h>
-#include <utils/fancylineedit.h>
-#include <utils/highlightingitemdelegate.h>
-#include <utils/hostosinfo.h>
-#include <utils/itemviews.h>
-#include <utils/progressindicator.h>
-#include <utils/qtcassert.h>
-#include <utils/runextensions.h>
-#include <utils/utilsicons.h>
+#include <utils/algorithm.hpp>
+#include <utils/fancylineedit.hpp>
+#include <utils/highlightingitemdelegate.hpp>
+#include <utils/hostosinfo.hpp>
+#include <utils/itemviews.hpp>
+#include <utils/progressindicator.hpp>
+#include <utils/qtcassert.hpp>
+#include <utils/runextensions.hpp>
+#include <utils/utilsicons.hpp>
 
 #include <QAction>
 #include <QApplication>

@@ -1,18 +1,18 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "vcsmanager.h"
-#include "iversioncontrol.h"
-#include "icore.h"
-#include "documentmanager.h"
-#include "idocument.h"
+#include "vcsmanager.hpp"
+#include "iversioncontrol.hpp"
+#include "icore.hpp"
+#include "documentmanager.hpp"
+#include "idocument.hpp"
 
-#include <core/dialogs/addtovcsdialog.h>
-#include <core/editormanager/editormanager.h>
+#include <core/dialogs/addtovcsdialog.hpp>
+#include <core/editormanager/editormanager.hpp>
 
-#include <utils/algorithm.h>
-#include <utils/infobar.h>
-#include <utils/optional.h>
-#include <utils/qtcassert.h>
+#include <utils/algorithm.hpp>
+#include <utils/infobar.hpp>
+#include <utils/optional.hpp>
+#include <utils/qtcassert.hpp>
 
 #include <QDir>
 #include <QString>
@@ -437,9 +437,9 @@ auto VcsManager::handleConfigurationChanges() -> void
 
 #include <QtTest>
 
-#include "coreplugin.h"
+#include "coreplugin.hpp"
 
-#include <extensionsystem/pluginmanager.h>
+#include <extensionsystem/pluginmanager.hpp>
 
 namespace Core {namespace Internal {
 

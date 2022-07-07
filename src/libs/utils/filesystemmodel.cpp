@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "filesystemmodel.h"
+#include "filesystemmodel.hpp"
 
-#include "filepath.h"
-#include "hostosinfo.h"
-#include "qtcassert.h"
+#include "filepath.hpp"
+#include "hostosinfo.hpp"
+#include "qtcassert.hpp"
 
 #include <QDateTime>
 #include <QDebug>
@@ -40,8 +40,8 @@
 #  include <qt_windows.h>
 #  include <shlobj.h>
 #else
-#  include <unistd.h>
-#  include <sys/types.h>
+#  include <unistd.hpp>
+#  include <sys/types.hpp>
 #endif
 
 namespace Utils {

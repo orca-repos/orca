@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "ieditorfactory.h"
-#include "ieditorfactory_p.h"
-#include "editormanager.h"
+#include "ieditorfactory.hpp"
+#include "ieditorfactory_p.hpp"
+#include "editormanager.hpp"
 
-#include <utils/algorithm.h>
-#include <utils/mimetypes/mimedatabase.h>
-#include <utils/qtcassert.h>
+#include <utils/algorithm.hpp>
+#include <utils/mimetypes/mimedatabase.hpp>
+#include <utils/qtcassert.hpp>
 
 using namespace Utils;
 

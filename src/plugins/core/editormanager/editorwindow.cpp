@@ -1,18 +1,18 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "editorwindow.h"
-#include "editorarea.h"
-#include "editormanager_p.h"
+#include "editorwindow.hpp"
+#include "editorarea.hpp"
+#include "editormanager_p.hpp"
 
-#include <core/coreconstants.h>
-#include <core/icontext.h>
-#include <core/icore.h>
-#include <core/locator/locatormanager.h>
-#include <core/minisplitter.h>
+#include <core/coreconstants.hpp>
+#include <core/icontext.hpp>
+#include <core/icore.hpp>
+#include <core/locator/locatormanager.hpp>
+#include <core/minisplitter.hpp>
 
-#include <utils/qtcassert.h>
+#include <utils/qtcassert.hpp>
 
-#include <aggregation/aggregate.h>
+#include <aggregation/aggregate.hpp>
 
 #include <QStatusBar>
 #include <QVBoxLayout>

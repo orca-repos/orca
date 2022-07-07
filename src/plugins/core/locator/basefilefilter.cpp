@@ -1,14 +1,14 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "basefilefilter.h"
+#include "basefilefilter.hpp"
 
-#include <core/editormanager/editormanager.h>
+#include <core/editormanager/editormanager.hpp>
 
-#include <utils/algorithm.h>
-#include <utils/fileutils.h>
-#include <utils/linecolumn.h>
-#include <utils/link.h>
-#include <utils/qtcassert.h>
+#include <utils/algorithm.hpp>
+#include <utils/fileutils.hpp>
+#include <utils/linecolumn.hpp>
+#include <utils/link.hpp>
+#include <utils/qtcassert.hpp>
 
 #include <QDir>
 #include <QRegularExpression>

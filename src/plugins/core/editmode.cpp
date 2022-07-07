@@ -1,16 +1,16 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "coreconstants.h"
-#include "coreicons.h"
-#include "editmode.h"
-#include "icore.h"
-#include "modemanager.h"
-#include "minisplitter.h"
-#include "navigationwidget.h"
-#include "outputpane.h"
-#include "rightpane.h"
-#include <core/editormanager/editormanager.h>
-#include <core/editormanager/ieditor.h>
+#include "coreconstants.hpp"
+#include "coreicons.hpp"
+#include "editmode.hpp"
+#include "icore.hpp"
+#include "modemanager.hpp"
+#include "minisplitter.hpp"
+#include "navigationwidget.hpp"
+#include "outputpane.hpp"
+#include "rightpane.hpp"
+#include <core/editormanager/editormanager.hpp>
+#include <core/editormanager/ieditor.hpp>
 
 #include <QLatin1String>
 #include <QHBoxLayout>

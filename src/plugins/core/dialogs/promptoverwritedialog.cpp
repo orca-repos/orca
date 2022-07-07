@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "promptoverwritedialog.h"
+#include "promptoverwritedialog.hpp"
 
-#include <utils/stringutils.h>
+#include <utils/stringutils.hpp>
 
 #include <QTreeView>
 #include <QLabel>

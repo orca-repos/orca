@@ -1,18 +1,18 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "filesystemfilter.h"
-#include "basefilefilter.h"
-#include "locatorwidget.h"
+#include "filesystemfilter.hpp"
+#include "basefilefilter.hpp"
+#include "locatorwidget.hpp"
 
-#include <core/coreconstants.h>
-#include <core/documentmanager.h>
-#include <core/editormanager/editormanager.h>
-#include <core/icore.h>
-#include <core/vcsmanager.h>
+#include <core/coreconstants.hpp>
+#include <core/documentmanager.hpp>
+#include <core/editormanager/editormanager.hpp>
+#include <core/icore.hpp>
+#include <core/vcsmanager.hpp>
 
-#include <utils/checkablemessagebox.h>
-#include <utils/fileutils.h>
-#include <utils/link.h>
+#include <utils/checkablemessagebox.hpp>
+#include <utils/fileutils.hpp>
+#include <utils/link.hpp>
 
 #include <QDir>
 #include <QJsonObject>

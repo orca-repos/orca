@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "commandlocator.h"
+#include "commandlocator.hpp"
 
-#include <core/actionmanager/command.h>
+#include <core/actionmanager/command.hpp>
 
-#include <utils/qtcassert.h>
-#include <utils/stringutils.h>
+#include <utils/qtcassert.hpp>
+#include <utils/stringutils.hpp>
 
 #include <QAction>
 

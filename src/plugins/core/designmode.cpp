@@ -1,16 +1,16 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "designmode.h"
+#include "designmode.hpp"
 
-#include <core/icore.h>
-#include <core/idocument.h>
-#include <core/modemanager.h>
-#include <core/editormanager/editormanager.h>
-#include <core/editormanager/ieditor.h>
-#include <core/coreconstants.h>
-#include <core/coreicons.h>
+#include <core/icore.hpp>
+#include <core/idocument.hpp>
+#include <core/modemanager.hpp>
+#include <core/editormanager/editormanager.hpp>
+#include <core/editormanager/ieditor.hpp>
+#include <core/coreconstants.hpp>
+#include <core/coreicons.hpp>
 
-#include <extensionsystem/pluginmanager.h>
+#include <extensionsystem/pluginmanager.hpp>
 
 #include <QPointer>
 #include <QStackedWidget>

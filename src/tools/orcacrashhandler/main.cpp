@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "crashhandler.h"
-#include "utils.h"
+#include "crashhandler.hpp"
+#include "utils.hpp"
 
 #include <QApplication>
 #include <QCommandLineParser>
@@ -11,9 +11,9 @@
 #include <QStyle>
 #include <QTextStream>
 
-#include <stdlib.h>
-#include <sys/types.h>
-#include <unistd.h>
+#include <stdlib.hpp>
+#include <sys/types.hpp>
+#include <unistd.hpp>
 
 static void printErrorAndExit()
 {

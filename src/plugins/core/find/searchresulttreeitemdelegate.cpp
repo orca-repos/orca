@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "searchresulttreeitemdelegate.h"
-#include "searchresulttreeitemroles.h"
+#include "searchresulttreeitemdelegate.hpp"
+#include "searchresulttreeitemroles.hpp"
 
 #include <QPainter>
 #include <QApplication>

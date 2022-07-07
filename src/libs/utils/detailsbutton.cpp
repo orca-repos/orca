@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "detailsbutton.h"
-#include "hostosinfo.h"
-#include "theme/theme.h"
+#include "detailsbutton.hpp"
+#include "hostosinfo.hpp"
+#include "theme/theme.hpp"
 
 #include <QGraphicsOpacityEffect>
 #include <QGuiApplication>

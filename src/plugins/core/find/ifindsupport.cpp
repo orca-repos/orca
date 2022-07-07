@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "ifindsupport.h"
+#include "ifindsupport.hpp"
 
-#include <utils/fadingindicator.h>
-#include <utils/stylehelper.h>
+#include <utils/fadingindicator.hpp>
+#include <utils/stylehelper.hpp>
 
 using namespace Core;
 

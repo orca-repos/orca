@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "fileutils_mac.h"
+#include "fileutils_mac.hpp"
 
-#include "qtcassert.h"
+#include "qtcassert.hpp"
 
 #include <QDir>
 #include <QFileInfo>

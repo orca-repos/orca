@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "basefilewizard.h"
-#include "basefilewizardfactory.h"
-#include "ifilewizardextension.h"
+#include "basefilewizard.hpp"
+#include "basefilewizardfactory.hpp"
+#include "ifilewizardextension.hpp"
 
 #include <QMessageBox>
 

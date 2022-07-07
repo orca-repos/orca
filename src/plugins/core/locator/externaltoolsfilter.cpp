@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "externaltoolsfilter.h"
+#include "externaltoolsfilter.hpp"
 
-#include <core/externaltool.h>
-#include <core/externaltoolmanager.h>
-#include <core/messagemanager.h>
+#include <core/externaltool.hpp>
+#include <core/externaltoolmanager.hpp>
+#include <core/messagemanager.hpp>
 
-#include <utils/qtcassert.h>
+#include <utils/qtcassert.hpp>
 
 using namespace Core;
 using namespace Internal;

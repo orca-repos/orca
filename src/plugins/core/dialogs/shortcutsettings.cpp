@@ -1,19 +1,19 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "shortcutsettings.h"
+#include "shortcutsettings.hpp"
 
-#include <core/coreconstants.h>
-#include <core/documentmanager.h>
-#include <core/icore.h>
-#include <core/actionmanager/actionmanager.h>
-#include <core/actionmanager/command.h>
-#include <core/actionmanager/commandsfile.h>
+#include <core/coreconstants.hpp>
+#include <core/documentmanager.hpp>
+#include <core/icore.hpp>
+#include <core/actionmanager/actionmanager.hpp>
+#include <core/actionmanager/command.hpp>
+#include <core/actionmanager/commandsfile.hpp>
 
-#include <utils/algorithm.h>
-#include <utils/fancylineedit.h>
-#include <utils/hostosinfo.h>
-#include <utils/qtcassert.h>
-#include <utils/theme/theme.h>
+#include <utils/algorithm.hpp>
+#include <utils/fancylineedit.hpp>
+#include <utils/hostosinfo.hpp>
+#include <utils/qtcassert.hpp>
+#include <utils/theme/theme.hpp>
 
 #include <QAction>
 #include <QApplication>

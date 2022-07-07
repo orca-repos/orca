@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "textdocument.h"
+#include "textdocument.hpp"
 
-#include <core/editormanager/editormanager.h>
+#include <core/editormanager/editormanager.hpp>
 
 #include <QDebug>
 #include <QTextCodec>

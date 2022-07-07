@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "minisplitter.h"
+#include "minisplitter.hpp"
 
-#include <utils/theme/theme.h>
+#include <utils/theme/theme.hpp>
 
 #include <QPaintEvent>
 #include <QPainter>

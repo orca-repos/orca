@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "projectintropage.h"
+#include "projectintropage.hpp"
 #include "ui_projectintropage.h"
 
-#include "filenamevalidatinglineedit.h"
-#include "wizard.h"
+#include "filenamevalidatinglineedit.hpp"
+#include "wizard.hpp"
 
 #include <QDir>
 

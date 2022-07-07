@@ -1,35 +1,35 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "documentmanager.h"
-#include "icore.h"
-#include "idocument.h"
-#include "idocumentfactory.h"
-#include "coreconstants.h"
+#include "documentmanager.hpp"
+#include "icore.hpp"
+#include "idocument.hpp"
+#include "idocumentfactory.hpp"
+#include "coreconstants.hpp"
 
-#include <core/actionmanager/actioncontainer.h>
-#include <core/actionmanager/actionmanager.h>
-#include <core/actionmanager/command.h>
-#include <core/diffservice.h>
-#include <core/dialogs/filepropertiesdialog.h>
-#include <core/dialogs/readonlyfilesdialog.h>
-#include <core/dialogs/saveitemsdialog.h>
-#include <core/editormanager/editormanager.h>
-#include <core/editormanager/editormanager_p.h>
-#include <core/editormanager/ieditorfactory.h>
-#include <core/editormanager/iexternaleditor.h>
+#include <core/actionmanager/actioncontainer.hpp>
+#include <core/actionmanager/actionmanager.hpp>
+#include <core/actionmanager/command.hpp>
+#include <core/diffservice.hpp>
+#include <core/dialogs/filepropertiesdialog.hpp>
+#include <core/dialogs/readonlyfilesdialog.hpp>
+#include <core/dialogs/saveitemsdialog.hpp>
+#include <core/editormanager/editormanager.hpp>
+#include <core/editormanager/editormanager_p.hpp>
+#include <core/editormanager/ieditorfactory.hpp>
+#include <core/editormanager/iexternaleditor.hpp>
 
-#include <utils/algorithm.h>
-#include <utils/fileutils.h>
-#include <utils/globalfilechangeblocker.h>
-#include <utils/hostosinfo.h>
-#include <utils/mimetypes/mimedatabase.h>
-#include <utils/optional.h>
-#include <utils/pathchooser.h>
-#include <utils/qtcassert.h>
-#include <utils/reloadpromptutils.h>
-#include <utils/threadutils.h>
+#include <utils/algorithm.hpp>
+#include <utils/fileutils.hpp>
+#include <utils/globalfilechangeblocker.hpp>
+#include <utils/hostosinfo.hpp>
+#include <utils/mimetypes/mimedatabase.hpp>
+#include <utils/optional.hpp>
+#include <utils/pathchooser.hpp>
+#include <utils/qtcassert.hpp>
+#include <utils/reloadpromptutils.hpp>
+#include <utils/threadutils.hpp>
 
-#include <extensionsystem/pluginmanager.h>
+#include <extensionsystem/pluginmanager.hpp>
 
 #include <QDateTime>
 #include <QDir>

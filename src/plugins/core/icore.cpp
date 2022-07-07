@@ -1,14 +1,14 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "icore.h"
-#include "windowsupport.h"
-#include "dialogs/settingsdialog.h"
+#include "icore.hpp"
+#include "windowsupport.hpp"
+#include "dialogs/settingsdialog.hpp"
 
-#include <app/app_version.h>
-#include <extensionsystem/pluginmanager.h>
+#include <app/app_version.hpp>
+#include <extensionsystem/pluginmanager.hpp>
 
-#include <utils/qtcassert.h>
-#include <utils/algorithm.h>
+#include <utils/qtcassert.hpp>
+#include <utils/algorithm.hpp>
 
 #include <QApplication>
 #include <QDebug>
@@ -117,13 +117,13 @@
     from the focus object as well as the additional context.
 */
 
-#include "dialogs/newdialogwidget.h"
-#include "dialogs/newdialog.h"
-#include "iwizardfactory.h"
-#include "mainwindow.h"
-#include "documentmanager.h"
+#include "dialogs/newdialogwidget.hpp"
+#include "dialogs/newdialog.hpp"
+#include "iwizardfactory.hpp"
+#include "mainwindow.hpp"
+#include "documentmanager.hpp"
 
-#include <utils/hostosinfo.h>
+#include <utils/hostosinfo.hpp>
 
 #include <QCoreApplication>
 #include <QDebug>
@@ -522,7 +522,7 @@ auto ICore::clangIncludeDirectory(const QString &clang_version, const FilePath &
 {
   auto dir = libexecPath("clang" + clangIncludePath(clang_version));
 
-  if (!dir.exists() || !dir.pathAppended("stdint.h").exists())
+  if (!dir.exists() || !dir.pathAppended("stdint.hpp").exists())
     dir = clang_fallback_include_dir;
 
   return dir.canonicalPath();

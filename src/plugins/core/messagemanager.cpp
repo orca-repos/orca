@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "messagemanager.h"
-#include "messageoutputwindow.h"
+#include "messagemanager.hpp"
+#include "messageoutputwindow.hpp"
 
-#include <extensionsystem/pluginmanager.h>
-#include <utils/qtcassert.h>
+#include <extensionsystem/pluginmanager.hpp>
+#include <utils/qtcassert.hpp>
 
 #include <QFont>
 #include <QThread>

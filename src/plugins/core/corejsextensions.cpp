@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "corejsextensions.h"
+#include "corejsextensions.hpp"
 
-#include <app/app_version.h>
+#include <app/app_version.hpp>
 
-#include <utils/fileutils.h>
-#include <utils/mimetypes/mimedatabase.h>
-#include <utils/qtcassert.h>
+#include <utils/fileutils.hpp>
+#include <utils/mimetypes/mimedatabase.hpp>
+#include <utils/qtcassert.hpp>
 
 #include <QDir>
 #include <QTemporaryFile>

@@ -1,15 +1,15 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "locatormanager.h"
-#include "ilocatorfilter.h"
-#include "locator.h"
-#include "locatorwidget.h"
+#include "locatormanager.hpp"
+#include "ilocatorfilter.hpp"
+#include "locator.hpp"
+#include "locatorwidget.hpp"
 
-#include <core/icore.h>
+#include <core/icore.hpp>
 
-#include <utils/qtcassert.h>
+#include <utils/qtcassert.hpp>
 
-#include <aggregation/aggregate.h>
+#include <aggregation/aggregate.hpp>
 
 #include <QApplication>
 

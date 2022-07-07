@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "jsexpander.h"
-#include "corejsextensions.h"
+#include "jsexpander.hpp"
+#include "corejsextensions.hpp"
 
-#include <utils/macroexpander.h>
+#include <utils/macroexpander.hpp>
 
 #include <QCoreApplication>
 #include <QDebug>

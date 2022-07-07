@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "backtracecollector.h"
+#include "backtracecollector.hpp"
 
 #include <QDebug>
 #include <QScopedPointer>

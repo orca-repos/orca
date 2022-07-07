@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "commandsfile.h"
-#include "command.h"
+#include "commandsfile.hpp"
+#include "command.hpp"
 
-#include <core/dialogs/shortcutsettings.h>
-#include <core/icore.h>
+#include <core/dialogs/shortcutsettings.hpp>
+#include <core/icore.hpp>
 
-#include <utils/qtcassert.h>
-#include <utils/fileutils.h>
+#include <utils/qtcassert.hpp>
+#include <utils/fileutils.hpp>
 
 #include <QKeySequence>
 #include <QFile>

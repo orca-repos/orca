@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "id.h"
+#include "id.hpp"
 
-#include "algorithm.h"
-#include "qtcassert.h"
+#include "algorithm.hpp"
+#include "qtcassert.hpp"
 
 #include <QByteArray>
 #include <QDataStream>

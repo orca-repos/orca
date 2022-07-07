@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "proxyaction.h"
+#include "proxyaction.hpp"
 
-#include "stringutils.h"
+#include "stringutils.hpp"
 
 using namespace Utils;
 

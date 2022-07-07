@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "namevaluesdialog.h"
+#include "namevaluesdialog.hpp"
 
-#include <utils/environment.h>
-#include <utils/hostosinfo.h>
+#include <utils/environment.hpp>
+#include <utils/hostosinfo.hpp>
 
 #include <QDialogButtonBox>
 #include <QLabel>

@@ -1,19 +1,19 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "mimetypesettings.h"
+#include "mimetypesettings.hpp"
 #include "ui_mimetypesettingspage.h"
-#include "coreconstants.h"
-#include "icore.h"
-#include "mimetypemagicdialog.h"
+#include "coreconstants.hpp"
+#include "icore.hpp"
+#include "mimetypemagicdialog.hpp"
 
-#include <core/editormanager/ieditorfactory.h>
-#include <core/editormanager/ieditorfactory_p.h>
+#include <core/editormanager/ieditorfactory.hpp>
+#include <core/editormanager/ieditorfactory_p.hpp>
 
-#include <utils/algorithm.h>
-#include <utils/headerviewstretcher.h>
-#include <utils/mimetypes/mimedatabase.h>
-#include <utils/qtcassert.h>
-#include <utils/stringutils.h>
+#include <utils/algorithm.hpp>
+#include <utils/headerviewstretcher.hpp>
+#include <utils/mimetypes/mimedatabase.hpp>
+#include <utils/qtcassert.hpp>
+#include <utils/stringutils.hpp>
 
 #include <QAbstractTableModel>
 #include <QDebug>

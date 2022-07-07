@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "buildablehelperlibrary.h"
-#include "hostosinfo.h"
-#include "qtcprocess.h"
+#include "buildablehelperlibrary.hpp"
+#include "hostosinfo.hpp"
+#include "qtcprocess.hpp"
 
 #include <QDateTime>
 #include <QDebug>

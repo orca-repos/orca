@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "coreconstants.h"
-#include "icore.h"
-#include "themechooser.h"
+#include "coreconstants.hpp"
+#include "icore.hpp"
+#include "themechooser.hpp"
 
-#include <core/dialogs/restartdialog.h>
+#include <core/dialogs/restartdialog.hpp>
 
-#include <utils/algorithm.h>
-#include <utils/theme/theme.h>
+#include <utils/algorithm.hpp>
+#include <utils/theme/theme.hpp>
 
 #include <QComboBox>
 #include <QCoreApplication>

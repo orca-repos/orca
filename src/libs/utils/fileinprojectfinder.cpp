@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "fileinprojectfinder.h"
+#include "fileinprojectfinder.hpp"
 
-#include "algorithm.h"
-#include "fileutils.h"
-#include "hostosinfo.h"
-#include "qrcparser.h"
-#include "qtcassert.h"
-#include "stringutils.h"
+#include "algorithm.hpp"
+#include "fileutils.hpp"
+#include "hostosinfo.hpp"
+#include "qrcparser.hpp"
+#include "qtcassert.hpp"
+#include "stringutils.hpp"
 
 #include <QCursor>
 #include <QDebug>

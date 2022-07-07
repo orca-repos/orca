@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "fileiconprovider.h"
+#include "fileiconprovider.hpp"
 
-#include <utils/fileutils.h>
-#include <utils/hostosinfo.h>
-#include <utils/mimetypes/mimedatabase.h>
-#include <utils/optional.h>
-#include <utils/qtcassert.h>
-#include <utils/variant.h>
+#include <utils/fileutils.hpp>
+#include <utils/hostosinfo.hpp>
+#include <utils/mimetypes/mimedatabase.hpp>
+#include <utils/optional.hpp>
+#include <utils/qtcassert.hpp>
+#include <utils/variant.hpp>
 
 #include <QApplication>
 #include <QStyle>

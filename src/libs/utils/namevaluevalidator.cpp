@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "namevaluevalidator.h"
-#include "namevaluemodel.h"
-#include "tooltip/tooltip.h"
+#include "namevaluevalidator.hpp"
+#include "namevaluemodel.hpp"
+#include "tooltip/tooltip.hpp"
 
 #include <QTreeView>
 

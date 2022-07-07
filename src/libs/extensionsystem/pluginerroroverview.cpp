@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "pluginerroroverview.h"
+#include "pluginerroroverview.hpp"
 #include "ui_pluginerroroverview.h"
-#include "pluginspec.h"
-#include "pluginmanager.h"
+#include "pluginspec.hpp"
+#include "pluginmanager.hpp"
 
 Q_DECLARE_METATYPE(ExtensionSystem::PluginSpec*)
 

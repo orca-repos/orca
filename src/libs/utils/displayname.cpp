@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "displayname.h"
+#include "displayname.hpp"
 
 namespace Utils {
 

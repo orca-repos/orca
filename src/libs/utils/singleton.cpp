@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "qtcassert.h"
-#include "singleton.h"
+#include "qtcassert.hpp"
+#include "singleton.hpp"
 
 #include <QCoreApplication>
 #include <QList>

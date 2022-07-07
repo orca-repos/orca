@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "fancyactionbar.h"
-#include "coreconstants.h"
+#include "fancyactionbar.hpp"
+#include "coreconstants.hpp"
 
-#include <utils/hostosinfo.h>
-#include <utils/stringutils.h>
-#include <utils/stylehelper.h>
-#include <utils/theme/theme.h>
-#include <utils/tooltip/tooltip.h>
+#include <utils/hostosinfo.hpp>
+#include <utils/stringutils.hpp>
+#include <utils/stylehelper.hpp>
+#include <utils/theme/theme.hpp>
+#include <utils/tooltip/tooltip.hpp>
 
 #include <QAction>
 #include <QEvent>

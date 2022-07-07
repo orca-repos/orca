@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "codecselector.h"
+#include "codecselector.hpp"
 
-#include <core/textdocument.h>
+#include <core/textdocument.hpp>
 
-#include <utils/algorithm.h>
-#include <utils/fileutils.h>
-#include <utils/itemviews.h>
+#include <utils/algorithm.hpp>
+#include <utils/fileutils.hpp>
+#include <utils/itemviews.hpp>
 
 #include <QTextCodec>
 #include <QPushButton>

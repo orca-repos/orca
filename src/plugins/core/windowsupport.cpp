@@ -1,18 +1,18 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "windowsupport.h"
-#include "coreconstants.h"
-#include "icore.h"
+#include "windowsupport.hpp"
+#include "coreconstants.hpp"
+#include "icore.hpp"
 
-#include <core/actionmanager/actioncontainer.h>
-#include <core/actionmanager/actionmanager.h>
-#include <core/actionmanager/command.h>
+#include <core/actionmanager/actioncontainer.hpp>
+#include <core/actionmanager/actionmanager.hpp>
+#include <core/actionmanager/command.hpp>
 
-#include <utils/hostosinfo.h>
-#include <utils/qtcassert.h>
-#include <utils/stringutils.h>
+#include <utils/hostosinfo.hpp>
+#include <utils/qtcassert.hpp>
+#include <utils/stringutils.hpp>
 
-#include <app/app_version.h>
+#include <app/app_version.hpp>
 
 #include <QAction>
 #include <QEvent>

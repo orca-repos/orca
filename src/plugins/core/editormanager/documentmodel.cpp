@@ -1,17 +1,17 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "documentmodel.h"
-#include "documentmodel_p.h"
-#include "ieditor.h"
+#include "documentmodel.hpp"
+#include "documentmodel_p.hpp"
+#include "ieditor.hpp"
 
-#include <core/documentmanager.h>
-#include <core/idocument.h>
+#include <core/documentmanager.hpp>
+#include <core/idocument.hpp>
 
-#include <utils/algorithm.h>
-#include <utils/dropsupport.h>
-#include <utils/hostosinfo.h>
-#include <utils/qtcassert.h>
-#include <utils/utilsicons.h>
+#include <utils/algorithm.hpp>
+#include <utils/dropsupport.hpp>
+#include <utils/hostosinfo.hpp>
+#include <utils/qtcassert.hpp>
+#include <utils/utilsicons.hpp>
 
 #include <QAbstractItemModel>
 #include <QIcon>

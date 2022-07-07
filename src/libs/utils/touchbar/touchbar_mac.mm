@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "touchbar.h"
-#include "touchbar_mac_p.h"
-#include "touchbar_appdelegate_mac_p.h"
+#include "touchbar.hpp"
+#include "touchbar_mac_p.hpp"
+#include "touchbar_appdelegate_mac_p.hpp"
 
 #include <utils/utilsicons.h>
 

@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "qtsingleapplication.h"
-#include "qtlocalpeer.h"
+#include "qtsingleapplication.hpp"
+#include "qtlocalpeer.hpp"
 
-#include <qtlockedfile.h>
+#include <qtlockedfile.hpp>
 
 #include <QDir>
 #include <QFileOpenEvent>

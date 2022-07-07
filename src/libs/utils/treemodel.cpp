@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "treemodel.h"
-#include "qtcassert.h"
+#include "treemodel.hpp"
+#include "qtcassert.hpp"
 
 #include <QStack>
 #include <QSize>

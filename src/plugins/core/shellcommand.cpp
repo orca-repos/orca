@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "shellcommand.h"
-#include "icore.h"
+#include "shellcommand.hpp"
+#include "icore.hpp"
 
-#include <core/progressmanager/progressmanager.h>
+#include <core/progressmanager/progressmanager.hpp>
 
 #include <QFutureInterface>
 #include <QFutureWatcher>

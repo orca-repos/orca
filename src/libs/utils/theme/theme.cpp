@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "theme.h"
-#include "theme_p.h"
-#include "../algorithm.h"
-#include "../hostosinfo.h"
-#include "../qtcassert.h"
+#include "theme.hpp"
+#include "theme_p.hpp"
+#include "../algorithm.hpp"
+#include "../hostosinfo.hpp"
+#include "../qtcassert.hpp"
 #ifdef Q_OS_MACOS
-#import "theme_mac.h"
+#import "theme_mac.hpp"
 #endif
 
 #include <QApplication>

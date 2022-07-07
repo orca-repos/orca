@@ -1,19 +1,19 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "readonlyfilesdialog.h"
+#include "readonlyfilesdialog.hpp"
 #include "ui_readonlyfilesdialog.h"
 
-#include <core/editormanager/editormanager_p.h>
-#include <core/fileiconprovider.h>
-#include <core/icore.h>
-#include <core/idocument.h>
-#include <core/iversioncontrol.h>
-#include <core/vcsmanager.h>
+#include <core/editormanager/editormanager_p.hpp>
+#include <core/fileiconprovider.hpp>
+#include <core/icore.hpp>
+#include <core/idocument.hpp>
+#include <core/iversioncontrol.hpp>
+#include <core/vcsmanager.hpp>
 
-#include <utils/algorithm.h>
-#include <utils/fileutils.h>
-#include <utils/hostosinfo.h>
-#include <utils/stringutils.h>
+#include <utils/algorithm.hpp>
+#include <utils/fileutils.hpp>
+#include <utils/hostosinfo.hpp>
+#include <utils/stringutils.hpp>
 
 #include <QButtonGroup>
 #include <QFileInfo>

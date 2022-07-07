@@ -1,15 +1,15 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "openeditorswindow.h"
-#include "editormanager.h"
-#include "editormanager_p.h"
-#include "editorview.h"
+#include "openeditorswindow.hpp"
+#include "editormanager.hpp"
+#include "editormanager_p.hpp"
+#include "editorview.hpp"
 
-#include <core/idocument.h>
+#include <core/idocument.hpp>
 
-#include <utils/hostosinfo.h>
-#include <utils/qtcassert.h>
-#include <utils/utilsicons.h>
+#include <utils/hostosinfo.hpp>
+#include <utils/qtcassert.hpp>
+#include <utils/utilsicons.hpp>
 
 #include <QFocusEvent>
 #include <QHeaderView>

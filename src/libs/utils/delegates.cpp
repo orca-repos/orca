@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "delegates.h"
-#include "completinglineedit.h"
+#include "delegates.hpp"
+#include "completinglineedit.hpp"
 
 #include <QPainter>
 #include <QApplication>

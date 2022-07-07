@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "infolabel.h"
+#include "infolabel.hpp"
 
-#include <utils/icon.h>
-#include <utils/utilsicons.h>
+#include <utils/icon.hpp>
+#include <utils/utilsicons.hpp>
 
 #include <QPainter>
 #include <QPaintEvent>

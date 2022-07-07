@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "optionsparser.h"
+#include "optionsparser.hpp"
 
-#include "pluginmanager.h"
-#include "pluginmanager_p.h"
-#include "pluginspec_p.h"
+#include "pluginmanager.hpp"
+#include "pluginmanager_p.hpp"
+#include "pluginspec_p.hpp"
 
-#include <utils/algorithm.h>
+#include <utils/algorithm.hpp>
 
 #include <QCoreApplication>
 

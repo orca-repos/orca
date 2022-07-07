@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "crashhandlerdialog.h"
-#include "crashhandler.h"
-#include "ui_crashhandlerdialog.h"
-#include "utils.h"
+#include "crashhandlerdialog.hpp"
+#include "crashhandler.hpp"
+#include "ui_crashhandlerdialog.hpp"
+#include "utils.hpp"
 
-#include <app/app_version.h>
-#include <utils/checkablemessagebox.h>
+#include <app/app_version.hpp>
+#include <utils/checkablemessagebox.hpp>
 
 #include <QClipboard>
 #include <QIcon>

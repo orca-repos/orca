@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "namevaluemodel.h"
+#include "namevaluemodel.hpp"
 
-#include <utils/algorithm.h>
-#include <utils/hostosinfo.h>
-#include <utils/namevaluedictionary.h>
-#include <utils/qtcassert.h>
+#include <utils/algorithm.hpp>
+#include <utils/hostosinfo.hpp>
+#include <utils/namevaluedictionary.hpp>
+#include <utils/qtcassert.hpp>
 
 #include <QFont>
 #include <QGuiApplication>

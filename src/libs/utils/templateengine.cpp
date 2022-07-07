@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "templateengine.h"
+#include "templateengine.hpp"
 
-#include "qtcassert.h"
+#include "qtcassert.hpp"
 
 #include <QJSEngine>
 #include <QRegularExpression>

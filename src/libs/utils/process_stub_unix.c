@@ -1,21 +1,21 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <sys/socket.h>
-#include <sys/un.h>
-#include <sys/wait.h>
-#include <fcntl.h>
-#include <unistd.h>
-#include <signal.h>
-#include <string.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <errno.h>
-#include <assert.h>
+#include <sys/types.hpp>
+#include <sys/stat.hpp>
+#include <sys/socket.hpp>
+#include <sys/un.hpp>
+#include <sys/wait.hpp>
+#include <fcntl.hpp>
+#include <unistd.hpp>
+#include <signal.hpp>
+#include <string.hpp>
+#include <stdlib.hpp>
+#include <stdio.hpp>
+#include <errno.hpp>
+#include <assert.hpp>
 
 #ifdef __linux__
-#include <sys/prctl.h>
+#include <sys/prctl.hpp>
 
 // Enable compilation with older header that doesn't contain this constant
 // for running on newer libraries that do support it

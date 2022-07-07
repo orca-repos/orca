@@ -2,19 +2,19 @@ add_qtc_library(ExtensionSystem
   DEPENDS Aggregation Utils
   PUBLIC_DEPENDS Qt6::Core Qt6::Widgets
   SOURCES
-    extensionsystem_global.h
-    invoker.cpp invoker.h
-    iplugin.cpp iplugin.h iplugin_p.h
-    optionsparser.cpp optionsparser.h
-    plugindetailsview.cpp plugindetailsview.h plugindetailsview.ui
-    pluginerroroverview.cpp pluginerroroverview.h pluginerroroverview.ui
-    pluginerrorview.cpp pluginerrorview.h pluginerrorview.ui
-    pluginmanager.cpp pluginmanager.h pluginmanager_p.h
-    pluginspec.cpp pluginspec.h pluginspec_p.h
-    pluginview.cpp pluginview.h
+    extensionsystem_global.hpp
+    invoker.cpp invoker.hpp
+    iplugin.cpp iplugin.hpp iplugin_p.hpp
+    optionsparser.cpp optionsparser.hpp
+    plugindetailsview.cpp plugindetailsview.hpp plugindetailsview.ui
+    pluginerroroverview.cpp pluginerroroverview.hpp pluginerroroverview.ui
+    pluginerrorview.cpp pluginerrorview.hpp pluginerrorview.ui
+    pluginmanager.cpp pluginmanager.hpp pluginmanager_p.hpp
+    pluginspec.cpp pluginspec.hpp pluginspec_p.hpp
+    pluginview.cpp pluginview.hpp
   EXPLICIT_MOC
-    pluginmanager.h
-    pluginmanager_p.h
+    pluginmanager.hpp
+    pluginmanager_p.hpp
   SKIP_AUTOMOC pluginmanager.cpp
 )
 

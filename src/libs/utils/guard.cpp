@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "guard.h"
-#include "qtcassert.h"
+#include "guard.hpp"
+#include "qtcassert.hpp"
 
 /*! \class Utils::Guard
 

@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "jsontreeitem.h"
+#include "jsontreeitem.hpp"
 
 #include <QJsonArray>
 #include <QJsonObject>

@@ -1,17 +1,17 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "qtcprocess.h"
+#include "qtcprocess.hpp"
 
-#include "commandline.h"
-#include "executeondestruction.h"
-#include "hostosinfo.h"
-#include "launcherinterface.h"
-#include "launcherpackets.h"
-#include "launchersocket.h"
-#include "processreaper.h"
-#include "qtcassert.h"
-#include "stringutils.h"
-#include "terminalprocess_p.h"
+#include "commandline.hpp"
+#include "executeondestruction.hpp"
+#include "hostosinfo.hpp"
+#include "launcherinterface.hpp"
+#include "launcherpackets.hpp"
+#include "launchersocket.hpp"
+#include "processreaper.hpp"
+#include "qtcassert.hpp"
+#include "stringutils.hpp"
+#include "terminalprocess_p.hpp"
 
 #include <QCoreApplication>
 #include <QDebug>

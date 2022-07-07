@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "ilocatorfilter.h"
+#include "ilocatorfilter.hpp"
 
-#include <utils/fuzzymatcher.h>
+#include <utils/fuzzymatcher.hpp>
 
 #include <QBoxLayout>
 #include <QCheckBox>

@@ -1,18 +1,18 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "plugindialog.h"
-#include "icore.h"
-#include "plugininstallwizard.h"
+#include "plugindialog.hpp"
+#include "icore.hpp"
+#include "plugininstallwizard.hpp"
 
-#include <core/dialogs/restartdialog.h>
+#include <core/dialogs/restartdialog.hpp>
 
-#include <extensionsystem/plugindetailsview.h>
-#include <extensionsystem/pluginerrorview.h>
-#include <extensionsystem/pluginmanager.h>
-#include <extensionsystem/pluginspec.h>
-#include <extensionsystem/pluginview.h>
+#include <extensionsystem/plugindetailsview.hpp>
+#include <extensionsystem/pluginerrorview.hpp>
+#include <extensionsystem/pluginmanager.hpp>
+#include <extensionsystem/pluginspec.hpp>
+#include <extensionsystem/pluginview.hpp>
 
-#include <utils/fancylineedit.h>
+#include <utils/fancylineedit.hpp>
 
 #include <QCheckBox>
 #include <QDialog>

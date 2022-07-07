@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "crumblepath.h"
-#include "qtcassert.h"
-#include "stylehelper.h"
+#include "crumblepath.hpp"
+#include "qtcassert.hpp"
+#include "stylehelper.hpp"
 
-#include <utils/icon.h>
-#include <utils/theme/theme.h>
+#include <utils/icon.hpp>
+#include <utils/theme/theme.hpp>
 
 #include <QHBoxLayout>
 #include <QMenu>

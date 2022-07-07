@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "optionspopup.h"
+#include "optionspopup.hpp"
 
-#include <core/actionmanager/actionmanager.h>
+#include <core/actionmanager/actionmanager.hpp>
 
-#include <utils/qtcassert.h>
+#include <utils/qtcassert.hpp>
 
 #include <QAction>
 #include <QCheckBox>

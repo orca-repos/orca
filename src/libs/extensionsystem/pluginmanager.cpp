@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "pluginmanager.h"
-#include "pluginmanager_p.h"
-#include "pluginspec.h"
-#include "pluginspec_p.h"
-#include "optionsparser.h"
-#include "iplugin.h"
+#include "pluginmanager.hpp"
+#include "pluginmanager_p.hpp"
+#include "pluginspec.hpp"
+#include "pluginspec_p.hpp"
+#include "optionsparser.hpp"
+#include "iplugin.hpp"
 
 #include <QCoreApplication>
 #include <QCryptographicHash>
@@ -25,18 +25,18 @@
 #include <QTimer>
 #include <QWriteLocker>
 
-#include <utils/algorithm.h>
-#include <utils/benchmarker.h>
-#include <utils/executeondestruction.h>
-#include <utils/fileutils.h>
-#include <utils/hostosinfo.h>
-#include <utils/mimetypes/mimedatabase.h>
-#include <utils/qtcassert.h>
-#include <utils/qtcprocess.h>
-#include <utils/qtcsettings.h>
+#include <utils/algorithm.hpp>
+#include <utils/benchmarker.hpp>
+#include <utils/executeondestruction.hpp>
+#include <utils/fileutils.hpp>
+#include <utils/hostosinfo.hpp>
+#include <utils/mimetypes/mimedatabase.hpp>
+#include <utils/qtcassert.hpp>
+#include <utils/qtcprocess.hpp>
+#include <utils/qtcsettings.hpp>
 
 #ifdef ORCA_BUILD_WITH_PLUGINS_TESTS
-#include <utils/hostosinfo.h>
+#include <utils/hostosinfo.hpp>
 #include <QTest>
 #include <QThread>
 #endif

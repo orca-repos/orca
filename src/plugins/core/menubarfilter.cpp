@@ -1,16 +1,16 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "menubarfilter.h"
-#include "actionmanager/actioncontainer.h"
-#include "actionmanager/actionmanager.h"
-#include "coreconstants.h"
-#include "icore.h"
-#include "locator/locatormanager.h"
+#include "menubarfilter.hpp"
+#include "actionmanager/actioncontainer.hpp"
+#include "actionmanager/actionmanager.hpp"
+#include "coreconstants.hpp"
+#include "icore.hpp"
+#include "locator/locatormanager.hpp"
 
-#include <utils/algorithm.h>
-#include <utils/porting.h>
-#include <utils/qtcassert.h>
-#include <utils/stringutils.h>
+#include <utils/algorithm.hpp>
+#include <utils/porting.hpp>
+#include <utils/qtcassert.hpp>
+#include <utils/stringutils.hpp>
 
 #include <QMenuBar>
 #include <QPointer>

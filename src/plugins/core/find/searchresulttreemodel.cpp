@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "searchresulttreemodel.h"
-#include "searchresulttreeitems.h"
-#include "searchresulttreeitemroles.h"
+#include "searchresulttreemodel.hpp"
+#include "searchresulttreeitems.hpp"
+#include "searchresulttreeitemroles.hpp"
 
-#include <utils/algorithm.h>
+#include <utils/algorithm.hpp>
 
 #include <QApplication>
 #include <QFont>

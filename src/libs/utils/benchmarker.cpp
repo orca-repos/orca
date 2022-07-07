@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "benchmarker.h"
+#include "benchmarker.hpp"
 
 #include <QCoreApplication>
 #include <QLoggingCategory>

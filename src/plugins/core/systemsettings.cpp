@@ -1,27 +1,27 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "systemsettings.h"
+#include "systemsettings.hpp"
 #include "ui_systemsettings.h"
-#include "coreconstants.h"
-#include "coreplugin.h"
-#include "fileutils.h"
-#include "icore.h"
-#include "iversioncontrol.h"
-#include "mainwindow.h"
-#include "patchtool.h"
-#include "vcsmanager.h"
+#include "coreconstants.hpp"
+#include "coreplugin.hpp"
+#include "fileutils.hpp"
+#include "icore.hpp"
+#include "iversioncontrol.hpp"
+#include "mainwindow.hpp"
+#include "patchtool.hpp"
+#include "vcsmanager.hpp"
 
-#include <core/editormanager/editormanager_p.h>
-#include <core/dialogs/restartdialog.h>
+#include <core/editormanager/editormanager_p.hpp>
+#include <core/dialogs/restartdialog.hpp>
 
-#include <utils/algorithm.h>
-#include <utils/environment.h>
-#include <utils/environmentdialog.h>
-#include <utils/hostosinfo.h>
-#include <utils/terminalcommand.h>
-#include <utils/unixutils.h>
+#include <utils/algorithm.hpp>
+#include <utils/environment.hpp>
+#include <utils/environmentdialog.hpp>
+#include <utils/hostosinfo.hpp>
+#include <utils/terminalcommand.hpp>
+#include <utils/unixutils.hpp>
 
-#include <app/app_version.h>
+#include <app/app_version.hpp>
 
 #include <QCoreApplication>
 #include <QMessageBox>

@@ -1,11 +1,11 @@
-configure_file(app_version.h.cmakein app_version.h ESCAPE_QUOTES)
+configure_file(app_version.hpp.cmakein app_version.hpp ESCAPE_QUOTES)
 
 if(NOT IS_ABSOLUTE "${IDE_ICON_PATH}")
   set(IDE_ICON_PATH "${CMAKE_CURRENT_SOURCE_DIR}/${IDE_ICON_PATH}")
 endif()
 
 install(
-  FILES ${CMAKE_CURRENT_BINARY_DIR}/app_version.h
+  FILES ${CMAKE_CURRENT_BINARY_DIR}/app_version.hpp
   DESTINATION ${IDE_HEADER_INSTALL_PATH}/src/app
   COMPONENT Devel EXCLUDE_FROM_ALL
 )
@@ -15,7 +15,7 @@ add_qtc_executable(orca
   DEPENDS Aggregation ExtensionSystem Qt6::Core Qt6::Widgets Utils shared_qtsingleapplication app_version
   SOURCES
     main.cpp
-    ../tools/orcacrashhandler/crashhandlersetup.cpp ../tools/orcacrashhandler/crashhandlersetup.h
+    ../tools/orcacrashhandler/crashhandlersetup.cpp ../tools/orcacrashhandler/crashhandlersetup.hpp
   PROPERTIES
     WIN32_EXECUTABLE ON
     MACOSX_BUNDLE ON

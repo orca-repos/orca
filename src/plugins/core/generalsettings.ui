@@ -194,12 +194,12 @@
   <customwidget>
    <class>Utils::QtColorButton</class>
    <extends>QToolButton</extends>
-   <header location="global">utils/qtcolorbutton.h</header>
+   <header location="global">utils/qtcolorbutton.hpp</header>
   </customwidget>
   <customwidget>
    <class>Core::Internal::ThemeChooser</class>
    <extends>QWidget</extends>
-   <header location="global">core/themechooser.h</header>
+   <header location="global">core/themechooser.hpp</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

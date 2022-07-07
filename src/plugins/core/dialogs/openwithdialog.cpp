@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "openwithdialog.h"
+#include "openwithdialog.hpp"
 
-#include <utils/fileutils.h>
+#include <utils/fileutils.hpp>
 
 #include <QPushButton>
 

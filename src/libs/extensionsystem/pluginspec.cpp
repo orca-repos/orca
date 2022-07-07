@@ -1,16 +1,16 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "pluginspec.h"
+#include "pluginspec.hpp"
 
-#include "pluginspec_p.h"
-#include "iplugin.h"
-#include "iplugin_p.h"
-#include "pluginmanager.h"
+#include "pluginspec_p.hpp"
+#include "iplugin.hpp"
+#include "iplugin_p.hpp"
+#include "pluginmanager.hpp"
 
-#include <utils/algorithm.h>
-#include <utils/hostosinfo.h>
-#include <utils/qtcassert.h>
-#include <utils/stringutils.h>
+#include <utils/algorithm.hpp>
+#include <utils/hostosinfo.hpp>
+#include <utils/qtcassert.hpp>
+#include <utils/stringutils.hpp>
 
 #include <QCoreApplication>
 #include <QDebug>

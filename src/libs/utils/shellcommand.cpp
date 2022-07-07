@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "shellcommand.h"
+#include "shellcommand.hpp"
 
-#include "environment.h"
-#include "fileutils.h"
-#include "qtcassert.h"
-#include "runextensions.h"
+#include "environment.hpp"
+#include "fileutils.hpp"
+#include "qtcassert.hpp"
+#include "runextensions.hpp"
 
 #include <QFileInfo>
 #include <QFuture>

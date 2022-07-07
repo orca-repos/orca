@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "pluginerrorview.h"
+#include "pluginerrorview.hpp"
 #include "ui_pluginerrorview.h"
-#include "pluginspec.h"
+#include "pluginspec.hpp"
 
 #include <QString>
 

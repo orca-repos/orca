@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "filesearch.h"
+#include "filesearch.hpp"
 
-#include "algorithm.h"
-#include "fileutils.h"
-#include "mapreduce.h"
-#include "qtcassert.h"
-#include "stringutils.h"
+#include "algorithm.hpp"
+#include "fileutils.hpp"
+#include "mapreduce.hpp"
+#include "qtcassert.hpp"
+#include "stringutils.hpp"
 
 #include <QCoreApplication>
 #include <QLoggingCategory>

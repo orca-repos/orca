@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "generatedfile.h"
+#include "generatedfile.hpp"
 
-#include <core/editormanager/editormanager.h>
+#include <core/editormanager/editormanager.hpp>
 
-#include <utils/fileutils.h>
-#include <utils/textfileformat.h>
+#include <utils/fileutils.hpp>
+#include <utils/textfileformat.hpp>
 
 #include <QCoreApplication>
 #include <QDebug>

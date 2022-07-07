@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "filesystemwatcher.h"
-#include "globalfilechangeblocker.h"
+#include "filesystemwatcher.hpp"
+#include "globalfilechangeblocker.hpp"
 
 #include <QDebug>
 #include <QDir>

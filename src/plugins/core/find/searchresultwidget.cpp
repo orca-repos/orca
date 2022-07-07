@@ -1,20 +1,20 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "searchresultwidget.h"
-#include "searchresulttreeview.h"
-#include "searchresulttreemodel.h"
-#include "searchresulttreeitems.h"
-#include "searchresulttreeitemroles.h"
-#include "findplugin.h"
-#include "itemviewfind.h"
+#include "searchresultwidget.hpp"
+#include "searchresulttreeview.hpp"
+#include "searchresulttreemodel.hpp"
+#include "searchresulttreeitems.hpp"
+#include "searchresulttreeitemroles.hpp"
+#include "findplugin.hpp"
+#include "itemviewfind.hpp"
 
-#include <core/coreplugin.h>
+#include <core/coreplugin.hpp>
 
-#include <utils/qtcassert.h>
-#include <utils/theme/theme.h>
-#include <utils/fancylineedit.h>
+#include <utils/qtcassert.hpp>
+#include <utils/theme/theme.hpp>
+#include <utils/fancylineedit.hpp>
 
-#include <aggregation/aggregate.h>
+#include <aggregation/aggregate.hpp>
 
 #include <QFrame>
 #include <QLabel>

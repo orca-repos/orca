@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "sidebar.h"
-#include "sidebarwidget.h"
+#include "sidebar.hpp"
+#include "sidebarwidget.hpp"
 
-#include <core/actionmanager/command.h>
+#include <core/actionmanager/command.hpp>
 
-#include <utils/algorithm.h>
-#include <utils/qtcassert.h>
-#include <utils/utilsicons.h>
+#include <utils/algorithm.hpp>
+#include <utils/qtcassert.hpp>
+#include <utils/utilsicons.hpp>
 
 #include <QSettings>
 #include <QPointer>

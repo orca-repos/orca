@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "locatorfiltersfilter.h"
-#include "locator.h"
-#include "locatorwidget.h"
+#include "locatorfiltersfilter.hpp"
+#include "locator.hpp"
+#include "locatorwidget.hpp"
 
-#include <utils/qtcassert.h>
-#include <utils/utilsicons.h>
+#include <utils/qtcassert.hpp>
+#include <utils/utilsicons.hpp>
 
 using namespace Core;
 using namespace Core::Internal;

@@ -1,16 +1,16 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "aspects.h"
+#include "aspects.hpp"
 
-#include "algorithm.h"
-#include "fancylineedit.h"
-#include "layoutbuilder.h"
-#include "pathchooser.h"
-#include "qtcassert.h"
-#include "qtcprocess.h"
-#include "qtcsettings.h"
-#include "utilsicons.h"
-#include "variablechooser.h"
+#include "algorithm.hpp"
+#include "fancylineedit.hpp"
+#include "layoutbuilder.hpp"
+#include "pathchooser.hpp"
+#include "qtcassert.hpp"
+#include "qtcprocess.hpp"
+#include "qtcsettings.hpp"
+#include "utilsicons.hpp"
+#include "variablechooser.hpp"
 
 #include <QAction>
 #include <QButtonGroup>

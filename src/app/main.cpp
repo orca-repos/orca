@@ -1,25 +1,25 @@
 // SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#include "../tools/orcacrashhandler/crashhandlersetup.h"
+#include "../tools/orcacrashhandler/crashhandlersetup.hpp"
 
-#include <app/app_version.h>
+#include <app/app_version.hpp>
 
-#include <utils/algorithm.h>
-#include <utils/environment.h>
-#include <utils/fileutils.h>
-#include <utils/hostosinfo.h>
-#include <utils/optional.h>
-#include <utils/qtcsettings.h>
-#include <utils/singleton.h>
-#include <utils/temporarydirectory.h>
-#include <utils/terminalcommand.h>
+#include <utils/algorithm.hpp>
+#include <utils/environment.hpp>
+#include <utils/fileutils.hpp>
+#include <utils/hostosinfo.hpp>
+#include <utils/optional.hpp>
+#include <utils/qtcsettings.hpp>
+#include <utils/singleton.hpp>
+#include <utils/temporarydirectory.hpp>
+#include <utils/terminalcommand.hpp>
 
-#include <extensionsystem/iplugin.h>
-#include <extensionsystem/pluginerroroverview.h>
-#include <extensionsystem/pluginmanager.h>
-#include <extensionsystem/pluginspec.h>
+#include <extensionsystem/iplugin.hpp>
+#include <extensionsystem/pluginerroroverview.hpp>
+#include <extensionsystem/pluginmanager.hpp>
+#include <extensionsystem/pluginspec.hpp>
 
-#include <qtsingleapplication.h>
+#include <qtsingleapplication.hpp>
 
 #include <QDebug>
 #include <QDir>
@@ -43,14 +43,14 @@
 #include <vector>
 
 #ifdef ENABLE_QT_BREAKPAD
-#include <qtsystemexceptionhandler.h>
+#include <qtsystemexceptionhandler.hpp>
 #endif
 
 #ifdef ENABLE_CRASHPAD
 #define NOMINMAX
-#include "client/crashpad_client.h"
-#include "client/crash_report_database.h"
-#include "client/settings.h"
+#include "client/crashpad_client.hpp"
+#include "client/crash_report_database.hpp"
+#include "client/settings.hpp"
 #endif
 
 #ifdef Q_OS_LINUX
@@ -64,7 +64,7 @@ enum class indent {
   description = 34
 };
 
-constexpr char core_plugin_name_c[] = "Core";
+constexpr char core_plugin_name_c[] = "core";
 constexpr char fixed_options_c[] =
 " [OPTION]... [FILE]...\n"
 "Options:\n"
