@@ -448,8 +448,8 @@ auto DocumentManager::addDocument(IDocument *document, const bool add_watcher) -
 
 auto DocumentManager::documentDestroyed(QObject *obj) -> void
 {
-  // Check the special unwatched first:
-  if (const auto document = dynamic_cast<IDocument*>(obj); !d->m_documents_without_watch.removeOne(document))
+  // NOTE: Don't use dynamic_cast. By the time QObject::destroyed() is emitted, IDocument has already been destroyed.
+  if (const auto document = static_cast<IDocument*>(obj); !d->m_documents_without_watch.removeOne(document)) // NOLINT(cppcoreguidelines-pro-type-static-cast-downcast)
     removeFileInfo(document);
 }
 
