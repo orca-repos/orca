@@ -250,15 +250,17 @@ auto DirectoryFilter::updateFileIterator() const -> void
 
 auto DirectoryFilter::refresh(QFutureInterface<void> &future) -> void
 {
-  QMutexLocker locker(&m_lock);
+  {
+    QMutexLocker locker(&m_lock);
 
-  if (m_directories.isEmpty()) {
-    m_files.clear();
-    QMetaObject::invokeMethod(this, &DirectoryFilter::updateFileIterator, Qt::QueuedConnection);
-    future.setProgressRange(0, 1);
-    future.setProgressValueAndText(1, tr("%1 filter update: 0 files").arg(displayName()));
-    return;
-  }
+    if (m_directories.isEmpty()) {
+      m_files.clear();
+      QMetaObject::invokeMethod(this, &DirectoryFilter::updateFileIterator, Qt::QueuedConnection);
+      future.setProgressRange(0, 1);
+      future.setProgressValueAndText(1, tr("%1 filter update: 0 files").arg(displayName()));
+      return;
+    }
+  } // release lock
 
   const auto directories = m_directories;
   const auto filters = m_filters;

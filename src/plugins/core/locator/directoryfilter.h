@@ -18,7 +18,7 @@ class DirectoryFilterOptions;
 } // namespace Ui
 } // namespace Internal
 
-class CORE_EXPORT DirectoryFilter final : public BaseFileFilter {
+class CORE_EXPORT DirectoryFilter : public BaseFileFilter {
   Q_OBJECT
 
 public:
