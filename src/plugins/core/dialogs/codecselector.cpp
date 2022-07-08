@@ -123,11 +123,11 @@ auto CodecSelector::selectedCodec() const -> QTextCodec*
 
 auto CodecSelector::buttonClicked(const QAbstractButton *button) -> void
 {
-  auto result = result::cancel;
+  auto result = Result::Cancel;
   if (button == m_reload_button)
-    result = result::reload;
+    result = Result::Reload;
   if (button == m_save_button)
-    result = result::save;
+    result = Result::Save;
   done(static_cast<int>(result));
 }
 

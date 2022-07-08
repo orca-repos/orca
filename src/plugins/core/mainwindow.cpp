@@ -818,9 +818,9 @@ auto MainWindow::openFiles(const FilePaths &file_paths, const ICore::OpenFilesFl
           ModeManager::activateMode(Id(Constants::MODE_EDIT));
       }
     } else if (flags & (ICore::SwitchSplitIfAlreadyVisible | ICore::CanContainLineAndColumnNumbers) || !res) {
-      QFlags<EditorManager::open_editor_flag> emFlags;
+      QFlags<EditorManager::OpenEditorFlag> emFlags;
       if (flags & ICore::SwitchSplitIfAlreadyVisible)
-        emFlags |= EditorManager::switch_split_if_already_visible;
+        emFlags |= EditorManager::SwitchSplitIfAlreadyVisible;
       const IEditor *editor = nullptr;
       if (flags & ICore::CanContainLineAndColumnNumbers) {
         const auto &link = Link::fromFilePath(absolute_file_path, true);

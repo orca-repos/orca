@@ -135,7 +135,7 @@ SearchResultWindowPrivate::SearchResultWindowPrivate(SearchResultWindow *window,
 
   const auto new_search_action = new QAction(tr("New Search"), this);
   new_search_action->setIcon(Utils::Icons::NEWSEARCH_TOOLBAR.icon());
-  cmd = ActionManager::command(Constants::advanced_find);
+  cmd = ActionManager::command(Constants::ADVANCED_FIND);
   m_new_search_button = Command::toolButtonWithAppendedShortcut(new_search_action, cmd);
 
   if (QTC_GUARD(cmd && cmd->action()))

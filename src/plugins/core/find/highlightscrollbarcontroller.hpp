@@ -19,11 +19,11 @@ namespace Core {
 
 struct CORE_EXPORT Highlight {
   enum Priority {
-    invalid = -1,
-    low_priority = 0,
-    normal_priority = 1,
-    high_priority = 2,
-    highest_priority = 3
+    Invalid = -1,
+    LowPriority = 0,
+    NormalPriority = 1,
+    HighPriority = 2,
+    HighestPriority = 3
   };
 
   Highlight(Utils::Id category, int position, Utils::Theme::Color color, Priority priority);
@@ -32,7 +32,7 @@ struct CORE_EXPORT Highlight {
   Utils::Id category;
   int position = -1;
   Utils::Theme::Color color = Utils::Theme::TextColorNormal;
-  Priority priority = invalid;
+  Priority priority = Invalid;
 };
 
 class HighlightScrollBarOverlay;

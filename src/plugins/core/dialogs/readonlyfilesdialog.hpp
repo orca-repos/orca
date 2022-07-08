@@ -15,25 +15,24 @@ namespace Internal {
 class ReadOnlyFilesDialogPrivate;
 }
 
-class CORE_EXPORT ReadOnlyFilesDialog final : public QDialog {
+class CORE_EXPORT ReadOnlyFilesDialog : public QDialog {
   Q_OBJECT
-  Q_DISABLE_COPY_MOVE(ReadOnlyFilesDialog)
   
-  enum read_only_files_tree_column {
-    make_writable = 0,
-    open_with_vcs = 1,
-    save_as = 2,
-    file_name = 3,
-    folder = 4,
-    number_of_columns
+  enum ReadOnlyFilesTreeColumn {
+    MakeWritable = 0,
+    OpenWithVCS = 1,
+    SaveAs = 2,
+    FileName = 3,
+    Folder = 4,
+    NumberOfColumns
   };
 
 public:
-  enum read_only_result {
-    ro_cancel = -1,
-    ro_open_vcs = open_with_vcs,
-    ro_make_writable = make_writable,
-    ro_save_as = save_as
+  enum ReadOnlyResult {
+    RO_Cancel = -1,
+    RO_OpenVCS = OpenWithVCS,
+    RO_MakeWritable = MakeWritable,
+    RO_SaveAs = SaveAs
   };
 
   explicit ReadOnlyFilesDialog(const Utils::FilePaths &file_paths, QWidget *parent = nullptr);

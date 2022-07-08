@@ -29,10 +29,10 @@ public:
   auto selectedCodec() const -> QTextCodec*;
 
   // Enumeration returned from QDialog::exec()
-  enum class result {
-    cancel,
-    reload,
-    save
+  enum Result {
+    Cancel,
+    Reload,
+    Save
   };
 
 private:

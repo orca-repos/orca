@@ -230,7 +230,7 @@ auto BaseTextFind::replace(const QString &before, const QString &after, const Fi
 }
 
 // QTextCursor::insert moves all other QTextCursors that are the the insertion point forward.
-// We do not want that for the replace operation, because then e.g. the find scope would move when
+// We do not want that for the REPLACE operation, because then e.g. the find scope would move when
 // replacing a match at the start.
 static auto insertTextAfterSelection(const QString &text, QTextCursor &cursor) -> void
 {

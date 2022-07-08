@@ -590,7 +590,7 @@ auto FolderNavigationWidget::openItem(const QModelIndex &index) const -> void
     return;
 
   const auto path = m_file_system_model->filePath(index);
-  EditorManager::openEditor(FilePath::fromString(path), {}, EditorManager::allow_external_editor);
+  EditorManager::openEditor(FilePath::fromString(path), {}, EditorManager::AllowExternalEditor);
 }
 
 auto FolderNavigationWidget::createNewFolder(const QModelIndex &parent) const -> void

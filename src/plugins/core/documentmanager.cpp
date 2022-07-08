@@ -645,7 +645,7 @@ static auto saveModifiedFilesHelper(const QList<IDocument*> &documents, const QS
     if (!ro_documents.isEmpty()) {
       ReadOnlyFilesDialog ro_dialog(ro_documents, ICore::dialogParent());
       ro_dialog.setShowFailWarning(true, DocumentManager::tr("Could not save the files.", "error message"));
-      if (ro_dialog.exec() == ReadOnlyFilesDialog::ro_cancel) {
+      if (ro_dialog.exec() == ReadOnlyFilesDialog::RO_Cancel) {
         if (cancelled)
           *cancelled = true;
         if (failed_to_save)

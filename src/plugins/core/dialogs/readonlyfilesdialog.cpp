@@ -36,16 +36,16 @@ public:
   ~ReadOnlyFilesDialogPrivate();
 
   enum read_only_files_tree_column {
-    make_writable = ReadOnlyFilesDialog::make_writable,
-    open_with_vcs = ReadOnlyFilesDialog::open_with_vcs,
-    save_as = ReadOnlyFilesDialog::save_as,
-    file_name = ReadOnlyFilesDialog::file_name,
-    folder = ReadOnlyFilesDialog::folder,
+    make_writable = ReadOnlyFilesDialog::MakeWritable,
+    open_with_vcs = ReadOnlyFilesDialog::OpenWithVCS,
+    save_as = ReadOnlyFilesDialog::SaveAs,
+    file_name = ReadOnlyFilesDialog::FileName,
+    folder = ReadOnlyFilesDialog::Folder,
     number_of_columns
   };
 
   auto initDialog(const FilePaths &file_paths) -> void;
-  auto promptFailWarning(const FilePaths &files, ReadOnlyFilesDialog::read_only_result type) const -> void;
+  auto promptFailWarning(const FilePaths &files, ReadOnlyFilesDialog::ReadOnlyResult type) const -> void;
   auto createRadioButtonForItem(QTreeWidgetItem *item, QButtonGroup *group, read_only_files_tree_column type) const -> QRadioButton*;
   auto setAll(int index) -> void;
   auto updateSelectAll() -> void;
@@ -175,7 +175,7 @@ auto ReadOnlyFilesDialog::setShowFailWarning(const bool show, const QString &war
  * Opens a message box with an error description according to the type.
  * \internal
  */
-auto ReadOnlyFilesDialogPrivate::promptFailWarning(const FilePaths &files, const ReadOnlyFilesDialog::read_only_result type) const -> void
+auto ReadOnlyFilesDialogPrivate::promptFailWarning(const FilePaths &files, const ReadOnlyFilesDialog::ReadOnlyResult type) const -> void
 {
   if (files.isEmpty())
     return;
@@ -187,7 +187,7 @@ auto ReadOnlyFilesDialogPrivate::promptFailWarning(const FilePaths &files, const
   if (files.count() == 1) {
     const auto &file = files.first();
     switch (type) {
-    case ReadOnlyFilesDialog::ro_open_vcs: {
+    case ReadOnlyFilesDialog::RO_OpenVCS: {
       if (const auto vc = version_controls[file]) {
         const auto open_text = stripAccelerator(vc->vcsOpenText());
         title = tr("Failed to %1 File").arg(open_text);
@@ -198,11 +198,11 @@ auto ReadOnlyFilesDialogPrivate::promptFailWarning(const FilePaths &files, const
       }
       break;
     }
-    case ReadOnlyFilesDialog::ro_make_writable:
+    case ReadOnlyFilesDialog::RO_MakeWritable:
       title = tr("Cannot Set Permissions");
       message = tr("Cannot set permissions for %1 to writable.").arg(file.toUserOutput()) + '\n' + fail_warning;
       break;
-    case ReadOnlyFilesDialog::ro_save_as:
+    case ReadOnlyFilesDialog::RO_SaveAs:
       title = tr("Cannot Save File");
       message = tr("Cannot save file %1").arg(file.toUserOutput()) + '\n' + fail_warning;
       break;
@@ -235,28 +235,28 @@ auto ReadOnlyFilesDialogPrivate::promptFailWarning(const FilePaths &files, const
 auto ReadOnlyFilesDialog::exec() -> int
 {
   if (QDialog::exec() != Accepted)
-    return ro_cancel;
+    return RO_Cancel;
 
-  auto result = ro_cancel;
+  auto result = RO_Cancel;
   FilePaths failed_to_make_writable;
 
   for (const auto &[file_path, group] : qAsConst(d->button_groups)) {
-    result = static_cast<read_only_result>(group->checkedId());
+    result = static_cast<ReadOnlyResult>(group->checkedId());
 
     switch (result) {
-    case ro_make_writable:
+    case RO_MakeWritable:
       if (!FileUtils::makeWritable(file_path)) {
         failed_to_make_writable << file_path;
         continue;
       }
       break;
-    case ro_open_vcs:
+    case RO_OpenVCS:
       if (!d->version_controls[file_path]->vcsOpen(file_path)) {
         failed_to_make_writable << file_path;
         continue;
       }
       break;
-    case ro_save_as:
+    case RO_SaveAs:
       if (!EditorManagerPrivate::saveDocumentAs(d->document)) {
         failed_to_make_writable << file_path;
         continue;
@@ -276,7 +276,7 @@ auto ReadOnlyFilesDialog::exec() -> int
       d->promptFailWarning(failed_to_make_writable, result);
 
   }
-  return failed_to_make_writable.isEmpty() ? result : ro_cancel;
+  return failed_to_make_writable.isEmpty() ? result : RO_Cancel;
 }
 
 /*!
@@ -364,7 +364,7 @@ auto ReadOnlyFilesDialogPrivate::initDialog(const FilePaths &file_paths) -> void
     const auto visible_name = file_path.fileName();
     const auto directory = file_path.absolutePath();
 
-    // Setup a default entry with filename folder and make writable radio button.
+    // Setup a default entry with filename Folder and make writable radio button.
     const auto item = new QTreeWidgetItem(ui.treeWidget);
     item->setText(file_name, visible_name);
     item->setIcon(file_name, FileIconProvider::icon(file_path));

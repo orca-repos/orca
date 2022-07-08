@@ -44,34 +44,33 @@ protected:
   auto showEvent(QShowEvent *event) -> void override;
 };
 
-class CORE_EXPORT EditorManager final : public QObject {
+class CORE_EXPORT EditorManager : public QObject {
   Q_OBJECT
-  Q_DISABLE_COPY_MOVE(EditorManager)
 
 public:
   using window_title_handler = std::function<QString (const Utils::FilePath &)>;
 
   static auto instance() -> EditorManager*;
 
-  enum open_editor_flag {
-    no_flags = 0,
-    do_not_change_current_editor = 1,
-    ignore_navigation_history = 2,
-    do_not_make_visible = 4,
-    open_in_other_split = 8,
-    do_not_switch_to_design_mode = 16,
-    do_not_switch_to_edit_mode = 32,
-    switch_split_if_already_visible = 64,
-    do_not_raise = 128,
-    allow_external_editor = 256
+  enum OpenEditorFlag {
+    NoFlags = 0,
+    DoNotChangeCurrentEditor = 1,
+    IgnoreNavigationHistory = 2,
+    DoNotMakeVisible = 4,
+    OpenInOtherSplit = 8,
+    DoNotSwitchToDesignMode = 16,
+    DoNotSwitchToEditMode = 32,
+    SwitchSplitIfAlreadyVisible = 64,
+    DoNotRaise = 128,
+    AllowExternalEditor = 256
   };
 
-  Q_DECLARE_FLAGS(OpenEditorFlags, open_editor_flag)
+  Q_DECLARE_FLAGS(OpenEditorFlags, OpenEditorFlag)
 
-  static auto openEditor(const Utils::FilePath &file_path, Utils::Id editor_id = {}, OpenEditorFlags flags = no_flags, bool *new_editor = nullptr) -> IEditor*;
-  static auto openEditorAt(const Utils::Link &link, Utils::Id editor_id = {}, OpenEditorFlags flags = no_flags, bool *new_editor = nullptr) -> IEditor*;
-  static auto openEditorAtSearchResult(const SearchResultItem &item, Utils::Id editor_id = {}, OpenEditorFlags flags = no_flags, bool *new_editor = nullptr) -> void;
-  static auto openEditorWithContents(Utils::Id editor_id, QString *title_pattern = nullptr, const QByteArray &contents = QByteArray(), const QString &unique_id = QString(), OpenEditorFlags flags = no_flags) -> IEditor*;
+  static auto openEditor(const Utils::FilePath &file_path, Utils::Id editor_id = {}, OpenEditorFlags flags = NoFlags, bool *new_editor = nullptr) -> IEditor*;
+  static auto openEditorAt(const Utils::Link &link, Utils::Id editor_id = {}, OpenEditorFlags flags = NoFlags, bool *new_editor = nullptr) -> IEditor*;
+  static auto openEditorAtSearchResult(const SearchResultItem &item, Utils::Id editor_id = {}, OpenEditorFlags flags = NoFlags, bool *new_editor = nullptr) -> void;
+  static auto openEditorWithContents(Utils::Id editor_id, QString *title_pattern = nullptr, const QByteArray &contents = QByteArray(), const QString &unique_id = QString(), OpenEditorFlags flags = NoFlags) -> IEditor*;
   static auto skipOpeningBigTextFile(const Utils::FilePath &file_path) -> bool;
   static auto clearUniqueId(IDocument *document) -> void;
   static auto openExternalEditor(const Utils::FilePath &file_path, Utils::Id editor_id) -> bool;
@@ -80,9 +79,9 @@ public:
   static auto currentDocument() -> IDocument*;
   static auto currentEditor() -> IEditor*;
   static auto visibleEditors() -> QList<IEditor*>;
-  static auto activateEditor(IEditor *editor, OpenEditorFlags flags = no_flags) -> void;
-  static auto activateEditorForEntry(DocumentModel::Entry *entry, OpenEditorFlags flags = no_flags) -> void;
-  static auto activateEditorForDocument(IDocument *document, OpenEditorFlags flags = no_flags) -> IEditor*;
+  static auto activateEditor(IEditor *editor, OpenEditorFlags flags = NoFlags) -> void;
+  static auto activateEditorForEntry(DocumentModel::Entry *entry, OpenEditorFlags flags = NoFlags) -> void;
+  static auto activateEditorForDocument(IDocument *document, OpenEditorFlags flags = NoFlags) -> IEditor*;
   static auto closeDocuments(const QList<IDocument*> &documents, bool ask_about_modified_editors = true) -> bool;
   static auto closeDocuments(const QList<DocumentModel::Entry*> &entries) -> bool;
   static auto closeOtherDocuments(IDocument *document) -> void;

@@ -61,13 +61,13 @@ public:
   static auto mainEditorArea() -> EditorArea*;
   static auto currentEditorView() -> EditorView*;
   static auto setCurrentEditor(IEditor *editor, bool ignore_navigation_history = false) -> void;
-  static auto openEditor(EditorView *view, const Utils::FilePath &file_path, Utils::Id editor_id = {}, EditorManager::OpenEditorFlags flags = EditorManager::no_flags, bool *new_editor = nullptr) -> IEditor*;
-  static auto openEditorAt(EditorView *view, const Utils::Link &link, Utils::Id editor_id = {}, EditorManager::OpenEditorFlags flags = EditorManager::no_flags, bool *new_editor = nullptr) -> IEditor*;
+  static auto openEditor(EditorView *view, const Utils::FilePath &file_path, Utils::Id editor_id = {}, EditorManager::OpenEditorFlags flags = EditorManager::NoFlags, bool *new_editor = nullptr) -> IEditor*;
+  static auto openEditorAt(EditorView *view, const Utils::Link &link, Utils::Id editor_id = {}, EditorManager::OpenEditorFlags flags = EditorManager::NoFlags, bool *new_editor = nullptr) -> IEditor*;
   static auto openEditorWith(const Utils::FilePath &file_path, Utils::Id editor_id) -> IEditor*;
   static auto duplicateEditor(IEditor *editor) -> IEditor*;
-  static auto activateEditor(EditorView *view, IEditor *editor, EditorManager::OpenEditorFlags flags = EditorManager::no_flags) -> IEditor*;
+  static auto activateEditor(EditorView *view, IEditor *editor, EditorManager::OpenEditorFlags flags = EditorManager::NoFlags) -> IEditor*;
   static auto activateEditorForDocument(EditorView *view, IDocument *document, EditorManager::OpenEditorFlags flags = {}) -> IEditor*;
-  static auto activateEditorForEntry(EditorView *view, DocumentModel::Entry *entry, EditorManager::OpenEditorFlags flags = EditorManager::no_flags) -> bool;
+  static auto activateEditorForEntry(EditorView *view, DocumentModel::Entry *entry, EditorManager::OpenEditorFlags flags = EditorManager::NoFlags) -> bool;
   /* closes the document if there is no other editor on the document visible */
   static auto closeEditorOrDocument(IEditor *editor) -> void;
   static auto closeEditors(const QList<IEditor*> &editors, close_flag flag) -> bool;

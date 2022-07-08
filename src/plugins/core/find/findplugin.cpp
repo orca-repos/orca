@@ -204,7 +204,7 @@ auto Find::initialize() -> void
 
   auto *find_tool_bar_context = new IContext(m_instance);
   find_tool_bar_context->setWidget(d->m_find_tool_bar);
-  find_tool_bar_context->setContext(Context(Constants::c_findtoolbar));
+  find_tool_bar_context->setContext(Context(Constants::C_FINDTOOLBAR));
   ICore::addContextObject(find_tool_bar_context);
 
   d->m_find_dialog = new Internal::FindToolWindow;
@@ -245,22 +245,22 @@ auto Find::openFindDialog(IFindFilter *filter) -> void
 auto FindPrivate::setupMenu() -> void
 {
   const auto medit = ActionManager::actionContainer(Constants::M_EDIT);
-  const auto mfind = ActionManager::createMenu(Constants::m_find);
+  const auto mfind = ActionManager::createMenu(Constants::M_FIND);
   medit->addMenu(mfind, Constants::G_EDIT_FIND);
   mfind->menu()->setTitle(tr("&Find/Replace"));
-  mfind->appendGroup(Constants::g_find_currentdocument);
-  mfind->appendGroup(Constants::g_find_filters);
-  mfind->appendGroup(Constants::g_find_flags);
-  mfind->appendGroup(Constants::g_find_actions);
-  mfind->addSeparator(Constants::g_find_flags);
-  mfind->addSeparator(Constants::g_find_actions);
+  mfind->appendGroup(Constants::G_FIND_CURRENTDOCUMENT);
+  mfind->appendGroup(Constants::G_FIND_FILTERS);
+  mfind->appendGroup(Constants::G_FIND_FLAGS);
+  mfind->appendGroup(Constants::G_FIND_ACTIONS);
+  mfind->addSeparator(Constants::G_FIND_FLAGS);
+  mfind->addSeparator(Constants::G_FIND_ACTIONS);
 
-  const auto mfindadvanced = ActionManager::createMenu(Constants::m_find_advanced);
+  const auto mfindadvanced = ActionManager::createMenu(Constants::M_FIND_ADVANCED);
   mfindadvanced->menu()->setTitle(tr("Advanced Find"));
-  mfind->addMenu(mfindadvanced, Constants::g_find_filters);
+  mfind->addMenu(mfindadvanced, Constants::G_FIND_FILTERS);
   m_open_find_dialog = new QAction(tr("Open Advanced Find..."), this);
   m_open_find_dialog->setIconText(tr("Advanced..."));
-  const auto cmd = ActionManager::registerAction(m_open_find_dialog, Constants::advanced_find);
+  const auto cmd = ActionManager::registerAction(m_open_find_dialog, Constants::ADVANCED_FIND);
   cmd->setDefaultKeySequence(QKeySequence(tr("Ctrl+Shift+F")));
   mfindadvanced->addAction(cmd);
   connect(m_open_find_dialog, &QAction::triggered, this, [] { Find::openFindDialog(nullptr); });
@@ -273,7 +273,7 @@ static auto filterActionName(const IFindFilter *filter) -> QString
 
 auto FindPrivate::setupFilterMenuItems() -> void
 {
-  const auto mfindadvanced = ActionManager::actionContainer(Constants::m_find_advanced);
+  const auto mfindadvanced = ActionManager::actionContainer(Constants::M_FIND_ADVANCED);
   auto have_enabled_filters = false;
   const Id base("FindFilter.");
   auto sorted_filters = IFindFilter::allFindFilters();

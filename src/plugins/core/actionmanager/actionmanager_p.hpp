@@ -15,12 +15,12 @@ namespace Internal {
 class Action;
 class ActionContainerPrivate;
 
-class ActionManagerPrivate final : public QObject {
+class ActionManagerPrivate : public QObject {
   Q_OBJECT
 
 public:
-  using id_cmd_map = QHash<Utils::Id, Command*>;
-  using id_container_map = QHash<Utils::Id, ActionContainerPrivate*>;
+  using IdCmdMap = QHash<Utils::Id, Command*>;
+  using IdContainerMap = QHash<Utils::Id, ActionContainerPrivate*>;
 
   ~ActionManagerPrivate() override;
 
@@ -35,8 +35,8 @@ public:
   auto containerDestroyed() -> void;
   auto actionTriggered() const -> void;
 
-  id_cmd_map m_id_cmd_map;
-  id_container_map m_id_container_map;
+  IdCmdMap m_id_cmd_map;
+  IdContainerMap m_id_container_map;
   Context m_context;
   bool m_presentation_mode_enabled = false;
 };

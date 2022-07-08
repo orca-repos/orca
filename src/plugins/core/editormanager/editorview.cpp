@@ -366,7 +366,7 @@ auto EditorView::openDroppedFiles(const QList<DropSupport::FileSpec> &files) -> 
       first = false;
       EditorManagerPrivate::openEditorAt(this, spec_to_link(spec));
     } else if (spec.column != -1 || spec.line != -1) {
-      EditorManagerPrivate::openEditorAt(this, spec_to_link(spec), Id(), EditorManager::do_not_change_current_editor | EditorManager::do_not_make_visible);
+      EditorManagerPrivate::openEditorAt(this, spec_to_link(spec), Id(), EditorManager::DoNotChangeCurrentEditor | EditorManager::DoNotMakeVisible);
     } else {
       const auto factory = IEditorFactory::preferredEditorFactories(spec.filePath).value(0);
       DocumentModelPrivate::addSuspendedDocument(spec.filePath, {}, factory ? factory->id() : Id());
@@ -532,14 +532,14 @@ auto EditorView::goBackInNavigationHistory() -> void
     auto location = m_navigation_history.at(m_current_navigation_history_position);
     IEditor *editor = nullptr;
     if (location.document) {
-      editor = EditorManagerPrivate::activateEditorForDocument(this, location.document, EditorManager::ignore_navigation_history);
+      editor = EditorManagerPrivate::activateEditorForDocument(this, location.document, EditorManager::IgnoreNavigationHistory);
     }
     if (!editor) {
       if (fileNameWasRemoved(location.file_path)) {
         m_navigation_history.removeAt(m_current_navigation_history_position);
         continue;
       }
-      editor = EditorManagerPrivate::openEditor(this, location.file_path, location.id, EditorManager::ignore_navigation_history);
+      editor = EditorManagerPrivate::openEditor(this, location.file_path, location.id, EditorManager::IgnoreNavigationHistory);
       if (!editor) {
         m_navigation_history.removeAt(m_current_navigation_history_position);
         continue;
@@ -565,14 +565,14 @@ auto EditorView::goForwardInNavigationHistory() -> void
     IEditor *editor = nullptr;
     auto location = m_navigation_history.at(m_current_navigation_history_position);
     if (location.document) {
-      editor = EditorManagerPrivate::activateEditorForDocument(this, location.document, EditorManager::ignore_navigation_history);
+      editor = EditorManagerPrivate::activateEditorForDocument(this, location.document, EditorManager::IgnoreNavigationHistory);
     }
     if (!editor) {
       if (fileNameWasRemoved(location.file_path)) {
         m_navigation_history.removeAt(m_current_navigation_history_position);
         continue;
       }
-      editor = EditorManagerPrivate::openEditor(this, location.file_path, location.id, EditorManager::ignore_navigation_history);
+      editor = EditorManagerPrivate::openEditor(this, location.file_path, location.id, EditorManager::IgnoreNavigationHistory);
       if (!editor) {
         m_navigation_history.removeAt(m_current_navigation_history_position);
         continue;
@@ -593,14 +593,14 @@ auto EditorView::goToEditLocation(const EditLocation &location) -> void
   IEditor *editor = nullptr;
 
   if (location.document) {
-    editor = EditorManagerPrivate::activateEditorForDocument(this, location.document, EditorManager::ignore_navigation_history);
+    editor = EditorManagerPrivate::activateEditorForDocument(this, location.document, EditorManager::IgnoreNavigationHistory);
   }
 
   if (!editor) {
     if (fileNameWasRemoved(location.file_path))
       return;
 
-    editor = EditorManagerPrivate::openEditor(this, location.file_path, location.id, EditorManager::ignore_navigation_history);
+    editor = EditorManagerPrivate::openEditor(this, location.file_path, location.id, EditorManager::IgnoreNavigationHistory);
   }
 
   if (editor) {
@@ -932,10 +932,10 @@ auto SplitterOrView::restoreState(const QByteArray &state) -> void
     stream >> file_name >> id >> editor_state;
     if (!QFile::exists(file_name))
       return;
-    const auto e = EditorManagerPrivate::openEditor(view(), FilePath::fromString(file_name), Id::fromString(id), EditorManager::ignore_navigation_history | EditorManager::do_not_change_current_editor);
+    const auto e = EditorManagerPrivate::openEditor(view(), FilePath::fromString(file_name), Id::fromString(id), EditorManager::IgnoreNavigationHistory | EditorManager::DoNotChangeCurrentEditor);
     if (!e) {
       if (const auto entry = DocumentModelPrivate::firstSuspendedEntry()) {
-        EditorManagerPrivate::activateEditorForEntry(view(), entry, EditorManager::ignore_navigation_history | EditorManager::do_not_change_current_editor);
+        EditorManagerPrivate::activateEditorForEntry(view(), entry, EditorManager::IgnoreNavigationHistory | EditorManager::DoNotChangeCurrentEditor);
       }
     }
     if (e) {

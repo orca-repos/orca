@@ -11,29 +11,29 @@
 namespace Core {
 namespace Constants {
 
-constexpr char c_findtoolbar[]          = "Find.ToolBar";
-constexpr char m_find[]                 = "Find.FindMenu";
-constexpr char m_find_advanced[]        = "Find.FindAdvancedMenu";
-constexpr char g_find_currentdocument[] = "Find.FindMenu.CurrentDocument";
-constexpr char g_find_filters[]         = "Find.FindMenu.Filters";
-constexpr char g_find_flags[]           = "Find.FindMenu.Flags";
-constexpr char g_find_actions[]         = "Find.FindMenu.Actions";
-constexpr char advanced_find[]          = "Find.Dialog";
-constexpr char find_in_document[]       = "Find.FindInCurrentDocument";
-constexpr char find_next_selected[]     = "Find.FindNextSelected";
-constexpr char find_prev_selected[]     = "Find.FindPreviousSelected";
-constexpr char find_select_all[]        = "Find.SelectAll";
-constexpr char find_next[]              = "Find.FindNext";
-constexpr char find_previous[]          = "Find.FindPrevious";
-constexpr char replace[]                = "Find.Replace";
-constexpr char replace_next[]           = "Find.ReplaceNext";
-constexpr char replace_previous[]       = "Find.ReplacePrevious";
-constexpr char replace_all[]            = "Find.ReplaceAll";
-constexpr char case_sensitive[]         = "Find.CaseSensitive";
-constexpr char whole_words[]            = "Find.WholeWords";
-constexpr char regular_expressions[]    = "Find.RegularExpressions";
-constexpr char preserve_case[]          = "Find.PreserveCase";
-constexpr char task_search[]            = "Find.Task.Search";
+constexpr char C_FINDTOOLBAR[]          = "Find.ToolBar";
+constexpr char M_FIND[]                 = "Find.FindMenu";
+constexpr char M_FIND_ADVANCED[]        = "Find.FindAdvancedMenu";
+constexpr char G_FIND_CURRENTDOCUMENT[] = "Find.FindMenu.CurrentDocument";
+constexpr char G_FIND_FILTERS[]         = "Find.FindMenu.Filters";
+constexpr char G_FIND_FLAGS[]           = "Find.FindMenu.Flags";
+constexpr char G_FIND_ACTIONS[]         = "Find.FindMenu.Actions";
+constexpr char ADVANCED_FIND[]          = "Find.Dialog";
+constexpr char FIND_IN_DOCUMENT[]       = "Find.FindInCurrentDocument";
+constexpr char FIND_NEXT_SELECTED[]     = "Find.FindNextSelected";
+constexpr char FIND_PREV_SELECTED[]     = "Find.FindPreviousSelected";
+constexpr char FIND_SELECT_ALL[]        = "Find.SelectAll";
+constexpr char FIND_NEXT[]              = "Find.FindNext";
+constexpr char FIND_PREVIOUS[]          = "Find.FindPrevious";
+constexpr char REPLACE[]                = "Find.Replace";
+constexpr char REPLACE_NEXT[]           = "Find.ReplaceNext";
+constexpr char REPLACE_PREVIOUS[]       = "Find.ReplacePrevious";
+constexpr char REPLACE_ALL[]            = "Find.ReplaceAll";
+constexpr char CASE_SENSITIVE[]         = "Find.CaseSensitive";
+constexpr char WHOLE_WORDS[]            = "Find.WholeWords";
+constexpr char REGULAR_EXPRESSION[]     = "Find.RegularExpressions";
+constexpr char PRESERVE_CASE[]          = "Find.PreserveCase";
+constexpr char TASK_SEARCH[]            = "Find.Task.Search";
 
 } // namespace Constants
 

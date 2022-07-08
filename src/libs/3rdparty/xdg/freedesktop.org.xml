@@ -30177,7 +30177,7 @@
     <comment xml:lang="zh_TW">字元裝置</comment>
   </mime-type>
   <mime-type type="inode/directory">
-    <comment>folder</comment>
+    <comment>Folder</comment>
     <comment xml:lang="ar">مجلّد</comment>
     <comment xml:lang="ast">carpeta</comment>
     <comment xml:lang="be@latin">kataloh</comment>
@@ -30187,7 +30187,7 @@
     <comment xml:lang="da">mappe</comment>
     <comment xml:lang="de">Ordner</comment>
     <comment xml:lang="el">Φάκελος</comment>
-    <comment xml:lang="en_GB">folder</comment>
+    <comment xml:lang="en_GB">Folder</comment>
     <comment xml:lang="eo">dosierujo</comment>
     <comment xml:lang="es">carpeta</comment>
     <comment xml:lang="eu">karpeta</comment>
@@ -30200,7 +30200,7 @@
     <comment xml:lang="hr">Mapa</comment>
     <comment xml:lang="hu">mappa</comment>
     <comment xml:lang="ia">Dossier</comment>
-    <comment xml:lang="id">folder</comment>
+    <comment xml:lang="id">Folder</comment>
     <comment xml:lang="it">Cartella</comment>
     <comment xml:lang="ja">フォルダー</comment>
     <comment xml:lang="kk">бума</comment>
@@ -30227,7 +30227,7 @@
     <comment xml:lang="vi">thư mục</comment>
     <comment xml:lang="zh_CN">文件夹</comment>
     <comment xml:lang="zh_TW">資料夾</comment>
-    <generic-icon name="folder"/>
+    <generic-icon name="Folder"/>
     <alias type="x-directory/normal"/>
   </mime-type>
   <mime-type type="inode/fifo">
@@ -31369,7 +31369,7 @@
     <comment xml:lang="zh_CN">签名信件</comment>
     <comment xml:lang="zh_TW">簽署的訊息</comment>
   </mime-type>
-  <mime-type type="multipart/x-mixed-replace">
+  <mime-type type="multipart/x-mixed-REPLACE">
     <comment>stream of data (server push)</comment>
     <comment xml:lang="ar">دفق بيانات (دفع خادم)</comment>
     <comment xml:lang="be@latin">płyń źviestak (ad servera)</comment>

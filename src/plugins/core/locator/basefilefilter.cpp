@@ -210,12 +210,12 @@ auto BaseFileFilter::openEditorAt(const LocatorFilterEntry &selection) -> void
     const auto line_column = LineColumn::extractFromFileName(postfix, postfix_pos);
     if (postfix_pos >= 0) {
       const Link link(selection.file_path, line_column.line, line_column.column);
-      EditorManager::openEditorAt(link, {}, EditorManager::allow_external_editor);
+      EditorManager::openEditorAt(link, {}, EditorManager::AllowExternalEditor);
       return;
     }
   }
 
-  EditorManager::openEditor(selection.file_path, {}, EditorManager::allow_external_editor);
+  EditorManager::openEditor(selection.file_path, {}, EditorManager::AllowExternalEditor);
 }
 
 /*!

@@ -106,27 +106,27 @@ FindToolBar::FindToolBar(CurrentDocumentFind *current_document_find) : m_current
   QMetaTypeId<QStringList>::qt_metatype_id();
 
   // register actions
-  Context findcontext(Constants::c_findtoolbar);
-  auto mfind = ActionManager::actionContainer(Constants::m_find);
+  Context findcontext(Constants::C_FINDTOOLBAR);
+  auto mfind = ActionManager::actionContainer(Constants::M_FIND);
 
-  m_ui.advancedButton->setDefaultAction(ActionManager::command(Constants::advanced_find)->action());
+  m_ui.advancedButton->setDefaultAction(ActionManager::command(Constants::ADVANCED_FIND)->action());
 
   m_go_to_current_find_action = new QAction(this);
   ActionManager::registerAction(m_go_to_current_find_action, Constants::S_RETURNTOEDITOR, findcontext);
   connect(m_go_to_current_find_action, &QAction::triggered, this, &FindToolBar::setFocusToCurrentFindSupport);
 
   Command *cmd;
-  auto icon = QIcon::fromTheme(QLatin1String("edit-find-replace"));
+  auto icon = QIcon::fromTheme(QLatin1String("edit-find-REPLACE"));
   m_find_in_document_action = new QAction(icon, tr("Find/Replace"), this);
-  cmd = ActionManager::registerAction(m_find_in_document_action, Constants::find_in_document);
+  cmd = ActionManager::registerAction(m_find_in_document_action, Constants::FIND_IN_DOCUMENT);
   cmd->setDefaultKeySequence(QKeySequence::Find);
-  mfind->addAction(cmd, Constants::g_find_currentdocument);
+  mfind->addAction(cmd, Constants::G_FIND_CURRENTDOCUMENT);
   connect(m_find_in_document_action, &QAction::triggered, this, [this] { openFind(); });
 
   // Pressing the find shortcut while focus is in the tool bar should not change the search text,
   // so register a different find action for the tool bar
   auto local_find_action = new QAction(this);
-  ActionManager::registerAction(local_find_action, Constants::find_in_document, findcontext);
+  ActionManager::registerAction(local_find_action, Constants::FIND_IN_DOCUMENT, findcontext);
   connect(local_find_action, &QAction::triggered, this, [this] {
     openFindToolBar(OpenFlags(update_all & ~update_find_text));
   });
@@ -135,101 +135,101 @@ FindToolBar::FindToolBar(CurrentDocumentFind *current_document_find) : m_current
     m_enter_find_string_action = new QAction(tr("Enter Find String"), this);
     cmd = ActionManager::registerAction(m_enter_find_string_action, "Find.EnterFindString");
     cmd->setDefaultKeySequence(QKeySequence(tr("Ctrl+E")));
-    mfind->addAction(cmd, Constants::g_find_actions);
+    mfind->addAction(cmd, Constants::G_FIND_ACTIONS);
     connect(m_enter_find_string_action, &QAction::triggered, this, &FindToolBar::putSelectionToFindClipboard);
     connect(QApplication::clipboard(), &QClipboard::findBufferChanged, this, &FindToolBar::updateFromFindClipboard);
   }
 
   m_find_next_action = new QAction(tr("Find Next"), this);
-  cmd = ActionManager::registerAction(m_find_next_action, Constants::find_next);
+  cmd = ActionManager::registerAction(m_find_next_action, Constants::FIND_NEXT);
   cmd->setDefaultKeySequence(QKeySequence::FindNext);
-  mfind->addAction(cmd, Constants::g_find_actions);
+  mfind->addAction(cmd, Constants::G_FIND_ACTIONS);
   connect(m_find_next_action, &QAction::triggered, this, &FindToolBar::invokeGlobalFindNext);
   m_local_find_next_action = new QAction(m_find_next_action->text(), this);
 
-  cmd = ActionManager::registerAction(m_local_find_next_action, Constants::find_next, findcontext);
+  cmd = ActionManager::registerAction(m_local_find_next_action, Constants::FIND_NEXT, findcontext);
   cmd->augmentActionWithShortcutToolTip(m_local_find_next_action);
   connect(m_local_find_next_action, &QAction::triggered, this, &FindToolBar::invokeFindNext);
   m_ui.findNextButton->setDefaultAction(m_local_find_next_action);
 
   m_find_previous_action = new QAction(tr("Find Previous"), this);
-  cmd = ActionManager::registerAction(m_find_previous_action, Constants::find_previous);
+  cmd = ActionManager::registerAction(m_find_previous_action, Constants::FIND_PREVIOUS);
   cmd->setDefaultKeySequence(QKeySequence::FindPrevious);
-  mfind->addAction(cmd, Constants::g_find_actions);
+  mfind->addAction(cmd, Constants::G_FIND_ACTIONS);
   connect(m_find_previous_action, &QAction::triggered, this, &FindToolBar::invokeGlobalFindPrevious);
   m_local_find_previous_action = new QAction(m_find_previous_action->text(), this);
 
-  cmd = ActionManager::registerAction(m_local_find_previous_action, Constants::find_previous, findcontext);
+  cmd = ActionManager::registerAction(m_local_find_previous_action, Constants::FIND_PREVIOUS, findcontext);
   cmd->augmentActionWithShortcutToolTip(m_local_find_previous_action);
   connect(m_local_find_previous_action, &QAction::triggered, this, &FindToolBar::invokeFindPrevious);
   m_ui.findPreviousButton->setDefaultAction(m_local_find_previous_action);
 
   m_find_next_selected_action = new QAction(tr("Find Next (Selected)"), this);
-  cmd = ActionManager::registerAction(m_find_next_selected_action, Constants::find_next_selected);
+  cmd = ActionManager::registerAction(m_find_next_selected_action, Constants::FIND_NEXT_SELECTED);
   cmd->setDefaultKeySequence(QKeySequence(tr("Ctrl+F3")));
-  mfind->addAction(cmd, Constants::g_find_actions);
+  mfind->addAction(cmd, Constants::G_FIND_ACTIONS);
   connect(m_find_next_selected_action, &QAction::triggered, this, &FindToolBar::findNextSelected);
   m_find_previous_selected_action = new QAction(tr("Find Previous (Selected)"), this);
 
-  cmd = ActionManager::registerAction(m_find_previous_selected_action, Constants::find_prev_selected);
+  cmd = ActionManager::registerAction(m_find_previous_selected_action, Constants::FIND_PREV_SELECTED);
   cmd->setDefaultKeySequence(QKeySequence(tr("Ctrl+Shift+F3")));
-  mfind->addAction(cmd, Constants::g_find_actions);
+  mfind->addAction(cmd, Constants::G_FIND_ACTIONS);
   connect(m_find_previous_selected_action, &QAction::triggered, this, &FindToolBar::findPreviousSelected);
   m_select_all_action = new QAction(tr("Select All"), this);
 
-  cmd = ActionManager::registerAction(m_select_all_action, Constants::find_select_all);
+  cmd = ActionManager::registerAction(m_select_all_action, Constants::FIND_SELECT_ALL);
   cmd->setDefaultKeySequence(QKeySequence(tr("Ctrl+Alt+Return")));
-  mfind->addAction(cmd, Constants::g_find_actions);
+  mfind->addAction(cmd, Constants::G_FIND_ACTIONS);
   connect(m_select_all_action, &QAction::triggered, this, &FindToolBar::selectAll);
   m_local_select_all_action = new QAction(m_select_all_action->text(), this);
 
-  cmd = ActionManager::registerAction(m_local_select_all_action, Constants::find_select_all, findcontext);
+  cmd = ActionManager::registerAction(m_local_select_all_action, Constants::FIND_SELECT_ALL, findcontext);
   cmd->augmentActionWithShortcutToolTip(m_local_select_all_action);
   connect(m_local_select_all_action, &QAction::triggered, this, &FindToolBar::selectAll);
   m_ui.selectAllButton->setDefaultAction(m_local_select_all_action);
 
   m_replace_action = new QAction(tr("Replace"), this);
-  cmd = ActionManager::registerAction(m_replace_action, Constants::replace);
+  cmd = ActionManager::registerAction(m_replace_action, Constants::REPLACE);
   cmd->setDefaultKeySequence(QKeySequence());
-  mfind->addAction(cmd, Constants::g_find_actions);
+  mfind->addAction(cmd, Constants::G_FIND_ACTIONS);
   connect(m_replace_action, &QAction::triggered, this, &FindToolBar::invokeGlobalReplace);
   m_local_replace_action = new QAction(m_replace_action->text(), this);
 
-  cmd = ActionManager::registerAction(m_local_replace_action, Constants::replace, findcontext);
+  cmd = ActionManager::registerAction(m_local_replace_action, Constants::REPLACE, findcontext);
   cmd->augmentActionWithShortcutToolTip(m_local_replace_action);
   connect(m_local_replace_action, &QAction::triggered, this, &FindToolBar::invokeReplace);
   m_ui.replaceButton->setDefaultAction(m_local_replace_action);
 
   m_replace_next_action = new QAction(tr("Replace && Find"), this);
-  cmd = ActionManager::registerAction(m_replace_next_action, Constants::replace_next);
+  cmd = ActionManager::registerAction(m_replace_next_action, Constants::REPLACE_NEXT);
   cmd->setDefaultKeySequence(QKeySequence(tr("Ctrl+=")));
-  mfind->addAction(cmd, Constants::g_find_actions);
+  mfind->addAction(cmd, Constants::G_FIND_ACTIONS);
   connect(m_replace_next_action, &QAction::triggered, this, &FindToolBar::invokeGlobalReplaceNext);
   m_local_replace_next_action = new QAction(m_replace_next_action->text(), this);
 
   m_local_replace_next_action->setIconText(m_replace_next_action->text()); // Workaround QTBUG-23396
-  cmd = ActionManager::registerAction(m_local_replace_next_action, Constants::replace_next, findcontext);
+  cmd = ActionManager::registerAction(m_local_replace_next_action, Constants::REPLACE_NEXT, findcontext);
   cmd->augmentActionWithShortcutToolTip(m_local_replace_next_action);
   connect(m_local_replace_next_action, &QAction::triggered, this, &FindToolBar::invokeReplaceNext);
   m_ui.replaceNextButton->setDefaultAction(m_local_replace_next_action);
 
   m_replace_previous_action = new QAction(tr("Replace && Find Previous"), this);
-  cmd = ActionManager::registerAction(m_replace_previous_action, Constants::replace_previous);
-  mfind->addAction(cmd, Constants::g_find_actions);
+  cmd = ActionManager::registerAction(m_replace_previous_action, Constants::REPLACE_PREVIOUS);
+  mfind->addAction(cmd, Constants::G_FIND_ACTIONS);
   connect(m_replace_previous_action, &QAction::triggered, this, &FindToolBar::invokeGlobalReplacePrevious);
   m_local_replace_previous_action = new QAction(m_replace_previous_action->text(), this);
 
-  cmd = ActionManager::registerAction(m_local_replace_previous_action, Constants::replace_previous, findcontext);
+  cmd = ActionManager::registerAction(m_local_replace_previous_action, Constants::REPLACE_PREVIOUS, findcontext);
   cmd->augmentActionWithShortcutToolTip(m_local_replace_previous_action);
   connect(m_local_replace_previous_action, &QAction::triggered, this, &FindToolBar::invokeReplacePrevious);
   m_replace_all_action = new QAction(tr("Replace All"), this);
 
-  cmd = ActionManager::registerAction(m_replace_all_action, Constants::replace_all);
-  mfind->addAction(cmd, Constants::g_find_actions);
+  cmd = ActionManager::registerAction(m_replace_all_action, Constants::REPLACE_ALL);
+  mfind->addAction(cmd, Constants::G_FIND_ACTIONS);
   connect(m_replace_all_action, &QAction::triggered, this, &FindToolBar::invokeGlobalReplaceAll);
   m_local_replace_all_action = new QAction(m_replace_all_action->text(), this);
 
-  cmd = ActionManager::registerAction(m_local_replace_all_action, Constants::replace_all, findcontext);
+  cmd = ActionManager::registerAction(m_local_replace_all_action, Constants::REPLACE_ALL, findcontext);
   cmd->augmentActionWithShortcutToolTip(m_local_replace_all_action);
   connect(m_local_replace_all_action, &QAction::triggered, this, &FindToolBar::invokeReplaceAll);
   m_ui.replaceAllButton->setDefaultAction(m_local_replace_all_action);
@@ -238,32 +238,32 @@ FindToolBar::FindToolBar(CurrentDocumentFind *current_document_find) : m_current
   m_case_sensitive_action->setIcon(Icons::FIND_CASE_INSENSITIVELY.icon());
   m_case_sensitive_action->setCheckable(true);
   m_case_sensitive_action->setChecked(false);
-  cmd = ActionManager::registerAction(m_case_sensitive_action, Constants::case_sensitive);
-  mfind->addAction(cmd, Constants::g_find_flags);
+  cmd = ActionManager::registerAction(m_case_sensitive_action, Constants::CASE_SENSITIVE);
+  mfind->addAction(cmd, Constants::G_FIND_FLAGS);
   connect(m_case_sensitive_action, &QAction::toggled, this, &FindToolBar::setCaseSensitive);
 
   m_whole_word_action = new QAction(tr("Whole Words Only"), this);
   m_whole_word_action->setIcon(Icons::FIND_WHOLE_WORD.icon());
   m_whole_word_action->setCheckable(true);
   m_whole_word_action->setChecked(false);
-  cmd = ActionManager::registerAction(m_whole_word_action, Constants::whole_words);
-  mfind->addAction(cmd, Constants::g_find_flags);
+  cmd = ActionManager::registerAction(m_whole_word_action, Constants::WHOLE_WORDS);
+  mfind->addAction(cmd, Constants::G_FIND_FLAGS);
   connect(m_whole_word_action, &QAction::toggled, this, &FindToolBar::setWholeWord);
 
   m_regular_expression_action = new QAction(tr("Use Regular Expressions"), this);
   m_regular_expression_action->setIcon(Icons::FIND_REGEXP.icon());
   m_regular_expression_action->setCheckable(true);
   m_regular_expression_action->setChecked(false);
-  cmd = ActionManager::registerAction(m_regular_expression_action, Constants::regular_expressions);
-  mfind->addAction(cmd, Constants::g_find_flags);
+  cmd = ActionManager::registerAction(m_regular_expression_action, Constants::REGULAR_EXPRESSION);
+  mfind->addAction(cmd, Constants::G_FIND_FLAGS);
   connect(m_regular_expression_action, &QAction::toggled, this, &FindToolBar::setRegularExpressions);
 
   m_preserve_case_action = new QAction(tr("Preserve Case when Replacing"), this);
   m_preserve_case_action->setIcon(Icons::FIND_PRESERVE_CASE.icon());
   m_preserve_case_action->setCheckable(true);
   m_preserve_case_action->setChecked(false);
-  cmd = ActionManager::registerAction(m_preserve_case_action, Constants::preserve_case);
-  mfind->addAction(cmd, Constants::g_find_flags);
+  cmd = ActionManager::registerAction(m_preserve_case_action, Constants::PRESERVE_CASE);
+  mfind->addAction(cmd, Constants::G_FIND_FLAGS);
   connect(m_preserve_case_action, &QAction::toggled, this, &FindToolBar::setPreserveCase);
   connect(m_current_document_find, &CurrentDocumentFind::candidateChanged, this, &FindToolBar::adaptToCandidate);
   connect(m_current_document_find, &CurrentDocumentFind::changed, this, &FindToolBar::updateActions);
@@ -628,7 +628,7 @@ auto FindToolBar::findFlagsChanged() const -> void
 
 auto FindToolBar::findEditButtonClicked() const -> void
 {
-  const auto popup = new OptionsPopup(m_ui.findEdit, {Constants::case_sensitive, Constants::whole_words, Constants::regular_expressions, Constants::preserve_case});
+  const auto popup = new OptionsPopup(m_ui.findEdit, {Constants::CASE_SENSITIVE, Constants::WHOLE_WORDS, Constants::REGULAR_EXPRESSION, Constants::PRESERVE_CASE});
   popup->show();
 }
 

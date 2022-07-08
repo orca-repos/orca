@@ -104,9 +104,9 @@ using namespace Utils;
 
 static auto checkEditorFlags(const EditorManager::OpenEditorFlags flags) -> void
 {
-  if (flags & EditorManager::open_in_other_split) {
-    QTC_CHECK(!(flags & EditorManager::switch_split_if_already_visible));
-    QTC_CHECK(!(flags & EditorManager::allow_external_editor));
+  if (flags & EditorManager::OpenInOtherSplit) {
+    QTC_CHECK(!(flags & EditorManager::SwitchSplitIfAlreadyVisible));
+    QTC_CHECK(!(flags & EditorManager::AllowExternalEditor));
   }
 }
 
@@ -761,7 +761,7 @@ auto EditorManagerPrivate::openEditor(EditorView *view, const FilePath &file_pat
 
   if (const auto editors = DocumentModel::editorsForFilePath(file_path); !editors.isEmpty()) {
     auto editor = editors.first();
-    if (flags & EditorManager::switch_split_if_already_visible) {
+    if (flags & EditorManager::SwitchSplitIfAlreadyVisible) {
       for (const auto ed : editors) {
         // Don't switch to a view where editor is not its current editor
         if (const auto v = viewForEditor(ed); v && v->currentEditor() == ed) {
@@ -784,7 +784,7 @@ auto EditorManagerPrivate::openEditor(EditorView *view, const FilePath &file_pat
   }
 
   auto factories = EditorType::preferredEditorTypes(file_path);
-  if (!(flags & EditorManager::allow_external_editor)) {
+  if (!(flags & EditorManager::AllowExternalEditor)) {
     factories = filtered(factories, [](EditorType *type) {
       return type->asEditorFactory() != nullptr;
     });
@@ -799,7 +799,7 @@ auto EditorManagerPrivate::openEditor(EditorView *view, const FilePath &file_pat
 
   if (editor_id.isValid()) {
     if (const auto factory = EditorType::editorTypeForId(editor_id)) {
-      QTC_CHECK(factory->asEditorFactory() || flags & EditorManager::allow_external_editor);
+      QTC_CHECK(factory->asEditorFactory() || flags & EditorManager::AllowExternalEditor);
       factories.removeOne(factory);
       factories.push_front(factory);
     }
@@ -894,7 +894,7 @@ auto EditorManagerPrivate::openEditorAt(EditorView *view, const Link &link, cons
   EditorManager::cutForwardNavigationHistory();
   EditorManager::addCurrentPositionToNavigationHistory();
 
-  const auto temp_flags = flags | EditorManager::ignore_navigation_history;
+  const auto temp_flags = flags | EditorManager::IgnoreNavigationHistory;
   const auto editor = openEditor(view, link.targetFilePath, editor_id, temp_flags, new_editor);
 
   if (editor && link.targetLine != -1)
@@ -936,7 +936,7 @@ auto EditorManagerPrivate::openEditorWith(const FilePath &file_path, const Id ed
       // * prevents multiple updates of focus etc which are not necessary
       // * lets us control which editor is made current by putting the current editor view
       //   to the front (if that was in the list in the first place)
-      flags |= EditorManager::do_not_change_current_editor;
+      flags |= EditorManager::DoNotChangeCurrentEditor;
       // do not try to open more editors if this one failed, or editor type does not
       // support duplication anyhow
       if (!editor || !editor->duplicateSupported())
@@ -976,10 +976,10 @@ auto EditorManagerPrivate::makeFileWritable(IDocument *document) -> make_writabl
   if (!document)
     return failed;
   switch (ReadOnlyFilesDialog ro_dialog(document, ICore::dialogParent(), document->isSaveAsAllowed()); ro_dialog.exec()) {
-  case ReadOnlyFilesDialog::ro_make_writable:
-  case ReadOnlyFilesDialog::ro_open_vcs:
+  case ReadOnlyFilesDialog::RO_MakeWritable:
+  case ReadOnlyFilesDialog::RO_OpenVCS:
     return made_writable;
-  case ReadOnlyFilesDialog::ro_save_as:
+  case ReadOnlyFilesDialog::RO_SaveAs:
     return saved_as;
   default:
     return failed;
@@ -1471,14 +1471,14 @@ auto EditorManagerPrivate::activateEditor(EditorView *view, IEditor *editor, con
 
   editor = placeEditor(view, editor);
 
-  if (!(flags & EditorManager::do_not_change_current_editor)) {
-    setCurrentEditor(editor, flags & EditorManager::ignore_navigation_history);
-    if (!(flags & EditorManager::do_not_make_visible)) {
+  if (!(flags & EditorManager::DoNotChangeCurrentEditor)) {
+    setCurrentEditor(editor, flags & EditorManager::IgnoreNavigationHistory);
+    if (!(flags & EditorManager::DoNotMakeVisible)) {
         editor->widget()->setFocus();
-        if (!(flags & EditorManager::do_not_raise))
+        if (!(flags & EditorManager::DoNotRaise))
           ICore::raiseWindow(editor->widget());
       }
-  } else if (!(flags & EditorManager::do_not_make_visible)) {
+  } else if (!(flags & EditorManager::DoNotMakeVisible)) {
     view->setCurrentEditor(editor);
   }
   return editor;
@@ -1644,7 +1644,7 @@ auto EditorManagerPrivate::closeEditors(const QList<IEditor*> &editors, const cl
       if (editor == view_current_editor && view == views.last()) {
         // Avoid removing the globally current editor from its view,
         // set a new current editor before.
-        EditorManager::OpenEditorFlags flags = view != current_view ? EditorManager::do_not_change_current_editor : EditorManager::no_flags;
+        EditorManager::OpenEditorFlags flags = view != current_view ? EditorManager::DoNotChangeCurrentEditor : EditorManager::NoFlags;
         const auto view_editors = view->editors();
         auto new_current = view_editors.size() > 1 ? view_editors.at(view_editors.size() - 2) : nullptr;
         if (!new_current)
@@ -1661,7 +1661,7 @@ auto EditorManagerPrivate::closeEditors(const QList<IEditor*> &editors, const cl
                 // Do not auto-switch to design mode if the new editor will be for
                 // the same document as the one that was closed.
                 if (view == current_view && document == editor->document())
-                  flags = EditorManager::do_not_switch_to_design_mode;
+                  flags = EditorManager::DoNotSwitchToDesignMode;
                 activateEditorForDocument(view, document, flags);
               }
             } else {
@@ -1891,7 +1891,7 @@ auto EditorManagerPrivate::splitNewWindow(const EditorView *view) -> void
   ICore::raiseWindow(win);
 
   if (new_editor) {
-    activateEditor(win->editorArea()->view(), new_editor, EditorManager::ignore_navigation_history);
+    activateEditor(win->editorArea()->view(), new_editor, EditorManager::IgnoreNavigationHistory);
     // possibly adapts old state to new layout
     new_editor->restoreState(state);
   } else {
@@ -2948,7 +2948,7 @@ auto EditorManager::closeEditors(const QList<IEditor*> &editors_to_close, const 
 */
 auto EditorManager::activateEditorForEntry(DocumentModel::Entry *entry, OpenEditorFlags flags) -> void
 {
-  QTC_CHECK(!(flags & EditorManager::allow_external_editor));
+  QTC_CHECK(!(flags & EditorManager::AllowExternalEditor));
 
   EditorManagerPrivate::activateEditorForEntry(EditorManagerPrivate::currentEditorView(), entry, flags);
 }
@@ -2960,7 +2960,7 @@ auto EditorManager::activateEditorForEntry(DocumentModel::Entry *entry, OpenEdit
 */
 auto EditorManager::activateEditor(IEditor *editor, const OpenEditorFlags flags) -> void
 {
-  QTC_CHECK(!(flags & EditorManager::allow_external_editor));
+  QTC_CHECK(!(flags & EditorManager::AllowExternalEditor));
   QTC_ASSERT(editor, return);
 
   auto view = EditorManagerPrivate::viewForEditor(editor);
@@ -2978,7 +2978,7 @@ auto EditorManager::activateEditor(IEditor *editor, const OpenEditorFlags flags)
 */
 auto EditorManager::activateEditorForDocument(IDocument *document, const OpenEditorFlags flags) -> IEditor*
 {
-  QTC_CHECK(!(flags & EditorManager::allow_external_editor));
+  QTC_CHECK(!(flags & EditorManager::AllowExternalEditor));
 
   return EditorManagerPrivate::activateEditorForDocument(EditorManagerPrivate::currentEditorView(), document, flags);
 }
@@ -3002,7 +3002,7 @@ auto EditorManager::openEditor(const FilePath &file_path, const Id editor_id, co
 {
   checkEditorFlags(flags);
 
-  if (flags & open_in_other_split)
+  if (flags & OpenInOtherSplit)
     gotoOtherSplit();
 
   return EditorManagerPrivate::openEditor(EditorManagerPrivate::currentEditorView(), file_path, editor_id, flags, new_editor);
@@ -3031,7 +3031,7 @@ auto EditorManager::openEditorAt(const Link &link, const Id editor_id, const Ope
 {
   checkEditorFlags(flags);
 
-  if (flags & open_in_other_split)
+  if (flags & OpenInOtherSplit)
     gotoOtherSplit();
 
   return EditorManagerPrivate::openEditorAt(EditorManagerPrivate::currentEditorView(), link, editor_id, flags, new_editor);
@@ -3175,13 +3175,13 @@ static auto makeTitleUnique(QString *title_pattern) -> QString
 */
 auto EditorManager::openEditorWithContents(const Id editor_id, QString *title_pattern, const QByteArray &contents, const QString &unique_id, const OpenEditorFlags flags) -> IEditor*
 {
-  QTC_CHECK(!(flags & EditorManager::allow_external_editor));
+  QTC_CHECK(!(flags & EditorManager::AllowExternalEditor));
   checkEditorFlags(flags);
 
   if constexpr (debug_editor_manager)
     qDebug() << Q_FUNC_INFO << editor_id.name() << title_pattern << unique_id << contents;
 
-  if (flags & open_in_other_split)
+  if (flags & OpenInOtherSplit)
     gotoOtherSplit();
 
   QApplication::setOverrideCursor(QCursor(Qt::WaitCursor));
@@ -3504,7 +3504,7 @@ auto EditorManager::restoreState(const QByteArray &state) -> bool
         continue;
 
       if (const auto rfp = autoSaveName(file_path); rfp.exists() && file_path.lastModified() < rfp.lastModified()) {
-        if (const auto editor = openEditor(file_path, id, do_not_make_visible))
+        if (const auto editor = openEditor(file_path, id, DoNotMakeVisible))
           DocumentModelPrivate::setPinned(DocumentModel::entryForDocument(editor->document()), pinned);
       } else {
         if (const auto entry = DocumentModelPrivate::addSuspendedDocument(file_path, display_name, id))
