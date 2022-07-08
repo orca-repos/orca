@@ -871,7 +871,7 @@ auto DocumentManager::saveModifiedDocumentSilently(IDocument *document, bool *ca
     Presents a dialog with all modified documents to users and asks them which
     of these should be saved.
 
-    This method may show additional dialogs to the user, e.g. if a file is
+    This method may Show additional dialogs to the user, e.g. if a file is
     not writeable.
 
     The dialog text can be set using \a message. If users canceled any
@@ -893,7 +893,7 @@ auto DocumentManager::saveAllModifiedDocuments(const QString &message, bool *can
     Presents a dialog with \a documents to users and asks them which
     of these should be saved.
 
-    This method may show additional dialogs to the user, e.g. if a file is
+    This method may Show additional dialogs to the user, e.g. if a file is
     not writeable.
 
     The dialog text can be set using \a message. If users canceled any
@@ -915,7 +915,7 @@ auto DocumentManager::saveModifiedDocuments(const QList<IDocument*> &documents, 
     Presents a dialog with the \a document to users and asks them whether
     it should be saved.
 
-    This method may show additional dialogs to the user, e.g. if a file is
+    This method may Show additional dialogs to the user, e.g. if a file is
     not writeable.
 
     The dialog text can be set using \a message. If users canceled any

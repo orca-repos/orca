@@ -533,7 +533,7 @@ auto ShortcutSettingsWidget::initialize() -> void
   QMap<QString, QTreeWidgetItem*> sections;
 
   for (const auto commands = ActionManager::commands(); const auto c : commands) {
-    if (c->hasAttribute(Command::ca_non_configurable))
+    if (c->hasAttribute(Command::CA_NonConfigurable))
       continue;
     if (c->action() && c->action()->isSeparator())
       continue;

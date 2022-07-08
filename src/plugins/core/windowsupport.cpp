@@ -105,7 +105,7 @@ auto WindowSupport::eventFilter(QObject *obj, QEvent *event) -> bool
   } else if (event->type() == QEvent::WindowActivate) {
     m_windowList->setActiveWindow(m_window);
   } else if (event->type() == QEvent::Hide) {
-    // minimized windows are hidden, but we still want to show them
+    // minimized windows are hidden, but we still want to Show them
     m_windowList->setWindowVisible(m_window, m_window->isMinimized());
   } else if (event->type() == QEvent::Show) {
     m_windowList->setWindowVisible(m_window, true);
@@ -161,7 +161,7 @@ auto WindowList::addWindow(QWidget *window) -> void
   action->setCheckable(true);
   action->setChecked(false);
   const auto cmd = ActionManager::registerAction(action, id);
-  cmd->setAttribute(Command::ca_update_text);
+  cmd->setAttribute(Command::CA_UpdateText);
   ActionManager::actionContainer(Constants::M_WINDOW)->addAction(cmd, Constants::G_WINDOW_LIST);
   action->setVisible(window->isVisible() || window->isMinimized()); // minimized windows are hidden but should be shown
   QObject::connect(window, &QWidget::windowTitleChanged, [window, this]() { updateTitle(window); });

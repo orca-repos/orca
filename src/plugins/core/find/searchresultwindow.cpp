@@ -125,7 +125,7 @@ SearchResultWindowPrivate::SearchResultWindowPrivate(SearchResultWindow *window,
   m_expand_collapse_action->setEnabled(false);
 
   auto cmd = ActionManager::registerAction(m_expand_collapse_action, "Find.ExpandAll");
-  cmd->setAttribute(Command::ca_update_text);
+  cmd->setAttribute(Command::CA_UpdateText);
   m_expand_collapse_button->setDefaultAction(cmd->action());
 
   m_filter_button = new QToolButton(m_widget);

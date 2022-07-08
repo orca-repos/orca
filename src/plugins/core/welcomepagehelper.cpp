@@ -55,7 +55,7 @@ auto panelBar(QWidget *parent) -> QWidget*
 {
   const auto frame = new QWidget(parent);
   frame->setAutoFillBackground(true);
-  frame->setMinimumWidth(g_h_spacing);
+  frame->setMinimumWidth(G_H_SPACING);
   QPalette pal;
   pal.setBrush(QPalette::Window, {});
   pal.setColor(QPalette::Window, themeColor(Theme::Welcome_BackgroundPrimaryColor));

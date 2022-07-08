@@ -25,10 +25,10 @@ class CORE_EXPORT ActionContainer : public QObject {
   Q_OBJECT
 
 public:
-  enum class on_all_disabled_behavior {
-    disable,
-    hide,
-    show
+  enum on_all_disabled_behavior {
+    Disable,
+    Hide,
+    Show
   };
 
   virtual auto setOnAllDisabledBehavior(on_all_disabled_behavior behavior) -> void = 0;

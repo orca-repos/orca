@@ -59,9 +59,9 @@ public:
 
 protected:
   virtual auto create(QWidget *parent, const WizardDialogParameters &parameters) const -> BaseFileWizard* = 0;
-  virtual auto generateFiles(const QWizard *w, QString *error_message) const -> generated_files = 0;
-  virtual auto writeFiles(const generated_files &files, QString *error_message) const -> bool;
-  virtual auto postGenerateFiles(const QWizard *w, const generated_files &l, QString *error_message) const -> bool;
+  virtual auto generateFiles(const QWizard *w, QString *error_message) const -> GeneratedFiles = 0;
+  virtual auto writeFiles(const GeneratedFiles &files, QString *error_message) const -> bool;
+  virtual auto postGenerateFiles(const QWizard *w, const GeneratedFiles &l, QString *error_message) const -> bool;
   static auto preferredSuffix(const QString &mime_type) -> QString;
 
   enum OverwriteResult {
@@ -70,8 +70,8 @@ protected:
     OverwriteCanceled
   };
 
-  static auto promptOverwrite(generated_files *files, QString *error_message) -> OverwriteResult;
-  static auto postGenerateOpenEditors(const generated_files &l, QString *error_message = nullptr) -> bool;
+  static auto promptOverwrite(GeneratedFiles *files, QString *error_message) -> OverwriteResult;
+  static auto postGenerateOpenEditors(const GeneratedFiles &l, QString *error_message = nullptr) -> bool;
 
 private:
   auto runWizardImpl(const Utils::FilePath &path, QWidget *parent, Utils::Id platform, const QVariantMap &extra_values, bool show_wizard = true) -> Utils::Wizard* final;

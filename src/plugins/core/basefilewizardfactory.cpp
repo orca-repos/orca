@@ -24,7 +24,7 @@ using namespace Utils;
 
 namespace Core {
 
-static auto indexOfFile(const generated_files &f, const QString &path) -> int
+static auto indexOfFile(const GeneratedFiles &f, const QString &path) -> int
 {
   const auto size = f.size();
   for (auto i = 0; i < size; ++i)
@@ -116,7 +116,7 @@ auto BaseFileWizardFactory::runWizardImpl(const FilePath &path, QWidget *parent,
     GeneratedFile::CustomGeneratorAttribute set.
 */
 
-auto BaseFileWizardFactory::writeFiles(const generated_files &files, QString *error_message) const -> bool
+auto BaseFileWizardFactory::writeFiles(const GeneratedFiles &files, QString *error_message) const -> bool
 {
   constexpr auto no_write_attributes = GeneratedFile::CustomGeneratorAttribute | GeneratedFile::KeepExistingFileAttribute;
 
@@ -137,7 +137,7 @@ auto BaseFileWizardFactory::writeFiles(const generated_files &files, QString *er
     Returns \a errorMessage if errors occur.
 */
 
-auto BaseFileWizardFactory::postGenerateFiles(const QWizard *, const generated_files &l, QString *error_message) const -> bool
+auto BaseFileWizardFactory::postGenerateFiles(const QWizard *, const GeneratedFiles &l, QString *error_message) const -> bool
 {
   return postGenerateOpenEditors(l, error_message);
 }
@@ -151,7 +151,7 @@ auto BaseFileWizardFactory::postGenerateFiles(const QWizard *, const generated_f
     \a errorMessage to the message that is displayed to users.
 */
 
-auto BaseFileWizardFactory::postGenerateOpenEditors(const generated_files &l, QString *error_message) -> bool
+auto BaseFileWizardFactory::postGenerateOpenEditors(const GeneratedFiles &l, QString *error_message) -> bool
 {
   for(const auto &file: l) {
     if (file.attributes() & GeneratedFile::OpenEditorAttribute) {
@@ -172,7 +172,7 @@ auto BaseFileWizardFactory::postGenerateOpenEditors(const generated_files &l, QS
     Returns \a errorMessage if the file cannot be overwritten.
 */
 
-auto BaseFileWizardFactory::promptOverwrite(generated_files *files, QString *error_message) -> OverwriteResult
+auto BaseFileWizardFactory::promptOverwrite(GeneratedFiles *files, QString *error_message) -> OverwriteResult
 {
   if constexpr (debugWizard)
     qDebug() << Q_FUNC_INFO << files;

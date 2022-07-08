@@ -20,8 +20,8 @@ class FancyLineEdit;
 namespace Core {
 namespace WelcomePageHelpers {
 
-constexpr int g_h_spacing = 20;
-constexpr int g_item_gap = 4;
+constexpr int G_H_SPACING = 20;
+constexpr int G_ITEM_GAP = 4;
 
 CORE_EXPORT auto brandFont() -> QFont;
 CORE_EXPORT auto panelBar(QWidget *parent = nullptr) -> QWidget*;
@@ -104,7 +104,7 @@ public:
 
   auto paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const -> void override;
 
-  static constexpr int grid_item_gap = 3 * WelcomePageHelpers::g_item_gap;
+  static constexpr int grid_item_gap = 3 * WelcomePageHelpers::G_ITEM_GAP;
   static constexpr int grid_item_width = 240 + grid_item_gap;
   static constexpr int grid_item_height = grid_item_width;
   static constexpr int tags_separator_y = grid_item_height - grid_item_gap - 52;

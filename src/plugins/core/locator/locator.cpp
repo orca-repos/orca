@@ -217,7 +217,7 @@ auto Locator::updateFilterActions() -> void
       // register new action
       action = new QAction(filter->displayName(), this);
       const auto cmd = ActionManager::registerAction(action, action_id);
-      cmd->setAttribute(Command::ca_update_text);
+      cmd->setAttribute(Command::CA_UpdateText);
       connect(action, &QAction::triggered, this, [filter] {
         LocatorManager::showFilter(filter);
       });

@@ -72,6 +72,6 @@ private:
 
 CORE_EXPORT auto operator<<(QDebug &debug, const Core::GeneratedFile &file) -> QDebug&;
 
-using generated_files = QList<GeneratedFile>;
+using GeneratedFiles = QList<GeneratedFile>;
 
 } // namespace Core

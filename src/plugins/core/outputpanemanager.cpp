@@ -368,8 +368,8 @@ OutputPaneManager::OutputPaneManager(QWidget *parent) : QWidget(parent), m_title
 
   cmd = ActionManager::registerAction(m_minMaxAction, "Coreplugin.OutputPane.minmax");
   cmd->setDefaultKeySequence(QKeySequence(tr("Alt+Shift+9")));
-  cmd->setAttribute(Command::ca_update_text);
-  cmd->setAttribute(Command::ca_update_icon);
+  cmd->setAttribute(Command::CA_UpdateText);
+  cmd->setAttribute(Command::CA_UpdateIcon);
   mpanes->addAction(cmd, "Coreplugin.OutputPane.ActionsGroup");
   connect(m_minMaxAction, &QAction::triggered, this, &OutputPaneManager::toggleMaximized);
   m_minMaxButton->setDefaultAction(cmd->action());

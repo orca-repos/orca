@@ -424,7 +424,7 @@ auto EditorManagerPrivate::init() -> void
   // Revert to saved
   m_revert_to_saved_action->setIcon(QIcon::fromTheme("document-revert"));
   auto cmd = ActionManager::registerAction(m_revert_to_saved_action, Constants::REVERTTOSAVED, edit_manager_context);
-  cmd->setAttribute(Command::ca_update_text);
+  cmd->setAttribute(Command::CA_UpdateText);
   cmd->setDescription(tr("Revert File to Saved"));
   mfile->addAction(cmd, Constants::G_FILE_SAVE);
   connect(m_revert_to_saved_action, &QAction::triggered, m_instance, &EditorManager::revertToSaved);
@@ -447,7 +447,7 @@ auto EditorManagerPrivate::init() -> void
   // Close Action
   cmd = ActionManager::registerAction(m_close_current_editor_action, Constants::CLOSE, edit_manager_context, true);
   cmd->setDefaultKeySequence(QKeySequence(tr("Ctrl+W")));
-  cmd->setAttribute(Command::ca_update_text);
+  cmd->setAttribute(Command::CA_UpdateText);
   cmd->setDescription(m_close_current_editor_action->text());
   mfile->addAction(cmd, Constants::G_FILE_CLOSE);
   connect(m_close_current_editor_action, &QAction::triggered, m_instance, &EditorManager::slotCloseCurrentEditorOrDocument);
@@ -470,7 +470,7 @@ auto EditorManagerPrivate::init() -> void
   // Close All Others Action
   cmd = ActionManager::registerAction(m_close_other_documents_action, Constants::CLOSEOTHERS, edit_manager_context, true);
   mfile->addAction(cmd, Constants::G_FILE_CLOSE);
-  cmd->setAttribute(Command::ca_update_text);
+  cmd->setAttribute(Command::CA_UpdateText);
   connect(m_close_other_documents_action, &QAction::triggered, m_instance, [] { EditorManager::closeOtherDocuments(); });
 
   // Close All Others Except Visible Action
@@ -996,13 +996,13 @@ auto EditorManagerPrivate::doEscapeKeyFocusMoveMagic() -> void
   // use cases to cover:
   // 1. if app focus is in mode or external window without editor view (e.g. Design, Projects, ext. Help)
   //      if there are extra views (e.g. output)
-  //        hide them
+  //        Hide them
   //      otherwise
   //        activate & raise the current editor view (can be external)
   //        if that is in edit mode
   //          activate edit mode and unmaximize output pane
   // 2. if app focus is in external window with editor view
-  //      hide find if necessary
+  //      Hide find if necessary
   // 2. if app focus is in mode with editor view
   //      if current editor view is in external window
   //        raise and activate current editor view
@@ -1011,11 +1011,11 @@ auto EditorManagerPrivate::doEscapeKeyFocusMoveMagic() -> void
   //      otherwise if the current view is app focus
   //        if mode is not edit mode
   //          if there are extra views (find, help, output)
-  //            hide them
+  //            Hide them
   //          otherwise
   //            activate edit mode and unmaximize output pane
   //        otherwise (i.e. mode is edit mode)
-  //          hide extra views (find, help, output)
+  //          Hide extra views (find, help, output)
 
   const auto active_window = QApplication::activeWindow();
   if (!active_window)

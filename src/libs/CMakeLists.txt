@@ -1,4 +1,5 @@
 add_subdirectory(3rdparty)
 add_subdirectory(aggregation)
 add_subdirectory(extensionsystem)
+add_subdirectory(ssh)
 add_subdirectory(utils)

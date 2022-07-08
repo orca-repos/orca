@@ -170,7 +170,7 @@ namespace Internal {
     \internal
 */
 
-ActionContainerPrivate::ActionContainerPrivate(const Id id) : m_on_all_disabled_behavior(on_all_disabled_behavior::disable), m_id(id), m_update_requested(false)
+ActionContainerPrivate::ActionContainerPrivate(const Id id) : m_on_all_disabled_behavior(on_all_disabled_behavior::Disable), m_id(id), m_update_requested(false)
 {
   ActionContainerPrivate::appendGroup(Constants::G_DEFAULT_ONE);
   ActionContainerPrivate::appendGroup(Constants::G_DEFAULT_TWO);
@@ -413,7 +413,7 @@ MenuActionContainer::MenuActionContainer(const Id id) : ActionContainerPrivate(i
 {
   m_menu->setObjectName(id.toString());
   m_menu->menuAction()->setMenuRole(QAction::NoRole);
-  ActionContainerPrivate::setOnAllDisabledBehavior(on_all_disabled_behavior::disable);
+  ActionContainerPrivate::setOnAllDisabledBehavior(on_all_disabled_behavior::Disable);
 }
 
 MenuActionContainer::~MenuActionContainer()
@@ -458,7 +458,7 @@ auto MenuActionContainer::removeMenu(ActionContainer *container) -> void
 
 auto MenuActionContainer::updateInternal() -> bool
 {
-  if (onAllDisabledBehavior() == on_all_disabled_behavior::show)
+  if (onAllDisabledBehavior() == on_all_disabled_behavior::Show)
     return true;
 
   auto hasitems = false;
@@ -504,9 +504,9 @@ auto MenuActionContainer::updateInternal() -> bool
     }
   }
 
-  if (onAllDisabledBehavior() == on_all_disabled_behavior::hide)
+  if (onAllDisabledBehavior() == on_all_disabled_behavior::Hide)
     m_menu->menuAction()->setVisible(hasitems);
-  else if (onAllDisabledBehavior() == on_all_disabled_behavior::disable)
+  else if (onAllDisabledBehavior() == on_all_disabled_behavior::Disable)
     m_menu->menuAction()->setEnabled(hasitems);
 
   return hasitems;
@@ -526,7 +526,7 @@ auto MenuActionContainer::canBeAddedToContainer(ActionContainerPrivate *containe
 
 MenuBarActionContainer::MenuBarActionContainer(const Id id) : ActionContainerPrivate(id), m_menu_bar(nullptr)
 {
-  ActionContainerPrivate::setOnAllDisabledBehavior(on_all_disabled_behavior::show);
+  ActionContainerPrivate::setOnAllDisabledBehavior(on_all_disabled_behavior::Show);
 }
 
 auto MenuBarActionContainer::setMenuBar(QMenuBar *menu_bar) -> void
@@ -571,7 +571,7 @@ auto MenuBarActionContainer::removeMenu(ActionContainer *container) -> void
 
 auto MenuBarActionContainer::updateInternal() -> bool
 {
-  if (onAllDisabledBehavior() == on_all_disabled_behavior::show)
+  if (onAllDisabledBehavior() == on_all_disabled_behavior::Show)
     return true;
 
   auto hasitems = false;
@@ -582,9 +582,9 @@ auto MenuBarActionContainer::updateInternal() -> bool
     }
   }
 
-  if (onAllDisabledBehavior() == on_all_disabled_behavior::hide)
+  if (onAllDisabledBehavior() == on_all_disabled_behavior::Hide)
     m_menu_bar->setVisible(hasitems);
-  else if (onAllDisabledBehavior() == on_all_disabled_behavior::disable)
+  else if (onAllDisabledBehavior() == on_all_disabled_behavior::Disable)
     m_menu_bar->setEnabled(hasitems);
 
   return hasitems;

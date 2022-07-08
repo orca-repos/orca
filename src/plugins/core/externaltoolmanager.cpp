@@ -207,7 +207,7 @@ auto ExternalToolManager::setToolsByCategory(const QMap<QString, QList<ExternalT
             MessageManager::writeFlashing(runner->errorString());
         });
         command = ActionManager::registerAction(action, external_tools_prefix.withSuffix(tool_id));
-        command->setAttribute(Command::ca_update_text);
+        command->setAttribute(Command::CA_UpdateText);
       }
       action->setText(tool->displayName());
       action->setToolTip(tool->description());

@@ -11,7 +11,7 @@ namespace Core {
 
 class BaseFileWizardFactory;
 
-class CORE_EXPORT BaseFileWizard final : public Utils::Wizard {
+class CORE_EXPORT BaseFileWizard : public Utils::Wizard {
   Q_OBJECT
 
 public:
@@ -29,7 +29,7 @@ private:
   const BaseFileWizardFactory *m_factory;
   QList<QWizardPage*> m_extension_pages;
   QWizardPage *m_first_extension_page = nullptr;
-  generated_files m_files;
+  GeneratedFiles m_files;
 };
 
 } // namespace Core

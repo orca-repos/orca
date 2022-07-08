@@ -20,7 +20,7 @@ namespace Internal {
 class OutputWindowPrivate;
 }
 
-class CORE_EXPORT OutputWindow final : public QPlainTextEdit {
+class CORE_EXPORT OutputWindow : public QPlainTextEdit {
   Q_OBJECT
 
 public:

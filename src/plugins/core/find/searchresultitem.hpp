@@ -98,8 +98,8 @@ public:
 
 private:
   QStringList m_path;  // hierarchy to the parent item of this item
-  QString m_line_text;  // text to show for the item itself
-  QIcon m_icon;        // icon to show in front of the item (by be null icon to hide)
+  QString m_line_text;  // text to Show for the item itself
+  QIcon m_icon;        // icon to Show in front of the item (by be null icon to Hide)
   QVariant m_user_data; // user data for identification of the item
   Search::TextRange m_main_range;
   bool m_use_text_editor_font = false;

@@ -777,7 +777,7 @@ auto FindToolBar::acceptCandidateAndMoveToolBar() -> void
     // Make sure we are really hidden, and not just because our parent was hidden.
     // Otherwise when the tool bar gets visible again, it will be in a different widget than
     // the current document find it acts on.
-    // Test case: Open find in navigation side bar, hide side bar, click into editor,
+    // Test case: Open find in navigation side bar, Hide side bar, click into editor,
     // trigger find next, show side bar
     hide();
     m_current_document_find->acceptCandidate();

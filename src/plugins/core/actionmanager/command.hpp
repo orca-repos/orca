@@ -31,10 +31,10 @@ class CORE_EXPORT Command final : public QObject {
 
 public:
   enum command_attribute {
-    ca_hide = 1,
-    ca_update_text = 2,
-    ca_update_icon = 4,
-    ca_non_configurable = 8
+    CA_Hide = 1,
+    CA_UpdateText = 2,
+    CA_UpdateIcon = 4,
+    CA_NonConfigurable = 8
   };
 
   Q_DECLARE_FLAGS(CommandAttributes, command_attribute)

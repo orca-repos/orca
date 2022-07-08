@@ -508,7 +508,7 @@ auto MainWindow::registerDefaultActions() -> void
   const auto ac = ActionManager::createMenu(Constants::M_FILE_RECENTFILES);
   mfile->addMenu(ac, Constants::G_FILE_OPEN);
   ac->menu()->setTitle(tr("Recent &Files"));
-  ac->setOnAllDisabledBehavior(ActionContainer::on_all_disabled_behavior::show);
+  ac->setOnAllDisabledBehavior(ActionContainer::on_all_disabled_behavior::Show);
 
   // Save Action
   icon = QIcon::fromTheme(QLatin1String("document-save"), Utils::Icons::SAVEFILE.icon());
@@ -516,7 +516,7 @@ auto MainWindow::registerDefaultActions() -> void
   tmpaction->setEnabled(false);
   cmd = ActionManager::registerAction(tmpaction, Constants::SAVE);
   cmd->setDefaultKeySequence(QKeySequence::Save);
-  cmd->setAttribute(Command::ca_update_text);
+  cmd->setAttribute(Command::CA_UpdateText);
   cmd->setDescription(tr("Save"));
   mfile->addAction(cmd, Constants::G_FILE_SAVE);
 
@@ -526,7 +526,7 @@ auto MainWindow::registerDefaultActions() -> void
   tmpaction->setEnabled(false);
   cmd = ActionManager::registerAction(tmpaction, Constants::SAVEAS);
   cmd->setDefaultKeySequence(QKeySequence(use_mac_shortcuts ? tr("Ctrl+Shift+S") : QString()));
-  cmd->setAttribute(Command::ca_update_text);
+  cmd->setAttribute(Command::CA_UpdateText);
   cmd->setDescription(tr("Save As..."));
   mfile->addAction(cmd, Constants::G_FILE_SAVE);
 
@@ -555,7 +555,7 @@ auto MainWindow::registerDefaultActions() -> void
   tmpaction = new QAction(icon, tr("&Undo"), this);
   cmd = ActionManager::registerAction(tmpaction, Constants::UNDO);
   cmd->setDefaultKeySequence(QKeySequence::Undo);
-  cmd->setAttribute(Command::ca_update_text);
+  cmd->setAttribute(Command::CA_UpdateText);
   cmd->setDescription(tr("Undo"));
   medit->addAction(cmd, Constants::G_EDIT_UNDOREDO);
   tmpaction->setEnabled(false);
@@ -565,7 +565,7 @@ auto MainWindow::registerDefaultActions() -> void
   tmpaction = new QAction(icon, tr("&Redo"), this);
   cmd = ActionManager::registerAction(tmpaction, Constants::REDO);
   cmd->setDefaultKeySequence(QKeySequence::Redo);
-  cmd->setAttribute(Command::ca_update_text);
+  cmd->setAttribute(Command::CA_UpdateText);
   cmd->setDescription(tr("Redo"));
   medit->addAction(cmd, Constants::G_EDIT_UNDOREDO);
   tmpaction->setEnabled(false);
@@ -680,7 +680,7 @@ auto MainWindow::registerDefaultActions() -> void
   cmd = ActionManager::registerAction(toggle_full_screen_action, Constants::TOGGLE_FULLSCREEN);
   cmd->setDefaultKeySequence(QKeySequence(use_mac_shortcuts ? tr("Ctrl+Meta+F") : tr("Ctrl+Shift+F11")));
   if constexpr (HostOsInfo::isMacHost())
-    cmd->setAttribute(Command::ca_update_text);
+    cmd->setAttribute(Command::CA_UpdateText);
   mwindow->addAction(cmd, Constants::G_WINDOW_SIZE);
 
   if constexpr (use_mac_shortcuts) {
@@ -697,7 +697,7 @@ auto MainWindow::registerDefaultActions() -> void
   m_toggle_left_side_bar_action = new QAction(Utils::Icons::TOGGLE_LEFT_SIDEBAR.icon(), QCoreApplication::translate("Core", Constants::TR_SHOW_LEFT_SIDEBAR), this);
   m_toggle_left_side_bar_action->setCheckable(true);
   cmd = ActionManager::registerAction(m_toggle_left_side_bar_action, Constants::TOGGLE_LEFT_SIDEBAR);
-  cmd->setAttribute(Command::ca_update_text);
+  cmd->setAttribute(Command::CA_UpdateText);
   cmd->setDefaultKeySequence(QKeySequence(use_mac_shortcuts ? tr("Ctrl+0") : tr("Alt+0")));
   connect(m_toggle_left_side_bar_action, &QAction::triggered, this, [this](bool visible) { setSidebarVisible(visible, Side::Left); });
   const auto toggle_left_side_bar_proxy_action = ProxyAction::proxyActionWithIcon(cmd->action(), Utils::Icons::TOGGLE_LEFT_SIDEBAR_TOOLBAR.icon());
@@ -709,7 +709,7 @@ auto MainWindow::registerDefaultActions() -> void
   m_toggle_right_side_bar_action = new QAction(Utils::Icons::TOGGLE_RIGHT_SIDEBAR.icon(), QCoreApplication::translate("Core", Constants::TR_SHOW_RIGHT_SIDEBAR), this);
   m_toggle_right_side_bar_action->setCheckable(true);
   cmd = ActionManager::registerAction(m_toggle_right_side_bar_action, Constants::TOGGLE_RIGHT_SIDEBAR);
-  cmd->setAttribute(Command::ca_update_text);
+  cmd->setAttribute(Command::CA_UpdateText);
   cmd->setDefaultKeySequence(QKeySequence(use_mac_shortcuts ? tr("Ctrl+Shift+0") : tr("Alt+Shift+0")));
   connect(m_toggle_right_side_bar_action, &QAction::triggered, this, [this](bool visible) { setSidebarVisible(visible, Side::Right); });
   const auto toggle_right_side_bar_proxy_action = ProxyAction::proxyActionWithIcon(cmd->action(), Utils::Icons::TOGGLE_RIGHT_SIDEBAR_TOOLBAR.icon());

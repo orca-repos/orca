@@ -289,7 +289,7 @@ auto FindPrivate::setupFilterMenuItems() -> void
     action->setEnabled(is_enabled);
     const auto cmd = ActionManager::registerAction(action, base.withSuffix(filter->id()));
     cmd->setDefaultKeySequence(filter->defaultShortcut());
-    cmd->setAttribute(Command::ca_update_text);
+    cmd->setAttribute(Command::CA_UpdateText);
     mfindadvanced->addAction(cmd);
 
     connect(action, &QAction::triggered, this, [filter] { Find::openFindDialog(filter); });

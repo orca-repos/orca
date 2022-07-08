@@ -349,16 +349,16 @@ auto Command::setAttribute(const command_attribute attr) const -> void
 {
   d->m_attributes |= attr;
   switch (attr) {
-  case ca_hide:
+  case CA_Hide:
     d->m_action->setAttribute(ProxyAction::Hide);
     break;
-  case ca_update_text:
+  case CA_UpdateText:
     d->m_action->setAttribute(ProxyAction::UpdateText);
     break;
-  case ca_update_icon:
+  case CA_UpdateIcon:
     d->m_action->setAttribute(ProxyAction::UpdateIcon);
     break;
-  case ca_non_configurable:
+  case CA_NonConfigurable:
     break;
   }
 }
@@ -367,16 +367,16 @@ auto Command::removeAttribute(const command_attribute attr) const -> void
 {
   d->m_attributes &= ~attr;
   switch (attr) {
-  case ca_hide:
+  case CA_Hide:
     d->m_action->removeAttribute(ProxyAction::Hide);
     break;
-  case ca_update_text:
+  case CA_UpdateText:
     d->m_action->removeAttribute(ProxyAction::UpdateText);
     break;
-  case ca_update_icon:
+  case CA_UpdateIcon:
     d->m_action->removeAttribute(ProxyAction::UpdateIcon);
     break;
-  case ca_non_configurable:
+  case CA_NonConfigurable:
     break;
   }
 }
