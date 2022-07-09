@@ -16,7 +16,6 @@ class QThreadPool;
 QT_END_NAMESPACE
 
 namespace Core {
-class IMode;
 class OutputWindow;
 } // namespace Core
 

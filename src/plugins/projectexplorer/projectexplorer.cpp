@@ -336,19 +336,6 @@ static auto isTextFile(const FilePath &filePath) -> bool
   return mimeTypeForFile(filePath).inherits(TextEditor::Constants::C_TEXTEDITOR_MIMETYPE_TEXT);
 }
 
-class ProjectsMode : public IMode {
-public:
-  ProjectsMode()
-  {
-    setContext(Context(Constants::C_PROJECTEXPLORER));
-    setDisplayName(QCoreApplication::translate("ProjectExplorer::ProjectsMode", "Projects"));
-    setIcon(Icon::modeIcon(Icons::MODE_PROJECT_CLASSIC, Icons::MODE_PROJECT_FLAT, Icons::MODE_PROJECT_FLAT_ACTIVE));
-    setPriority(Constants::P_MODE_SESSION);
-    setId(Constants::MODE_SESSION);
-    setContextHelp("Managing Projects");
-  }
-};
-
 class ProjectEnvironmentWidget : public NamedWidget {
   Q_DECLARE_TR_FUNCTIONS(ProjectEnvironmentWidget)
 public:
@@ -434,11 +421,8 @@ public:
   auto openTerminalHere(const EnvironmentGetter &env) -> void;
   auto openTerminalHereWithRunEnv() -> void;
   auto invalidateProject(Project *project) -> void;
-  auto projectAdded(Project *pro) -> void;
-  auto projectRemoved(Project *pro) -> void;
   auto projectDisplayNameChanged(Project *pro) -> void;
   auto doUpdateRunActions() -> void;
-  auto currentModeChanged(Id mode, Id oldMode) -> void;
   auto updateWelcomePage() -> void;
   auto checkForShutdown() -> void;
   auto timerEvent(QTimerEvent *) -> void override;
@@ -460,7 +444,6 @@ public:
   ParameterAction *m_buildProjectForAllConfigsAction;
   ParameterAction *m_buildAction;
   ParameterAction *m_buildForRunConfigAction;
-  ProxyAction *m_modeBarBuildAction;
   QAction *m_buildActionContextMenu;
   QAction *m_buildDependenciesActionContextMenu;
   QAction *m_buildSessionAction;
@@ -561,7 +544,6 @@ public:
   ProjectWelcomePage m_welcomePage;
   CustomWizardMetaFactory<CustomProjectWizard> m_customProjectWizard{IWizardFactory::ProjectWizard};
   CustomWizardMetaFactory<CustomWizard> m_fileWizard{IWizardFactory::FileWizard};
-  ProjectsMode m_projectsMode;
   CopyTaskHandler m_copyTaskHandler;
   ShowInEditorTaskHandler m_showInEditorTaskHandler;
   VcsAnnotateTaskHandler m_vcsAnnotateTaskHandler;
@@ -720,8 +702,6 @@ auto ProjectExplorerPlugin::initialize(const QStringList &arguments, QString *er
   connect(sessionManager, &SessionManager::projectAdded, this, &ProjectExplorerPlugin::fileListChanged);
   connect(sessionManager, &SessionManager::aboutToRemoveProject, dd, &ProjectExplorerPluginPrivate::invalidateProject);
   connect(sessionManager, &SessionManager::projectRemoved, this, &ProjectExplorerPlugin::fileListChanged);
-  connect(sessionManager, &SessionManager::projectAdded, dd, &ProjectExplorerPluginPrivate::projectAdded);
-  connect(sessionManager, &SessionManager::projectRemoved, dd, &ProjectExplorerPluginPrivate::projectRemoved);
   connect(sessionManager, &SessionManager::projectDisplayNameChanged, dd, &ProjectExplorerPluginPrivate::projectDisplayNameChanged);
   connect(sessionManager, &SessionManager::dependencyChanged, dd, &ProjectExplorerPluginPrivate::updateActions);
   connect(sessionManager, &SessionManager::sessionLoaded, dd, &ProjectExplorerPluginPrivate::updateActions);
@@ -764,8 +744,6 @@ auto ProjectExplorerPlugin::initialize(const QStringList &arguments, QString *er
   auto splitter = new MiniSplitter(Qt::Vertical);
   splitter->addWidget(dd->m_proWindow);
   splitter->addWidget(new OutputPanePlaceHolder(Constants::MODE_SESSION, splitter));
-  dd->m_projectsMode.setWidget(splitter);
-  dd->m_projectsMode.setEnabled(false);
 
   ICore::addPreCloseListener([]() -> bool { return coreAboutToClose(); });
 
@@ -1121,15 +1099,6 @@ auto ProjectExplorerPlugin::initialize(const QStringList &arguments, QString *er
   cmd->setDescription(dd->m_buildProjectForAllConfigsAction->text());
   mbuild->addAction(cmd, Constants::G_BUILD_PROJECT_ALLCONFIGURATIONS);
 
-  // Add to mode bar
-  dd->m_modeBarBuildAction = new ProxyAction(this);
-  dd->m_modeBarBuildAction->setObjectName("Build"); // used for UI introduction
-  dd->m_modeBarBuildAction->initialize(cmd->action());
-  dd->m_modeBarBuildAction->setAttribute(ProxyAction::UpdateText);
-  dd->m_modeBarBuildAction->setAction(cmd->action());
-  if (!hideBuildMenu())
-    ModeManager::addAction(dd->m_modeBarBuildAction, Constants::P_ACTION_BUILDPROJECT);
-
   // build for run config
   dd->m_buildForRunConfigAction = new ParameterAction(tr("Build for &Run Configuration"), tr("Build for &Run Configuration \"%1\""), ParameterAction::EnabledWithParameter, this);
   dd->m_buildForRunConfigAction->setIcon(buildIcon);
@@ -1189,9 +1158,6 @@ auto ProjectExplorerPlugin::initialize(const QStringList &arguments, QString *er
 
   cmd->setDefaultKeySequence(QKeySequence(tr("Ctrl+R")));
   mbuild->addAction(cmd, Constants::G_BUILD_RUN);
-
-  cmd->action()->setObjectName("Run"); // used for UI introduction
-  ModeManager::addAction(cmd->action(), Constants::P_ACTION_RUN);
 
   // Run without deployment action
   dd->m_runWithoutDeployAction = new QAction(tr("Run Without Deployment"), this);
@@ -1385,7 +1351,6 @@ auto ProjectExplorerPlugin::initialize(const QStringList &arguments, QString *er
   dd->m_projectSelectorAction->setEnabled(false);
   dd->m_targetSelector = new MiniProjectTargetSelector(dd->m_projectSelectorAction, ICore::dialogParent());
   connect(dd->m_projectSelectorAction, &QAction::triggered, dd->m_targetSelector, &QWidget::show);
-  ModeManager::addProjectSelector(dd->m_projectSelectorAction);
 
   dd->m_projectSelectorActionMenu = new QAction(this);
   dd->m_projectSelectorActionMenu->setEnabled(false);
@@ -1849,8 +1814,6 @@ auto ProjectExplorerPluginPrivate::closeAllProjects() -> void
 
   SessionManager::closeAllProjects();
   updateActions();
-
-  ModeManager::activateMode(Core::Constants::MODE_WELCOME);
 }
 
 auto ProjectExplorerPlugin::extensionsInitialized() -> void
@@ -1937,7 +1900,6 @@ auto ProjectExplorerPluginPrivate::updateRunWithoutDeployMenu() -> void
 
 auto ProjectExplorerPlugin::aboutToShutdown() -> ShutdownFlag
 {
-  disconnect(ModeManager::instance(), &ModeManager::currentModeChanged, dd, &ProjectExplorerPluginPrivate::currentModeChanged);
   ProjectTree::aboutToShutDown();
   ToolChainManager::aboutToShutdown();
   SessionManager::closeAllProjects();
@@ -1978,9 +1940,6 @@ auto ProjectExplorerPluginPrivate::showSessionManager() -> void
   dd->m_projectExplorerSettings.autorestoreLastSession = sessionDialog.autoLoadSession();
 
   updateActions();
-
-  if (ModeManager::currentModeId() == Core::Constants::MODE_WELCOME)
-    updateWelcomePage();
 }
 
 auto ProjectExplorerPluginPrivate::setStartupProject(Project *project) -> void
@@ -2164,34 +2123,12 @@ auto ProjectExplorerPlugin::openProjects(const FilePaths &filePaths) -> OpenProj
   }
   dd->updateActions();
 
-  const auto switchToProjectsMode = anyOf(openedPro, &Project::needsConfiguration);
-  const auto switchToEditMode = allOf(openedPro, [](Project *p) { return p->isEditModePreferred(); });
-  if (!openedPro.isEmpty()) {
-    if (switchToProjectsMode)
-      ModeManager::activateMode(Constants::MODE_SESSION);
-    else if (switchToEditMode)
-      ModeManager::activateMode(Core::Constants::MODE_EDIT);
-    ModeManager::setFocusToCurrentMode();
-  }
-
   return OpenProjectResult(openedPro, alreadyOpen, errorString);
 }
 
 auto ProjectExplorerPluginPrivate::updateWelcomePage() -> void
 {
   m_welcomePage.reloadWelcomeScreenData();
-}
-
-auto ProjectExplorerPluginPrivate::currentModeChanged(Id mode, Id oldMode) -> void
-{
-  if (oldMode == Constants::MODE_SESSION) {
-    // Saving settings directly in a mode change is not a good idea, since the mode change
-    // can be part of a bigger change. Save settings after that bigger change had a chance to
-    // complete.
-    QTimer::singleShot(0, ICore::instance(), [] { ICore::saveSettings(ICore::ModeChanged); });
-  }
-  if (mode == Core::Constants::MODE_WELCOME)
-    updateWelcomePage();
 }
 
 auto ProjectExplorerPluginPrivate::determineSessionToRestoreAtStartup() -> void
@@ -2215,9 +2152,6 @@ auto ProjectExplorerPluginPrivate::determineSessionToRestoreAtStartup() -> void
   // Handle settings only after command line arguments:
   if (m_sessionToRestoreAtStartup.isEmpty() && m_projectExplorerSettings.autorestoreLastSession)
     m_sessionToRestoreAtStartup = SessionManager::startupSession();
-
-  if (!m_sessionToRestoreAtStartup.isEmpty())
-    ModeManager::activateMode(Core::Constants::MODE_EDIT);
 }
 
 // Return a list of glob patterns for project files ("*.pro", etc), use first, main pattern only.
@@ -2293,7 +2227,6 @@ auto ProjectExplorerPluginPrivate::restoreSession() -> void
   SessionManager::loadSession(!dd->m_sessionToRestoreAtStartup.isEmpty() ? dd->m_sessionToRestoreAtStartup : QString(), true);
 
   // update welcome page
-  connect(ModeManager::instance(), &ModeManager::currentModeChanged, dd, &ProjectExplorerPluginPrivate::currentModeChanged);
   connect(&dd->m_welcomePage, &ProjectWelcomePage::requestProject, m_instance, &ProjectExplorerPlugin::openProjectWelcomePage);
   dd->m_arguments = arguments;
   // delay opening projects from the command line even more
@@ -2426,10 +2359,6 @@ auto ProjectExplorerPluginPrivate::updateActions() -> void
   m_closeProjectFilesActionContextMenu->setParameter(projectNameContextMenu);
 
   // mode bar build action
-  const auto buildAction = ActionManager::command(Constants::BUILD)->action();
-  m_modeBarBuildAction->setAction(isBuilding ? ActionManager::command(Constants::CANCELBUILD)->action() : buildAction);
-  m_modeBarBuildAction->setIcon(isBuilding ? Icons::CANCELBUILD_FLAT.icon() : buildAction->icon());
-
   const RunConfiguration *const runConfig = project && project->activeTarget() ? project->activeTarget()->activeRunConfiguration() : nullptr;
 
   // Normal actions
@@ -2778,18 +2707,6 @@ auto ProjectExplorerPlugin::runningRunControlProcesses() -> QList<QPair<Runnable
 auto ProjectExplorerPlugin::allRunControls() -> QList<RunControl*>
 {
   return dd->m_outputPane.allRunControls();
-}
-
-auto ProjectExplorerPluginPrivate::projectAdded(Project *pro) -> void
-{
-  Q_UNUSED(pro)
-  m_projectsMode.setEnabled(true);
-}
-
-auto ProjectExplorerPluginPrivate::projectRemoved(Project *pro) -> void
-{
-  Q_UNUSED(pro)
-  m_projectsMode.setEnabled(SessionManager::hasProjects());
 }
 
 auto ProjectExplorerPluginPrivate::projectDisplayNameChanged(Project *pro) -> void
