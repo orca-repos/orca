@@ -8,7 +8,7 @@
 #include "runconfigurationaspects.hpp"
 #include "target.hpp"
 
-#include <cmakeprojectmanager/cmakeprojectconstants.h>
+#include <cmakeprojectmanager/cmakeprojectconstants.hpp>
 #include <docker/dockerconstants.h>
 #include <qbsprojectmanager/qbsprojectmanagerconstants.h>
 #include <qmakeprojectmanager/qmakeprojectmanagerconstants.hpp>

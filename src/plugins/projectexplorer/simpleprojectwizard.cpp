@@ -9,7 +9,7 @@
 #include <core/basefilewizard.hpp>
 #include <core/icore.hpp>
 
-#include <cmakeprojectmanager/cmakeprojectconstants.h>
+#include <cmakeprojectmanager/cmakeprojectconstants.hpp>
 #include <projectexplorer/projectexplorerconstants.hpp>
 #include <projectexplorer/projectexplorericons.hpp>
 #include <projectexplorer/customwizard/customwizard.hpp>
