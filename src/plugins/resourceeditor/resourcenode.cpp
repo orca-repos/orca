@@ -7,7 +7,7 @@
 #include <core/documentmanager.hpp>
 #include <core/fileiconprovider.hpp>
 
-#include <qmljstools/qmljstoolsconstants.h>
+#include <constants/qmljstools/qmljstoolsconstants.hpp>
 
 #include <utils/algorithm.hpp>
 #include <utils/fileutils.hpp>

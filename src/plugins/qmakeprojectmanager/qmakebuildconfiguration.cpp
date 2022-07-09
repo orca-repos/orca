@@ -12,7 +12,7 @@
 #include "makefileparse.hpp"
 #include "qmakebuildconfiguration.hpp"
 
-#include <android/androidconstants.h>
+#include <constants/android/androidconstants.hpp>
 
 #include <core/documentmanager.hpp>
 #include <core/icore.hpp>

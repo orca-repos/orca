@@ -10,8 +10,8 @@
 #include <QPixmapCache>
 #include <QUrl>
 
-#include <android/androidconstants.h>
-#include <ios/iosconstants.h>
+#include <constants/android/androidconstants.hpp>
+#include <constants/ios/iosconstants.hpp>
 #include <core/helpmanager.hpp>
 #include <core/icore.hpp>
 

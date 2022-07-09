@@ -11,7 +11,7 @@
 #include "qmakeprojectmanagerconstants.hpp"
 #include "qmakesettings.hpp"
 
-#include <android/androidconstants.h>
+#include <constants/android/androidconstants.hpp>
 
 #include <projectexplorer/buildmanager.hpp>
 #include <projectexplorer/buildsteplist.hpp>
@@ -28,7 +28,7 @@
 #include <qtsupport/qtversionmanager.hpp>
 #include <qtsupport/qtsupportconstants.hpp>
 
-#include <ios/iosconstants.h>
+#include <constants/ios/iosconstants.hpp>
 
 #include <utils/algorithm.hpp>
 #include <utils/hostosinfo.hpp>

@@ -46,7 +46,6 @@ protected:
 
   //! implements QWidget::hideEvent
   auto hideEvent(QHideEvent *event) -> void override;
-
   //! implements QWidget::showEvent
   auto showEvent(QShowEvent *event) -> void override;
 

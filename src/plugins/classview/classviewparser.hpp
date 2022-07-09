@@ -21,35 +21,34 @@ namespace Internal {
 
 class ParserPrivate;
 
-class Parser : public QObject
-{
-    Q_OBJECT
+class Parser : public QObject {
+  Q_OBJECT
 
 public:
-    explicit Parser(QObject *parent = nullptr);
-    ~Parser() override;
+  explicit Parser(QObject *parent = nullptr);
+  ~Parser() override;
 
-    auto requestCurrentState() -> void;
-    auto removeFiles(const QStringList &fileList) -> void;
-    auto resetData(const QHash<Utils::FilePath, QPair<QString, Utils::FilePaths>> &projects) -> void;
-    auto addProject(const Utils::FilePath &projectPath, const QString &projectName, const Utils::FilePaths &filesInProject) -> void;
-    auto removeProject(const Utils::FilePath &projectPath) -> void;
-    auto setFlatMode(bool flat) -> void;
-    auto updateDocuments(const QSet<Utils::FilePath> &documentPaths) -> void;
+  auto requestCurrentState() -> void;
+  auto removeFiles(const QStringList &fileList) -> void;
+  auto resetData(const QHash<Utils::FilePath, QPair<QString, Utils::FilePaths>> &projects) -> void;
+  auto addProject(const Utils::FilePath &projectPath, const QString &projectName, const Utils::FilePaths &filesInProject) -> void;
+  auto removeProject(const Utils::FilePath &projectPath) -> void;
+  auto setFlatMode(bool flat) -> void;
+  auto updateDocuments(const QSet<Utils::FilePath> &documentPaths) -> void;
 
 signals:
-    auto treeRegenerated(const ParserTreeItem::ConstPtr &root) -> void;
+  auto treeRegenerated(const ParserTreeItem::ConstPtr &root) -> void;
 
 private:
-    auto updateDocumentsFromSnapshot(const QSet<Utils::FilePath> &documentPaths, const CPlusPlus::Snapshot &snapshot) -> void;
-    auto getParseDocumentTree(const CPlusPlus::Document::Ptr &doc) -> ParserTreeItem::ConstPtr;
-    auto getCachedOrParseDocumentTree(const CPlusPlus::Document::Ptr &doc) -> ParserTreeItem::ConstPtr;
-    auto getParseProjectTree(const Utils::FilePath &projectPath, const QSet<Utils::FilePath> &filesInProject) -> ParserTreeItem::ConstPtr;
-    auto getCachedOrParseProjectTree(const Utils::FilePath &projectPath, const QSet<Utils::FilePath> &filesInProject) -> ParserTreeItem::ConstPtr;
-    auto parse() -> ParserTreeItem::ConstPtr;
+  auto updateDocumentsFromSnapshot(const QSet<Utils::FilePath> &documentPaths, const CPlusPlus::Snapshot &snapshot) -> void;
+  auto getParseDocumentTree(const CPlusPlus::Document::Ptr &doc) -> ParserTreeItem::ConstPtr;
+  auto getCachedOrParseDocumentTree(const CPlusPlus::Document::Ptr &doc) -> ParserTreeItem::ConstPtr;
+  auto getParseProjectTree(const Utils::FilePath &projectPath, const QSet<Utils::FilePath> &filesInProject) -> ParserTreeItem::ConstPtr;
+  auto getCachedOrParseProjectTree(const Utils::FilePath &projectPath, const QSet<Utils::FilePath> &filesInProject) -> ParserTreeItem::ConstPtr;
+  auto parse() -> ParserTreeItem::ConstPtr;
 
-    //! Private class data pointer
-    ParserPrivate *d;
+  //! Private class data pointer
+  ParserPrivate *d;
 };
 
 } // namespace Internal

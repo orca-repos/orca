@@ -39,8 +39,8 @@
 #include <utils/qtcassert.hpp>
 #include <utils/stringutils.hpp>
 
-#include <android/androidconstants.h>
-#include <ios/iosconstants.h>
+#include <constants/android/androidconstants.hpp>
+#include <constants/ios/iosconstants.hpp>
 
 #include <QJsonDocument>
 #include <QJsonObject>

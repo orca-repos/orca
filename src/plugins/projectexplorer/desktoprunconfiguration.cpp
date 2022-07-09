@@ -8,15 +8,19 @@
 #include "runconfigurationaspects.hpp"
 #include "target.hpp"
 
-#include <cmakeprojectmanager/cmakeprojectconstants.hpp>
-#include <docker/dockerconstants.h>
-#include <qbsprojectmanager/qbsprojectmanagerconstants.h>
+
+#include <constants/android/androidconstants.hpp>
+#include <constants/docker/dockerconstants.hpp>
+#include <constants/qbsprojectmanager/qbsprojectmanagerconstants.hpp>
+
 #include <qmakeprojectmanager/qmakeprojectmanagerconstants.hpp>
+#include <cmakeprojectmanager/cmakeprojectconstants.hpp>
 
 #include <utils/fileutils.hpp>
 #include <utils/pathchooser.hpp>
 #include <utils/qtcassert.hpp>
 #include <utils/stringutils.hpp>
+
 
 using namespace Utils;
 

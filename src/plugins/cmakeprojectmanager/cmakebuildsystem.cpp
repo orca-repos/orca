@@ -15,7 +15,7 @@
 #include "projecttreehelper.hpp"
 #include "utils/algorithm.hpp"
 
-#include <android/androidconstants.h>
+#include <constants/android/androidconstants.hpp>
 #include <core/icore.hpp>
 #include <core/progressmanager/progressmanager.hpp>
 #include <cppeditor/cppeditorconstants.hpp>

@@ -69,13 +69,11 @@ public:
   Parser *m_parser = nullptr;
   QThread m_parserThread;
   ParserTreeItem::ConstPtr m_root;
-
   QTimer m_timer;
   QSet<FilePath> m_awaitingDocuments;
 
   //! Internal manager state. \sa Manager::state
   bool state = false;
-
   //! there is some massive operation ongoing so temporary we should wait
   bool disableCodeParser = false;
 

@@ -17,7 +17,7 @@
 #include <utils/stringutils.hpp>
 #include <utils/treemodel.hpp>
 #include <utils/wizard.hpp>
-#include <vcsbase/vcsbaseconstants.h>
+#include <constants/vcsbase/vcsbaseconstants.hpp>
 
 #include <QDir>
 #include <QTextStream>

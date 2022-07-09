@@ -11,7 +11,7 @@
 #include <projectexplorer/target.hpp>
 #include <projectexplorer/session.hpp>
 #include <qtsupport/qtkitinformation.hpp>
-#include <designer/designerconstants.h>
+#include <constants/designer/designerconstants.hpp>
 
 #include <QDebug>
 #include <QTcpServer>

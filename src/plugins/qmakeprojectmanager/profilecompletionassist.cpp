@@ -4,7 +4,7 @@
 
 #include "texteditor/codeassist/keywordscompletionassist.hpp"
 
-#include <android/androidconstants.h>
+#include <constants/android/androidconstants.hpp>
 
 auto QmakeProjectManager::Internal::qmakeKeywords() -> const TextEditor::Keywords&
 {

@@ -15,10 +15,10 @@
 
 #include <core/icore.hpp>
 
-#include <android/androidconstants.h>
-#include <baremetal/baremetalconstants.h>
-#include <qnx/qnxconstants.h>
-#include <remotelinux/remotelinux_constants.h>
+#include <constants/android/androidconstants.hpp>
+#include <constants/baremetal/baremetalconstants.hpp>
+#include <constants/qnx/qnxconstants.hpp>
+#include <constants/remotelinux/remotelinux_constants.hpp>
 
 #include <utils/environment.hpp>
 #include <utils/layoutbuilder.hpp>

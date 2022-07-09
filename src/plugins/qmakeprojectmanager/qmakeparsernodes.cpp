@@ -6,7 +6,7 @@
 #include "qmakeprojectmanagerconstants.hpp"
 #include "qmakebuildconfiguration.hpp"
 
-#include <android/androidconstants.h>
+#include <constants/android/androidconstants.hpp>
 #include <core/documentmanager.hpp>
 #include <core/editormanager/editormanager.hpp>
 #include <core/icore.hpp>

@@ -8,7 +8,7 @@
 #include <projectexplorer/abi.hpp>
 #include <projectexplorer/projectexplorerconstants.hpp>
 
-#include <remotelinux/remotelinux_constants.h>
+#include <constants/remotelinux/remotelinux_constants.hpp>
 
 #include <core/featureprovider.hpp>
 

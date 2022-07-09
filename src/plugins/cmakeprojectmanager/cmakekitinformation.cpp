@@ -12,7 +12,7 @@
 
 #include <core/icore.hpp>
 
-#include <ios/iosconstants.h>
+#include <constants/ios/iosconstants.hpp>
 
 #include <projectexplorer/kitinformation.hpp>
 #include <projectexplorer/projectexplorer.hpp>

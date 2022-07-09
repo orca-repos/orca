@@ -12,7 +12,7 @@
 #include <projectexplorer/projectexplorerconstants.hpp>
 #include <projectexplorer/projectmacro.hpp>
 
-#include <qnx/qnxconstants.h>
+#include <constants/qnx/qnxconstants.hpp>
 
 #include <utils/algorithm.hpp>
 #include <utils/cpplanguage_details.hpp>

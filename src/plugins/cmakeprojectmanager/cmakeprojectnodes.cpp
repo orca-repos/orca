@@ -5,9 +5,9 @@
 #include "cmakebuildsystem.hpp"
 #include "cmakeprojectconstants.hpp"
 
-#include <android/androidconstants.h>
+#include <constants/android/androidconstants.hpp>
 #include <core/fileiconprovider.hpp>
-#include <ios/iosconstants.h>
+#include <constants/ios/iosconstants.hpp>
 #include <projectexplorer/projectexplorerconstants.hpp>
 #include <projectexplorer/target.hpp>
 

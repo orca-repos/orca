@@ -14,11 +14,11 @@
 #include "configmodelitemdelegate.hpp"
 #include "fileapiparser.hpp"
 
-#include <android/androidconstants.h>
-#include <docker/dockerconstants.h>
-#include <ios/iosconstants.h>
-#include <qnx/qnxconstants.h>
-#include <webassembly/webassemblyconstants.h>
+#include <constants/android/androidconstants.hpp>
+#include <constants/docker/dockerconstants.hpp>
+#include <constants/ios/iosconstants.hpp>
+#include <constants/qnx/qnxconstants.hpp>
+#include <constants/webassembly/webassemblyconstants.hpp>
 
 #include <core/find/itemviewfind.hpp>
 #include <core/icore.hpp>
