@@ -1,0 +1,22 @@
+// SPDX-License-Identifier: GPL-3.0-only WITH Qt-GPL-exception-1.0
+
+#include "cppworkingcopy.hpp"
+
+/*!
+    \class CppEditor::WorkingCopy
+    \brief The working copy holds among others the unsaved content of editors.
+
+    The working copy holds
+     - unsaved content of editors
+     - uic-ed UI files (through \c AbstractEditorSupport)
+     - the preprocessor configuration
+
+    Contents are keyed on filename, and hold the revision in the editor and the editor's
+    contents encoded as UTF-8.
+*/
+
+namespace CppEditor {
+
+WorkingCopy::WorkingCopy() = default;
+
+} // namespace CppEditor

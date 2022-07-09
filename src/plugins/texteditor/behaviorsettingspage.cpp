@@ -21,7 +21,7 @@
 #include <utils/qtcassert.hpp>
 
 // for opening the respective coding style preferences
-#include <cppeditor/cppeditorconstants.h>
+#include <cppeditor/cppeditorconstants.hpp>
 // #include <qmljseditor/qmljseditorconstants.hpp>
 // #include <qmljstools/qmljstoolsconstants.hpp>
 

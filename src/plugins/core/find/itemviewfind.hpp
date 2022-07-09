@@ -13,7 +13,7 @@ QT_END_NAMESPACE
 namespace Core {
 class ItemModelFindPrivate;
 
-class CORE_EXPORT ItemViewFind final : public IFindSupport {
+class CORE_EXPORT ItemViewFind : public IFindSupport {
   Q_OBJECT
   Q_DISABLE_COPY_MOVE(ItemViewFind)
 

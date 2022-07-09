@@ -4,7 +4,7 @@
 #include "customwizardscriptgenerator.hpp"
 
 #include <core/icore.hpp>
-#include <cppeditor/cppeditorconstants.h>
+#include <cppeditor/cppeditorconstants.hpp>
 
 #include <utils/macroexpander.hpp>
 #include <utils/mimetypes/mimedatabase.hpp>

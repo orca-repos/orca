@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include <qsystemdetection.hpp>
+#include <qsystemdetection.h>
 
 #include <cstdlib>
 #include <cstring>

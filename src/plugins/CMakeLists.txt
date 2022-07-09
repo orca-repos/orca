@@ -1,3 +1,4 @@
 add_subdirectory(core)
 add_subdirectory(texteditor)
 add_subdirectory(projectexplorer)
+add_subdirectory(cppeditor)

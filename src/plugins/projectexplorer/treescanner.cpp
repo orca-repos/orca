@@ -9,7 +9,7 @@
 #include <core/iversioncontrol.hpp>
 #include <core/vcsmanager.hpp>
 
-#include <cppeditor/cppeditorconstants.h>
+#include <cppeditor/cppeditorconstants.hpp>
 
 #include <utils/qtcassert.hpp>
 #include <utils/algorithm.hpp>

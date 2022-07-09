@@ -1,5 +1,7 @@
 add_subdirectory(3rdparty)
 add_subdirectory(aggregation)
+add_subdirectory(clangsupport)
+add_subdirectory(cplusplus)
 add_subdirectory(extensionsystem)
 add_subdirectory(ssh)
 add_subdirectory(utils)

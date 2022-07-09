@@ -8,7 +8,7 @@
 
 #include <core/icore.hpp>
 
-#include <cppeditor/cpptoolssettings.h>
+#include <cppeditor/cpptoolssettings.hpp>
 
 using namespace CppEditor;
 
