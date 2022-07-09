@@ -11,7 +11,7 @@
 #include <cmakeprojectmanager/cmakeprojectconstants.h>
 #include <docker/dockerconstants.h>
 #include <qbsprojectmanager/qbsprojectmanagerconstants.h>
-#include <qmakeprojectmanager/qmakeprojectmanagerconstants.h>
+#include <qmakeprojectmanager/qmakeprojectmanagerconstants.hpp>
 
 #include <utils/fileutils.hpp>
 #include <utils/pathchooser.hpp>

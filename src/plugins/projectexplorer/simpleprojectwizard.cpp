@@ -14,7 +14,7 @@
 #include <projectexplorer/projectexplorericons.hpp>
 #include <projectexplorer/customwizard/customwizard.hpp>
 #include <projectexplorer/selectablefilesmodel.hpp>
-#include <qmakeprojectmanager/qmakeprojectmanagerconstants.h>
+#include <qmakeprojectmanager/qmakeprojectmanagerconstants.hpp>
 
 #include <utils/algorithm.hpp>
 #include <utils/fileutils.hpp>
