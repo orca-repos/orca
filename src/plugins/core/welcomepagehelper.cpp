@@ -333,7 +333,7 @@ auto ListModelFilter::setSearchString(const QString &arg) -> void
   delayedUpdateFilter();
 }
 
-auto ListModelFilter::leaveFilterAcceptsRowBeforeFiltering(const ListItem *, bool *) -> bool
+auto ListModelFilter::leaveFilterAcceptsRowBeforeFiltering(const ListItem *, bool *) const -> bool
 {
   return false;
 }

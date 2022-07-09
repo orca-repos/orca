@@ -1,3 +1,4 @@
+add_subdirectory(proparser)
 add_subdirectory(qtsingleapplication)
 add_subdirectory(qtlockedfile)
 

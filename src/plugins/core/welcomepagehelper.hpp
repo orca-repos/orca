@@ -76,14 +76,14 @@ protected:
   QList<ListItem*> m_items;
 };
 
-class CORE_EXPORT ListModelFilter final : public QSortFilterProxyModel {
+class CORE_EXPORT ListModelFilter : public QSortFilterProxyModel {
 public:
   ListModelFilter(ListModel *source_model, QObject *parent);
 
   auto setSearchString(const QString &arg) -> void;
 
 protected:
-  static auto leaveFilterAcceptsRowBeforeFiltering(const ListItem *item, bool *early_exit_result) -> bool;
+  virtual auto leaveFilterAcceptsRowBeforeFiltering(const ListItem *item, bool *early_exit_result) const -> bool;
 
 private:
   auto filterAcceptsRow(int source_row, const QModelIndex &source_parent) const -> bool override;

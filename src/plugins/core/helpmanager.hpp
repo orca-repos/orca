@@ -32,14 +32,14 @@ enum HelpViewerLocation {
   ExternalHelpAlways = 3
 };
 
-auto documentationPath() -> CORE_EXPORT QString;
-auto registerDocumentation(const QStringList &file_names) -> CORE_EXPORT void;
-auto unregisterDocumentation(const QStringList &file_names) -> CORE_EXPORT void;
-auto linksForIdentifier(const QString &id) -> CORE_EXPORT QMultiMap<QString, QUrl>;
-auto linksForKeyword(const QString &keyword) -> CORE_EXPORT QMultiMap<QString, QUrl>;
-auto fileData(const QUrl &url) -> CORE_EXPORT QByteArray;
-auto showHelpUrl(const QUrl &url, HelpViewerLocation location = HelpModeAlways) -> CORE_EXPORT void;
-auto showHelpUrl(const QString &url, HelpViewerLocation location = HelpModeAlways) -> CORE_EXPORT void;
+CORE_EXPORT auto documentationPath() -> QString;
+CORE_EXPORT auto registerDocumentation(const QStringList &file_names) -> void;
+CORE_EXPORT auto unregisterDocumentation(const QStringList &file_names) -> void;
+CORE_EXPORT auto linksForIdentifier(const QString &id) -> QMultiMap<QString, QUrl>;
+CORE_EXPORT auto linksForKeyword(const QString &keyword) -> QMultiMap<QString, QUrl>;
+CORE_EXPORT auto fileData(const QUrl &url) -> QByteArray;
+CORE_EXPORT auto showHelpUrl(const QUrl &url, HelpViewerLocation location = HelpModeAlways) -> void;
+CORE_EXPORT auto showHelpUrl(const QString &url, HelpViewerLocation location = HelpModeAlways) -> void;
 
 } // HelpManager
 } // Core
