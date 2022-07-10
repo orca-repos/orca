@@ -530,7 +530,7 @@ auto main(int argc, char **argv) -> int
   #endif
 
   PluginManager plugin_manager;
-  PluginManager::setPluginIID(QLatin1String("org.qt-project.Qt.OrcaPlugin"));
+  PluginManager::setPluginIID(QLatin1String("org.orca-repos.orca.plugin"));
   PluginManager::setGlobalSettings(global_settings);
   PluginManager::setSettings(settings);
 

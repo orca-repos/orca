@@ -30,7 +30,7 @@ class Locator;
 
 class CorePlugin final : public ExtensionSystem::IPlugin {
   Q_OBJECT
-  Q_PLUGIN_METADATA(IID "org.qt-project.Qt.OrcaPlugin" FILE "Core.json")
+  Q_PLUGIN_METADATA(IID "org.orca-repos.orca.plugin" FILE "Core.json")
 
 public:
   CorePlugin();

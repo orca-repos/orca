@@ -9,7 +9,7 @@ namespace Internal {
 class LineNumberFilter;
 
 class TextEditorPlugin final : public ExtensionSystem::IPlugin {
-  Q_OBJECT Q_PLUGIN_METADATA(IID "org.qt-project.Qt.OrcaPlugin" FILE "texteditor.json")public:
+  Q_OBJECT Q_PLUGIN_METADATA(IID "org.orca-repos.orca.plugin" FILE "texteditor.json")public:
   TextEditorPlugin();
   ~TextEditorPlugin() override;
 

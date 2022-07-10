@@ -13,7 +13,7 @@ class CMakeSpecificSettings;
 
 class CMakeProjectPlugin final : public ExtensionSystem::IPlugin {
   Q_OBJECT
-  Q_PLUGIN_METADATA(IID "org.qt-project.Qt.OrcaPlugin" FILE "CMakeProjectManager.json")
+  Q_PLUGIN_METADATA(IID "org.orca-repos.orca.plugin" FILE "CMakeProjectManager.json")
 
 public:
   static auto projectTypeSpecificSettings() -> CMakeSpecificSettings*;

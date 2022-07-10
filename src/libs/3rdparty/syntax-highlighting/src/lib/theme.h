@@ -26,7 +26,7 @@ class RepositoryPrivate;
  *
  * The Theme provides a full color theme for painting the highlighted text.
  * One Theme is defined either as a *.theme file on disk, or as a file compiled
- * into the SyntaxHighlighting library by using Qt's resource system. Each
+ * into the SyntaxHighlighting library by using Orca's resource system. Each
  * Theme has a unique name(), including a translatedName() if put into the UI.
  * Themes shipped by default are typically read-only, see isReadOnly().
  *

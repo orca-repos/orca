@@ -86,7 +86,7 @@ enum {
 
     \section1 Plugins
     Plugins must derive from the IPlugin class and have the IID
-    \c "org.qt-project.Qt.OrcaPlugin".
+    \c "org.orca-repos.orca.plugin".
 
     The plugin manager is used to set a list of file system directories to search for
     plugins, retrieve information about the state of these plugins, and to load them.

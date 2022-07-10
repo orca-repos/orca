@@ -2,15 +2,15 @@
     \"Name\" : \"ResourceEditor\",
     \"Version\" : \"$$ORCA_VERSION\",
     \"CompatVersion\" : \"$$ORCA_COMPAT_VERSION\",
-    \"Vendor\" : \"The Qt Company Ltd\",
-    \"Copyright\" : \"(C) $$ORCA_COPYRIGHT_YEAR The Qt Company Ltd\",
+    \"Vendor\" : \"Orca\",
+    \"Copyright\" : \"(C) $$ORCA_COPYRIGHT_YEAR\",
     \"License\" : [ \"GNU General Public License Usage\",
                   \"\",
-                  \"This plugin may be used under the terms of the GNU General Public License version 3 as published by the Free Software Foundation with exceptions as appearing in the file LICENSE.GPL3-EXCEPT included in the packaging of this plugin. Please review the following information to ensure the GNU General Public License requirements will be met: https://www.gnu.org/licenses/gpl-3.0.html.\"
+                  \"This plugin may be used under the terms of the GNU General Public License version 3 as published by the Free Software Foundation with exceptions as appearing in the file LICENSE included in the packaging of this plugin. Please review the following information to ensure the GNU General Public License requirements will be met: https://www.gnu.org/licenses/gpl-3.0.html.\"
     ],
-    \"Category\" : \"Qt Creator\",
+    \"Category\" : \"Orca\",
     \"Description\" : \"Editor for qrc files.\",
-    \"Url\" : \"http://www.qt.io\",
+    \"Url\" : \"https://github.com/orca-repos/orca\",
     $$dependencyList,
 
     \"Mimetypes\" : [

@@ -9,7 +9,7 @@ namespace Internal {
 
 class ClassViewPlugin final : public ExtensionSystem::IPlugin {
   Q_OBJECT
-  Q_PLUGIN_METADATA(IID "org.qt-project.Qt.OrcaPlugin" FILE "ClassView.json")
+  Q_PLUGIN_METADATA(IID "org.orca-repos.orca.plugin" FILE "ClassView.json")
 
 public:
   ClassViewPlugin() = default;

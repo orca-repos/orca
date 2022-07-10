@@ -9,7 +9,7 @@ namespace Internal {
 
 class QtSupportPlugin final : public ExtensionSystem::IPlugin {
   Q_OBJECT
-  Q_PLUGIN_METADATA(IID "org.qt-project.Qt.OrcaPlugin" FILE "QtSupport.json")
+  Q_PLUGIN_METADATA(IID "org.orca-repos.orca.plugin" FILE "QtSupport.json")
 
 public:
   ~QtSupportPlugin() final;

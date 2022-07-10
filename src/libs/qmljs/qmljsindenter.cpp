@@ -258,7 +258,7 @@ int QmlJSIndenter::indentForContinuationLine()
                 delimDepth--;
                 /*
                     An unclosed delimiter is a good place to align at,
-                    at least for some styles (including Qt's).
+                    at least for some styles (including Orca's).
                 */
                 if (delimDepth == -1)
                     hook = j;
@@ -268,7 +268,7 @@ int QmlJSIndenter::indentForContinuationLine()
                 braceDepth--;
                 /*
                     An unclosed delimiter is a good place to align at,
-                    at least for some styles (including Qt's).
+                    at least for some styles (including Orca's).
                 */
                 if (braceDepth == -1)
                     hook = j;

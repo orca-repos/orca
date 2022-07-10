@@ -21,8 +21,8 @@
     Plugins must provide one implementation of the IPlugin class, located
     in a library that matches the \c name attribute given in their
     meta data. The IPlugin implementation must be exported and
-    made known to Qt's plugin system, using the \c Q_PLUGIN_METADATA macro with
-    an IID set to \c "org.qt-project.Qt.OrcaPlugin".
+    made known to Orca's plugin system, using the \c Q_PLUGIN_METADATA macro with
+    an IID set to \c "org.orca-repos.orca.plugin".
 
     For more information, see \l{Plugin Life Cycle}.
 */
