@@ -43,7 +43,7 @@ class ProjectExplorerSettings;
 
 class PROJECTEXPLORER_EXPORT ProjectExplorerPlugin : public ExtensionSystem::IPlugin {
   Q_OBJECT
-  Q_PLUGIN_METADATA(IID "org.orca-repos.orca.plugin" FILE "ProjectExplorer.json")
+  Q_PLUGIN_METADATA(IID "org.orca-repos.orca.plugin" FILE "projectexplorer.json")
 
   friend class ProjectExplorerPluginPrivate;
 

@@ -64,7 +64,7 @@ enum class indent {
   description = 34
 };
 
-constexpr char core_plugin_name_c[] = "core";
+constexpr char core_plugin_name_c[] = "Core";
 constexpr char fixed_options_c[] =
 " [OPTION]... [FILE]...\n"
 "Options:\n"

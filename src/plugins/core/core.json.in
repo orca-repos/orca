@@ -1,5 +1,5 @@
 {
-    \"Name\" : \"core\",
+    \"Name\" : \"Core\",
     \"Version\" : \"$$ORCA_VERSION\",
     \"CompatVersion\" : \"$$ORCA_COMPAT_VERSION\",
     \"Required\" : true,

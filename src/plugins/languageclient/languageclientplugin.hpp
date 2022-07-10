@@ -12,7 +12,7 @@ namespace LanguageClient {
 
 class LanguageClientPlugin : public ExtensionSystem::IPlugin {
   Q_OBJECT
-  Q_PLUGIN_METADATA(IID "org.orca-repos.orca.plugin" FILE "LanguageClient.json")
+  Q_PLUGIN_METADATA(IID "org.orca-repos.orca.plugin" FILE "languageclient.json")
 
 public:
   LanguageClientPlugin();
