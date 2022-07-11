@@ -120,11 +120,11 @@ auto BaseFileWizardFactory::writeFiles(const GeneratedFiles &files, QString *err
 {
   constexpr auto no_write_attributes = GeneratedFile::CustomGeneratorAttribute | GeneratedFile::KeepExistingFileAttribute;
 
-  for (const auto &generated_file : files)
-    if (generated_file.attributes() & no_write_attributes || generated_file.write(error_message))
+  return std::ranges::all_of(files, [this, error_message](const GeneratedFile& file){
+    if (!(file.attributes() & no_write_attributes) && !file.write(error_message))
       return false;
-
-  return true;
+    return true;
+  });
 }
 
 /*!
