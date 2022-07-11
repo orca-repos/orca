@@ -34,6 +34,24 @@ if (ORCA_BUILD_WITH_PLUGINS_TESTS)
   set(IMPLICIT_DEPENDS Qt6::Test)
 endif()
 
+# LIEF
+option(LIEF_DOC "Build LIEF docs" OFF)
+option(LIEF_PYTHON_API "Build LIEF Python API" OFF)
+option(LIEF_EXAMPLES "Build LIEF examples" OFF)
+option(LIEF_TESTS "Build LIEF tests" OFF)
+if(MSVC)
+  set(LIEF_USE_CRT_RELEASE "MT" CACHE STRING "LIEF CRT option")
+  add_link_options(/NODEFAULTLIB:MSVCRT)
+endif()
+include(FetchContent)
+set(LIEF_GIT_URL "https://github.com/lief-project/LIEF.git")
+set(LIEF_VERSION 0.12.0)
+FetchContent_Declare(LIEF
+  GIT_REPOSITORY "${LIEF_GIT_URL}"
+  GIT_TAG ${LIEF_VERSION}
+)
+FetchContent_MakeAvailable(LIEF)
+
 # Crashpad
 set(CRASHPAD_BACKEND_URL "" CACHE STRING "Crashpad backend URL")
 set(BUILD_WITH_CRASHPAD OFF)
