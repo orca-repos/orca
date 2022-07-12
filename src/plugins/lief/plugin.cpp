@@ -2,10 +2,9 @@
 
 #include "plugin.hpp"
 
-namespace LIEF {
+#include "system/windows/windows.hpp"
 
-auto newFileWizardFactory() -> void;
-auto newProjectWizardFactory() -> void;
+namespace Orca::Plugin::LIEF {
 
 auto Plugin::initialize(const QStringList &, QString *) -> bool
 {
@@ -14,8 +13,9 @@ auto Plugin::initialize(const QStringList &, QString *) -> bool
 
 auto Plugin::extensionsInitialized() -> void
 {
-  newFileWizardFactory();
-  newProjectWizardFactory();
+  Core::IWizardFactory::registerFactoryCreator([] {
+    return QList<Core::IWizardFactory*>{new Windows};
+  });
 }
 
-} // namespace LIEF
+} // namespace Orca::Plugin::LIEF

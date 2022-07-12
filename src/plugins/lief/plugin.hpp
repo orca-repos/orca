@@ -4,7 +4,7 @@
 
 #include <extensionsystem/iplugin.hpp>
 
-namespace LIEF {
+namespace Orca::Plugin::LIEF {
 
 class Plugin final : public ExtensionSystem::IPlugin
 {
@@ -15,4 +15,4 @@ class Plugin final : public ExtensionSystem::IPlugin
   auto extensionsInitialized() -> void override;
 };
 
-} // namespace LIEF
+} // namespace Orca::Plugin::LIEF
