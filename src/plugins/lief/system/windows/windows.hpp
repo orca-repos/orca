@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include <core/basefilewizardfactory.hpp>
+#include <core/core-base-file-wizard-factory.hpp>
 
 #include <LIEF/PE/Binary.hpp>
 

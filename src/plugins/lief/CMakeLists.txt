@@ -1,6 +1,6 @@
 add_qtc_plugin(LIEF
   DEPENDS LIEF::LIEF
-  PLUGIN_DEPENDS Core ProjectExplorer
+  PLUGIN_DEPENDS Core
   SOURCES
     plugin.cpp
     plugin.hpp

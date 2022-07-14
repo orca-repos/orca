@@ -2,8 +2,6 @@
 
 #include "windows.hpp"
 
-#include <projectexplorer/customwizard/customwizard.hpp>
-
 #include <LIEF/PE/Parser.hpp>
 
 #include <QMessageBox>
@@ -42,7 +40,7 @@ auto Windows::generateFiles(const QWizard *wizard, QString *error_message) const
 
 auto Windows::postGenerateFiles(const QWizard *wizard, const Core::GeneratedFiles &files, QString *error_message) const -> bool
 {
-  return ProjectExplorer::CustomProjectWizard::postGenerateOpen(files, error_message);
+  return {};
 }
 
 } // namespace Orca::Plugin::LIEF

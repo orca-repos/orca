@@ -1,6 +1,6 @@
 add_subdirectory(core)
-add_subdirectory(texteditor)
-add_subdirectory(projectexplorer)
+# add_subdirectory(texteditor)
+# add_subdirectory(projectexplorer)
 # add_subdirectory(cppeditor)
 # add_subdirectory(resourceeditor)
 # add_subdirectory(classview)
