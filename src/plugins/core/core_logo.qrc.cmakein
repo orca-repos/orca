@@ -1,6 +1,0 @@
-<RCC>
-    <qresource prefix="/core">
-    <file alias="images/orcalogo-big.png">${IDE_LOGO_PATH}/images/logo/128/Orca-orca.png</file>
-    <file alias="images/orcalogo-big@2x.png">${IDE_LOGO_PATH}/images/logo/256/Orca-orca.png</file>
-    </qresource>
-</RCC>

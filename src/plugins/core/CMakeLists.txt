@@ -1,191 +1,354 @@
 if (NOT IS_ABSOLUTE ${IDE_LOGO_PATH})
   set(IDE_LOGO_PATH "${CMAKE_CURRENT_SOURCE_DIR}/${IDE_LOGO_PATH}")
 endif()
-configure_file(core_logo.qrc.cmakein core_logo_cmake.qrc)
+configure_file(core-logo.qrc.cmakein core-logo-cmake.qrc)
 
 add_qtc_plugin(Core
   DEPENDS Qt6::PrintSupport Qt6::Qml Qt6::Sql Qt6::Gui Qt6::GuiPrivate
   PUBLIC_DEPENDS Aggregation ExtensionSystem Utils app_version
   SOURCES
-    actionmanager/actioncontainer.cpp actionmanager/actioncontainer.hpp actionmanager/actioncontainer_p.hpp
-    actionmanager/actionmanager.cpp actionmanager/actionmanager.hpp actionmanager/actionmanager_p.hpp
-    actionmanager/command.cpp actionmanager/command.hpp actionmanager/command_p.hpp
-    actionmanager/commandbutton.cpp actionmanager/commandbutton.hpp
-    actionmanager/commandmappings.cpp actionmanager/commandmappings.hpp
-    actionmanager/commandsfile.cpp actionmanager/commandsfile.hpp
-    basefilewizard.cpp basefilewizard.hpp
-    basefilewizardfactory.cpp basefilewizardfactory.hpp
-    ${CMAKE_CURRENT_BINARY_DIR}/core_logo_cmake.qrc
     core.qrc
-    core_global.hpp
-    coreconstants.hpp
-    coreicons.cpp coreicons.hpp
-    corejsextensions.cpp corejsextensions.hpp
-    coreplugin.cpp coreplugin.hpp
-    designmode.cpp designmode.hpp
-    dialogs/addtovcsdialog.cpp dialogs/addtovcsdialog.hpp dialogs/addtovcsdialog.ui
-    dialogs/codecselector.cpp dialogs/codecselector.hpp
-    dialogs/externaltoolconfig.cpp dialogs/externaltoolconfig.hpp dialogs/externaltoolconfig.ui
-    dialogs/filepropertiesdialog.cpp dialogs/filepropertiesdialog.hpp dialogs/filepropertiesdialog.ui
-    dialogs/ioptionspage.cpp dialogs/ioptionspage.hpp
-    dialogs/newdialog.cpp dialogs/newdialog.hpp dialogs/newdialog.ui
-    dialogs/newdialogwidget.cpp dialogs/newdialogwidget.hpp
-    dialogs/openwithdialog.cpp dialogs/openwithdialog.hpp dialogs/openwithdialog.ui
-    dialogs/promptoverwritedialog.cpp dialogs/promptoverwritedialog.hpp
-    dialogs/readonlyfilesdialog.cpp dialogs/readonlyfilesdialog.hpp dialogs/readonlyfilesdialog.ui
-    dialogs/restartdialog.cpp dialogs/restartdialog.hpp
-    dialogs/saveitemsdialog.cpp dialogs/saveitemsdialog.hpp dialogs/saveitemsdialog.ui
-    dialogs/settingsdialog.cpp dialogs/settingsdialog.hpp
-    dialogs/shortcutsettings.cpp dialogs/shortcutsettings.hpp
-    diffservice.cpp diffservice.hpp
-    documentmanager.cpp documentmanager.hpp
-    editmode.cpp editmode.hpp
-    editormanager/documentmodel.cpp editormanager/documentmodel.hpp editormanager/documentmodel_p.hpp
-    editormanager/editorarea.cpp editormanager/editorarea.hpp
-    editormanager/editormanager.cpp editormanager/editormanager.hpp editormanager/editormanager_p.hpp
-    editormanager/editorview.cpp editormanager/editorview.hpp
-    editormanager/editorwindow.cpp editormanager/editorwindow.hpp
-    editormanager/ieditor.cpp editormanager/ieditor.hpp
-    editormanager/ieditorfactory.cpp editormanager/ieditorfactory.hpp editormanager/ieditorfactory_p.hpp
-    editormanager/iexternaleditor.cpp editormanager/iexternaleditor.hpp
-    editormanager/openeditorsview.cpp editormanager/openeditorsview.hpp
-    editormanager/openeditorswindow.cpp editormanager/openeditorswindow.hpp
-    editormanager/systemeditor.cpp editormanager/systemeditor.hpp
-    editortoolbar.cpp editortoolbar.hpp
-    externaltool.cpp externaltool.hpp
-    externaltoolmanager.cpp externaltoolmanager.hpp
-    fancyactionbar.cpp fancyactionbar.hpp
-    fancyactionbar.qrc
-    fancytabwidget.cpp fancytabwidget.hpp
-    featureprovider.cpp featureprovider.hpp
-    fileiconprovider.cpp fileiconprovider.hpp
-    fileutils.cpp fileutils.hpp
-    find/basetextfind.cpp find/basetextfind.hpp
-    find/currentdocumentfind.cpp find/currentdocumentfind.hpp
-    find/find.qrc
-    find/finddialog.ui
-    find/findplugin.cpp find/findplugin.hpp
-    find/findtoolbar.cpp find/findtoolbar.hpp
-    find/findtoolwindow.cpp find/findtoolwindow.hpp
-    find/findwidget.ui
-    find/highlightscrollbarcontroller.cpp find/highlightscrollbarcontroller.hpp
-    find/ifindfilter.cpp find/ifindfilter.hpp
-    find/ifindsupport.cpp find/ifindsupport.hpp
-    find/itemviewfind.cpp find/itemviewfind.hpp
-    find/optionspopup.cpp find/optionspopup.hpp
-    find/searchresultcolor.hpp
-    find/searchresultitem.hpp
-    find/searchresulttreeitemdelegate.cpp find/searchresulttreeitemdelegate.hpp
-    find/searchresulttreeitemroles.hpp
-    find/searchresulttreeitems.cpp find/searchresulttreeitems.hpp
-    find/searchresulttreemodel.cpp find/searchresulttreemodel.hpp
-    find/searchresulttreeview.cpp find/searchresulttreeview.hpp
-    find/searchresultwidget.cpp find/searchresultwidget.hpp
-    find/searchresultwindow.cpp find/searchresultwindow.hpp
-    find/textfindconstants.hpp
-    findplaceholder.cpp findplaceholder.hpp
-    foldernavigationwidget.cpp
-    foldernavigationwidget.hpp
-    generalsettings.cpp generalsettings.hpp generalsettings.ui
-    generatedfile.cpp generatedfile.hpp
-    helpitem.cpp helpitem.hpp
-    helpmanager.cpp helpmanager.hpp helpmanager_implementation.hpp
-    icontext.cpp icontext.hpp
-    icore.cpp icore.hpp
-    idocument.cpp idocument.hpp
-    idocumentfactory.cpp idocumentfactory.hpp
-    ifilewizardextension.hpp
-    imode.cpp imode.hpp
-    inavigationwidgetfactory.cpp inavigationwidgetfactory.hpp
-    ioutputpane.cpp ioutputpane.hpp
-    iversioncontrol.cpp iversioncontrol.hpp
-    iwelcomepage.cpp iwelcomepage.hpp
-    iwizardfactory.cpp iwizardfactory.hpp
-    jsexpander.cpp jsexpander.hpp
-    locator/basefilefilter.cpp locator/basefilefilter.hpp
-    locator/commandlocator.cpp locator/commandlocator.hpp
-    locator/directoryfilter.cpp locator/directoryfilter.hpp locator/directoryfilter.ui
-    locator/executefilter.cpp locator/executefilter.hpp
-    locator/externaltoolsfilter.cpp locator/externaltoolsfilter.hpp
-    locator/filesystemfilter.cpp locator/filesystemfilter.hpp locator/filesystemfilter.ui
-    locator/ilocatorfilter.cpp locator/ilocatorfilter.hpp
-    locator/javascriptfilter.cpp locator/javascriptfilter.hpp
-    locator/locator.cpp locator/locator.hpp
-    locator/locatorconstants.hpp
-    locator/locatorfiltersfilter.cpp locator/locatorfiltersfilter.hpp
-    locator/locatormanager.cpp locator/locatormanager.hpp
-    locator/locatorsearchutils.cpp locator/locatorsearchutils.hpp
-    locator/locatorsettingspage.cpp locator/locatorsettingspage.hpp locator/locatorsettingspage.ui
-    locator/locatorwidget.cpp locator/locatorwidget.hpp
-    locator/opendocumentsfilter.cpp locator/opendocumentsfilter.hpp
-    locator/spotlightlocatorfilter.hpp locator/spotlightlocatorfilter.cpp
-    locator/urllocatorfilter.cpp locator/urllocatorfilter.hpp locator/urllocatorfilter.ui
-    loggingviewer.cpp loggingviewer.hpp
-    loggingmanager.cpp loggingmanager.hpp
-    mainwindow.cpp mainwindow.hpp
-    manhattanstyle.cpp manhattanstyle.hpp
-    menubarfilter.cpp menubarfilter.hpp
-    messagebox.cpp messagebox.hpp
-    messagemanager.cpp messagemanager.hpp
-    messageoutputwindow.cpp messageoutputwindow.hpp
-    mimetypemagicdialog.cpp mimetypemagicdialog.hpp mimetypemagicdialog.ui
-    mimetypesettings.cpp mimetypesettings.hpp
-    mimetypesettingspage.ui
-    minisplitter.cpp minisplitter.hpp
-    modemanager.cpp modemanager.hpp
-    navigationsubwidget.cpp navigationsubwidget.hpp
-    navigationwidget.cpp navigationwidget.hpp
-    opendocumentstreeview.cpp opendocumentstreeview.hpp
-    outputpane.cpp outputpane.hpp
-    outputpanemanager.cpp outputpanemanager.hpp
-    outputwindow.cpp outputwindow.hpp
-    patchtool.cpp patchtool.hpp
-    plugindialog.cpp plugindialog.hpp
-    plugininstallwizard.cpp plugininstallwizard.hpp
-    progressmanager/futureprogress.cpp progressmanager/futureprogress.hpp
-    progressmanager/progressbar.cpp progressmanager/progressbar.hpp
-    progressmanager/progressmanager.cpp progressmanager/progressmanager.hpp progressmanager/progressmanager_p.hpp
-    progressmanager/progressview.cpp progressmanager/progressview.hpp
-    rightpane.cpp rightpane.hpp
-    settingsdatabase.cpp settingsdatabase.hpp
-    shellcommand.cpp shellcommand.hpp
-    sidebar.cpp sidebar.hpp
-    sidebarwidget.cpp sidebarwidget.hpp
-    statusbarmanager.cpp statusbarmanager.hpp
-    styleanimator.cpp styleanimator.hpp
-    systemsettings.cpp systemsettings.hpp systemsettings.ui
-    textdocument.cpp textdocument.hpp
-    themechooser.cpp themechooser.hpp
-    vcsmanager.cpp vcsmanager.hpp
-    versiondialog.cpp versiondialog.hpp
-    welcomepagehelper.cpp welcomepagehelper.hpp
-    windowsupport.cpp windowsupport.hpp
-  EXPLICIT_MOC dialogs/filepropertiesdialog.hpp
+    core-action-container.cpp 
+    core-action-container.hpp 
+    core-action-container-private.hpp
+    core-action-manager.cpp 
+    core-action-manager.hpp 
+    core-action-manager-private.hpp
+    core-add-to-vcs-dialog.cpp 
+    core-add-to-vcs-dialog.hpp
+    core-add-to-vcs-dialog.ui
+    core-base-file-filter.cpp 
+    core-base-file-filter.hpp
+    core-base-file-wizard.cpp 
+    core-base-file-wizard.hpp
+    core-base-file-wizard-factory.cpp 
+    core-base-file-wizard-factory.hpp
+    core-base-text-find.cpp 
+    core-base-text-find.hpp
+    core-codec-selector.cpp 
+    core-codec-selector.hpp
+    core-command.cpp 
+    core-command.hpp
+    core-command-button.cpp 
+    core-command-button.hpp
+    core-command-locator.cpp 
+    core-command-locator.hpp
+    core-command-mappings.cpp 
+    core-command-mappings.hpp
+    core-command-private.hpp
+    core-commands-file.cpp 
+    core-commands-file.hpp
+    core-constants.hpp
+    core-context-interface.cpp 
+    core-context-interface.hpp
+    core-current-document-find.cpp 
+    core-current-document-find.hpp
+    core-design-mode.cpp 
+    core-design-mode.hpp
+    core-diff-service.cpp 
+    core-diff-service.hpp
+    core-directory-filter.cpp 
+    core-directory-filter.hpp 
+    core-directory-filter.ui
+    core-document-factory-interface.cpp 
+    core-document-factory-interface.hpp
+    core-document-interface.cpp 
+    core-document-interface.hpp
+    core-document-manager.cpp 
+    core-document-manager.hpp
+    core-document-model.cpp 
+    core-document-model.hpp 
+    core-document-model-private.hpp
+    core-edit-mode.cpp
+    core-edit-mode.hpp
+    core-editor-area.cpp 
+    core-editor-area.hpp
+    core-editor-factory-interface.cpp 
+    core-editor-factory-interface.hpp 
+    core-editor-factory-private-interface.hpp
+    core-editor-interface.cpp 
+    core-editor-interface.hpp
+    core-editor-manager.cpp 
+    core-editor-manager.hpp 
+    core-editor-manager-private.hpp
+    core-editor-tool-bar.cpp 
+    core-editor-tool-bar.hpp
+    core-editor-view.cpp 
+    core-editor-view.hpp
+    core-editor-window.cpp 
+    core-editor-window.hpp
+    core-execute-filter.cpp 
+    core-execute-filter.hpp
+    core-external-editor-interface.cpp 
+    core-external-editor-interface.hpp
+    core-external-tool.cpp 
+    core-external-tool.hpp
+    core-external-tool-config.cpp 
+    core-external-tool-config.hpp 
+    core-external-tool-config.ui
+    core-external-tool-manager.cpp 
+    core-external-tool-manager.hpp
+    core-external-tools-filter.cpp 
+    core-external-tools-filter.hpp
+    core-fancy-action-bar.cpp 
+    core-fancy-action-bar.hpp
+    core-fancy-action-bar.qrc
+    core-fancy-tab-widget.cpp 
+    core-fancy-tab-widget.hpp
+    core-feature-provider.cpp 
+    core-feature-provider.hpp
+    core-file-icon-provider.cpp 
+    core-file-icon-provider.hpp
+    core-file-properties-dialog.cpp 
+    core-file-properties-dialog.hpp 
+    core-file-properties-dialog.ui
+    core-file-system-filter.cpp 
+    core-file-system-filter.hpp 
+    core-file-system-filter.ui
+    core-file-utils.cpp 
+    core-file-utils.hpp
+    core-file-wizard-extension-interface.hpp
+    core-find.qrc
+    core-find-dialog.ui
+    core-find-filter-interface.cpp 
+    core-find-filter-interface.hpp
+    core-find-placeholder.cpp 
+    core-find-placeholder.hpp
+    core-find-plugin.cpp 
+    core-find-plugin.hpp
+    core-find-support-interface.cpp
+    core-find-support-interface.hpp
+    core-find-tool-bar.cpp 
+    core-find-tool-bar.hpp
+    core-find-tool-window.cpp 
+    core-find-tool-window.hpp
+    core-find-widget.ui
+    core-folder-navigation-widget.cpp
+    core-folder-navigation-widget.hpp
+    core-future-progress.cpp 
+    core-future-progress.hpp
+    core-general-settings.cpp 
+    core-general-settings.hpp 
+    core-general-settings.ui
+    core-generated-file.cpp 
+    core-generated-file.hpp
+    core-global.hpp
+    core-help-item.cpp 
+    core-help-item.hpp
+    core-help-manager.cpp 
+    core-help-manager.hpp 
+    core-help-manager-implementation.hpp
+    core-highlight-scroll-bar-controller.cpp 
+    core-highlight-scroll-bar-controller.hpp
+    core-icons.cpp 
+    core-icons.hpp
+    core-interface.cpp 
+    core-interface.hpp
+    core-item-view-find.cpp 
+    core-item-view-find.hpp
+    core-javascript-filter.cpp 
+    core-javascript-filter.hpp
+    core-js-expander.cpp 
+    core-js-expander.hpp
+    core-js-extensions.cpp 
+    core-js-extensions.hpp
+    core-locator.cpp 
+    core-locator.hpp
+    core-locator-constants.hpp
+    core-locator-filter-interface.cpp 
+    core-locator-filter-interface.hpp
+    core-locator-filters-filter.cpp 
+    core-locator-filters-filter.hpp
+    core-locator-manager.cpp 
+    core-locator-manager.hpp
+    core-locator-search-utils.cpp 
+    core-locator-search-utils.hpp
+    core-locator-settings-page.cpp 
+    core-locator-settings-page.hpp 
+    core-locator-settings-page.ui
+    core-locator-widget.cpp 
+    core-locator-widget.hpp
+    core-logging-manager.cpp 
+    core-logging-manager.hpp
+    core-logging-viewer.cpp 
+    core-logging-viewer.hpp
+    core-logo-cmake.qrc
+    core-main-window.cpp 
+    core-main-window.hpp
+    core-manhattan-style.cpp
+    core-manhattan-style.hpp
+    core-menu-bar-filter.cpp 
+    core-menu-bar-filter.hpp
+    core-message-box.cpp 
+    core-message-box.hpp
+    core-message-manager.cpp 
+    core-message-manager.hpp
+    core-message-output-window.cpp 
+    core-message-output-window.hpp
+    core-mime-type-magic-dialog.cpp 
+    core-mime-type-magic-dialog.hpp 
+    core-mime-type-magic-dialog.ui
+    core-mime-type-settings.cpp 
+    core-mime-type-settings.hpp
+    core-mime-type-settings-page.ui
+    core-mini-splitter.cpp 
+    core-mini-splitter.hpp
+    core-mode-interface.cpp 
+    core-mode-interface.hpp
+    core-mode-manager.cpp 
+    core-mode-manager.hpp
+    core-navigation-sub-widget.cpp 
+    core-navigation-sub-widget.hpp
+    core-navigation-widget.cpp
+    core-navigation-widget.hpp
+    core-navigation-widget-factory-interface.cpp 
+    core-navigation-widget-factory-interface.hpp
+    core-new-dialog.cpp 
+    core-new-dialog.hpp 
+    core-new-dialog.ui
+    core-new-dialog-widget.cpp 
+    core-new-dialog-widget.hpp
+    core-open-documents-filter.cpp 
+    core-open-documents-filter.hpp
+    core-open-documents-tree-view.cpp 
+    core-open-documents-tree-view.hpp
+    core-open-editors-view.cpp 
+    core-open-editors-view.hpp
+    core-open-editors-window.cpp 
+    core-open-editors-window.hpp
+    core-open-with-dialog.cpp 
+    core-open-with-dialog.hpp 
+    core-open-with-dialog.ui
+    core-options-page-interface.cpp 
+    core-options-page-interface.hpp
+    core-options-popup.cpp 
+    core-options-popup.hpp
+    core-output-pane.cpp 
+    core-output-pane.hpp
+    core-output-pane-interface.cpp 
+    core-output-pane-interface.hpp
+    core-output-pane-manager.cpp 
+    core-output-pane-manager.hpp
+    core-output-window.cpp 
+    core-output-window.hpp
+    core-patch-tool.cpp 
+    core-patch-tool.hpp
+    core-plugin.cpp 
+    core-plugin.hpp
+    core-plugin-dialog.cpp 
+    core-plugin-dialog.hpp
+    core-plugin-install-wizard.cpp 
+    core-plugin-install-wizard.hpp
+    core-progress-bar.cpp 
+    core-progress-bar.hpp
+    core-progress-manager.cpp 
+    core-progress-manager.hpp 
+    core-progress-manager-private.hpp
+    core-progress-view.cpp
+    core-progress-view.hpp
+    core-prompt-overwrite-dialog.cpp 
+    core-prompt-overwrite-dialog.hpp
+    core-readonly-files-dialog.cpp 
+    core-readonly-files-dialog.hpp 
+    core-readonly-files-dialog.ui
+    core-restart-dialog.cpp 
+    core-restart-dialog.hpp
+    core-right-pane.cpp 
+    core-right-pane.hpp
+    core-save-items-dialog.cpp 
+    core-save-items-dialog.hpp 
+    core-save-items-dialog.ui
+    core-search-result-color.hpp
+    core-search-result-item.hpp
+    core-search-result-tree-item-delegate.cpp 
+    core-search-result-tree-item-delegate.hpp
+    core-search-result-tree-item-roles.hpp
+    core-search-result-tree-items.cpp 
+    core-search-result-tree-items.hpp
+    core-search-result-tree-model.cpp 
+    core-search-result-tree-model.hpp
+    core-search-result-tree-view.cpp 
+    core-search-result-tree-view.hpp
+    core-search-result-widget.cpp 
+    core-search-result-widget.hpp
+    core-search-result-window.cpp 
+    core-search-result-window.hpp
+    core-settings-database.cpp 
+    core-settings-database.hpp
+    core-settings-dialog.cpp 
+    core-settings-dialog.hpp
+    core-shell-command.cpp 
+    core-shell-command.hpp
+    core-shortcut-settings.cpp 
+    core-shortcut-settings.hpp
+    core-side-bar.cpp 
+    core-side-bar.hpp
+    core-side-bar-widget.cpp 
+    core-side-bar-widget.hpp
+    core-spotlight-locator-filter.hpp 
+    core-spotlight-locator-filter.cpp
+    core-status-bar-manager.cpp 
+    core-status-bar-manager.hpp
+    core-style-animator.cpp 
+    core-style-animator.hpp
+    core-system-editor.cpp 
+    core-system-editor.hpp
+    core-system-settings.cpp 
+    core-system-settings.hpp 
+    core-system-settings.ui
+    core-text-document.cpp 
+    core-text-document.hpp
+    core-text-find-constants.hpp
+    core-theme-chooser.cpp 
+    core-theme-chooser.hpp
+    core-url-locator-filter.cpp 
+    core-url-locator-filter.hpp 
+    core-url-locator-filter.ui
+    core-vcs-manager.cpp 
+    core-vcs-manager.hpp
+    core-version-control-interface.cpp 
+    core-version-control-interface.hpp
+    core-version-dialog.cpp 
+    core-version-dialog.hpp
+    core-welcome-page-helper.cpp 
+    core-welcome-page-helper.hpp
+    core-welcome-page-interface.cpp 
+    core-welcome-page-interface.hpp
+    core-window-support.cpp 
+    core-window-support.hpp
+    core-wizard-factory-interface.cpp 
+    core-wizard-factory-interface.hpp
+
+  EXPLICIT_MOC core-file-properties-dialog.hpp
 )
 
 extend_qtc_plugin(Core
   CONDITION ORCA_BUILD_WITH_PLUGINS_TESTS
   SOURCES
-    locator/locator_test.cpp
-    locator/locatorfiltertest.cpp locator/locatorfiltertest.hpp
-    testdatadir.cpp testdatadir.hpp
+    core-locator-test.cpp
+    core-locator-filter-test.cpp 
+    core-locator-filter-test.hpp
+    core-test-data-dir.cpp 
+    core-test-data-dir.hpp
 )
 
 extend_qtc_plugin(Core
   CONDITION WIN32
-  SOURCES progressmanager/progressmanager_win.cpp
+  SOURCES 
+    core-progress-manager-win.cpp
 )
 
 extend_qtc_plugin(Core
   CONDITION APPLE
   DEPENDS ${FWAppKit}
   SOURCES
-    progressmanager/progressmanager_mac.mm
+    core-progress-manager-mac.mm
 )
 
 extend_qtc_plugin(Core
   CONDITION (NOT WIN32) AND (NOT APPLE)
-  SOURCES progressmanager/progressmanager_x11.cpp
+  SOURCES 
+    core-progress-manager-x11.cpp
 )
 
 extend_qtc_plugin(Core

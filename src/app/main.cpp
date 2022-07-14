@@ -109,7 +109,7 @@ static auto toHtml(const QString &t) -> QString
 static auto displayHelpText(const QString &t) -> void
 {
   if (Utils::HostOsInfo::isWindowsHost() && qApp)
-    QMessageBox::information(nullptr, QLatin1String(Core::Constants::IDE_DISPLAY_NAME), toHtml(t));
+    QMessageBox::information(nullptr, QLatin1String(Orca::Plugin::Core::IDE_DISPLAY_NAME), toHtml(t));
   else
     qWarning("%s", qPrintable(t));
 }
@@ -117,7 +117,7 @@ static auto displayHelpText(const QString &t) -> void
 static auto displayError(const QString &t) -> void
 {
   if (Utils::HostOsInfo::isWindowsHost() && qApp)
-    QMessageBox::critical(nullptr, QLatin1String(Core::Constants::IDE_DISPLAY_NAME), t);
+    QMessageBox::critical(nullptr, QLatin1String(Orca::Plugin::Core::IDE_DISPLAY_NAME), t);
   else
     qCritical("%s", qPrintable(t));
 }
@@ -126,7 +126,7 @@ static auto printVersion(const PluginSpec *coreplugin) -> void
 {
   QString version;
   QTextStream str(&version);
-  str << '\n' << Core::Constants::IDE_DISPLAY_NAME << ' ' << coreplugin->version() << " based on Qt " << qVersion() << "\n\n";
+  str << '\n' << Orca::Plugin::Core::IDE_DISPLAY_NAME << ' ' << coreplugin->version() << " based on Qt " << qVersion() << "\n\n";
   PluginManager::formatPluginVersions(str);
   str << '\n' << coreplugin->copyright() << '\n';
   displayHelpText(version);
@@ -167,7 +167,7 @@ static auto msgCoreLoadFailure(const QString &why) -> QString
 
 static auto askMsgSendFailed() -> int
 {
-  return QMessageBox::question(nullptr, QApplication::translate("Application", "Could not send message"), QCoreApplication::translate("Application", "Unable to send command line arguments " "to the already running instance. It does not appear to " "be responding. Do you want to start a new instance of " "%1?").arg(Core::Constants::IDE_DISPLAY_NAME), QMessageBox::Yes | QMessageBox::No | QMessageBox::Retry, QMessageBox::Retry);
+  return QMessageBox::question(nullptr, QApplication::translate("Application", "Could not send message"), QCoreApplication::translate("Application", "Unable to send command line arguments " "to the already running instance. It does not appear to " "be responding. Do you want to start a new instance of " "%1?").arg(Orca::Plugin::Core::IDE_DISPLAY_NAME), QMessageBox::Yes | QMessageBox::No | QMessageBox::Retry, QMessageBox::Retry);
 }
 
 static auto getPluginPaths() -> QStringList
@@ -184,14 +184,14 @@ static auto getPluginPaths() -> QStringList
   if constexpr (Utils::HostOsInfo::isAnyUnixHost() && !Utils::HostOsInfo::isMacHost())
     plugin_path += QLatin1String("/data");
 
-  plugin_path += QLatin1Char('/') + QLatin1String(Core::Constants::IDE_SETTINGSVARIANT_STR) + QLatin1Char('/');
-  plugin_path += QLatin1String(Utils::HostOsInfo::isMacHost() ? Core::Constants::IDE_DISPLAY_NAME : Core::Constants::IDE_ID);
+  plugin_path += QLatin1Char('/') + QLatin1String(Orca::Plugin::Core::IDE_SETTINGSVARIANT_STR) + QLatin1Char('/');
+  plugin_path += QLatin1String(Utils::HostOsInfo::isMacHost() ? Orca::Plugin::Core::IDE_DISPLAY_NAME : Orca::Plugin::Core::IDE_ID);
   plugin_path += QLatin1String("/plugins/");
 
   // Orca X.Y.Z can load plugins from X.Y.(Z-1) etc, so add current and previous
   // patch versions
   const QString minor_version = QString::number(IDE_VERSION_MAJOR) + '.' + QString::number(IDE_VERSION_MINOR) + '.';
-  const auto min_patch_version = qMin(IDE_VERSION_RELEASE, QVersionNumber::fromString(Core::Constants::IDE_VERSION_COMPAT).microVersion());
+  const auto min_patch_version = qMin(IDE_VERSION_RELEASE, QVersionNumber::fromString(Orca::Plugin::Core::IDE_VERSION_COMPAT).microVersion());
 
   for (auto patchVersion = IDE_VERSION_RELEASE; patchVersion >= min_patch_version; --patchVersion)
     rc.push_back(plugin_path + minor_version + QString::number(patchVersion));
@@ -202,7 +202,7 @@ static auto getPluginPaths() -> QStringList
 static auto setupInstallSettings(QString &install_settingspath) -> void
 {
   if (!install_settingspath.isEmpty() && !QFileInfo(install_settingspath).isDir()) {
-    displayError(QString("-installsettingspath \"%0\" needs to be the path where a %1/%2.ini exist.").arg(install_settingspath, QLatin1String(Core::Constants::IDE_SETTINGSVARIANT_STR), QLatin1String(Core::Constants::IDE_CASED_ID)));
+    displayError(QString("-installsettingspath \"%0\" needs to be the path where a %1/%2.ini exist.").arg(install_settingspath, QLatin1String(Orca::Plugin::Core::IDE_SETTINGSVARIANT_STR), QLatin1String(Orca::Plugin::Core::IDE_CASED_ID)));
     install_settingspath.clear();
   }
 
@@ -212,7 +212,7 @@ static auto setupInstallSettings(QString &install_settingspath) -> void
   static constexpr char k_install_settings_key[] = "Settings/InstallSettings";
   QSettings::setPath(QSettings::IniFormat, QSettings::SystemScope, install_settingspath.isEmpty() ? resourcePath() : install_settingspath);
 
-  if (const QSettings install_settings(QSettings::IniFormat, QSettings::UserScope, QLatin1String(Core::Constants::IDE_SETTINGSVARIANT_STR), QLatin1String(Core::Constants::IDE_CASED_ID)); install_settings.contains(k_install_settings_key)) {
+  if (const QSettings install_settings(QSettings::IniFormat, QSettings::UserScope, QLatin1String(Orca::Plugin::Core::IDE_SETTINGSVARIANT_STR), QLatin1String(Orca::Plugin::Core::IDE_CASED_ID)); install_settings.contains(k_install_settings_key)) {
     auto install_settings_path = install_settings.value(k_install_settings_key).toString();
     if (QDir::isRelativePath(install_settings_path))
       install_settings_path = applicationDirPath() + '/' + install_settings_path;
@@ -222,7 +222,7 @@ static auto setupInstallSettings(QString &install_settingspath) -> void
 
 static auto createUserSettings() -> Utils::QtcSettings*
 {
-  return new Utils::QtcSettings(QSettings::IniFormat, QSettings::UserScope, QLatin1String(Core::Constants::IDE_SETTINGSVARIANT_STR), QLatin1String(Core::Constants::IDE_CASED_ID));
+  return new Utils::QtcSettings(QSettings::IniFormat, QSettings::UserScope, QLatin1String(Orca::Plugin::Core::IDE_SETTINGSVARIANT_STR), QLatin1String(Orca::Plugin::Core::IDE_CASED_ID));
 }
 
 static auto setHighDpiEnvironmentVariable() -> void
@@ -381,7 +381,7 @@ auto startCrashpad(const QString &libexec_path, bool crash_reporting_enabled) ->
 
   // Optional annotations passed via --annotations to the handler
   std::map<std::string, std::string> annotations;
-  annotations["app-version"] = Core::Constants::IDE_VERSION_DISPLAY;
+  annotations["app-version"] = Orca::Plugin::Core::IDE_VERSION_DISPLAY;
   annotations["qt-version"] = QT_VERSION_STR;
 
   // Optional arguments to pass to the handler
@@ -453,7 +453,7 @@ auto main(int argc, char **argv) -> int
   }
   #endif
 
-  Utils::TemporaryDirectory::setMasterTemporaryDirectory(QDir::tempPath() + "/" + Core::Constants::IDE_CASED_ID + "-XXXXXX");
+  Utils::TemporaryDirectory::setMasterTemporaryDirectory(QDir::tempPath() + "/" + Orca::Plugin::Core::IDE_CASED_ID + "-XXXXXX");
 
   #ifdef Q_OS_MACOS
     // increase the number of file that can be opened in Orca.
@@ -485,11 +485,11 @@ auto main(int argc, char **argv) -> int
 
   auto numberof_arguments = static_cast<int>(options.app_arguments.size());
 
-  SharedTools::QtSingleApplication app((QLatin1String(Core::Constants::IDE_DISPLAY_NAME)), numberof_arguments, options.app_arguments.data());
-  QCoreApplication::setApplicationName(Core::Constants::IDE_CASED_ID);
-  QCoreApplication::setApplicationVersion(QLatin1String(Core::Constants::IDE_VERSION_LONG));
-  QCoreApplication::setOrganizationName(QLatin1String(Core::Constants::IDE_SETTINGSVARIANT_STR));
-  QGuiApplication::setApplicationDisplayName(Core::Constants::IDE_DISPLAY_NAME);
+  SharedTools::QtSingleApplication app((QLatin1String(Orca::Plugin::Core::IDE_DISPLAY_NAME)), numberof_arguments, options.app_arguments.data());
+  QCoreApplication::setApplicationName(Orca::Plugin::Core::IDE_CASED_ID);
+  QCoreApplication::setApplicationVersion(QLatin1String(Orca::Plugin::Core::IDE_VERSION_LONG));
+  QCoreApplication::setOrganizationName(QLatin1String(Orca::Plugin::Core::IDE_SETTINGSVARIANT_STR));
+  QGuiApplication::setApplicationDisplayName(Orca::Plugin::Core::IDE_DISPLAY_NAME);
 
   auto cleanup = qScopeGuard([] { Utils::Singleton::deleteAll(); });
   const auto plugin_arguments = SharedTools::QtSingleApplication::arguments();
@@ -498,7 +498,7 @@ auto main(int argc, char **argv) -> int
   setupInstallSettings(options.install_settings_path);
 
   auto settings = createUserSettings();
-  auto global_settings = new Utils::QtcSettings(QSettings::IniFormat, QSettings::SystemScope, QLatin1String(Core::Constants::IDE_SETTINGSVARIANT_STR), QLatin1String(Core::Constants::IDE_CASED_ID));
+  auto global_settings = new Utils::QtcSettings(QSettings::IniFormat, QSettings::SystemScope, QLatin1String(Orca::Plugin::Core::IDE_SETTINGSVARIANT_STR), QLatin1String(Orca::Plugin::Core::IDE_CASED_ID));
 
   Utils::TerminalCommand::setSettings(settings);
   loadFonts();
@@ -516,7 +516,7 @@ auto main(int argc, char **argv) -> int
   #else
 
   // Display a backtrace once a serious signal is delivered (Linux only).
-  CrashHandlerSetup setup_crash_handler(Core::Constants::IDE_DISPLAY_NAME, CrashHandlerSetup::EnableRestart, libexec_path);
+  CrashHandlerSetup setup_crash_handler(Orca::Plugin::Core::IDE_DISPLAY_NAME, CrashHandlerSetup::EnableRestart, libexec_path);
   #endif
 
   #ifdef ENABLE_CRASHPAD

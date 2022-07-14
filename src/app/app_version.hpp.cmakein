@@ -8,8 +8,7 @@
 
 #cmakedefine IDE_REVISION
 
-namespace Core {
-namespace Constants {
+namespace Orca::Plugin::Core {
 
 const char IDE_VERSION_LONG[] = "${PROJECT_VERSION}";
 const char IDE_AUTHOR[]       = "Orca Developers";
@@ -27,5 +26,4 @@ const char IDE_REVISION_URL[] = "${IDE_REVISION_URL}";
 // changes the path where the settings are saved to
 const char IDE_SETTINGSVARIANT_STR[] = "${IDE_SETTINGSVARIANT}";
 
-} // Constants
-} // Core
+} // namespace Orca::Plugin::Core

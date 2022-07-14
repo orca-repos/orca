@@ -2,8 +2,7 @@
 
 #pragma once
 
-namespace Core {
-namespace Constants {
+namespace Orca::Plugin::Core {
 
 #define STRINGIFY_INTERNAL(x) #x
 #define STRINGIFY(x) STRINGIFY_INTERNAL(x)
@@ -49,5 +48,4 @@ const char IDE_SETTINGSVARIANT_STR[]      = \"QtProject\";
 #undef STRINGIFY
 #undef STRINGIFY_INTERNAL
 
-} // Constants
-} // Core
+} // Orca::Plugin::Core
