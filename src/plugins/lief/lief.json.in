@@ -2,6 +2,7 @@
     \"Name\" : \"LIEF\",
     \"Version\" : \"$$ORCA_VERSION\",
     \"CompatVersion\" : \"$$ORCA_COMPAT_VERSION\",
+    \"Required\" : true,
     \"Vendor\" : \"Orca\",
     \"Copyright\" : \"(C) $$ORCA_COPYRIGHT_YEAR\",
     \"License\" : [ \"GNU General Public License Usage\",
