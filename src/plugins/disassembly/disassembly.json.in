@@ -10,21 +10,5 @@
     \"Category\" : \"Orca\",
     \"Description\" : \"The Disassembly plugin for Orca.\",
     \"Url\" : \"https://github.com/orca-repos/orca\",
-    \"Arguments\" : [
-        {
-            \"Name\" : \"-color\",
-            \"Parameter\" : \"color\",
-            \"Description\" : \"Override selected UI color\"
-        },
-        {
-            \"Name\" : \"-theme\",
-            \"Parameter\" : \"light|dark\",
-            \"Description\" : \"Choose a built-in theme or pass a .theme file\"
-        },
-        {
-            \"Name\" : \"-presentationMode\",
-            \"Description\" : \"Enable presentation mode with pop-ups for key combos\"
-        }
-    ],
     $$dependencyList
 }
