@@ -1,7 +1,10 @@
-<img src=".github/assets/logo-dark.svg#gh-dark-mode-only" width="150" height="150" align="left" style="float: left; margin: 0 10px 0 0;">
-<img src=".github/assets/logo-light.svg#gh-light-mode-only" width="150" height="150" align="left" style="float: left; margin: 0 10px 0 0;">
+<img src=".github/assets/logo-dark.svg#gh-dark-mode-only" width="190" height="190" align="left" style="float: left; margin: 0 10px 0 0;">
+<img src=".github/assets/logo-light.svg#gh-light-mode-only" width="190" height="190" align="left" style="float: left; margin: 0 10px 0 0;">
 
-# Orca 
+# Orca
+[![License](https://img.shields.io/badge/License-GPLv3-blue?style=flat-square)](LICENSE)
+[![Discord](https://img.shields.io/discord/945737077776064532?color=%237289da&label=Discord&logo=discord&logoColor=white&style=flat-square)](https://discord.gg/EhsacxezBp)
+
 A fork of Qt Creator 7.0.2 to build a modern interactive disassembler for Windows, Mac and Linux platforms. **This project is not ready for end users.**
 <br/>
 <br/>
