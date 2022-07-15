@@ -1,0 +1,32 @@
+name: gh-pages
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Configure
+      run: |
+        sudo apt-add-repository universe
+        sudo apt-get update
+        sudo apt-get install -y wget
+        sudo apt-get install -y unzip
+        sudo apt-get install -y graphviz
+        sudo apt-get install -y doxygen
+        sudo apt-get install -y python3.10
+        sudo apt-get install -y python3-pip
+    - name: Generate
+      run: |
+        wget https://github.com/mosra/m.css/archive/refs/heads/master.zip
+        unzip master.zip
+        python3 m.css-master/documentation/doxygen.py doc/conf.py
+    - name: Publish
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: doc/doxyout/html
