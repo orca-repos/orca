@@ -75,23 +75,6 @@ auto QtSupportPlugin::initialize(const QStringList &arguments, QString *errorMes
   return true;
 }
 
-const char kLinkWithQtInstallationSetting[] = "LinkWithQtInstallation";
-
-static auto askAboutQtInstallation() -> void
-{
-  // if the install settings exist, the Qt Creator installation is (probably) already linked to
-  // a Qt installation, so don't ask
-  if (!QtOptionsPage::canLinkWithQt() || QtOptionsPage::isLinkedWithQt() || !ICore::infoBar()->canInfoBeAdded(kLinkWithQtInstallationSetting))
-    return;
-
-  Utils::InfoBarEntry info(kLinkWithQtInstallationSetting, QtSupportPlugin::tr("Link with a Qt installation to automatically register Qt versions and kits? To do " "this later, select Options > Kits > Qt Versions > Link with Qt."), Utils::InfoBarEntry::GlobalSuppression::Enabled);
-  info.addCustomButton(QtSupportPlugin::tr("Link with Qt"), [] {
-    ICore::infoBar()->removeInfo(kLinkWithQtInstallationSetting);
-    QTimer::singleShot(0, ICore::dialogParent(), &QtOptionsPage::linkWithQt);
-  });
-  ICore::infoBar()->addInfo(info);
-}
-
 auto QtSupportPlugin::extensionsInitialized() -> void
 {
   const auto expander = Utils::globalMacroExpander();
@@ -139,8 +122,6 @@ auto QtSupportPlugin::extensionsInitialized() -> void
     const auto qt = activeQtVersion();
     return qt ? qt->hostLibexecPath().toUserOutput() : QString();
   });
-
-  askAboutQtInstallation();
 }
 
 } // Internal
