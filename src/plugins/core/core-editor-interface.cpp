@@ -3,7 +3,7 @@
 #include "core-editor-interface.hpp"
 
 /*!
-    \class Core::IEditor
+    \class Orca::Plugin::Core::IEditor
     \inheaderfile coreplugin/editormanager/ieditor.h
     \inmodule Orca
 
@@ -20,7 +20,7 @@
     The IEditor::toolBar() is integrated into the toolbar above the editor
     widget, next to the document drop down.
 
-    \sa Core::IEditorFactory, Core::EditorManager
+    \sa Orca::Plugin::Core::IEditorFactory, Orca::Plugin::Core::EditorManager
 */
 
 namespace Orca::Plugin::Core {

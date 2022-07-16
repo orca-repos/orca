@@ -51,7 +51,7 @@ struct SideBarPrivate {
   QStringList m_availableItemTitles;
   QStringList m_unavailableItemIds;
   QStringList m_defaultVisible;
-  QMap<QString, Core::Command*> m_shortcutMap;
+  QMap<QString, Orca::Plugin::Core::Command*> m_shortcutMap;
   bool m_closeWhenEmpty = false;
 };
 

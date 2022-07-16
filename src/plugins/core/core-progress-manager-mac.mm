@@ -2,11 +2,11 @@
 
 #include "progressmanager_p.hpp"
 
-void Core::ProgressManagerPrivate::initInternal()
+void Orca::Plugin::Core::ProgressManagerPrivate::initInternal()
 {
 }
 
-void Core::ProgressManagerPrivate::cleanup()
+void Orca::Plugin::Core::ProgressManagerPrivate::cleanup()
 {
 }
 
@@ -98,24 +98,24 @@ static ApplicationProgressView *sharedProgressView = nil;
 
 @end
 
-void Core::ProgressManagerPrivate::doSetApplicationLabel(const QString &text)
+void Orca::Plugin::Core::ProgressManagerPrivate::doSetApplicationLabel(const QString &text)
 {
     NSString *cocoaString = [[NSString alloc] initWithUTF8String:text.toUtf8().constData()];
     [[NSApp dockTile] setBadgeLabel:cocoaString];
     [cocoaString release];
 }
 
-void Core::ProgressManagerPrivate::setApplicationProgressRange(int min, int max)
+void Orca::Plugin::Core::ProgressManagerPrivate::setApplicationProgressRange(int min, int max)
 {
     [[ApplicationProgressView sharedProgressView] setRangeMin:min max:max];
 }
 
-void Core::ProgressManagerPrivate::setApplicationProgressValue(int value)
+void Orca::Plugin::Core::ProgressManagerPrivate::setApplicationProgressValue(int value)
 {
     [[ApplicationProgressView sharedProgressView] setValue:value];
 }
 
-void Core::ProgressManagerPrivate::setApplicationProgressVisible(bool visible)
+void Orca::Plugin::Core::ProgressManagerPrivate::setApplicationProgressVisible(bool visible)
 {
     if (visible) {
         [[NSApp dockTile] setContentView:[ApplicationProgressView sharedProgressView]];
@@ -127,23 +127,23 @@ void Core::ProgressManagerPrivate::setApplicationProgressVisible(bool visible)
 
 #else
 
-void Core::ProgressManagerPrivate::setApplicationLabel(const QString &text)
+void Orca::Plugin::Core::ProgressManagerPrivate::setApplicationLabel(const QString &text)
 {
     Q_UNUSED(text)
 }
 
-void Core::ProgressManagerPrivate::setApplicationProgressRange(int min, int max)
+void Orca::Plugin::Core::ProgressManagerPrivate::setApplicationProgressRange(int min, int max)
 {
     Q_UNUSED(min)
     Q_UNUSED(max)
 }
 
-void Core::ProgressManagerPrivate::setApplicationProgressValue(int value)
+void Orca::Plugin::Core::ProgressManagerPrivate::setApplicationProgressValue(int value)
 {
     Q_UNUSED(value)
 }
 
-void Core::ProgressManagerPrivate::setApplicationProgressVisible(bool visible)
+void Orca::Plugin::Core::ProgressManagerPrivate::setApplicationProgressVisible(bool visible)
 {
     Q_UNUSED(visible)
 }

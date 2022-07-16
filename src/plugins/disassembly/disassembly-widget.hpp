@@ -24,7 +24,7 @@ public:
   DisassemblyWidget(QWidget *parent = nullptr);
   ~DisassemblyWidget() override;
 
-  // The disassembly widget is embed into a Core::IEditor.
+  // The disassembly widget is embed into a Orca::Plugin::Core::IEditor.
   auto disassemblyService() const -> DisassemblyService*;
   auto editor() const -> Core::IEditor*;
   auto setEditor(Core::IEditor *editor_interface) -> void ;

@@ -53,7 +53,7 @@ static QString formatSize(qint64 size)
 #endif // ENABLE_CRASHPAD
 
 class SystemSettingsWidget final : public IOptionsPageWidget {
-  Q_DECLARE_TR_FUNCTIONS(Core::SystemSettingsWidget)
+  Q_DECLARE_TR_FUNCTIONS(Orca::Plugin::Core::SystemSettingsWidget)
 
 public:
   SystemSettingsWidget()
@@ -118,7 +118,7 @@ public:
     });
     connect(m_ui.enableCrashReportingCheckBox, QOverload<int>::of(&QCheckBox::stateChanged), this, [this] {
       const QString restartText = tr("The change will take effect after restart.");
-      Core::RestartDialog restartDialog(Core::ICore::dialogParent(), restartText);
+      Orca::Plugin::Core::RestartDialog restartDialog(Orca::Plugin::Core::ICore::dialogParent(), restartText);
       restartDialog.exec();
       if (restartDialog.result() == QDialog::Accepted)
         apply();

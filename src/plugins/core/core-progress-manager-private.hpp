@@ -19,7 +19,7 @@ class StatusBarWidget;
 class ProgressBar;
 class ProgressView;
 
-class ProgressManagerPrivate : public Core::ProgressManager {
+class ProgressManagerPrivate : public Orca::Plugin::Core::ProgressManager {
   Q_OBJECT
 
 public:

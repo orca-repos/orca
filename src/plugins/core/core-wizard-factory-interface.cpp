@@ -19,7 +19,7 @@
 #include <QPainter>
 
 /*!
-    \class Core::IWizardFactory
+    \class Orca::Plugin::Core::IWizardFactory
     \inheaderfile coreplugin/iwizardfactory.h
     \inmodule Orca
     \ingroup mainclasses
@@ -50,11 +50,11 @@
         }
     \endcode
 
-    \sa Core::BaseFileWizardFactory, Core::BaseFileWizard
+    \sa Orca::Plugin::Core::BaseFileWizardFactory, Orca::Plugin::Core::BaseFileWizard
 */
 
 /*!
-    \enum Core::IWizardFactory::WizardKind
+    \enum Orca::Plugin::Core::IWizardFactory::WizardKind
     Used to specify what kind of objects the wizard creates. This information is used
     to show e.g. only wizards that create projects when selecting a \uicontrol{New Project}
     menu item.
@@ -65,39 +65,39 @@
 */
 
 /*!
-    \fn Core::IWizardFactory::WizardKind Core::IWizardFactory::kind() const
+    \fn Orca::Plugin::Core::IWizardFactory::WizardKind Orca::Plugin::Core::IWizardFactory::kind() const
     Returns what kind of objects are created by the wizard.
 */
 
 /*!
-    \fn QIcon Core::IWizardFactory::icon() const
+    \fn QIcon Orca::Plugin::Core::IWizardFactory::icon() const
     Returns an icon to show in the wizard selection dialog.
 */
 
 /*!
-    \fn QString Core::IWizardFactory::description() const
+    \fn QString Orca::Plugin::Core::IWizardFactory::description() const
     Returns a translated description to show when this wizard is selected
     in the dialog.
 */
 
 /*!
-    \fn QString Core::IWizardFactory::displayName() const
+    \fn QString Orca::Plugin::Core::IWizardFactory::displayName() const
     Returns the translated name of the wizard, how it should appear in the
     dialog.
 */
 
 /*!
-    \fn QString Core::IWizardFactory::id() const
+    \fn QString Orca::Plugin::Core::IWizardFactory::id() const
     Returns an arbitrary id that is used for sorting within the category.
 */
 
 /*!
-    \fn QString Core::IWizardFactory::category() const
+    \fn QString Orca::Plugin::Core::IWizardFactory::category() const
     Returns a category ID to add the wizard to.
 */
 
 /*!
-    \fn QString Core::IWizardFactory::displayCategory() const
+    \fn QString Orca::Plugin::Core::IWizardFactory::displayCategory() const
     Returns the translated string of the category, how it should appear
     in the dialog.
 */

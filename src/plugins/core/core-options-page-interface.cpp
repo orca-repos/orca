@@ -21,18 +21,18 @@ using namespace Utils;
 namespace Orca::Plugin::Core {
 
 /*!
-    \class Core::IOptionsPageProvider
+    \class Orca::Plugin::Core::IOptionsPageProvider
     \inmodule Orca
     \internal
 */
 /*!
-    \class Core::IOptionsPageWidget
+    \class Orca::Plugin::Core::IOptionsPageWidget
     \inmodule Orca
     \internal
 */
 
 /*!
-    \class Core::IOptionsPage
+    \class Orca::Plugin::Core::IOptionsPage
     \inheaderfile coreplugin/dialogs/ioptionspage.h
     \ingroup mainclasses
     \inmodule Orca
@@ -45,26 +45,26 @@ namespace Orca::Plugin::Core {
 
 /*!
 
-    \fn Utils::Id Core::IOptionsPage::id() const
+    \fn Utils::Id Orca::Plugin::Core::IOptionsPage::id() const
 
     Returns a unique identifier for referencing the options page.
 */
 
 /*!
-    \fn QString Core::IOptionsPage::displayName() const
+    \fn QString Orca::Plugin::Core::IOptionsPage::displayName() const
 
     Returns the translated display name of the options page.
 */
 
 /*!
-    \fn Utils::Id Core::IOptionsPage::category() const
+    \fn Utils::Id Orca::Plugin::Core::IOptionsPage::category() const
 
     Returns the unique id for the category that the options page should be displayed in. This id is
     used for sorting the list on the left side of the \uicontrol Options dialog.
 */
 
 /*!
-    \fn QString Core::IOptionsPage::displayCategory() const
+    \fn QString Orca::Plugin::Core::IOptionsPage::displayCategory() const
 
     Returns the translated category name of the options page. This name is displayed in the list on
     the left side of the \uicontrol Options dialog.
@@ -174,31 +174,31 @@ auto IOptionsPage::setLayouter(const std::function<void(QWidget *w)> &layouter) 
 }
 
 /*!
-    \fn void Core::IOptionsPage::setId(Utils::Id id)
+    \fn void Orca::Plugin::Core::IOptionsPage::setId(Utils::Id id)
 
     Sets the \a id of the options page.
 */
 
 /*!
-    \fn void Core::IOptionsPage::setDisplayName(const QString &displayName)
+    \fn void Orca::Plugin::Core::IOptionsPage::setDisplayName(const QString &displayName)
 
     Sets \a displayName as the display name of the options page.
 */
 
 /*!
-    \fn void Core::IOptionsPage::setCategory(Utils::Id category)
+    \fn void Orca::Plugin::Core::IOptionsPage::setCategory(Utils::Id category)
 
     Uses \a category to sort the options pages.
 */
 
 /*!
-    \fn void Core::IOptionsPage::setDisplayCategory(const QString &displayCategory)
+    \fn void Orca::Plugin::Core::IOptionsPage::setDisplayCategory(const QString &displayCategory)
 
     Sets \a displayCategory as the display category of the options page.
 */
 
 /*!
-    \fn void Core::IOptionsPage::setCategoryIcon(const Utils::Icon &categoryIcon)
+    \fn void Orca::Plugin::Core::IOptionsPage::setCategoryIcon(const Utils::Icon &categoryIcon)
 
     Sets \a categoryIcon as the category icon of the options page.
 */

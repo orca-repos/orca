@@ -20,7 +20,7 @@
 using namespace Utils;
 
 /*!
-  \namespace Core::FileIconProvider
+  \namespace Orca::Plugin::Core::FileIconProvider
   \inmodule Orca
   \brief Provides functions for registering custom overlay icons for system
   icons.

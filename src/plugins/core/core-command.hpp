@@ -82,6 +82,6 @@ private:
   CommandPrivate *d;
 };
 
-} // namespace Core
+} // namespace Orca::Plugin::Core
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(Orca::Plugin::Core::Command::CommandAttributes)

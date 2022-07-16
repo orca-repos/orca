@@ -28,25 +28,25 @@ static constexpr int max_search_history = 12;
 namespace Orca::Plugin::Core {
 
 /*!
-    \namespace Core::Search
+    \namespace Orca::Plugin::Core::Search
     \inmodule Orca
     \internal
 */
 
 /*!
-    \class Core::Search::TextPosition
+    \class Orca::Plugin::Core::TextPosition
     \inmodule Orca
     \internal
 */
 
 /*!
-    \class Core::Search::TextRange
+    \class Orca::Plugin::Core::TextRange
     \inmodule Orca
     \internal
 */
 
 /*!
-    \class Core::SearchResultItem
+    \class Orca::Plugin::Core::SearchResultItem
     \inmodule Orca
     \internal
 */
@@ -70,7 +70,7 @@ class InternalScrollArea final : public QScrollArea {
 };
 
 class SearchResultWindowPrivate : public QObject {
-  Q_DECLARE_TR_FUNCTIONS(Core::SearchResultWindow)
+  Q_DECLARE_TR_FUNCTIONS(Orca::Plugin::Core::SearchResultWindow)
 
 public:
   SearchResultWindowPrivate(SearchResultWindow *window, QWidget *new_search_panel);
@@ -223,7 +223,7 @@ auto SearchResultWindowPrivate::popupRequested(const bool focus) -> void
 }
 
 /*!
-    \enum Core::SearchResultWindow::SearchMode
+    \enum Orca::Plugin::Core::SearchResultWindow::SearchMode
     This enum type specifies whether a search should show the replace UI or not:
 
     \value SearchOnly
@@ -233,7 +233,7 @@ auto SearchResultWindowPrivate::popupRequested(const bool focus) -> void
 */
 
 /*!
-    \class Core::SearchResult
+    \class Orca::Plugin::Core::SearchResult
     \inheaderfile coreplugin/find/searchresultwindow.h
     \inmodule Orca
 
@@ -246,14 +246,14 @@ auto SearchResultWindowPrivate::popupRequested(const bool focus) -> void
 */
 
 /*!
-    \fn void Core::SearchResult::activated(const Core::SearchResultItem &item)
+    \fn void Orca::Plugin::Core::SearchResult::activated(const Orca::Plugin::Core::SearchResultItem &item)
     Indicates that the user activated the search result \a item by
     double-clicking it, for example.
 */
 
 /*!
-    \fn void Core::SearchResult::replaceButtonClicked(const QString &replaceText,
-                           const QList<Core::SearchResultItem> &checkedItems,
+    \fn void Orca::Plugin::Core::SearchResult::replaceButtonClicked(const QString &replaceText,
+                           const QList<Orca::Plugin::Core::SearchResultItem> &checkedItems,
                            bool preserveCase)
 
     Indicates that the user initiated a text replace by selecting
@@ -268,7 +268,7 @@ auto SearchResultWindowPrivate::popupRequested(const bool focus) -> void
 */
 
 /*!
-    \enum Core::SearchResult::AddMode
+    \enum Orca::Plugin::Core::SearchResult::AddMode
     This enum type specifies whether the search results should be sorted or
     ordered:
 
@@ -279,43 +279,43 @@ auto SearchResultWindowPrivate::popupRequested(const bool focus) -> void
 */
 
 /*!
-    \fn void Core::SearchResult::cancelled()
+    \fn void Orca::Plugin::Core::SearchResult::cancelled()
     This signal is emitted if the user cancels the search.
 */
 
 /*!
-    \fn void Core::SearchResult::countChanged(int count)
+    \fn void Orca::Plugin::Core::SearchResult::countChanged(int count)
     This signal is emitted when the number of search hits changes to \a count.
 */
 
 /*!
-    \fn void Core::SearchResult::paused(bool paused)
+    \fn void Orca::Plugin::Core::SearchResult::paused(bool paused)
     This signal is emitted when the search status is set to \a paused.
 */
 
 /*!
-    \fn void Core::SearchResult::requestEnabledCheck()
+    \fn void Orca::Plugin::Core::SearchResult::requestEnabledCheck()
 
     This signal is emitted when the enabled status of search results is
     requested.
 */
 
 /*!
-    \fn void Core::SearchResult::searchAgainRequested()
+    \fn void Orca::Plugin::Core::SearchResult::searchAgainRequested()
 
     This signal is emitted when the \uicontrol {Search Again} button is
     selected.
 */
 
 /*!
-    \fn void Core::SearchResult::visibilityChanged(bool visible)
+    \fn void Orca::Plugin::Core::SearchResult::visibilityChanged(bool visible)
 
     This signal is emitted when the visibility of the search results changes
     to \a visible.
 */
 
 /*!
-    \class Core::SearchResultWindow
+    \class Orca::Plugin::Core::SearchResultWindow
     \inheaderfile coreplugin/find/searchresultwindow.h
     \inmodule Orca
 
@@ -350,12 +350,12 @@ auto SearchResultWindowPrivate::popupRequested(const bool focus) -> void
 */
 
 /*!
-    \fn QString Core::SearchResultWindow::displayName() const
+    \fn QString Orca::Plugin::Core::SearchResultWindow::displayName() const
     \internal
 */
 
 /*!
-    \enum Core::SearchResultWindow::PreserveCaseMode
+    \enum Orca::Plugin::Core::SearchResultWindow::PreserveCaseMode
     This enum type specifies whether a search and replace should preserve the
     case of the replaced strings:
 

@@ -539,11 +539,11 @@ namespace Orca::Plugin::Core {
   void CorePlugin::testVcsManager()
   {
     // setup:
-    QList<IVersionControl*> orig = Core::d->m_versionControlList;
+    QList<IVersionControl*> orig = Orca::Plugin::Core::d->m_versionControlList;
     TestVersionControl *vcsA(new TestVersionControl(ID_VCS_A, QLatin1String("A")));
     TestVersionControl *vcsB(new TestVersionControl(ID_VCS_B, QLatin1String("B")));
 
-    Core::d->m_versionControlList = {vcsA, vcsB};
+    Orca::Plugin::Core::d->m_versionControlList = {vcsA, vcsB};
 
     // test:
     QFETCH(QStringList, dirsVcsA);
@@ -586,8 +586,8 @@ namespace Orca::Plugin::Core {
     }
 
     // teardown:
-    qDeleteAll(Core::d->m_versionControlList);
-    Core::d->m_versionControlList = orig;
+    qDeleteAll(Orca::Plugin::Core::d->m_versionControlList);
+    Orca::Plugin::Core::d->m_versionControlList = orig;
   }
 
 } // namespace Orca::Plugin::Core

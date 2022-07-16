@@ -35,14 +35,14 @@ static auto indexOfFile(const GeneratedFiles &f, const QString &path) -> int
 }
 
 /*!
-    \class Core::BaseFileWizard
+    \class Orca::Plugin::Core::BaseFileWizard
     \inheaderfile coreplugin/basefilewizardfactory.h
     \inmodule Orca
 
     \brief The BaseFileWizard class implements a is a convenience class for
     creating files.
 
-    \sa Core::BaseFileWizardFactory
+    \sa Orca::Plugin::Core::BaseFileWizardFactory
 */
 
 auto BaseFileWizardFactory::runWizardImpl(const FilePath &path, QWidget *parent, const Id platform, const QVariantMap &extra_values, const bool show_wizard) -> Wizard*
@@ -65,7 +65,7 @@ auto BaseFileWizardFactory::runWizardImpl(const FilePath &path, QWidget *parent,
 }
 
 /*!
-    \class Core::BaseFileWizardFactory
+    \class Orca::Plugin::Core::BaseFileWizardFactory
     \inheaderfile coreplugin/basefilewizardfactory.h
     \inmodule Orca
 
@@ -85,18 +85,18 @@ auto BaseFileWizardFactory::runWizardImpl(const FilePath &path, QWidget *parent,
     wizards, as instructed in \l{https://doc.qt.io/orca/creator-project-wizards.html}
     {Adding New Custom Wizards}.
 
-    \sa Core::GeneratedFile, Core::WizardDialogParameters, Core::BaseFileWizard
+    \sa Orca::Plugin::Core::GeneratedFile, Orca::Plugin::Core::WizardDialogParameters, Orca::Plugin::Core::BaseFileWizard
 */
 
 /*!
-    \fn Core::BaseFileWizard *Core::BaseFileWizardFactory::create(QWidget *parent,
-                                                                  const Core::WizardDialogParameters &parameters) const
+    \fn Orca::Plugin::Core::BaseFileWizard *Core::BaseFileWizardFactory::create(QWidget *parent,
+                                                                  const Orca::Plugin::Core::WizardDialogParameters &parameters) const
 
     Creates the wizard on the \a parent with the \a parameters.
 */
 
 /*!
-    \fn virtual Core::GeneratedFiles Core::BaseFileWizardFactory::generateFiles(const QWizard *w,
+    \fn virtual Orca::Plugin::Core::GeneratedFiles Orca::Plugin::Core::BaseFileWizardFactory::generateFiles(const QWizard *w,
                                                                                 QString *errorMessage) const
     Overwrite to query the parameters from the wizard \a w and generate the
     files.
@@ -104,7 +104,7 @@ auto BaseFileWizardFactory::runWizardImpl(const FilePath &path, QWidget *parent,
     Possible errors are held in \a errorMessage.
 
     \note This does not generate physical files, but merely the list of
-    Core::GeneratedFile.
+    Orca::Plugin::Core::GeneratedFile.
 */
 
 /*!
@@ -295,18 +295,18 @@ auto BaseFileWizardFactory::preferredSuffix(const QString &mime_type) -> QString
 }
 
 /*!
-    \class Core::WizardDialogParameters
+    \class Orca::Plugin::Core::WizardDialogParameters
     \inheaderfile coreplugin/basefilewizardfactory.h
     \inmodule Orca
 
     \brief The WizardDialogParameters class holds parameters for the new file
     wizard dialog.
 
-    \sa Core::GeneratedFile, Core::BaseFileWizardFactory
+    \sa Orca::Plugin::Core::GeneratedFile, Orca::Plugin::Core::BaseFileWizardFactory
 */
 
 /*!
-    \enum Core::WizardDialogParameters::DialogParameterEnum
+    \enum Orca::Plugin::Core::WizardDialogParameters::DialogParameterEnum
     This enum type holds whether to force capital letters for file names.
     \value ForceCapitalLetterForFileName Forces capital letters for file names.
 */

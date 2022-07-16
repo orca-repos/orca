@@ -22,7 +22,7 @@ public:
 };
 
 class MimeTypeMagicDialog final : public QDialog {
-  Q_DECLARE_TR_FUNCTIONS(Core::MimeTypeMagicDialog)
+  Q_DECLARE_TR_FUNCTIONS(Orca::Plugin::Core::MimeTypeMagicDialog)
 
 public:
   explicit MimeTypeMagicDialog(QWidget *parent = nullptr);

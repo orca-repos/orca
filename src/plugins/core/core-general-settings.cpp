@@ -30,7 +30,7 @@ constexpr char settingsKeyShortcutsInContextMenu[] = "General/ShowShortcutsInCon
 constexpr char settingsKeyCodecForLocale[] = "General/OverrideCodecForLocale";
 
 class GeneralSettingsWidget final : public IOptionsPageWidget {
-  Q_DECLARE_TR_FUNCTIONS(Core::GeneralSettings)
+  Q_DECLARE_TR_FUNCTIONS(Orca::Plugin::Core::GeneralSettings)
 
 public:
   explicit GeneralSettingsWidget(GeneralSettings *q);

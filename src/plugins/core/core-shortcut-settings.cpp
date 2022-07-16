@@ -237,7 +237,7 @@ auto ShortcutButton::handleToggleChange(const bool toggle_state) -> void
 }
 
 class ShortcutSettingsWidget final : public CommandMappings {
-  Q_DECLARE_TR_FUNCTIONS(Core::ShortcutSettings)
+  Q_DECLARE_TR_FUNCTIONS(Orca::Plugin::Core::ShortcutSettings)
   Q_DISABLE_COPY_MOVE(ShortcutSettingsWidget)
 
 public:

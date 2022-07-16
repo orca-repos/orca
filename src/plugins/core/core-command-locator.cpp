@@ -19,7 +19,7 @@ struct CommandLocatorPrivate {
 };
 
 /*!
-    \class Core::CommandLocator
+    \class Orca::Plugin::Core::CommandLocator
     \inmodule Orca
     \internal
 */

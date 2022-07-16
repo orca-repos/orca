@@ -70,7 +70,7 @@
 #include <utility>
 
 #if defined(ORCA_BUILD_WITH_PLUGINS_TESTS)
-#include <core/coreplugin.hpp>
+#include <core/core-plugin.hpp>
 #include <QTest>
 #endif
 
@@ -113,13 +113,13 @@ static auto checkEditorFlags(const EditorManager::OpenEditorFlags flags) -> void
 //===================EditorManager=====================
 
 /*!
-    \class Core::EditorManagerPlaceHolder
+    \class Orca::Plugin::Core::EditorManagerPlaceHolder
     \inheaderfile coreplugin/editormanager/editormanager.h
     \inmodule Orca
     \ingroup mainclasses
 
     \brief The EditorManagerPlaceHolder class is used to integrate an editor
-    area into a \l{Core::IMode}{mode}.
+    area into a \l{Orca::Plugin::Core::IMode}{mode}.
 
     Create an instance of EditorManagerPlaceHolder and integrate it into your
     mode widget's layout, to add the main editor area into your mode. The best
@@ -170,7 +170,7 @@ auto EditorManagerPlaceHolder::showEvent(QShowEvent *) -> void
 // ---------------- EditorManager
 
 /*!
-    \class Core::EditorManager
+    \class Orca::Plugin::Core::EditorManager
     \inheaderfile coreplugin/editormanager/editormanager.h
     \inmodule Orca
 
@@ -193,7 +193,7 @@ auto EditorManagerPlaceHolder::showEvent(QShowEvent *) -> void
 */
 
 /*!
-    \enum Core::MakeWritableResult
+    \enum Orca::Plugin::Core::MakeWritableResult
     \internal
 
     This enum specifies whether the document has successfully been made writable.
@@ -234,13 +234,13 @@ auto EditorManagerPlaceHolder::showEvent(QShowEvent *) -> void
 */
 
 /*!
-    \fn void Core::EditorManager::currentEditorChanged(Core::IEditor *editor)
+    \fn void Orca::Plugin::Core::EditorManager::currentEditorChanged(Orca::Plugin::Core::IEditor *editor)
 
     This signal is emitted after the current editor changed to \a editor.
 */
 
 /*!
-    \fn void Core::EditorManager::currentDocumentStateChanged()
+    \fn void Orca::Plugin::Core::EditorManager::currentDocumentStateChanged()
 
     This signal is emitted when the meta data of the current document, for
     example file name or modified state, changed.
@@ -249,7 +249,7 @@ auto EditorManagerPlaceHolder::showEvent(QShowEvent *) -> void
 */
 
 /*!
-    \fn void Core::EditorManager::documentStateChanged(Core::IDocument *document)
+    \fn void Orca::Plugin::Core::EditorManager::documentStateChanged(Orca::Plugin::Core::IDocument *document)
 
     This signal is emitted when the meta data of the \a document, for
     example file name or modified state, changed.
@@ -258,13 +258,13 @@ auto EditorManagerPlaceHolder::showEvent(QShowEvent *) -> void
 */
 
 /*!
-    \fn void Core::EditorManager::editorCreated(Core::IEditor *editor, const QString &fileName)
+    \fn void Orca::Plugin::Core::EditorManager::editorCreated(Orca::Plugin::Core::IEditor *editor, const QString &fileName)
 
     This signal is emitted after an \a editor was created for \a fileName, but
     before it was opened in an editor view.
 */
 /*!
-    \fn void Core::EditorManager::editorOpened(Core::IEditor *editor)
+    \fn void Orca::Plugin::Core::EditorManager::editorOpened(Orca::Plugin::Core::IEditor *editor)
 
     This signal is emitted after a new \a editor was opened in an editor view.
 
@@ -272,14 +272,14 @@ auto EditorManagerPlaceHolder::showEvent(QShowEvent *) -> void
 */
 
 /*!
-    \fn void Core::EditorManager::documentOpened(Core::IDocument *document)
+    \fn void Orca::Plugin::Core::EditorManager::documentOpened(Orca::Plugin::Core::IDocument *document)
 
     This signal is emitted after the first editor for \a document opened in an
     editor view.
 */
 
 /*!
-    \fn void Core::EditorManager::editorAboutToClose(Core::IEditor *editor)
+    \fn void Orca::Plugin::Core::EditorManager::editorAboutToClose(Orca::Plugin::Core::IEditor *editor)
 
     This signal is emitted before \a editor is closed. This can be used to free
     resources that were allocated for the editor separately from the editor
@@ -292,7 +292,7 @@ auto EditorManagerPlaceHolder::showEvent(QShowEvent *) -> void
 */
 
 /*!
-    \fn void Core::EditorManager::editorsClosed(QList<Core::IEditor *> editors)
+    \fn void Orca::Plugin::Core::EditorManager::editorsClosed(QList<Orca::Plugin::Core::IEditor *> editors)
 
     This signal is emitted after the \a editors closed, but before they are
     deleted.
@@ -301,7 +301,7 @@ auto EditorManagerPlaceHolder::showEvent(QShowEvent *) -> void
 */
 
 /*!
-    \fn void Core::EditorManager::documentClosed(Core::IDocument *document)
+    \fn void Orca::Plugin::Core::EditorManager::documentClosed(Orca::Plugin::Core::IDocument *document)
 
     This signal is emitted after the \a document closed, but before it is deleted.
 */
@@ -311,22 +311,22 @@ auto EditorManagerPlaceHolder::showEvent(QShowEvent *) -> void
     \internal
 */
 /*!
-    \fn void Core::EditorManager::aboutToSave(Core::IDocument *document)
+    \fn void Orca::Plugin::Core::EditorManager::aboutToSave(Orca::Plugin::Core::IDocument *document)
 
     This signal is emitted before the \a document is saved.
 */
 /*!
-    \fn void Core::EditorManager::saved(Core::IDocument *document)
+    \fn void Orca::Plugin::Core::EditorManager::saved(Orca::Plugin::Core::IDocument *document)
 
     This signal is emitted after the \a document was saved.
 */
 /*!
-    \fn void Core::EditorManager::autoSaved()
+    \fn void Orca::Plugin::Core::EditorManager::autoSaved()
 
     This signal is emitted after auto-save was triggered.
 */
 /*!
-    \fn void Core::EditorManager::currentEditorAboutToChange(Core::IEditor *editor)
+    \fn void Orca::Plugin::Core::EditorManager::currentEditorAboutToChange(Orca::Plugin::Core::IEditor *editor)
 
     This signal is emitted before the current editor changes to \a editor.
 */

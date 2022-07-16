@@ -12,7 +12,7 @@ using namespace Utils;
 namespace Orca::Plugin::Core {
 
 /*!
-    \class Core::CommandButton
+    \class Orca::Plugin::Core::CommandButton
     \inheaderfile coreplugin/actionmanager/commandbutton.h
     \inmodule Orca
 

@@ -17,7 +17,7 @@ namespace {
 
 QTC_DECLARE_MYTESTDATADIR("../../../tests/locators/")
 
-class MyBaseFileFilter : public Core::BaseFileFilter
+class MyBaseFileFilter : public Orca::Plugin::Core::BaseFileFilter
 {
 public:
     MyBaseFileFilter(const Utils::FilePaths &theFiles)
@@ -44,7 +44,7 @@ public:
 Q_DECLARE_METATYPE(ReferenceData)
 Q_DECLARE_METATYPE(QList<ReferenceData>)
 
-void Core::CorePlugin::test_basefilefilter()
+void Orca::Plugin::Core::CorePlugin::test_basefilefilter()
 {
     QFETCH(QStringList, testFiles);
     QFETCH(QList<ReferenceData>, referenceDataList);
@@ -61,7 +61,7 @@ void Core::CorePlugin::test_basefilefilter()
     }
 }
 
-void Core::CorePlugin::test_basefilefilter_data()
+void Orca::Plugin::Core::CorePlugin::test_basefilefilter_data()
 {
     auto shortNativePath = [](const QString &file) {
         return Utils::FilePath::fromString(file).shortNativePath();

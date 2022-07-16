@@ -13,8 +13,8 @@ auto Plugin::initialize(const QStringList &, QString *) -> bool
 
 auto Plugin::extensionsInitialized() -> void
 {
-  Core::IWizardFactory::registerFactoryCreator([] {
-    return QList<Core::IWizardFactory*>{new Windows};
+  Orca::Plugin::Core::IWizardFactory::registerFactoryCreator([] {
+    return QList<Orca::Plugin::Core::IWizardFactory*>{new Windows};
   });
 }
 

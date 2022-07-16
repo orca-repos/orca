@@ -139,7 +139,7 @@ bool CrashHandlerDialog::runDebuggerWhileBacktraceNotFinished()
 {
     // Check settings.
     QSettings settings(QSettings::IniFormat, QSettings::UserScope,
-        QLatin1String(Core::Constants::IDE_SETTINGSVARIANT_STR),
+        QLatin1String(Orca::Plugin::Core::IDE_SETTINGSVARIANT_STR),
         QLatin1String(SettingsApplication));
     if (settings.value(QLatin1String(SettingsKeySkipWarningAbortingBacktrace), false).toBool())
         return true;
@@ -192,11 +192,11 @@ void CrashHandlerDialog::setApplicationInfo(const QString &signalName, const QSt
 
     QString revision;
 #ifdef IDE_REVISION
-     revision = QLatin1Char(' ') + tr("from revision %1").arg(QString::fromLatin1(Core::Constants::IDE_REVISION_STR).left(10));
+     revision = QLatin1Char(' ') + tr("from revision %1").arg(QString::fromLatin1(Orca::Plugin::Core::IDE_REVISION_STR).left(10));
 #endif
     const QString versionInformation = tr(
         "%1 %2%3, based on Qt %4 (%5 bit)\n")
-            .arg(appName, QLatin1String(Core::Constants::IDE_VERSION_LONG), revision,
+            .arg(appName, QLatin1String(Orca::Plugin::Core::IDE_VERSION_LONG), revision,
                  QLatin1String(QT_VERSION_STR),
                  QString::number(QSysInfo::WordSize));
     m_ui->debugInfoEdit->append(versionInformation);

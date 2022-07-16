@@ -61,8 +61,8 @@ public slots:
   auto sendRequestPopup() -> void;
 
 signals:
-  auto activated(const Core::SearchResultItem &item) -> void;
-  auto replaceButtonClicked(const QString &replace_text, const QList<Core::SearchResultItem> &checked_items, bool preserve_case) -> void;
+  auto activated(const Orca::Plugin::Core::SearchResultItem &item) -> void;
+  auto replaceButtonClicked(const QString &replace_text, const QList<Orca::Plugin::Core::SearchResultItem> &checked_items, bool preserve_case) -> void;
   auto replaceTextChanged(const QString &replace_text) -> void;
   auto searchAgainRequested() -> void;
   auto cancelled() -> void;

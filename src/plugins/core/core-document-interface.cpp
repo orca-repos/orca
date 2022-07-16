@@ -10,7 +10,7 @@
 #include <QFile>
 
 /*!
-    \class Core::IDocument
+    \class Orca::Plugin::Core::IDocument
     \inheaderfile coreplugin/idocument.h
     \inmodule Orca
 
@@ -128,7 +128,7 @@
 */
 
 /*!
-    \fn Core::IDocument::changed()
+    \fn Orca::Plugin::Core::IDocument::changed()
 
     This signal is emitted when the document's meta data, like file name or
     modified state, changes.
@@ -139,7 +139,7 @@
 */
 
 /*!
-    \fn Core::IDocument::contentsChanged()
+    \fn Orca::Plugin::Core::IDocument::contentsChanged()
 
     This signal is emitted when the document's content changes.
 
@@ -147,7 +147,7 @@
 */
 
 /*!
-    \fn Core::IDocument::mimeTypeChanged()
+    \fn Orca::Plugin::Core::IDocument::mimeTypeChanged()
 
     This signal is emitted when the document content's MIME type changes.
 
@@ -155,7 +155,7 @@
 */
 
 /*!
-    \fn Core::IDocument::aboutToReload()
+    \fn Orca::Plugin::Core::IDocument::aboutToReload()
 
     This signal is emitted before the document is reloaded from the backing
     file.
@@ -164,7 +164,7 @@
 */
 
 /*!
-    \fn Core::IDocument::reloadFinished(bool success)
+    \fn Orca::Plugin::Core::IDocument::reloadFinished(bool success)
 
     This signal is emitted after the document is reloaded from the backing
     file, or if reloading failed.
@@ -175,7 +175,7 @@
 */
 
 /*!
-    \fn Core::IDocument::filePathChanged(const Utils::FilePath &oldName, const Utils::FilePath &newName)
+    \fn Orca::Plugin::Core::IDocument::filePathChanged(const Utils::FilePath &oldName, const Utils::FilePath &newName)
 
     This signal is emitted after the file path changed from \a oldName to \a
     newName.

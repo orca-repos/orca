@@ -47,7 +47,7 @@ static const bool kUseProjectsDirectoryDefault = true;
 static Q_LOGGING_CATEGORY(log, "qtc.core.documentmanager", QtWarningMsg)
 
 /*!
-  \class Core::DocumentManager
+  \class Orca::Plugin::Core::DocumentManager
   \inheaderfile coreplugin/documentmanager.h
   \ingroup mainclasses
   \inmodule Orca
@@ -79,7 +79,7 @@ static Q_LOGGING_CATEGORY(log, "qtc.core.documentmanager", QtWarningMsg)
 
   Different IDocument objects in the set can point to the same file in the
   file system. The monitoring for an IDocument can be blocked by
-  using the \l Core::FileChangeBlocker class.
+  using the \l Orca::Plugin::Core::FileChangeBlocker class.
 
   The functions \c expectFileChange() and \c unexpectFileChange() mark a file change
   as expected. On expected file changes all IDocument objects are notified to reload
@@ -1447,7 +1447,7 @@ auto DocumentManager::registerSaveAllAction() -> void
 // -------------- FileChangeBlocker
 
 /*!
-    \class Core::FileChangeBlocker
+    \class Orca::Plugin::Core::FileChangeBlocker
     \inheaderfile coreplugin/documentmanager.h
     \inmodule Orca
 

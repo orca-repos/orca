@@ -12,7 +12,7 @@
 #include <QVariant>
 
 /*!
-    \class Core::SettingsDatabase
+    \class Orca::Plugin::Core::SettingsDatabase
     \inheaderfile coreplugin/settingsdatabase.h
     \inmodule Orca
 

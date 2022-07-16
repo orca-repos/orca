@@ -35,7 +35,7 @@ constexpr Qt::ItemFlags category_item_flags = Qt::ItemIsSelectable | Qt::ItemIsE
 constexpr Qt::ItemFlags tool_item_flags = Qt::ItemIsSelectable | Qt::ItemIsEnabled | Qt::ItemIsDragEnabled | Qt::ItemIsEditable;
 
 class ExternalToolModel final : public QAbstractItemModel {
-  Q_DECLARE_TR_FUNCTIONS(Core::ExternalToolConfig)
+  Q_DECLARE_TR_FUNCTIONS(Orca::Plugin::Core::ExternalToolConfig)
   Q_DISABLE_COPY_MOVE(ExternalToolModel)
 
 public:
@@ -434,7 +434,7 @@ static auto fillBaseEnvironmentComboBox(QComboBox *box) -> void
 }
 
 class ExternalToolConfig final : public IOptionsPageWidget {
-  Q_DECLARE_TR_FUNCTIONS(Core::ExternalToolConfig)
+  Q_DECLARE_TR_FUNCTIONS(Orca::Plugin::Core::ExternalToolConfig)
 
 public:
   ExternalToolConfig();

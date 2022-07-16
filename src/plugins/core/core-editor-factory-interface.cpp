@@ -14,7 +14,7 @@ using namespace Utils;
 namespace Orca::Plugin::Core {
 
 /*!
-    \class Core::IEditorFactory
+    \class Orca::Plugin::Core::IEditorFactory
     \inheaderfile coreplugin/editormanager/ieditorfactory.h
     \inmodule Orca
 
@@ -32,23 +32,23 @@ namespace Orca::Plugin::Core {
     IEditorFactory instances automatically register themselves in \QC in their
     constructor.
 
-    \sa Core::EditorType
-    \sa Core::IEditor
-    \sa Core::IDocument
-    \sa Core::EditorManager
+    \sa Orca::Plugin::Core::EditorType
+    \sa Orca::Plugin::Core::IEditor
+    \sa Orca::Plugin::Core::IDocument
+    \sa Orca::Plugin::Core::EditorManager
 */
 
 /*!
-    \class Core::EditorType
+    \class Orca::Plugin::Core::EditorType
     \inheaderfile coreplugin/editormanager/ieditorfactory.h
     \inmodule Orca
 
-    \brief The EditorType class is the base class for Core::IEditorFactory and
-    Core::IExternalEditor.
+    \brief The EditorType class is the base class for Orca::Plugin::Core::IEditorFactory and
+    Orca::Plugin::Core::IExternalEditor.
 */
 
 /*!
-    \fn void Core::EditorType::addMimeType(const QString &mimeType)
+    \fn void Orca::Plugin::Core::EditorType::addMimeType(const QString &mimeType)
 
     Adds \a mimeType to the list of MIME types supported by this editor type.
 
@@ -57,7 +57,7 @@ namespace Orca::Plugin::Core {
 */
 
 /*!
-    \fn QString Core::EditorType::displayName() const
+    \fn QString Orca::Plugin::Core::EditorType::displayName() const
 
     Returns a user-visible description of the editor type.
 
@@ -65,7 +65,7 @@ namespace Orca::Plugin::Core {
 */
 
 /*!
-    \fn Utils::Id Core::EditorType::id() const
+    \fn Utils::Id Orca::Plugin::Core::EditorType::id() const
 
     Returns the ID of the editors' document type.
 
@@ -73,7 +73,7 @@ namespace Orca::Plugin::Core {
 */
 
 /*!
-    \fn QString Core::EditorType::mimeTypes() const
+    \fn QString Orca::Plugin::Core::EditorType::mimeTypes() const
 
     Returns the list of supported MIME types of this editor type.
 
@@ -82,7 +82,7 @@ namespace Orca::Plugin::Core {
 */
 
 /*!
-    \fn void Core::EditorType::setDisplayName(const QString &displayName)
+    \fn void Orca::Plugin::Core::EditorType::setDisplayName(const QString &displayName)
 
     Sets the \a displayName of the editor type. This is for example shown in
     the \uicontrol {Open With} menu and the MIME type preferences.
@@ -91,7 +91,7 @@ namespace Orca::Plugin::Core {
 */
 
 /*!
-    \fn void Core::EditorType::setId(Utils::Id id)
+    \fn void Orca::Plugin::Core::EditorType::setId(Utils::Id id)
 
     Sets the \a id of the editors' document type. This must be the same as the
     IDocument::id() of the documents returned by created editors.
@@ -100,7 +100,7 @@ namespace Orca::Plugin::Core {
 */
 
 /*!
-    \fn void Core::EditorType::setMimeTypes(const QStringList &mimeTypes)
+    \fn void Orca::Plugin::Core::EditorType::setMimeTypes(const QStringList &mimeTypes)
 
     Sets the MIME types supported by the editor type to \a mimeTypes.
 

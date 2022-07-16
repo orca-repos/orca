@@ -16,9 +16,9 @@ MessageOutputWindow::MessageOutputWindow()
   m_widget = new OutputWindow(Context(C_GENERAL_OUTPUT_PANE), g_zoom_settings_key);
   m_widget->setReadOnly(true);
 
-  connect(this, &IOutputPane::zoomInRequested, m_widget, &Core::OutputWindow::zoomIn);
-  connect(this, &IOutputPane::zoomOutRequested, m_widget, &Core::OutputWindow::zoomOut);
-  connect(this, &IOutputPane::resetZoomRequested, m_widget, &Core::OutputWindow::resetZoom);
+  connect(this, &IOutputPane::zoomInRequested, m_widget, &Orca::Plugin::Core::OutputWindow::zoomIn);
+  connect(this, &IOutputPane::zoomOutRequested, m_widget, &Orca::Plugin::Core::OutputWindow::zoomOut);
+  connect(this, &IOutputPane::resetZoomRequested, m_widget, &Orca::Plugin::Core::OutputWindow::resetZoom);
   connect(this, &IOutputPane::fontChanged, m_widget, &OutputWindow::setBaseFont);
   connect(this, &IOutputPane::wheelZoomEnabledChanged, m_widget, &OutputWindow::setWheelZoomEnabled);
 

@@ -46,7 +46,7 @@ public:
   FolderNavigationWidgetFactory();
 
   static auto instance()->FolderNavigationWidgetFactory*;
-  auto createWidget() -> Core::NavigationView override;
+  auto createWidget() -> Orca::Plugin::Core::NavigationView override;
   auto saveSettings(Utils::QtcSettings *settings, int position, QWidget *widget) -> void override;
   auto restoreSettings(QSettings *settings, int position, QWidget *widget) -> void override;
   static auto insertRootDirectory(const RootDirectory &directory) -> void;
@@ -104,7 +104,7 @@ private:
   auto setRootAutoSynchronization(bool sync) -> void;
   auto setHiddenFilesFilter(bool filter) const -> void;
   auto selectBestRootForFile(const Utils::FilePath &file_path) -> void;
-  auto handleCurrentEditorChanged(const Core::IEditor *editor) -> void;
+  auto handleCurrentEditorChanged(const Orca::Plugin::Core::IEditor *editor) -> void;
   auto selectFile(const Utils::FilePath &file_path) -> void;
   auto setRootDirectory(const Utils::FilePath &directory) const -> void;
   auto bestRootForFile(const Utils::FilePath &file_path) const -> int;

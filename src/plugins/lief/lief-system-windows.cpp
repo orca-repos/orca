@@ -10,7 +10,7 @@
 
 namespace Orca::Plugin::LIEF {
 
-auto Windows::create(QWidget *parent, const Core::WizardDialogParameters &params) const -> Core::BaseFileWizard*
+auto Windows::create(QWidget *parent, const Orca::Plugin::Core::WizardDialogParameters &params) const -> Orca::Plugin::Core::BaseFileWizard*
 {
   const auto format = QFileDialog::getOpenFileName(nullptr, "Potable Executable (PE) Format.", "", "Portable Executable (PE) Format (*.exe)");
   if (format.isEmpty())
@@ -33,12 +33,12 @@ auto Windows::create(QWidget *parent, const Core::WizardDialogParameters &params
   return {};
 }
 
-auto Windows::generateFiles(const QWizard *wizard, QString *error_message) const -> Core::GeneratedFiles
+auto Windows::generateFiles(const QWizard *wizard, QString *error_message) const -> Orca::Plugin::Core::GeneratedFiles
 {
   return {};
 }
 
-auto Windows::postGenerateFiles(const QWizard *wizard, const Core::GeneratedFiles &files, QString *error_message) const -> bool
+auto Windows::postGenerateFiles(const QWizard *wizard, const Orca::Plugin::Core::GeneratedFiles &files, QString *error_message) const -> bool
 {
   return {};
 }

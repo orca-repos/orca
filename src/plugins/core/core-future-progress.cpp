@@ -52,7 +52,7 @@ FutureProgressPrivate::FutureProgressPrivate(FutureProgress *q) : m_progress(new
 /*!
     \ingroup mainclasses
     \inheaderfile coreplugin/progressmanager/futureprogress.h
-    \class Core::FutureProgress
+    \class Orca::Plugin::Core::FutureProgress
     \inmodule Orca
 
     \brief The FutureProgress class is used to adapt the appearance of
@@ -68,23 +68,23 @@ FutureProgressPrivate::FutureProgressPrivate(FutureProgress *q) : m_progress(new
 */
 
 /*!
-    \fn void Core::FutureProgress::clicked()
+    \fn void Orca::Plugin::Core::FutureProgress::clicked()
     Connect to this signal to get informed when the user clicks on the
     progress indicator.
 */
 
 /*!
-    \fn void Core::FutureProgress::canceled()
+    \fn void Orca::Plugin::Core::FutureProgress::canceled()
     Connect to this signal to get informed when the operation is canceled.
 */
 
 /*!
-    \fn void Core::FutureProgress::finished()
+    \fn void Orca::Plugin::Core::FutureProgress::finished()
     Another way to get informed when the task has finished.
 */
 
 /*!
-    \fn QWidget Core::FutureProgress::widget() const
+    \fn QWidget Orca::Plugin::Core::FutureProgress::widget() const
     Returns the custom widget that is shown below the progress indicator.
 */
 

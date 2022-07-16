@@ -76,8 +76,8 @@ private:
   auto handleConfigurationChanges() -> void;
   static auto addVersionControl(IVersionControl *vc) -> void;
 
-  friend class Core::MainWindow;
-  friend class Core::IVersionControl;
+  friend class Orca::Plugin::Core::MainWindow;
+  friend class Orca::Plugin::Core::IVersionControl;
 };
 
 } // namespace Orca::Plugin::Core

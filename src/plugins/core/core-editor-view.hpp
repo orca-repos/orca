@@ -69,7 +69,7 @@ public:
   static auto updateEditorHistory(const IEditor *editor, QList<EditLocation> &history) -> void;
 
 signals:
-  auto currentEditorChanged(Core::IEditor *editor) -> void;
+  auto currentEditorChanged(Orca::Plugin::Core::IEditor *editor) -> void;
 
 protected:
   auto paintEvent(QPaintEvent *) -> void override;

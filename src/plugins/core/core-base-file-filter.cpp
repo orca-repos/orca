@@ -39,7 +39,7 @@ public:
 };
 
 /*!
-    \class Core::BaseFileFilter
+    \class Orca::Plugin::Core::BaseFileFilter
     \inheaderfile coreplugin/locator/basefilefilter.h
     \inmodule Orca
 
@@ -47,13 +47,13 @@ public:
 */
 
 /*!
-    \class Core::BaseFileFilter::Iterator
+    \class Orca::Plugin::Core::BaseFileFilter::Iterator
     \inmodule Orca
     \internal
 */
 
 /*!
-    \class Core::BaseFileFilter::ListIterator
+    \class Orca::Plugin::Core::BaseFileFilter::ListIterator
     \inmodule Orca
     \internal
 */

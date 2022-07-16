@@ -7,7 +7,7 @@
 namespace Orca::Plugin::Core {
 
 /*!
-    \class Core::IExternalEditor
+    \class Orca::Plugin::Core::IExternalEditor
     \inheaderfile coreplugin/editormanager/iexternaleditor.h
     \inmodule Orca
     \ingroup mainclasses
@@ -17,22 +17,22 @@ namespace Orca::Plugin::Core {
 */
 
 /*!
-    \fn QString Core::IExternalEditor::displayName() const
+    \fn QString Orca::Plugin::Core::IExternalEditor::displayName() const
     Returns a user-visible description of the editor type.
 */
 
 /*!
-    \fn Utils::Id Core::IExternalEditor::id() const
+    \fn Utils::Id Orca::Plugin::Core::IExternalEditor::id() const
     Returns the ID of the factory or editor type.
 */
 
 /*!
-    \fn QStringList Core::IExternalEditor::mimeTypes() const
+    \fn QStringList Orca::Plugin::Core::IExternalEditor::mimeTypes() const
     Returns a list of MIME types that the editor supports
 */
 
 /*!
-    \fn bool Core::IExternalEditor::startEditor(const Utils::FilePath &fileName, QString *errorMessage)
+    \fn bool Orca::Plugin::Core::IExternalEditor::startEditor(const Utils::FilePath &fileName, QString *errorMessage)
 
     Opens the editor with \a fileName. Returns \c true on success or \c false
     on failure along with the error in \a errorMessage.

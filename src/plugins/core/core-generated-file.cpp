@@ -17,7 +17,7 @@ using namespace Utils;
 namespace Orca::Plugin::Core {
 
 /*!
-    \class Core::GeneratedFile
+    \class Orca::Plugin::Core::GeneratedFile
     \inheaderfile coreplugin/generatedfile.h
     \inmodule Orca
 
@@ -26,7 +26,7 @@ namespace Orca::Plugin::Core {
     The BaseFileWizard class checks whether each file already exists and
     reports any errors that may occur during creation of the files.
 
-    \sa Core::WizardDialogParameters, Core::BaseFileWizard,
+    \sa Orca::Plugin::Core::WizardDialogParameters, Orca::Plugin::Core::BaseFileWizard,
  */
 
 class GeneratedFilePrivate : public QSharedData {

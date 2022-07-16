@@ -13,7 +13,7 @@
 #include <QTime>
 
 /*!
-    \class Core::MessageManager
+    \class Orca::Plugin::Core::MessageManager
     \inheaderfile coreplugin/messagemanager.h
     \ingroup mainclasses
     \inmodule Orca

@@ -14,13 +14,13 @@ using namespace Utils;
 namespace Orca::Plugin::Core {
 
 /*!
-    \class Core::Highlight
+    \class Orca::Plugin::Core::Highlight
     \inmodule Orca
     \internal
 */
 
 /*!
-    \class Core::HighlightScrollBarController
+    \class Orca::Plugin::Core::HighlightScrollBarController
     \inmodule Orca
     \internal
 */

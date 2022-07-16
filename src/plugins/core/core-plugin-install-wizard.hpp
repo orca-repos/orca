@@ -7,7 +7,7 @@
 namespace Orca::Plugin::Core {
 
 class PluginInstallWizard {
-  Q_DECLARE_TR_FUNCTIONS(Core::PluginInstallWizard)
+  Q_DECLARE_TR_FUNCTIONS(Orca::Plugin::Core::PluginInstallWizard)
 
 public:
   static auto exec() -> bool;

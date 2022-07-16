@@ -13,19 +13,19 @@
 namespace Orca::Plugin::Core {
 
 /*!
-    \class Core::Tests::BasicLocatorFilterTest
+    \class Orca::Plugin::Core::Tests::BasicLocatorFilterTest
     \inmodule Orca
     \internal
 */
 
 /*!
-    \class Core::Tests::TestDataDir
+    \class Orca::Plugin::Core::Tests::TestDataDir
     \inmodule Orca
     \internal
 */
 
 /*!
-    \namespace Core::Tests
+    \namespace Orca::Plugin::Core::Tests
     \inmodule Orca
     \internal
 */
@@ -47,7 +47,7 @@ QList<LocatorFilterEntry> BasicLocatorFilterTest::matchesFor(const QString &sear
 }
 
 /*!
-    \class Core::Tests::ResultData
+    \class Orca::Plugin::Core::Tests::ResultData
     \inmodule Orca
     \internal
 */

@@ -11,7 +11,7 @@ namespace Constants {
 constexpr char LIEFPROJECT_ID[] = "LIEF.Project";
 } // namespace Constants
 
-struct Windows final : Core::BaseFileWizardFactory {
+struct Windows final : Orca::Plugin::Core::BaseFileWizardFactory {
   Windows() {
     setId("LIEF.NewFileWizard.Windows");
     setIcon(QIcon{":/core/images/orcalogo-big.png"}); // TODO: Use appropriate icons to represent each Projects.
@@ -20,9 +20,9 @@ struct Windows final : Core::BaseFileWizardFactory {
     setSupportedProjectTypes({Constants::LIEFPROJECT_ID});
   }
 
-  auto create(QWidget *parent, const Core::WizardDialogParameters &params) const -> Core::BaseFileWizard*;
-  auto generateFiles(const QWizard *wizard, QString *error_message) const -> Core::GeneratedFiles;
-  auto postGenerateFiles(const QWizard *wizard, const Core::GeneratedFiles &files, QString *error_message) const -> bool;
+  auto create(QWidget *parent, const Orca::Plugin::Core::WizardDialogParameters &params) const -> Orca::Plugin::Core::BaseFileWizard*;
+  auto generateFiles(const QWizard *wizard, QString *error_message) const -> Orca::Plugin::Core::GeneratedFiles;
+  auto postGenerateFiles(const QWizard *wizard, const Orca::Plugin::Core::GeneratedFiles &files, QString *error_message) const -> bool;
 
   mutable std::unique_ptr<::LIEF::PE::Binary> binary;
 };

@@ -13,7 +13,7 @@
 #include <QToolButton>
 
 /*!
-    \class Core::Command
+    \class Orca::Plugin::Core::Command
     \inheaderfile coreplugin/actionmanager/command.h
     \inmodule Orca
     \ingroup mainclasses
@@ -43,14 +43,14 @@
     \l{Command::CommandAttribute}{attributes}.
 
     See \l{The Action Manager and Commands} for an overview of how
-    Core::Command and Core::ActionManager interact.
+    Orca::Plugin::Core::Command and Orca::Plugin::Core::ActionManager interact.
 
-    \sa Core::ActionManager
+    \sa Orca::Plugin::Core::ActionManager
     \sa {The Action Manager and Commands}
 */
 
 /*!
-    \enum Core::Command::CommandAttribute
+    \enum Orca::Plugin::Core::Command::CommandAttribute
     This enum defines how the user visible action is updated when the active action changes.
     The default is to update the enabled and visible state, and to disable the
     user visible action when there is no active action.
@@ -67,7 +67,7 @@
 */
 
 /*!
-    \fn void Core::Command::setDefaultKeySequence(const QKeySequence &key)
+    \fn void Orca::Plugin::Core::Command::setDefaultKeySequence(const QKeySequence &key)
 
     Sets the default keyboard shortcut that can be used to activate this
     command to \a key. This is used if the user didn't customize the shortcut,
@@ -75,7 +75,7 @@
 */
 
 /*!
-    \fn void Core::Command::setDefaultKeySequences(const QList<QKeySequence> &keys)
+    \fn void Orca::Plugin::Core::Command::setDefaultKeySequences(const QList<QKeySequence> &keys)
 
     Sets the default keyboard shortcuts that can be used to activate this
     command to \a keys. This is used if the user didn't customize the
@@ -83,7 +83,7 @@
 */
 
 /*!
-    \fn QList<QKeySequence> Core::Command::defaultKeySequences() const
+    \fn QList<QKeySequence> Orca::Plugin::Core::Command::defaultKeySequences() const
 
     Returns the default keyboard shortcuts that can be used to activate this
     command.
@@ -91,32 +91,32 @@
 */
 
 /*!
-    \fn void Core::Command::keySequenceChanged()
+    \fn void Orca::Plugin::Core::Command::keySequenceChanged()
     Sent when the keyboard shortcuts assigned to this Command change, e.g.
     when the user sets them in the keyboard shortcut settings dialog.
 */
 
 /*!
-    \fn QList<QKeySequence> Core::Command::keySequences() const
+    \fn QList<QKeySequence> Orca::Plugin::Core::Command::keySequences() const
 
     Returns the current keyboard shortcuts assigned to this Command.
     \sa defaultKeySequences()
 */
 
 /*!
-    \fn QKeySequence Core::Command::keySequence() const
+    \fn QKeySequence Orca::Plugin::Core::Command::keySequence() const
 
     Returns the current main keyboard shortcut assigned to this Command.
     \sa defaultKeySequences()
 */
 
 /*!
-    \fn void Core::Command::setKeySequences(const QList<QKeySequence> &keys)
+    \fn void Orca::Plugin::Core::Command::setKeySequences(const QList<QKeySequence> &keys)
     \internal
 */
 
 /*!
-    \fn void Core::Command::setDescription(const QString &text)
+    \fn void Orca::Plugin::Core::Command::setDescription(const QString &text)
     Sets the \a text that is used to represent the Command in the
     keyboard shortcut settings dialog. If you do not set this,
     the current text from the user visible action is taken (which
@@ -124,18 +124,18 @@
 */
 
 /*!
-    \fn QString Core::Command::description() const
+    \fn QString Orca::Plugin::Core::Command::description() const
     Returns the text that is used to present this Command to the user.
     \sa setDescription()
 */
 
 /*!
-    \fn int Core::Command::id() const
+    \fn int Orca::Plugin::Core::Command::id() const
     \internal
 */
 
 /*!
-    \fn QString Core::Command::stringWithAppendedShortcut(const QString &string) const
+    \fn QString Orca::Plugin::Core::Command::stringWithAppendedShortcut(const QString &string) const
 
     Returns the \a string with an appended representation of the main keyboard
     shortcut that is currently assigned to this Command.
@@ -153,13 +153,13 @@
 */
 
 /*!
-    \fn Core::Context Core::Command::context() const
+    \fn Orca::Plugin::Core::Context Orca::Plugin::Core::Command::context() const
 
     Returns the context for this command.
 */
 
 /*!
-    \fn void Core::Command::setAttribute(Core::Command::CommandAttribute attribute)
+    \fn void Orca::Plugin::Core::Command::setAttribute(Orca::Plugin::Core::Command::CommandAttribute attribute)
     Adds \a attribute to the attributes of this Command.
     \sa CommandAttribute
     \sa removeAttribute()
@@ -167,14 +167,14 @@
 */
 
 /*!
-    \fn void Core::Command::removeAttribute(Core::Command::CommandAttribute attribute)
+    \fn void Orca::Plugin::Core::Command::removeAttribute(Orca::Plugin::Core::Command::CommandAttribute attribute)
     Removes \a attribute from the attributes of this Command.
     \sa CommandAttribute
     \sa setAttribute()
 */
 
 /*!
-    \fn bool Core::Command::hasAttribute(Core::Command::CommandAttribute attribute) const
+    \fn bool Orca::Plugin::Core::Command::hasAttribute(Orca::Plugin::Core::Command::CommandAttribute attribute) const
     Returns whether the Command has the \a attribute set.
     \sa CommandAttribute
     \sa removeAttribute()
@@ -182,49 +182,49 @@
 */
 
 /*!
-    \fn bool Core::Command::isActive() const
+    \fn bool Orca::Plugin::Core::Command::isActive() const
 
     Returns whether the Command has an active action for the current context.
 */
 
 /*!
-    \fn bool Core::Command::isScriptable() const
+    \fn bool Orca::Plugin::Core::Command::isScriptable() const
     Returns whether the Command is scriptable. A scriptable command can be called
     from a script without the need for the user to interact with it.
 */
 
 /*!
-    \fn bool Core::Command::isScriptable(const Core::Context &) const
+    \fn bool Orca::Plugin::Core::Command::isScriptable(const Orca::Plugin::Core::Context &) const
     \internal
 
     Returns whether the Command is scriptable.
 */
 
 /*!
-    \fn void Core::Command::activeStateChanged()
+    \fn void Orca::Plugin::Core::Command::activeStateChanged()
 
     This signal is emitted when the active state of the command changes.
 */
 
 /*!
-    \fn virtual void Core::Command::setTouchBarText(const QString &text)
+    \fn virtual void Orca::Plugin::Core::Command::setTouchBarText(const QString &text)
 
     Sets the text for the action on the touch bar to \a text.
 */
 
 /*!
-    \fn virtual QString Core::Command::touchBarText() const
+    \fn virtual QString Orca::Plugin::Core::Command::touchBarText() const
 
     Returns the text for the action on the touch bar.
 */
 
 /*!
-    \fn virtual void Core::Command::setTouchBarIcon(const QIcon &icon)
+    \fn virtual void Orca::Plugin::Core::Command::setTouchBarIcon(const QIcon &icon)
 
     Sets the icon for the action on the touch bar to \a icon.
 */
 
-/*! \fn virtual QIcon Core::Command::touchBarIcon() const
+/*! \fn virtual QIcon Orca::Plugin::Core::Command::touchBarIcon() const
 
     Returns the icon for the action on the touch bar.
 */

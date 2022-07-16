@@ -18,7 +18,7 @@ using namespace Utils;
 namespace Orca::Plugin::Core {
 
 /*!
-    \class Core::OptionsPopup
+    \class Orca::Plugin::Core::OptionsPopup
     \inmodule Orca
     \internal
 */

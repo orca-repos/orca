@@ -93,7 +93,7 @@ auto UrlFilterOptions::updateActionButtons() const -> void
 // -- UrlLocatorFilter
 
 /*!
-    \class Core::UrlLocatorFilter
+    \class Orca::Plugin::Core::UrlLocatorFilter
     \inmodule Orca
     \internal
 */

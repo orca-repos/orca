@@ -16,7 +16,7 @@
 namespace Orca::Plugin::Core {
 
 /*!
-    \class Core::LocatorManager
+    \class Orca::Plugin::Core::LocatorManager
     \inmodule Orca
     \internal
 */

@@ -44,7 +44,7 @@ auto JavaScriptFilter::prepareSearch(const QString &entry) -> void
   m_abort_timer.start();
 }
 
-auto JavaScriptFilter::matchesFor(QFutureInterface<Core::LocatorFilterEntry> &future, const QString &entry) -> QList<LocatorFilterEntry>
+auto JavaScriptFilter::matchesFor(QFutureInterface<Orca::Plugin::Core::LocatorFilterEntry> &future, const QString &entry) -> QList<LocatorFilterEntry>
 {
   Q_UNUSED(future)
   QList<LocatorFilterEntry> entries;

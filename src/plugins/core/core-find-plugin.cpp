@@ -26,12 +26,12 @@
 #include <QStringListModel>
 
 /*!
-    \namespace Core::ItemDataRoles
+    \namespace Orca::Plugin::Core::ItemDataRoles
     \internal
 */
 
 /*!
-    \class Core::Find
+    \class Orca::Plugin::Core::Find
     \inmodule Orca
     \internal
 */
@@ -148,7 +148,7 @@ auto CompletionModel::updateCompletion(const QString &text, const FindFlags f) -
 }
 
 class FindPrivate final : public QObject {
-  Q_DECLARE_TR_FUNCTIONS(Core::Find)
+  Q_DECLARE_TR_FUNCTIONS(Orca::Plugin::Core::Find)
 
 public:
   auto isAnyFilterEnabled() const -> bool;

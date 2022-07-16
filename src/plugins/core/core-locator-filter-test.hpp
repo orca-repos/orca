@@ -56,7 +56,7 @@ Q_DECLARE_METATYPE(Orca::Plugin::Core::Tests::ResultDataList)
 QT_BEGIN_NAMESPACE
 namespace QTest {
 
-template<> inline char *toString(const Core::Tests::ResultData &data)
+template<> inline char *toString(const Orca::Plugin::Core::Tests::ResultData &data)
 {
     const QByteArray ba = "\n\"" + data.textColumn1.toUtf8() + "\", \"" + data.textColumn2.toUtf8()
             + "\"\n\"" + data.highlight.toUtf8() + "\"";

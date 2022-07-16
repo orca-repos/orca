@@ -33,7 +33,7 @@ using namespace Utils;
 
 
 /*!
-    \class Core::CommandsFile
+    \class Orca::Plugin::Core::CommandsFile
     \internal
     \inmodule Orca
     \brief The CommandsFile class provides a collection of import and export commands.

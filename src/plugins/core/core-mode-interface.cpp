@@ -7,7 +7,7 @@
 namespace Orca::Plugin::Core {
 
 /*!
-    \class Core::IMode
+    \class Orca::Plugin::Core::IMode
     \inheaderfile coreplugin/imode.h
     \ingroup mainclasses
     \inmodule Orca

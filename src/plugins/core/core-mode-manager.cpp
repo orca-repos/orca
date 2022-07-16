@@ -23,7 +23,7 @@ using namespace Utils;
 namespace Orca::Plugin::Core {
 
 /*!
-    \class Core::ModeManager
+    \class Orca::Plugin::Core::ModeManager
     \inheaderfile coreplugin/modemanager.h
     \ingroup mainclasses
     \inmodule Orca

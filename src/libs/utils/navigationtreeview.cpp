@@ -13,7 +13,7 @@
     sidebar widget.
 
    Common initialization etc, e.g. Mac specific behaviour.
-   \sa Core::NavigationView, Core::INavigationWidgetFactory
+   \sa Orca::Plugin::Core::NavigationView, Orca::Plugin::Core::INavigationWidgetFactory
  */
 
 namespace Utils {

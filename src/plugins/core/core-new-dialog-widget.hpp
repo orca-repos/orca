@@ -48,7 +48,7 @@ private:
   auto reject() -> void override;
   auto updateOkButton() const -> void;
   auto setSelectedPlatform(int index) const -> void;
-  auto currentWizardFactory() const -> Core::IWizardFactory*;
+  auto currentWizardFactory() const -> Orca::Plugin::Core::IWizardFactory*;
   auto addItem(QStandardItem *top_level_category_item, IWizardFactory *factory) -> void;
   auto saveState() const -> void;
 

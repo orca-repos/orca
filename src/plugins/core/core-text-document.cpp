@@ -8,7 +8,7 @@
 #include <QTextCodec>
 
 /*!
-    \class Core::BaseTextDocument
+    \class Orca::Plugin::Core::BaseTextDocument
     \inheaderfile coreplugin/textdocument.h
     \inmodule Orca
 

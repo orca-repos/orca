@@ -17,14 +17,14 @@
 #include <QStandardPaths>
 
 /*!
-    \namespace Core
+    \namespace Orca::Plugin::Core
     \inmodule Orca
     \brief The Core namespace contains all classes that make up the Core plugin
     which constitute the basic functionality of \QC.
 */
 
 /*!
-    \enum Core::FindFlag
+    \enum Orca::Plugin::Core::FindFlag
     This enum holds the find flags.
 
     \value FindBackward
@@ -40,32 +40,32 @@
 */
 
 /*!
-    \enum Core::ICore::ContextPriority
+    \enum Orca::Plugin::Core::ICore::ContextPriority
 
     This enum defines the priority of additional contexts.
 
     \value High
            Additional contexts that have higher priority than contexts from
-           Core::IContext instances.
+           Orca::Plugin::Core::IContext instances.
     \value Low
            Additional contexts that have lower priority than contexts from
-           Core::IContext instances.
+           Orca::Plugin::Core::IContext instances.
 
-    \sa Core::ICore::updateAdditionalContexts()
+    \sa Orca::Plugin::Core::ICore::updateAdditionalContexts()
 */
 
 /*!
-    \enum Core::SaveSettingsReason
+    \enum Orca::Plugin::Core::SaveSettingsReason
     \internal
 */
 
 /*!
-    \namespace Core
+    \namespace Orca::Plugin::Core
     \internal
 */
 
 /*!
-    \class Core::ICore
+    \class Orca::Plugin::Core::ICore
     \inheaderfile coreplugin/icore.h
     \inmodule Orca
     \ingroup mainclasses
@@ -79,19 +79,19 @@
 */
 
 /*!
-    \fn void Core::ICore::coreAboutToOpen()
+    \fn void Orca::Plugin::Core::ICore::coreAboutToOpen()
 
     Indicates that all plugins have been loaded and the main window is about to
     be shown.
 */
 
 /*!
-    \fn void Core::ICore::coreOpened()
+    \fn void Orca::Plugin::Core::ICore::coreOpened()
     Indicates that all plugins have been loaded and the main window is shown.
 */
 
 /*!
-    \fn void Core::ICore::saveSettingsRequested(Core::ICore::SaveSettingsReason reason)
+    \fn void Orca::Plugin::Core::ICore::saveSettingsRequested(Orca::Plugin::Core::ICore::SaveSettingsReason reason)
     Signals that the user has requested that the global settings
     should be saved to disk for a \a reason.
 
@@ -99,7 +99,7 @@
 */
 
 /*!
-    \fn void Core::ICore::coreAboutToClose()
+    \fn void Orca::Plugin::Core::ICore::coreAboutToClose()
     Enables plugins to perform some pre-end-of-life actions.
 
     The application is guaranteed to shut down after this signal is emitted.
@@ -108,13 +108,13 @@
 */
 
 /*!
-    \fn void Core::ICore::contextAboutToChange(const QList<Core::IContext *> &context)
+    \fn void Orca::Plugin::Core::ICore::contextAboutToChange(const QList<Orca::Plugin::Core::IContext *> &context)
     Indicates that a new \a context will shortly become the current context
     (meaning that its widget got focus).
 */
 
 /*!
-    \fn void Core::ICore::contextChanged(const Core::Context &context)
+    \fn void Orca::Plugin::Core::ICore::contextChanged(const Orca::Plugin::Core::Context &context)
     Indicates that a new \a context just became the current context. This includes the context
     from the focus object as well as the additional context.
 */
@@ -225,7 +225,7 @@ ICore::~ICore()
 
     Additional variables for the wizards are set in \a extraVariables.
 
-    \sa Core::DocumentManager
+    \sa Orca::Plugin::Core::DocumentManager
     \sa isNewItemDialogRunning()
     \sa newItemDialog()
 */

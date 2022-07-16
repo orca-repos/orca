@@ -18,7 +18,7 @@ using namespace Utils;
 namespace Orca::Plugin::Core {
 
 /*!
-    \class Core::ActionContainer
+    \class Orca::Plugin::Core::ActionContainer
     \inheaderfile coreplugin/actionmanager/actioncontainer.h
     \ingroup mainclasses
     \inmodule Orca
@@ -34,8 +34,8 @@ namespace Orca::Plugin::Core {
     Within a menu or menu bar you can group menus and items together by defining groups
     (the order of the groups is defined by the order of the \l{ActionContainer::appendGroup()} calls), and
     adding menus or actions to these groups. If no custom groups are defined, an action container
-    has three default groups \c{Core::G_DEFAULT_ONE}, \c{Core::G_DEFAULT_TWO}
-    and \c{Core::G_DEFAULT_THREE}.
+    has three default groups \c{Orca::Plugin::Core::G_DEFAULT_ONE}, \c{Orca::Plugin::Core::G_DEFAULT_TWO}
+    and \c{Orca::Plugin::Core::G_DEFAULT_THREE}.
 
     You can specify whether the menu represented by this action container should
     be automatically disabled or hidden whenever it only contains disabled items
@@ -45,7 +45,7 @@ namespace Orca::Plugin::Core {
 */
 
 /*!
-    \enum Core::ActionContainer::OnAllDisabledBehavior
+    \enum Orca::Plugin::Core::ActionContainer::OnAllDisabledBehavior
     Defines what happens when the represented menu is empty or contains only
     disabled or invisible items.
     \value Disable
@@ -57,7 +57,7 @@ namespace Orca::Plugin::Core {
 */
 
 /*!
-    \fn Core::ActionContainer::setOnAllDisabledBehavior(OnAllDisabledBehavior behavior)
+    \fn Orca::Plugin::Core::ActionContainer::setOnAllDisabledBehavior(OnAllDisabledBehavior behavior)
     Defines the \a behavior of the menu represented by this action container for the case
     whenever it only contains disabled items and submenus.
     The default is ActionContainer::Disable for menus, and ActionContainer::Show for menu bars.
@@ -66,7 +66,7 @@ namespace Orca::Plugin::Core {
 */
 
 /*!
-    \fn Core::ActionContainer::onAllDisabledBehavior() const
+    \fn Orca::Plugin::Core::ActionContainer::onAllDisabledBehavior() const
     Returns the behavior of the menu represented by this action container for the case
     whenever it only contains disabled items and submenus.
     The default is ActionContainer::Disable for menus, and ActionContainer::Show for menu bars.
@@ -75,7 +75,7 @@ namespace Orca::Plugin::Core {
 */
 
 /*!
-    \fn int Core::ActionContainer::id() const
+    \fn int Orca::Plugin::Core::ActionContainer::id() const
     \internal
 */
 
@@ -98,7 +98,7 @@ namespace Orca::Plugin::Core {
 */
 
 /*!
-    \fn void Core::ActionContainer::appendGroup(Utils::Id group)
+    \fn void Orca::Plugin::Core::ActionContainer::appendGroup(Utils::Id group)
     Adds \a group to the action container.
 
     Use groups to segment your action container into logical parts. You can add
@@ -108,7 +108,7 @@ namespace Orca::Plugin::Core {
 */
 
 /*!
-    \fn void Core::ActionContainer::addAction(Core::Command *action, Utils::Id group = Id())
+    \fn void Orca::Plugin::Core::ActionContainer::addAction(Orca::Plugin::Core::Command *action, Utils::Id group = Id())
     Add the \a action as a menu item to this action container. The action is added as the
     last item of the specified \a group.
     \sa appendGroup()
@@ -116,7 +116,7 @@ namespace Orca::Plugin::Core {
 */
 
 /*!
-    \fn void Core::ActionContainer::addMenu(Core::ActionContainer *menu, Utils::Id group = Utils::Id())
+    \fn void Orca::Plugin::Core::ActionContainer::addMenu(Orca::Plugin::Core::ActionContainer *menu, Utils::Id group = Utils::Id())
     Add the \a menu as a submenu to this action container. The menu is added as the
     last item of the specified \a group.
     \sa appendGroup()
@@ -124,7 +124,7 @@ namespace Orca::Plugin::Core {
 */
 
 /*!
-    \fn void Core::ActionContainer::addMenu(Core::ActionContainer *before, Core::ActionContainer *menu)
+    \fn void Orca::Plugin::Core::ActionContainer::addMenu(Orca::Plugin::Core::ActionContainer *before, Orca::Plugin::Core::ActionContainer *menu)
     Add \a menu as a submenu to this action container before the menu specified
     by \a before.
     \sa appendGroup()
@@ -132,7 +132,7 @@ namespace Orca::Plugin::Core {
 */
 
 /*!
-    \fn Core::ActionContainer::clear()
+    \fn Orca::Plugin::Core::ActionContainer::clear()
 
     Clears this menu and submenus from all actions and submenus. However, does
     does not destroy the submenus and commands, just removes them from their
@@ -140,7 +140,7 @@ namespace Orca::Plugin::Core {
 */
 
 /*!
-    \fn Core::ActionContainer::insertGroup(Utils::Id before, Utils::Id group)
+    \fn Orca::Plugin::Core::ActionContainer::insertGroup(Utils::Id before, Utils::Id group)
 
     Inserts \a group to the action container before the group specified by
     \a before.
@@ -153,7 +153,7 @@ namespace Orca::Plugin::Core {
 */
 
 /*!
-    \fn Core::ActionContainer::addSeparator(const Core::Context &context, Utils::Id group, QAction **outSeparator)
+    \fn Orca::Plugin::Core::ActionContainer::addSeparator(const Orca::Plugin::Core::Context &context, Utils::Id group, QAction **outSeparator)
 
     Adds a separator to the end of the given \a group to the action container,
     which is enabled for a given \a context. Returns the created separator
@@ -161,7 +161,7 @@ namespace Orca::Plugin::Core {
 */
 
 /*!
-    \class Core::ActionContainerPrivate
+    \class Orca::Plugin::Core::ActionContainerPrivate
     \internal
 */
 
@@ -400,7 +400,7 @@ auto ActionContainerPrivate::update() -> void
 // ---------- MenuActionContainer ------------
 
 /*!
-    \class Core::MenuActionContainer
+    \class Orca::Plugin::Core::MenuActionContainer
     \internal
 */
 
@@ -515,7 +515,7 @@ auto MenuActionContainer::canBeAddedToContainer(ActionContainerPrivate *containe
 // ---------- MenuBarActionContainer ------------
 
 /*!
-    \class Core::MenuBarActionContainer
+    \class Orca::Plugin::Core::MenuBarActionContainer
     \internal
 */
 

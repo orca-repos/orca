@@ -13,7 +13,7 @@
 #include <QStringList>
 
 /*!
-    \class Core::IVersionControl::TopicCache
+    \class Orca::Plugin::Core::IVersionControl::TopicCache
     \inheaderfile coreplugin/iversioncontrol.h
     \inmodule Orca
 
@@ -38,11 +38,11 @@
  */
 
 /*!
-    \fn Utils::FilePath Core::IVersionControl::TopicCache::trackFile(const Utils::FilePath &repository)
+    \fn Utils::FilePath Orca::Plugin::Core::IVersionControl::TopicCache::trackFile(const Utils::FilePath &repository)
     Returns the path to the file that invalidates the cache for \a repository when
     the file is modified.
 
-    \fn QString Core::IVersionControl::TopicCache::refreshTopic(const Utils::FilePath &repository)
+    \fn QString Orca::Plugin::Core::IVersionControl::TopicCache::refreshTopic(const Utils::FilePath &repository)
     Returns the current topic for \a repository.
  */
 

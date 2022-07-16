@@ -19,7 +19,7 @@ using namespace Utils;
 namespace Orca::Plugin::Core {
 
 /*!
-    \class Core::ILocatorFilter
+    \class Orca::Plugin::Core::ILocatorFilter
     \inheaderfile coreplugin/locator/ilocatorfilter.h
     \inmodule Orca
 
@@ -29,13 +29,13 @@ namespace Orca::Plugin::Core {
 */
 
 /*!
-    \class Core::LocatorFilterEntry
+    \class Orca::Plugin::Core::LocatorFilterEntry
     \inmodule Orca
     \internal
 */
 
 /*!
-    \class Core::LocatorFilterEntry::HighlightInfo
+    \class Orca::Plugin::Core::LocatorFilterEntry::HighlightInfo
     \inmodule Orca
     \internal
 */
@@ -558,7 +558,7 @@ auto ILocatorFilter::isOldSetting(const QByteArray &state) -> bool
 }
 
 /*!
-    \fn QList<Core::LocatorFilterEntry> Core::ILocatorFilter::matchesFor(QFutureInterface<Core::LocatorFilterEntry> &future, const QString &entry)
+    \fn QList<Orca::Plugin::Core::LocatorFilterEntry> Orca::Plugin::Core::ILocatorFilter::matchesFor(QFutureInterface<Orca::Plugin::Core::LocatorFilterEntry> &future, const QString &entry)
 
     Returns the list of results of this filter for the search term \a entry.
     This is run in a separate thread, but is guaranteed to only run in a single
@@ -574,7 +574,7 @@ auto ILocatorFilter::isOldSetting(const QByteArray &state) -> bool
 */
 
 /*!
-    \fn void Core::ILocatorFilter::accept(Core::const LocatorFilterEntry &selection, QString *newText, int *selectionStart, int *selectionLength) const
+    \fn void Orca::Plugin::Core::ILocatorFilter::accept(Orca::Plugin::Core::const LocatorFilterEntry &selection, QString *newText, int *selectionStart, int *selectionLength) const
 
     Called with the entry specified by \a selection when the user activates it
     in the result list.
@@ -583,7 +583,7 @@ auto ILocatorFilter::isOldSetting(const QByteArray &state) -> bool
 */
 
 /*!
-    \fn void Core::ILocatorFilter::refresh(QFutureInterface<void> &future)
+    \fn void Orca::Plugin::Core::ILocatorFilter::refresh(QFutureInterface<void> &future)
 
     Refreshes cached data asynchronously.
 
@@ -591,7 +591,7 @@ auto ILocatorFilter::isOldSetting(const QByteArray &state) -> bool
 */
 
 /*!
-    \enum Core::ILocatorFilter::Priority
+    \enum Orca::Plugin::Core::ILocatorFilter::Priority
 
     This enum value holds the priority that is used for ordering the results
     when multiple filters are used.
@@ -608,7 +608,7 @@ auto ILocatorFilter::isOldSetting(const QByteArray &state) -> bool
 */
 
 /*!
-    \enum Core::ILocatorFilter::MatchLevel
+    \enum Orca::Plugin::Core::ILocatorFilter::MatchLevel
 
     This enum value holds the level for ordering the results based on how well
     they match the search criteria.

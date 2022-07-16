@@ -7,7 +7,7 @@
 #include <QString>
 
 #define QTC_DECLARE_MYTESTDATADIR(PATH)                                          \
-    class MyTestDataDir : public Core::Tests::TestDataDir                        \
+    class MyTestDataDir : public Orca::Plugin::Core::Tests::TestDataDir                        \
     {                                                                            \
     public:                                                                      \
         MyTestDataDir(const QString &testDataDirectory = QString())              \

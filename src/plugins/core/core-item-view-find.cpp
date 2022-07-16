@@ -13,7 +13,7 @@
 namespace Orca::Plugin::Core {
 
 /*!
-    \class Core::ItemViewFind
+    \class Orca::Plugin::Core::ItemViewFind
     \inmodule Orca
     \internal
 */

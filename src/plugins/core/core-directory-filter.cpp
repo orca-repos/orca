@@ -18,7 +18,7 @@ using namespace Utils;
 namespace Orca::Plugin::Core {
 
 /*!
-    \class Core::DirectoryFilter
+    \class Orca::Plugin::Core::DirectoryFilter
     \inmodule Orca
     \internal
 */

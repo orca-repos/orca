@@ -60,7 +60,7 @@ static auto hasLibSuffix(const FilePath &path) -> bool
 
 static auto pluginInstallPath(const bool install_into_application) -> FilePath
 {
-  return FilePath::fromString(install_into_application ? Core::ICore::pluginPath() : Core::ICore::userPluginPath());
+  return FilePath::fromString(install_into_application ? Orca::Plugin::Core::ICore::pluginPath() : Orca::Plugin::Core::ICore::userPluginPath());
 }
 
 class SourcePage final : public WizardPage {

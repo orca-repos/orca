@@ -36,25 +36,25 @@ BaseTextFindPrivate::BaseTextFindPrivate(QTextEdit *editor) : m_editor(editor), 
 BaseTextFindPrivate::BaseTextFindPrivate(QPlainTextEdit *editor) : m_plaineditor(editor), m_widget(editor), m_incremental_start_pos(-1), m_incremental_wrapped_state(false) {}
 
 /*!
-    \class Core::BaseTextFind
+    \class Orca::Plugin::Core::BaseTextFind
     \inheaderfile coreplugin/find/basetextfind.h
     \inmodule Orca
 
     \brief The BaseTextFind class implements a find filter for QPlainTextEdit
     and QTextEdit based widgets.
 
-    \sa Core::IFindFilter
+    \sa Orca::Plugin::Core::IFindFilter
 */
 
 /*!
-    \fn void Core::BaseTextFind::findScopeChanged(const Utils::MultiTextCursor &cursor)
+    \fn void Orca::Plugin::Core::BaseTextFind::findScopeChanged(const Utils::MultiTextCursor &cursor)
 
     This signal is emitted when the search
     scope changes to \a cursor.
 */
 
 /*!
-    \fn void Core::BaseTextFind::highlightAllRequested(const QString &txt, Core::FindFlags findFlags)
+    \fn void Orca::Plugin::Core::BaseTextFind::highlightAllRequested(const QString &txt, Orca::Plugin::Core::FindFlags findFlags)
 
     This signal is emitted when the search results for \a txt using the given
     \a findFlags should be highlighted in the editor widget.

@@ -94,7 +94,7 @@ public:
 };
 
 /*!
-    \class Core::CommandMappings
+    \class Orca::Plugin::Core::CommandMappings
     \inmodule Orca
     \internal
 */

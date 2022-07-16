@@ -395,13 +395,13 @@ auto DocumentModelPrivate::addEditor(IEditor *editor, bool *is_new_document) -> 
 }
 
 /*!
-    \class Core::DocumentModel
+    \class Orca::Plugin::Core::DocumentModel
     \inmodule Orca
     \internal
 */
 
 /*!
-    \class Core::DocumentModel::Entry
+    \class Orca::Plugin::Core::DocumentModel::Entry
     \inmodule Orca
     \internal
 */

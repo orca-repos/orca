@@ -35,7 +35,7 @@ using namespace Utils;
 namespace Orca::Plugin::Core {
 
 /*!
-    \class Core::ProgressManager
+    \class Orca::Plugin::Core::ProgressManager
     \inheaderfile coreplugin/progressmanager/progressmanager.h
     \inmodule Orca
     \ingroup mainclasses
@@ -88,9 +88,9 @@ namespace Orca::Plugin::Core {
 
     To register a task you create your \c QFuture<void> object, and call
     addTask(). This function returns a
-    \l{Core::FutureProgress}{FutureProgress}
+    \l{Orca::Plugin::Core::FutureProgress}{FutureProgress}
     object that you can use to further customize the progress bar's appearance.
-    See the \l{Core::FutureProgress}{FutureProgress} documentation for
+    See the \l{Orca::Plugin::Core::FutureProgress}{FutureProgress} documentation for
     details.
 
     In the following you will learn about two common patterns how to
@@ -106,7 +106,7 @@ namespace Orca::Plugin::Core {
     \c QFuture object. This is what you want to give the
     ProgressManager in the addTask() function.
 
-    Have a look at e.g Core::ILocatorFilter. Locator filters implement
+    Have a look at e.g Orca::Plugin::Core::ILocatorFilter. Locator filters implement
     a function \c refresh() which takes a \c QFutureInterface object
     as a parameter. These functions look something like:
     \code
@@ -126,7 +126,7 @@ namespace Orca::Plugin::Core {
     in a different thread, looks like this:
     \code
     QFuture<void> task = Utils::map(filters, &ILocatorFilter::refresh);
-    Core::FutureProgress *progress = Core::ProgressManager::addTask(task, tr("Indexing"),
+    Orca::Plugin::Core::FutureProgress *progress = Orca::Plugin::Core::ProgressManager::addTask(task, tr("Indexing"),
                                                                     Locator::TASK_INDEX);
     \endcode
     First, we to start an asynchronous operation which calls all the filters'
@@ -142,7 +142,7 @@ namespace Orca::Plugin::Core {
     // We are already running in a different thread here
     QFutureInterface<void> *progressObject = new QFutureInterface<void>;
     progressObject->setProgressRange(0, MAX);
-    Core::ProgressManager::addTask(progressObject->future(), tr("DoIt"), MYTASKTYPE);
+    Orca::Plugin::Core::ProgressManager::addTask(progressObject->future(), tr("DoIt"), MYTASKTYPE);
     progressObject->reportStarted();
     // Do something
     ...
@@ -172,7 +172,7 @@ namespace Orca::Plugin::Core {
 */
 
 /*!
-    \enum Core::ProgressManager::ProgressFlag
+    \enum Orca::Plugin::Core::ProgressManager::ProgressFlag
     Additional flags that specify details in behavior. The
     default for a task is to not have any of these flags set.
     \value KeepOnFinish
@@ -184,13 +184,13 @@ namespace Orca::Plugin::Core {
 */
 
 /*!
-    \fn void Core::ProgressManager::taskStarted(Utils::Id type)
+    \fn void Orca::Plugin::Core::ProgressManager::taskStarted(Utils::Id type)
 
     Sent whenever a task of a given \a type is started.
 */
 
 /*!
-    \fn void Core::ProgressManager::allTasksFinished(Utils::Id type)
+    \fn void Orca::Plugin::Core::ProgressManager::allTasksFinished(Utils::Id type)
 
     Sent when all tasks of a \a type have finished.
 */

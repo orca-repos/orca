@@ -122,8 +122,8 @@ private:
   auto filterCaseSensitivityActionId() const -> Utils::Id;
   auto filterInvertedActionId() const -> Utils::Id;
 
-  Core::CommandButton *const m_zoom_in_button;
-  Core::CommandButton *const m_zoom_out_button;
+  Orca::Plugin::Core::CommandButton *const m_zoom_in_button;
+  Orca::Plugin::Core::CommandButton *const m_zoom_out_button;
   QAction *m_filter_action_regexp = nullptr;
   QAction *m_filter_action_case_sensitive = nullptr;
   QAction *m_invert_filter_action = nullptr;

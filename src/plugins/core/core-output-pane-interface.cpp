@@ -5,7 +5,7 @@
 namespace Orca::Plugin::Core {
 
 /*!
-    \class Core::IOutputPane
+    \class Orca::Plugin::Core::IOutputPane
     \inheaderfile coreplugin/ioutputpane.h
     \brief The IOutputPane class is an interface for providing \uicontrol Output panes.
 

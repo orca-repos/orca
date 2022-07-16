@@ -28,7 +28,7 @@ enum class WarnAbout {
 static constexpr char k_keyboard_settings_key_v2[] = "KeyboardShortcutsV2";
 
 /*!
-    \class Core::ActionManager
+    \class Orca::Plugin::Core::ActionManager
     \inheaderfile coreplugin/actionmanager/actionmanager.h
     \ingroup mainclasses
     \inmodule Orca
@@ -47,7 +47,7 @@ static constexpr char k_keyboard_settings_key_v2[] = "KeyboardShortcutsV2";
     copy/replace/undo/redo actions).
 
     See \l{The Action Manager and Commands} for an overview of the interaction
-    between Core::ActionManager, Core::Command, and Core::Context.
+    between Orca::Plugin::Core::ActionManager, Orca::Plugin::Core::Command, and Orca::Plugin::Core::Context.
 
     Register a globally active action "My Action" by putting the following in
     your plugin's ExtensionSystem::IPlugin::initialize() function.
@@ -70,33 +70,33 @@ static constexpr char k_keyboard_settings_key_v2[] = "KeyboardShortcutsV2";
 
     Also use the action manager to add items to registered action containers
     like the application's menu bar or menus in that menu bar. Register your
-    action via the Core::ActionManager::registerAction() function, get the
+    action via the Orca::Plugin::Core::ActionManager::registerAction() function, get the
     action container for a specific ID (as specified for example in the
-    Core::Constants namespace) with Core::ActionManager::actionContainer(), and
+    Orca::Plugin::Core:: namespace) with Orca::Plugin::Core::ActionManager::actionContainer(), and
     add your command to this container.
 
     Building on the example, adding "My Action" to the "Tools" menu would be
     done with
 
     \code
-        ActionManager::actionContainer(Core::M_TOOLS)->addAction(cmd);
+        ActionManager::actionContainer(Orca::Plugin::Core::M_TOOLS)->addAction(cmd);
     \endcode
 
-    \sa Core::ICore
-    \sa Core::Command
-    \sa Core::ActionContainer
-    \sa Core::IContext
+    \sa Orca::Plugin::Core::ICore
+    \sa Orca::Plugin::Core::Command
+    \sa Orca::Plugin::Core::ActionContainer
+    \sa Orca::Plugin::Core::IContext
     \sa {The Action Manager and Commands}
 */
 
 /*!
-    \fn void Core::ActionManager::commandListChanged()
+    \fn void Orca::Plugin::Core::ActionManager::commandListChanged()
 
     Emitted when the command list has changed.
 */
 
 /*!
-    \fn void Core::ActionManager::commandAdded(Utils::Id id)
+    \fn void Orca::Plugin::Core::ActionManager::commandAdded(Utils::Id id)
 
     Emitted when a command (with the \a id) is added.
 */
@@ -250,12 +250,12 @@ auto ActionManager::command(const Id id) -> Command*
     Returns the ActionContainter instance that has been created with
     createMenu(), createMenuBar(), createTouchBar() for the specified \a id.
 
-    Use the ID \c{Core::MENU_BAR} to retrieve the main menu bar.
+    Use the ID \c{Orca::Plugin::Core::MENU_BAR} to retrieve the main menu bar.
 
-    Use the IDs \c{Core::M_FILE}, \c{Core::M_EDIT}, and
+    Use the IDs \c{Orca::Plugin::Core::M_FILE}, \c{Orca::Plugin::Core::M_EDIT}, and
     similar constants to retrieve the various default menus.
 
-    Use the ID \c{Core::TOUCH_BAR} to retrieve the main touch bar.
+    Use the ID \c{Orca::Plugin::Core::TOUCH_BAR} to retrieve the main touch bar.
 
     \sa ActionManager::createMenu()
     \sa ActionManager::createMenuBar()
@@ -504,4 +504,4 @@ auto ActionManagerPrivate::saveSettings() const -> void
   }
 }
 
-} // namespace Core
+} // namespace Orca::Plugin::Core

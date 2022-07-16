@@ -69,10 +69,10 @@ public:
 private:
   QSharedDataPointer<GeneratedFilePrivate> m_d;
 
-  friend CORE_EXPORT auto operator<<(QDebug &debug, const Core::GeneratedFile &file) -> QDebug&;
+  friend CORE_EXPORT auto operator<<(QDebug &debug, const Orca::Plugin::Core::GeneratedFile &file) -> QDebug&;
 };
 
-CORE_EXPORT auto operator<<(QDebug &debug, const Core::GeneratedFile &file) -> QDebug&;
+CORE_EXPORT auto operator<<(QDebug &debug, const Orca::Plugin::Core::GeneratedFile &file) -> QDebug&;
 
 using GeneratedFiles = QList<GeneratedFile>;
 

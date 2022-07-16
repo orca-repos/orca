@@ -11,4 +11,4 @@ public:
   SystemSettings();
 };
 
-} // namespace Core
+} // namespace Orca::Plugin::Core

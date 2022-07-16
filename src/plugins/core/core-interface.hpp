@@ -108,8 +108,8 @@ signals:
   auto newItemDialogStateChanged() -> void;
   auto saveSettingsRequested(SaveSettingsReason reason) -> void;
   auto coreAboutToClose() -> void;
-  auto contextAboutToChange(const QList<Core::IContext*> &context) -> void;
-  auto contextChanged(const Core::Context &context) -> void;
+  auto contextAboutToChange(const QList<Orca::Plugin::Core::IContext*> &context) -> void;
+  auto contextChanged(const Orca::Plugin::Core::Context &context) -> void;
   auto systemEnvironmentChanged() -> void;
 
 public:

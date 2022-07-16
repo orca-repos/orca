@@ -51,7 +51,7 @@ private:
   ProgressManager();
   ~ProgressManager() override;
 
-  friend class Core::ProgressManagerPrivate;
+  friend class Orca::Plugin::Core::ProgressManagerPrivate;
 };
 
 class CORE_EXPORT ProgressTimer final : public QObject {

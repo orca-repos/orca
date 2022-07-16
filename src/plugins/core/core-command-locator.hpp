@@ -7,7 +7,7 @@
 namespace Orca::Plugin::Core {
 
 /* Command locators: Provides completion for a set of
- * Core::Command's by sub-string of their action's text. */
+ * Orca::Plugin::Core::Command's by sub-string of their action's text. */
 class Command;
 struct CommandLocatorPrivate;
 

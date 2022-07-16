@@ -18,7 +18,7 @@ enum class file_name_role {
 };
 
 /*!
-    \class Core::PromptOverwriteDialog
+    \class Orca::Plugin::Core::PromptOverwriteDialog
     \inmodule Orca
     \internal
     \brief The PromptOverwriteDialog class implements a dialog that asks

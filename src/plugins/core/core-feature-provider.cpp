@@ -3,7 +3,7 @@
 #include "core-feature-provider.hpp"
 
 /*!
-    \class Core::IFeatureProvider
+    \class Orca::Plugin::Core::IFeatureProvider
     \inheaderfile coreplugin/featureprovider.h
     \inmodule Orca
     \ingroup mainclasses
@@ -22,7 +22,7 @@
     The QtSupport plugin creates an instance of IFeatureProvider and provides Qt specific
     features for the available versions of Qt.
 
-    \sa Core::IWizard
+    \sa Orca::Plugin::Core::IWizard
     \sa QtSupport::QtVersionManager
 */
 

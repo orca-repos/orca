@@ -5,7 +5,7 @@
 #include <QKeySequence>
 
 /*!
-    \class Core::INavigationWidgetFactory
+    \class Orca::Plugin::Core::INavigationWidgetFactory
     \inheaderfile coreplugin/inavigationwidgetfactory.h
     \ingroup mainclasses
     \inmodule Orca
@@ -13,12 +13,12 @@
     \brief The INavigationWidgetFactory class provides new instances of navigation widgets.
 
     A navigation widget factory is necessary because there can be more than one navigation widget of
-    the same type at a time. Each navigation widget is wrapped in a \l{Core::NavigationView} for
+    the same type at a time. Each navigation widget is wrapped in a \l{Orca::Plugin::Core::NavigationView} for
     delivery.
 */
 
 /*!
-    \class Core::NavigationView
+    \class Orca::Plugin::Core::NavigationView
     \inheaderfile coreplugin/inavigationwidgetfactory.h
     \inmodule Qt Creator
     \brief The NavigationView class is a C struct for wrapping a widget and a list of tool buttons.
@@ -27,14 +27,14 @@
 */
 
 /*!
-    \fn QString Core::INavigationWidgetFactory::displayName() const
+    \fn QString Orca::Plugin::Core::INavigationWidgetFactory::displayName() const
 
     Returns the display name of the navigation widget, which is shown in the dropdown menu above the
     navigation widget.
 */
 
 /*!
-    \fn int Core::INavigationWidgetFactory::priority() const
+    \fn int Orca::Plugin::Core::INavigationWidgetFactory::priority() const
 
     Determines the position of the navigation widget in the dropdown menu.
 
@@ -42,15 +42,15 @@
 */
 
 /*!
-    \fn Id Core::INavigationWidgetFactory::id() const
+    \fn Id Orca::Plugin::Core::INavigationWidgetFactory::id() const
 
     Returns a unique identifier for referencing the navigation widget factory.
 */
 
 /*!
-    \fn Core::NavigationView Core::INavigationWidgetFactory::createWidget()
+    \fn Orca::Plugin::Core::NavigationView Orca::Plugin::Core::INavigationWidgetFactory::createWidget()
 
-    Returns a \l{Core::NavigationView} containing the widget and the buttons. The ownership is given
+    Returns a \l{Orca::Plugin::Core::NavigationView} containing the widget and the buttons. The ownership is given
     to the caller.
 */
 

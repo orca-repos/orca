@@ -27,7 +27,7 @@ VersionDialog::VersionDialog(QWidget *parent) : QDialog(parent)
   if constexpr (Utils::HostOsInfo::isLinuxHost())
     setWindowIcon(ORCALOGO_BIG.icon());
 
-  setWindowTitle(tr("About %1").arg(Core::IDE_DISPLAY_NAME));
+  setWindowTitle(tr("About %1").arg(Orca::Plugin::Core::IDE_DISPLAY_NAME));
 
   const auto layout = new QGridLayout(this);
   layout->setSizeConstraint(QLayout::SetFixedSize);

@@ -27,7 +27,7 @@ public:
   static auto destroyModeIfRequired() -> void;
 
 signals:
-  auto actionsUpdated(Core::IEditor *editor) -> void;
+  auto actionsUpdated(Orca::Plugin::Core::IEditor *editor) -> void;
 
 private:
   DesignMode();

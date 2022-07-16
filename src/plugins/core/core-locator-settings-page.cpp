@@ -143,7 +143,7 @@ auto CategoryItem::data(const int column, const int role) const -> QVariant
 }
 
 class LocatorSettingsWidget final : public IOptionsPageWidget {
-  Q_DECLARE_TR_FUNCTIONS(Core::LocatorSettingsWidget)
+  Q_DECLARE_TR_FUNCTIONS(Orca::Plugin::Core::LocatorSettingsWidget)
 
 public:
   LocatorSettingsWidget()

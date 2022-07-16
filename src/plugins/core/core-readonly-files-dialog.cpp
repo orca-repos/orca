@@ -27,7 +27,7 @@ using namespace Utils;
 namespace Orca::Plugin::Core {
 
 class ReadOnlyFilesDialogPrivate {
-  Q_DECLARE_TR_FUNCTIONS(Core::ReadOnlyFilesDialog)
+  Q_DECLARE_TR_FUNCTIONS(Orca::Plugin::Core::ReadOnlyFilesDialog)
   Q_DISABLE_COPY_MOVE(ReadOnlyFilesDialogPrivate)
 
 public:
@@ -94,7 +94,7 @@ ReadOnlyFilesDialogPrivate::~ReadOnlyFilesDialogPrivate()
 using namespace Internal;
 
 /*!
- * \class Core::ReadOnlyFilesDialog
+ * \class Orca::Plugin::Core::ReadOnlyFilesDialog
  * \inmodule Orca
  * \internal
  * \brief The ReadOnlyFilesDialog class implements a dialog to show a set of

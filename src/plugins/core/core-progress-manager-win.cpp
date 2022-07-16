@@ -82,7 +82,7 @@ auto ProgressManagerPrivate::doSetApplicationLabel(const QString &text) -> void
   if (!p_i_task)
     return;
 
-  const auto win_id = hwndOfWidget(Core::ICore::mainWindow());
+  const auto win_id = hwndOfWidget(Orca::Plugin::Core::ICore::mainWindow());
 
   if (text.isEmpty()) {
     p_i_task->SetOverlayIcon(win_id, NULL, nullptr);
@@ -109,7 +109,7 @@ auto ProgressManagerPrivate::setApplicationProgressRange(int min, int max) -> vo
 auto ProgressManagerPrivate::setApplicationProgressValue(int value) -> void
 {
   if (p_i_task) {
-    const auto winId = hwndOfWidget(Core::ICore::mainWindow());
+    const auto winId = hwndOfWidget(Orca::Plugin::Core::ICore::mainWindow());
     p_i_task->SetProgressValue(winId, value, total);
   }
 }
@@ -119,7 +119,7 @@ auto ProgressManagerPrivate::setApplicationProgressVisible(bool visible) -> void
   if (!p_i_task)
     return;
 
-  const auto winId = hwndOfWidget(Core::ICore::mainWindow());
+  const auto winId = hwndOfWidget(Orca::Plugin::Core::ICore::mainWindow());
   if (visible)
     p_i_task->SetProgressState(winId, TBPF_NORMAL);
   else
@@ -128,27 +128,27 @@ auto ProgressManagerPrivate::setApplicationProgressVisible(bool visible) -> void
 
 #else
 
-void Core::ProgressManagerPrivate::initInternal() {}
+void Orca::Plugin::Core::ProgressManagerPrivate::initInternal() {}
 
-void Core::ProgressManagerPrivate::cleanup() {}
+void Orca::Plugin::Core::ProgressManagerPrivate::cleanup() {}
 
-void Core::ProgressManagerPrivate::doSetApplicationLabel(const QString &text)
+void Orca::Plugin::Core::ProgressManagerPrivate::doSetApplicationLabel(const QString &text)
 {
   Q_UNUSED(text)
 }
 
-void Core::ProgressManagerPrivate::setApplicationProgressRange(int min, int max)
+void Orca::Plugin::Core::ProgressManagerPrivate::setApplicationProgressRange(int min, int max)
 {
   Q_UNUSED(min)
   Q_UNUSED(max)
 }
 
-void Core::ProgressManagerPrivate::setApplicationProgressValue(int value)
+void Orca::Plugin::Core::ProgressManagerPrivate::setApplicationProgressValue(int value)
 {
   Q_UNUSED(value)
 }
 
-void Core::ProgressManagerPrivate::setApplicationProgressVisible(bool visible)
+void Orca::Plugin::Core::ProgressManagerPrivate::setApplicationProgressVisible(bool visible)
 {
   Q_UNUSED(visible)
 }

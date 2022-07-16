@@ -45,7 +45,7 @@ auto MiniSplitterHandle::paintEvent(QPaintEvent *event) -> void
 }
 
 /*!
-    \class Core::MiniSplitter
+    \class Orca::Plugin::Core::MiniSplitter
     \inheaderfile coreplugin/minisplitter.h
     \inmodule Orca
 
@@ -54,7 +54,7 @@ auto MiniSplitterHandle::paintEvent(QPaintEvent *event) -> void
 */
 
 /*!
-    \enum Core::MiniSplitter::SplitterStyle
+    \enum Orca::Plugin::Core::MiniSplitter::SplitterStyle
     This enum value holds the splitter style.
 
     \value Dark  Dark style.
@@ -81,7 +81,7 @@ MiniSplitter::MiniSplitter(const Qt::Orientation orientation, QWidget *parent, c
 }
 
 /*!
-    \class Core::NonResizingSplitter
+    \class Orca::Plugin::Core::NonResizingSplitter
     \inheaderfile coreplugin/minisplitter.h
     \inmodule Orca
 

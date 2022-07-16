@@ -10,7 +10,7 @@
 namespace Orca::Plugin::Core {
 
 class CORE_EXPORT RestartDialog final : public QMessageBox {
-  Q_DECLARE_TR_FUNCTIONS(Core::RestartDialog)
+  Q_DECLARE_TR_FUNCTIONS(Orca::Plugin::Core::RestartDialog)
 
 public:
   RestartDialog(QWidget *parent, const QString &text);
