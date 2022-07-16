@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/lief">
+        <file>images/logo/Windows.png</file>
+    </qresource>
+</RCC>

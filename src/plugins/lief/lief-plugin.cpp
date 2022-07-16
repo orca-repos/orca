@@ -2,7 +2,7 @@
 
 #include "lief-plugin.hpp"
 
-#include "lief-system-windows.hpp"
+#include "lief-wizard-windows.hpp"
 
 namespace Orca::Plugin::LIEF {
 
@@ -13,8 +13,8 @@ auto Plugin::initialize(const QStringList &, QString *) -> bool
 
 auto Plugin::extensionsInitialized() -> void
 {
-  Orca::Plugin::Core::IWizardFactory::registerFactoryCreator([] {
-    return QList<Orca::Plugin::Core::IWizardFactory*>{new Windows};
+  Core::IWizardFactory::registerFactoryCreator([] {
+    return QList<Core::IWizardFactory*>{new Windows};
   });
 }
 
