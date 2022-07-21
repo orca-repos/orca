@@ -1,0 +1,36 @@
+name: gh-pages
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-22.04
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Install Libadwaita
+      run: |
+        sudo apt-get update
+        sudo apt install build-essential -y
+        sudo apt install libgtk-4-dev -y
+        sudo apt install libadwaita-1-dev -y
+
+    - name: Install Rust latest nightly
+      uses: actions-rs/toolchain@v1
+      with:
+        toolchain: nightly
+        override: true
+        components: rustfmt, rust-src
+
+    - name: Generate Orca documentation
+      uses: actions-rs/cargo@v1
+      with:
+        command: doc
+        args: --all --no-deps
+
+    - name: Publish Orca documentation
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./target/doc

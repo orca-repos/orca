@@ -1,0 +1,24 @@
+[package]
+name = "orca_libadwaita"
+version = "1.0.0"
+authors = ["William Roy <wroy@proton.me>"]
+edition = "2021"
+rust-version = "1.62.0"
+description = "A modern GNOME application interface with Orca"
+documentation = "wroyca.github.io/orca/orca"
+readme = "README.md"
+homepage = "wroyca.github.io"
+repository = "https://github.com/wroyca/orca.git"
+license = "GPL-3.0-or-later"
+license-file = "LICENSE"
+keywords = ["disassembler", "orca"]
+categories = ["disassembler", "orca" ]
+
+[dependencies]
+gettext-rs = { version = "0.7", features = ["gettext-system"] }
+gtk = { version = "0.4.8", package = "gtk4" }
+libadwaita = "0.1.0"
+
+[build-dependencies]
+libadwaita = "0.1.0"
+

@@ -1,0 +1,20 @@
+[package]
+name              = "orca"
+version           = "1.0.0"
+authors           = ["William Roy <wroy@proton.me>"]
+edition           = "2021"
+rust-version      = "1.62.0"
+description       = "A modern interactive disassembler for Windows, Mac and Linux platforms"
+documentation 	  = "wroyca.github.io/orca/orca"
+readme            = "README.md"
+homepage          = "wroyca.github.io"
+repository        = "https://github.com/wroyca/orca.git"
+license           = "GPL-3.0-or-later"
+keywords          = ["disassembler", "orca"]
+categories        = ["disassembler", "orca"]
+
+[workspace]
+members           = ["crates/*"]
+
+[dependencies]
+orca_libadwaita	  = { path = "crates/orca_libadwaita" }
